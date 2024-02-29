@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  display: grid;
+  grid-row: auto;
+  gap: 10px 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: row;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px; // This padding is for the right side of the container
+  padding-left: 15px; // This padding is for the left side of the container
+
+  @include respond-to(sm) {
+    max-width: 540px;
+  }
+  @include respond-to(md) {
+    max-width: 720px;
+  }
+  @include respond-to(lg) {
+    max-width: 960px;
+  }
+  @include respond-to(xl) {
+    max-width: 1140px;
+  }
+}
+
+.col {
+  float: left; // This property might not be necessary with grid layout
+  // padding-right: 5px; // Space between columns
+  // padding-left: 5px; // Space between columns
+  box-sizing: border-box; // Ensures padding is included in the column's width
+}
+
+.col:first-child {
+  padding-left: 0;
+}
+
+.col:last-child {
+  padding-right: 0;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+// Direct media query for max-width of 540px
+@media (max-width: 540px) {
+  .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    grid-column: span 12; // Make each column span full width on small screens
+    width: 94%;
+  }
+}
+
+@media (max-width: 720px) {
+  .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    grid-column: span 12; // Make each column span full width on small screens
+    width: 94%;
+  }
+}

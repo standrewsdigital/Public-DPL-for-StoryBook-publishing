@@ -1,0 +1,42 @@
+$website-footer-background: $dark-grey-1;
+$website-footer-text-color: $light-grey-1;
+$website-footer-link-color: $light-grey-1;
+$website-footer-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+
+// Set the body and html to 100% height
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+// Set up the grid container to take at least 100% of the viewport height
+.page-container {
+  display: grid;
+  grid-template-rows: 1fr auto; // 1 fraction for content, auto for footer
+  min-height: 100vh; // Use 100% of the viewport height
+}
+
+// Footer styles
+.website-footer{
+  border-top: 1px solid #6a6a6b;
+  grid-row-start: 2; // Place the footer in the second row
+  grid-auto-flow: row;
+  background-color: $website-footer-background;
+  color: $website-footer-text-color;
+  padding: calc(1vw + 1rem) 0;
+  font-family: $website-footer-font-family;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.5;
+
+  ul {
+    list-style: none; // Remove bullets
+    margin: 0; // Remove default margin
+    padding: 0; // Remove default padding
+  }
+}
+
+// Responsive typography
+@include respond-to(sm) {
+    font-size: 16px;
+}

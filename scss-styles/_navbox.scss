@@ -1,0 +1,27 @@
+$navbox-title-blue: $light-blue-primary; // Example blue color, adjust as needed
+
+.navbox {
+    width: 100%;
+
+  .navbox-image {
+    width: 100%; // Ensure image takes the full width of the navbox
+    min-width: 250px;
+    margin-bottom: 0;
+  }
+
+  .navbox-title {
+    width: 100%; // Ensure image takes the full width of the navbox
+    min-width: 250px;
+    background-color: $navbox-title-blue;
+    margin-top: -5px;
+    padding: 5px, 5px, 5px, 5px;
+  }
+  a{
+    color: white;
+    padding: 5px 5px 5px 5px;
+  }
+  h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
