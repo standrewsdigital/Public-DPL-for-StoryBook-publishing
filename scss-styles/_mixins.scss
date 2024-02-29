@@ -1,0 +1,39 @@
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @warn "Unknown breakpoint: #{$breakpoint}.";
+    }
+  }
+
+//Typography
+// Mixin for applying styles based on breakpoints
+@mixin typography($property, $values) {
+    @each $breakpoint, $value in $values {
+      @if $breakpoint == 'xs' {
+        #{$property}: $value;
+      } @else {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        @media (min-width: $breakpoint-value) {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+
+  // Mixin for responsive typography based on viewport width
+  @mixin responsive-font-size($size, $vw-adjustment, $min-vw, $max-vw) {
+    font-size: $size;
+
+    @media (min-width: $min-vw) and (max-width: $max-vw) {
+      font-size: calc(#{$size} + #{$vw-adjustment} * (100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}));
+    }
+
+    @media (min-width: $max-vw) {
+      font-size: calc(#{$size} + #{$vw-adjustment});
+    }
+  }
+
+

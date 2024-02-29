@@ -1,0 +1,17 @@
+{
+  "name": "@stadigicomms/dpl",
+  "version": "1.0.0",
+  "description": "the css library for the sta website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss": "node-sass -w scss-styles/ -o compiled-css/"
+  },
+  "author": "teo udrea",
+  "license": "ISC",
+  "dependencies": {
+    "basic-ftp": "^5.0.4",
+    "node-sass": "^9.0.0",
+    "ssh2-sftp-client": "^10.0.0"
+  }
+}

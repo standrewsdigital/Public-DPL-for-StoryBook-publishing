@@ -1,0 +1,6 @@
+# Ignore specific script files
+uploadToFtps.js
+uploadToSftp.js
+
+# Ignore all node modules
+node_modules/

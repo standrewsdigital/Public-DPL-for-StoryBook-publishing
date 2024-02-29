@@ -1,0 +1,33 @@
+.header-content {
+    display: grid;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: left;
+
+    .logo {
+        height: auto;
+        max-width: 300px;
+        min-width: 216px;
+    }
+}
+
+/* Smaller screens (e.g., phones) */
+@media (max-width: 600px) {
+    .header-content .logo {
+        width: 40%;
+    }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header-content .logo {
+        width: 40%;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+    .header-content .logo {
+        width: 40%;
+    }
+}

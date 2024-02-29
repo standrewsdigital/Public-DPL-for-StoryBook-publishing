@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  .page-link {
+    display: block;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border: 1px solid $dark-grey-1;
+    background-color: white;
+    color: $blue-primary;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: $font-family;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: $blue-primary;
+      color: white;
+    }
+  }
+}

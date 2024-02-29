@@ -1,0 +1,33 @@
+// Assuming _typography.scss is already imported elsewhere in your project
+@import "variables";
+@import "typography";
+$category-header-background: $light-blue-primary;
+$category-header-color: $white;
+$category-header-active: $link-focus-color;
+$category-header-selected: $link-focus-background;
+$category-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+
+.category-header {
+    background-color: $category-header-background; // Blue background
+    color: $category-header-color; // White text
+    // padding-top: 5px;
+    // padding-bottom: 5px;
+    font-family: $category-font-family;
+
+    a {
+      color: inherit; // Inherit white color from parent
+      text-decoration: none; // No underline by default
+
+      // Hover effect
+      &:hover {
+        text-decoration: underline; // Underline on hover
+      }
+
+      // Active (or "selected") state
+      // Note: You might need to use JavaScript to add/remove a 'selected' class to make this work as intended
+      &:active, &.selected {
+        color: $category-header-active; // Text turns black
+        background-color: $category-header-selected; // Background behind text turns yellow
+      }
+    }
+  }
