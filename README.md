@@ -65,3 +65,55 @@ To make sure the previous command worked, while the command is running, make a s
 This command starts the SCSS to CSS compilation process. It will continue to watch for any changes in your SCSS files and recompile them as needed.
 
 By following these steps, you should have a working setup of the `sta-dpl-npm` package, ready for development. If you encounter any issues, refer to the project's README file or contact the repository maintainers for further assistance.
+
+
+# Development guide:
+This guide outlines the process of developing, building, and deploying CSS styling using SCSS, HTML examples, and integrating these changes into a Node package, GitLab repository, and CDN through FTPS.
+
+## Overview
+The development process involves several key steps, from writing styles in SCSS, compiling them to CSS, testing them with HTML pages, and then managing version control and deployment through GitLab and npm, ultimately ensuring the styling is distributed via CDN.
+
+## Development and Compilation
+### SCSS to CSS Compilation
+
+Use SCSS (Sassy CSS) to write your styling code. SCSS allows for variables, nested rules, mixins, and more, making your CSS more maintainable and easier to write.
+Compile your SCSS code to CSS using a build tool or script. This process will generate .css files from your .scss files, typically in a compiled-css folder.
+
+### HTML Page Examples
+
+Create example HTML pages to demonstrate and test your styling. Ensure that these pages use the compiled CSS files to reflect the styling accurately.
+
+## Version Control and Collaboration
+### GitLab Repository Workflow
+
+Create a new branch for your changes: This ensures that the main branch remains stable while development continues on feature or bug-fix branches.
+After making changes and compiling SCSS to CSS, push your branch and create a pull request.
+Once reviewed and approved, merge your changes into the main branch.
+
+### Version Management and npm
+
+Update the version of your npm package following semantic versioning principles. This update should be part of the pull request to ensure version consistency.
+After merging, sync the main branch to ensure all changes are up-to-date.
+Publish the new version of your package to npm, making it available for others to use.
+
+## Deployment
+### CDN Deployment via FTPS
+
+Publish your compiled CSS files to a CDN (Content Delivery Network) through FTPS (File Transfer Protocol Secure). This step ensures that your styling is accessible and can be efficiently delivered to users worldwide.
+
+## Pipeline Automation
+
+We should consider automating the update of the npm package and the upload of CSS files to the CDN as part of your GitLab CI/CD pipeline. This automation can streamline the deployment process and reduce manual errors.
+If VPN issues interfere with CDN uploads, manual intervention may be necessary. However, automating wherever possible is beneficial.
+
+## Integration and Automation Considerations
+### Referencing CSS in T4 Page Layouts
+
+Explore automating the reference to new DPL CSS files in T4 page layouts. Automating this can save time and reduce the risk of human error. Consider using a variable or constant to represent the DPL version in page or component creation scripts.
+
+### Automation and Versioning
+
+Discuss the potential for automating the inclusion of the DPL version in web pages or components. This approach could facilitate easier updates and maintenance of web assets using DPL styling.
+
+## Conclusion
+Following this guide will help ensure a streamlined process for developing, deploying, and maintaining styling with DPL. Automation and careful version control are key to efficient workflow and consistent performance across all stages of development and deployment.
