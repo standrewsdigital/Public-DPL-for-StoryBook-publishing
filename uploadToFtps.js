@@ -18,7 +18,6 @@ const ftpConfig = {
     secure: process.env.FTP_SECURE === 'true' // Enable FTPS
 };
 
-
 async function checkAndCreateFolder(client, folderPath) {
     try {
         await client.cd('/'); // Go to root directory
@@ -41,7 +40,6 @@ async function checkAndCreateFolder(client, folderPath) {
 
 }
 
-
 async function uploadDirectory(client, localDirPath, remoteDirPath) {
     try {
         let localFiles = fs.readdirSync(localDirPath);
@@ -50,11 +48,11 @@ async function uploadDirectory(client, localDirPath, remoteDirPath) {
 
         for (const localFile of localFiles) {
             const localFilePath = path.join(localDirPath, localFile);
-            const remoteFilePath = path.join(remoteDirPath, localFile);
 
             if (fs.statSync(localFilePath).isDirectory()) {
-                await uploadDirectory(client, localFilePath, remoteFilePath);
+                await uploadDirectory(client, localFilePath, remoteDirPath);
             } else {
+                const remoteFilePath = localFile; // Using the original file name
                 await client.uploadFrom(localFilePath, remoteFilePath);
                 console.log(`Uploaded ${localFile}`);
             }
