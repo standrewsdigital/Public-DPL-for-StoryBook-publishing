@@ -1,6 +1,6 @@
 {
   "name": "@stadigicomms/dpl",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "the css library for the sta website",
   "main": "index.js",
   "scripts": {
