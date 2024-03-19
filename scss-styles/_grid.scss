@@ -22,12 +22,21 @@
   @include respond-to(xl) {
     max-width: 1140px;
   }
+
+  .row {
+    display: contents; // This allows the child divs to behave as if they were directly within the grid container
+  }
+  .row:first-child {
+    padding-top: 0px;
+  }
+
+  .row:last-child {
+    padding-bottom: 0px;
+  }
 }
 
 .col {
   float: left; // This property might not be necessary with grid layout
-  // padding-right: 5px; // Space between columns
-  // padding-left: 5px; // Space between columns
   box-sizing: border-box; // Ensures padding is included in the column's width
 }
 
