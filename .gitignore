@@ -1,5 +1,6 @@
 # Ignore specific script files
 uploadToSftp.js
+.env
 
 # Ignore all node modules
 node_modules/
