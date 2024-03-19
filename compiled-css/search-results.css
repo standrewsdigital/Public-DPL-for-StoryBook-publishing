@@ -1,0 +1,11 @@
+.search-results ol {
+  padding-left: 0px; }
+  .search-results ol li {
+    list-style-type: none;
+    margin-bottom: 10px; }
+    .search-results ol li p {
+      margin-top: 2px;
+      margin-bottom: 2px; }
+    .search-results ol li h4 {
+      margin-top: 2px;
+      margin-bottom: 2px; }
