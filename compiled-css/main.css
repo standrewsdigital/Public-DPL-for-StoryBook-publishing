@@ -1783,3 +1783,22 @@ html, body {
     .horizontal-list li a {
       text-decoration: underline;
       color: inherit; }
+
+.article-header {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  border-bottom: 1px #dedede solid;
+  margin-bottom: calc(1.5vw + 1rem); }
+
+.article-header h1 {
+  margin-bottom: 0.75rem; }
+
+.article-header img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 10px; }
+
+.article-header .meta {
+  display: flex; }
