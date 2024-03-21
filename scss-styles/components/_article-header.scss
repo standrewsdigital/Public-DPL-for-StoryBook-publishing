@@ -1,0 +1,22 @@
+$article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
+.article-header {
+  font-family: $article-font-family;
+  border-bottom: 1px #dedede solid;
+  margin-bottom: calc(1.5vw + 1rem);
+}
+.article-header {
+  h1 {
+    margin-bottom: 0.75rem;
+  }
+  img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 10px;
+  }
+  .meta {
+    display: flex;
+  }
+}
