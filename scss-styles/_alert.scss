@@ -1,0 +1,36 @@
+@mixin options() {
+    padding: 20px;
+    margin-bottom: 20px;
+
+    &.success {
+        border-color: $green-primary;
+    }
+    &.info {
+        border-color: $blue-primary;
+    }
+    &.warning {
+        border-color: $dark-orange;
+    }
+    &.danger {
+        border-color: $red-primary;
+    }
+
+    h2, h3, h4, h5, h6 {
+        @include responsive-font-size(1.44em, 0.1225em, 36em, 75em);
+        margin: 0 0 10px 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.alert {
+    border: 5px solid $grey;
+    @include options;
+}
+
+.callout {
+    border-left: 5px solid $grey;
+    @include options;
+}
