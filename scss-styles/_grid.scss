@@ -1,3 +1,9 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box; // Ensures padding is included in each element's width
+}
+
 .container {
   width: 100%;
   display: grid;
@@ -46,7 +52,6 @@
 
 .col {
   float: left; // This property might not be necessary with grid layout
-  box-sizing: border-box; // Ensures padding is included in the column's width
 }
 
 .col:first-child {
