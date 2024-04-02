@@ -604,6 +604,11 @@ a {
     outline: 3px solid #ffb400;
     text-decoration: underline; }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
 .container {
   width: 100%;
   display: grid;
@@ -644,8 +649,7 @@ a {
     padding-bottom: 0px; }
 
 .col {
-  float: left;
-  box-sizing: border-box; }
+  float: left; }
 
 .col:first-child {
   padding-left: 0; }
