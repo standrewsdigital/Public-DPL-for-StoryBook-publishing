@@ -1,14 +1,6 @@
 @import '../variables';
 
-.pattern-wrapper {
-    border-bottom: 1px #6a6a6b dashed;
-    border-top: 1px #6a6a6b dashed;
-    margin-bottom: 30px;
-}
 
-.container {
-    grid-template-columns: auto auto auto auto;
-}
 .sta-tag {
     border: 3px solid $grey;
     color: $grey;
