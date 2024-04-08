@@ -1,0 +1,184 @@
+@import '../variables';
+
+.pattern-wrapper {
+    border-bottom: 1px #6a6a6b dashed;
+    border-top: 1px #6a6a6b dashed;
+    margin-bottom: 30px;
+}
+
+.container {
+    grid-template-columns: auto auto auto auto;
+}
+.sta-tag {
+    border: 3px solid $grey;
+    color: $grey;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1 !important;
+    padding: 0.3em;
+    white-space: nowrap
+}
+
+.sta-tag--success {
+    border-color: $green-primary;
+    color: $green-primary;
+}
+
+.sta-tag--info {
+    border-color: $blue-primary;
+    color: $blue-primary
+}
+
+.sta-tag--warning {
+    border-color: $dark-orange;
+    color: $dark-orange;
+}
+
+.sta-tag--danger {
+    border-color: $red-primary;
+    color: $red-primary;
+}
+
+// font-scale.
+
+.font-scale-minus-1 {
+    font-size: .83333em !important;
+    line-height: inherit !important
+}
+
+@media (min-width: 36em) and (max-width: 75em) {
+    .font-scale-minus-1 {
+        font-size:calc( .83333em + -.03333 * ( ( 100vw - 36em) / 39 ) ) !important
+    }
+}
+
+@media (min-width: 75em) {
+    .font-scale-minus-1 {
+        font-size:.8em !important
+    }
+}
+
+.font-scale-reset {
+    font-size: 1rem !important;
+    line-height: inherit !important
+}
+
+.font-scale-0 {
+    font-size: 1em !important;
+    line-height: inherit !important
+}
+
+@media (min-width: 36em) and (max-width: 75em) {
+    .font-scale-0 {
+        font-size:calc( 1em + 0 * ( ( 100vw - 36em) / 39 ) ) !important
+    }
+}
+
+@media (min-width: 75em) {
+    .font-scale-0 {
+        font-size:1em !important
+    }
+}
+
+.font-scale-1 {
+    font-size: 1.2em !important;
+    line-height: inherit !important
+}
+
+@media (min-width: 36em) and (max-width: 75em) {
+    .font-scale-1 {
+        font-size:calc( 1.2em + .05 * ( ( 100vw - 36em) / 39 ) ) !important
+    }
+}
+
+@media (min-width: 75em) {
+    .font-scale-1 {
+        font-size:1.25em !important
+    }
+}
+
+.font-scale-2 {
+    font-size: 1.44em !important;
+    line-height: inherit !important
+}
+
+@media (min-width: 36em) and (max-width: 75em) {
+    .font-scale-2 {
+        font-size:calc( 1.44em + .1225 * ( ( 100vw - 36em) / 39 ) ) !important
+    }
+}
+
+@media (min-width: 75em) {
+    .font-scale-2 {
+        font-size:1.5625em !important
+    }
+}
+
+.font-scale-3 {
+    font-size: 1.728em !important;
+    line-height: inherit !important
+}
+
+@media (min-width: 36em) and (max-width: 75em) {
+    .font-scale-3 {
+        font-size:calc( 1.728em + .22513 * ( ( 100vw - 36em) / 39 ) ) !important
+    }
+}
+
+@media (min-width: 75em) {
+    .font-scale-3 {
+        font-size:1.95313em !important
+    }
+}
+
+.font-scale-4 {
+    font-size: 2.0736em !important;
+    line-height: inherit !important
+}
+
+@media (min-width: 36em) and (max-width: 75em) {
+    .font-scale-4 {
+        font-size:calc( 2.0736em + .36781 * ( ( 100vw - 36em) / 39 ) ) !important
+    }
+}
+
+@media (min-width: 75em) {
+    .font-scale-4 {
+        font-size:2.44141em !important
+    }
+}
+
+.font-scale-5 {
+    font-size: 2.48832em !important;
+    line-height: inherit !important
+}
+
+@media (min-width: 36em) and (max-width: 75em) {
+    .font-scale-5 {
+        font-size:calc( 2.48832em + .56344 * ( ( 100vw - 36em) / 39 ) ) !important
+    }
+}
+
+@media (min-width: 75em) {
+    .font-scale-5 {
+        font-size:3.05176em !important
+    }
+}
+
+.font-scale-6 {
+    font-size: 2.98598em !important;
+    line-height: inherit !important
+}
+
+@media (min-width: 36em) and (max-width: 75em) {
+    .font-scale-6 {
+        font-size:calc( 2.98598em + .82871 * ( ( 100vw - 36em) / 39 ) ) !important
+    }
+}
+
+@media (min-width: 75em) {
+    .font-scale-6 {
+        font-size:3.8147em !important
+    }
+}
