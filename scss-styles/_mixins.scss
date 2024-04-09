@@ -7,7 +7,6 @@
       @warn "Unknown breakpoint: #{$breakpoint}.";
     }
   }
-
 //Typography
 // Mixin for applying styles based on breakpoints
 @mixin typography($property, $values) {

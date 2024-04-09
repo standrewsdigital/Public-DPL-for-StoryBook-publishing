@@ -1,3 +1,9 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box; // Ensures padding is included in each element's width
+}
+
 .container {
   width: 100%;
   display: grid;
@@ -10,6 +16,12 @@
   padding-right: 15px; // This padding is for the right side of the container
   padding-left: 15px; // This padding is for the left side of the container
 
+  @include respond-to(xxs) {
+    max-width: 280px;
+  }
+  @include respond-to(xs) {
+    max-width: 400px;
+  }
   @include respond-to(sm) {
     max-width: 540px;
   }
@@ -21,6 +33,9 @@
   }
   @include respond-to(xl) {
     max-width: 1140px;
+  }
+  @include respond-to(xxl) {
+    max-width: 1366px;
   }
 
   .row {
@@ -37,7 +52,6 @@
 
 .col {
   float: left; // This property might not be necessary with grid layout
-  box-sizing: border-box; // Ensures padding is included in the column's width
 }
 
 .col:first-child {
