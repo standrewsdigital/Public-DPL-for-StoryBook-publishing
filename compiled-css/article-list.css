@@ -1,0 +1,37 @@
+.article-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* or "contain" */ }
+
+.article-list .snippet {
+  width: 70%;
+  padding-left: 1em; }
+  .article-list .snippet .heading {
+    font-size: 1.2em;
+    line-height: 1.25;
+    margin: 20px 0 5px 0; }
+  .article-list .snippet dl {
+    margin: 0;
+    font-size: 1rem;
+    overflow: auto; }
+    .article-list .snippet dl dt {
+      display: inline-block;
+      line-height: 1.5;
+      font-weight: bold; }
+      .article-list .snippet dl dt i {
+        font-weight: 400; }
+      .article-list .snippet dl dt span {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px; }
+    .article-list .snippet dl dd {
+      font-weight: bold;
+      display: inline-block; }
+  .article-list .snippet .description {
+    margin: 0 0 5px 0; }
