@@ -22,6 +22,7 @@ $red-50-tint: #f58d89;
 $red-25-shade: #b0140e;
 $dark-grey-1: #202024;
 $dark-grey-2: #0f0f11;
+$dark-grey-3: #585859;
 $grey: #6a6a6b;
 $mid-grey-1: #949494;
 $mid-grey-2: #dedede;
@@ -30,7 +31,7 @@ $light-grey-2: #fafafa;
 $white: #ffffff;
 $orange-primary: #ffb400;
 $dark-orange: #bf5909;
-
+$dark-orange-25-shade: #803b06;
 // Additional Colors
 $green-primary: #00853f;
 $green-25-tint: #40a46f;
@@ -59,6 +60,24 @@ $link-focus-color: #202024;
 $link-focus-background: #ffb400;
 $link-focus-outline: 3px solid #ffb400;
 
+
+// AAA color contrast for white text
+$aaa-blue-primary: #005A8F; // Contrast Ratio 7.3
+$aaa-blue-25-shade: #004770;     // Contrast Ratio 9.8
+$aaa-red-primary: #AF130E; //  Contrast Ratio 7.1
+$aaa-red-25-shade: #8E100B; // Contrast Ratio 9.4
+$aaa-green-primary: #006630; // Contrast Ratio 7.1
+$aaa-green-25-shade: #005226; // Contrast Ratio 9.3
+$aaa-purple-primary: #754091; // Contrast Ratio 7.2
+$aaa-purple-25-shade: #603479; // Contrast Ratio 9.2
+$aaa-burgundy-primary: #AE0A3E; // Contrast Ratio 7.2
+$aaa-burgundy-25-shade: #920733; // Contrast Ratio 9.2
+$aaa-dark-orange: #8D4107; // Contrast Ratio  7.2
+$aaa-dark-orange-25-shade: #743606; // Contrast Ratio 9.2
+$aaa-dark-grey: #585859; // 7.1
+$aaa-dark-grey-25-shade: #454545; // 9.2
+
+
 // Loop through all the color variables and generate classes
 @each $color-name, $color-value in (
   blue-primary: $blue-primary,
@@ -75,6 +94,7 @@ $link-focus-outline: 3px solid #ffb400;
   red-25-shade: $red-25-shade,
   dark-grey-1: $dark-grey-1,
   dark-grey-2: $dark-grey-2,
+  dark-grey-3: $dark-grey-3,
   grey: $grey,
   mid-grey-1: $mid-grey-1,
   mid-grey-2: $mid-grey-2,
@@ -83,6 +103,7 @@ $link-focus-outline: 3px solid #ffb400;
   white: $white,
   orange-primary: $orange-primary,
   dark-orange: $dark-orange,
+  dark-orange-25-shade: $dark-orange-25-shade,
   green-primary: $green-primary,
   green-25-tint: $green-25-tint,
   green-50-tint: $green-50-tint,
@@ -129,5 +150,3 @@ $link-focus-outline: 3px solid #ffb400;
     outline: $link-focus-outline;
   }
 }
-
-
