@@ -32,6 +32,15 @@
         width: 1px; }
     .article-list .snippet dl dd {
       font-weight: bold;
-      display: inline-block; }
+      display: inline-block;
+      margin-bottom: 10px; }
+    @media only screen and (max-width: 570px) {
+      .article-list .snippet dl dd {
+        font-weight: bold;
+        display: block;
+        line-height: 0; } }
   .article-list .snippet .description {
     margin: 0 0 5px 0; }
+  @media only screen and (max-width: 570px) {
+    .article-list .snippet .description {
+      display: none; } }
