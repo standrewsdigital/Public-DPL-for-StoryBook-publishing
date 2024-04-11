@@ -1,10 +1,4 @@
 .article-list {
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* or "contain" */
-    }
 
     .snippet {
         width: 70%;
@@ -47,23 +41,25 @@
                 display: inline-block;
                 margin-bottom: 10px;
             }
+
             @media only screen and (max-width: 570px) {
                 dd {
-                   font-weight: bold;
+                    font-weight: bold;
                     display: block;
-                   line-height: 0;
-               }
-             }
+                    line-height: 0;
+                }
+            }
         }
 
         .description {
             margin: 0 0 5px 0;
         }
+
         @media only screen and (max-width: 570px) {
-             .description {
+            .description {
                 display: none;
             }
-          }
+        }
 
     }
 }
