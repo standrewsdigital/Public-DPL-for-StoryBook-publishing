@@ -1806,12 +1806,6 @@ html, body {
 .article-header .meta {
   display: flex; }
 
-.article-list img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* or "contain" */ }
-
 .article-list .snippet {
   width: 70%;
   padding-left: 1em; }
