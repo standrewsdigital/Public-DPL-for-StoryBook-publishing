@@ -1,0 +1,269 @@
+@mixin options() {
+    
+    // Colour options
+    // green, orange, red, grey, burgundy, purple, white
+
+    &.white {
+        background-color: #fff;
+        color: $blue-primary;
+        border: 1px $blue-25-shade solid;
+        border-bottom: 3px #0071b3 solid;
+        padding-bottom: 6px;
+    }
+    &.white:focus {
+        background-color: #fff;
+        color: $blue-primary;
+        text-decoration: underline;
+    }
+    &.white:hover { 
+        background-color: #fff;
+        color: $blue-primary;
+        text-decoration: underline;
+    }
+
+    &.green {
+        background-color: $green-primary;
+    }
+    &.green:focus {
+        background-color: $green-25-shade;
+    }
+    &.green:hover { 
+        background-color: $green-25-shade;
+    }
+
+    &.orange {
+        background-color: $dark-orange;
+    }
+    &.orange:focus {
+        background-color: $dark-orange-25-shade;
+    }
+    &.orange:hover {
+        background-color: $dark-orange-25-shade;
+    }
+
+    &.red {
+        background-color: $red-primary;
+    }
+    &.red:focus {
+        background-color: $red-25-shade ;
+    }
+    &.red:hover {
+        background-color: $red-25-shade;
+    }
+
+    &.grey {
+        background-color: $mid-grey-1;
+    }
+    &.grey:focus {
+        background-color: $dark-grey-3;
+    }
+    &.grey:hover {
+        background-color: $dark-grey-3;
+    }
+
+    &.burgundy {
+        background-color: $burgundy-primary;
+    }
+    &.burgundy:focus {
+        background-color: $burgundy-25-shade;
+    }
+    &.burgundy:hover {
+        background-color: $burgundy-25-shade;
+    }
+
+    &.purple {
+        background-color: $purple-primary;
+    }
+    &.purple:focus {
+        background-color: $purple-25-shade;
+    }
+    &.purple:hover {
+        background-color: $purple-25-shade;
+    }
+
+    // Size options
+    // lg
+    &.lg {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    // Size options
+    // action
+    &.action{
+        border-bottom: 3px $blue-25-shade solid;
+        font-weight: bold;
+        color: white;
+        position: relative;
+        text-align: left;
+        padding-top: 0.1rem;
+    }
+
+    // Colour options for the action bottom border
+    &.action.green{
+        border-bottom: 3px $green-25-shade solid;
+    }
+    &.action.orange{
+        border-bottom: 3px $dark-orange-25-shade solid;
+    }
+    &.action.red{
+        border-bottom: 3px $red-25-shade solid;
+    }
+    &.action.burgundy{
+        border-bottom: 3px $burgundy-25-shade solid;
+    }
+    &.action.green{
+        border-bottom: 3px $green-25-shade solid;
+    }
+    &.action.purple{
+        border-bottom: 3px $purple-25-shade solid;
+    }
+    &.action.grey{
+        border-bottom: 3px $dark-grey-3 solid;
+    }
+    &.action.white{
+        background-color: #fff;
+        color: $blue-primary;
+        border: 1px $blue-25-shade solid;
+        border-bottom: 3px #0071b3 solid;
+        padding-bottom: 6px;
+    }
+    // Add the > arrow to action buttons
+    &.action:after{
+        content: "";
+        margin-bottom: -0.2rem;
+        margin-top: 0.7rem;
+        margin-left: 0.8rem;
+        border: 1rem solid #fff;
+        border-width: 0px 0.3rem 0.3rem 0px;
+        display: inline-block;
+        padding: 0.4rem;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+    &.action.white:after{
+        border: 1rem solid $blue-primary;
+        border-width: 0px 0.3rem 0.3rem 0px;
+    }
+
+    &.aaa-green {
+        background-color: $aaa-green-primary;
+    }
+    
+    &.aaa-green:focus {
+        background-color: $aaa-green-25-shade;
+    }
+
+    &.aaa-green:hover {
+        color: #fff;    
+        background-color: $aaa-green-25-shade;
+    }
+
+    &.aaa-orange {
+        background-color: $aaa-dark-orange;
+    }
+    &.aaa-orange:focus {
+        color: #fff;    
+        background-color: $aaa-dark-orange-25-shade;
+    }
+    &.aaa-orange:hover {
+        color: #fff;    
+        background-color: $aaa-dark-orange-25-shade;
+    }
+
+    &.aaa-red {
+        background-color: $aaa-red-primary;
+    }
+    &.aaa-red:focus {
+        color: #fff;    
+        background-color: $aaa-red-25-shade ;
+    }
+    &.aaa-red:hover {
+        color: #fff;    
+        background-color: $aaa-red-25-shade;
+    }
+
+    &.aaa-grey {
+        background-color:$aaa-dark-grey;
+    }
+    &.aaa-grey:focus {
+        color: #fff;    
+        background-color: $aaa-dark-grey-25-shade;
+    }
+    &.aaa-grey:hover {
+        color: #fff;    
+        background-color: $aaa-dark-grey-25-shade;
+    }
+
+    &.aaa-burgundy {
+        background-color: $aaa-burgundy-primary;
+    }
+    &.aaa-burgundy:focus {
+        color: #fff;    
+        background-color: $aaa-burgundy-25-shade;
+    }
+    &.aaa-burgundy:hover {
+        color: #fff;    
+        background-color: $aaa-burgundy-25-shade;
+    }
+
+    &.aaa-purple {
+        background-color: $aaa-purple-primary;
+    }
+    &.aaa-purple:focus {
+        color: #fff;    
+        background-color: $aaa-purple-25-shade;
+    }
+    &.aaa-purple:hover {
+        color: #fff;    
+        background-color: $aaa-purple-25-shade;
+    }
+    &.aaa-blue {
+        background-color: $aaa-blue-primary;
+    }
+    &.aaa-blue:focus {
+        color: #fff;    
+        background-color: $aaa-blue-25-shade;
+    }
+    &.aaa-blue:hover {
+        color: #fff;    
+        background-color: $aaa-blue-25-shade;
+    }
+}
+
+
+.btn {
+    margin-bottom: 5px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    text-underline-offset: 0.15em;
+    background-color: $blue-primary;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    line-height: 1.5;
+    border-radius: 0px;
+    white-space: nowrap;
+    display: inline-block;
+    @include options;
+}
+
+// Styling for the default blue button
+.btn:focus {
+    color: #fff;    
+    background-color: $blue-25-shade;
+}
+
+.btn:hover {
+    color: #fff;        
+    background-color: $blue-25-shade;
+}
+
+.btn:active {
+    color: #202024;    
+    background-color: $link-focus-background;
+}
