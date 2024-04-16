@@ -1,0 +1,17 @@
+// Declare variables that are common to both light and dark themes
+// The values of which are set within ./variables
+
+// Default theme settings
+:root {
+--page-background-color: #{$page-background-color};
+--page-text-color: #{$page-text-color};
+--page-font-family: #{$page-font-family};
+
+// link colors
+--link-color: #{$link-color};
+--link-hover-color:#{$link-hover-color};
+--link-active-color:#{$link-active-color};
+--link-focus-color:#{$link-focus-color};
+--link-focus-background:#{$link-focus-background};
+--link-focus-outline:#{$link-focus-outline};
+}
