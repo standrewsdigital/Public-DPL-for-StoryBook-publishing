@@ -1,6 +1,8 @@
-// supported screen size breakpoints 
+// Global variables with values that apply to all themes
 @import './variables/breakpoints';
+@import './variables/main_colours';
 
+$page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 
 // Loop through all the color variables and generate classes
 @each $color-name, $color-value in (
@@ -18,12 +20,10 @@
   red-25-shade: $red-25-shade,
   dark-grey-1: $dark-grey-1,
   dark-grey-2: $dark-grey-2,
-  //grey: $grey,
   mid-grey-1: $mid-grey-1,
   mid-grey-2: $mid-grey-2,
   light-grey-1: $light-grey-1,
   light-grey-2: $light-grey-2,
- // white: $white,
   orange-primary: $orange-primary,
   dark-orange: $dark-orange,
   green-primary: $green-primary,
@@ -43,34 +43,14 @@
   warning: $warning,
   danger: $danger
 ) {
+
   // Background color classes
-  .bg-#{$color-name} {
+ .bg-#{color-name} {
     background-color: $color-value;
   }
 
   // Text color classes
-  .text-#{$color-name} {
+   .text#{color-name} {
     color: $color-value;
   }
 }
-
-// Link colors
-.link {
-  color: $link-color;
-
-  &:hover {
-    color: $link-hover-color;
-  }
-
-  &:active {
-    color: $link-active-color;
-  }
-
-  &:focus {
-    color: $link-focus-color;
-    background-color: $link-focus-background;
-    outline: $link-focus-outline;
-  }
-}
-
-
