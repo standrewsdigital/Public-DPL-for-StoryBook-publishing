@@ -112,13 +112,14 @@ $link-focus-outline: 3px solid #ffb400;
   warning: $warning,
   danger: $danger
 ) {
+
   // Background color classes
-  .bg-#{$color-name} {
+ .bg-#{color-name} {
     background-color: $color-value;
   }
 
   // Text color classes
-  .text-#{$color-name} {
+   .text#{color-name} {
     color: $color-value;
   }
 }
