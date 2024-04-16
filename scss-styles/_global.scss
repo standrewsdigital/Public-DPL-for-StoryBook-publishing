@@ -1,50 +1,46 @@
 body {
-    background-color: var(--page-background-color);
-    color: var(--page-text-color);
-}
-
-
-body {
+  background-color: var(--page-background-color);
+  color: var(--page-text-color);
   font-family: var(--page-font-family);
   @include typography(font-size, ('xs': 100%, 'sm': 112.5%));
 }
 
 h1 {
-    @include responsive-font-size(2.0736em, 0.36780625em, 36em, 75em);
-    font-weight: 700;
-  }
+  @include responsive-font-size(2.0736em, 0.36780625em, 36em, 75em);
+  font-weight: 700;
+}
 
-  h2 {
-    @include responsive-font-size(1.728em, 0.225125em, 36em, 75em);
-    font-weight: 700;
-  }
+h2 {
+  @include responsive-font-size(1.728em, 0.225125em, 36em, 75em);
+  font-weight: 700;
+}
 
-  h3 {
-    @include responsive-font-size(1.44em, 0.1225em, 36em, 75em);
-    font-weight: 700;
-  }
+h3 {
+  @include responsive-font-size(1.44em, 0.1225em, 36em, 75em);
+  font-weight: 700;
+}
 
-  h4 {
-    @include responsive-font-size(1.2em, 0.05em, 36em, 75em);
-    font-weight: 700;
-  }
+h4 {
+  @include responsive-font-size(1.2em, 0.05em, 36em, 75em);
+  font-weight: 700;
+}
 
-  h5 {
-    font-size: 1em; // No responsive adjustment needed based on your setup
-    font-weight: 700;
-  }
+h5 {
+  font-size: 1em; // No responsive adjustment needed based on your setup
+  font-weight: 700;
+}
 
-  h6 {
-    font-size: 1em; // No responsive adjustment needed based on your setup
-    font-weight: 700;
-  }
+h6 {
+  font-size: 1em; // No responsive adjustment needed based on your setup
+  font-weight: 700;
+}
 
-// Define styles for h1 to h6 and a tags as shown previously
-a {
-    color: var(--link-color);
-    text-decoration: underline;
-    text-underline-offset: .15em;
-    transition: color 0.3s ease;
+// Define styles links
+a, .link {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: .15em;
+  transition: color 0.3s ease;
 
     &:hover {
       color: var(--link-hover-color);
@@ -61,5 +57,5 @@ a {
       box-shadow: 0 3px var(--link-focus-background);
       outline: var(--link-focus-outline);
       text-decoration: underline;
-}
+    }
 }
