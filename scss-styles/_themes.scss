@@ -1,92 +1,35 @@
 // Importing themes
 @import './variables/light-theme';
-
-
-// Default to light theme
 :root {
-  --page-background-color: #{$white};
-  --blue-primary: #{$blue-primary};
-  --blue-25-tint:  #{$blue-25-tint};
-  --blue-50-tint:  #{$blue-50-tint};
-  --blue-25-shade:  #{$blue-25-shade};
-  --light-blue-primary:  #{$light-blue-primary};
-  --light-blue-25-tint:  #{$light-blue-25-tint};
-  --light-blue-50-tint:  #{$light-blue-50-tint};
-  --light-blue-25-shade:  #{$light-blue-25-shade};
-  --red-primary:  #{$red-primary};
-  --red-25-tint:  #{$red-25-tint};
-  --red-50-tint:  #{$red-50-tint};
-  --red-25-shade:  #{$red-25-shade};
-  --dark-grey-1:  #{$dark-grey-1};
-  --dark-grey-2:  #{$dark-grey-2};
-  //grey: $grey,
-  --mid-grey-1:  #{$mid-grey-1};
-  --mid-grey-2:  #{$mid-grey-2};
-  --light-grey-1:  #{$light-grey-1};
-  --light-grey-2:  #{$light-grey-2};
- // white: $white,
-  --orange-primary:  #{$orange-primary};
-  --dark-orange:  #{$dark-orange};
-  --green-primary:  #{$green-primary};
-  --green-25-tint:  #{$green-25-tint};
-  --green-50-tint:  #{$green-50-tint};
-  --green-25-shade:  #{$green-25-shade};
-  --purple-primary:  #{$purple-primary};
-  --purple-25-tint:  #{$purple-25-tint};
-  --purple-50-tint:  #{$purple-50-tint};
-  --purple-25-shade:  #{$purple-25-shade};
-  --burgundy-primary:  #{$burgundy-primary};
-  --burgundy-25-tint:  #{$burgundy-25-tint};
-  --burgundy-50-tint:  #{$burgundy-50-tint};
-  --burgundy-25-shade:  #{$burgundy-25-shade};
-  --success:  #{$success};
-  --information:  #{$information};
-  --warning:  #{$warning};
-  --danger:  #{$danger};
+  // Default theme settings
+  --page-background-color: #{$page-background-color};
+  --page-text-color: #{$page-text-color};
+  --page-font-family:#{$page-font-family};
+
+  // link colors
+  --link-color:#{$link-color};
+  --link-hover-color:#{$link-hover-color};
+  --link-active-color:#{$link-active-color};
+  --link-focus-color:#{$link-focus-color};
+  --link-focus-background:#{$link-focus-background};
+  --link-focus-outline:#{$link-focus-outline};
 }
 
 // Check for user's preference for dark mode
 @media (prefers-color-scheme: dark) {
-    @import './variables/dark-theme';
+  @import './variables/dark-theme';
   :root {
-  --page-background-color:  #{$dark-grey-1};
-  --blue-primary: #{$blue-primary};
-  --blue-25-tint:  #{$blue-25-tint};
-  --blue-50-tint:  #{$blue-50-tint};
-  --blue-25-shade:  #{$blue-25-shade};
-  --light-blue-primary:  #{$light-blue-primary};
-  --light-blue-25-tint:  #{$light-blue-25-tint};
-  --light-blue-50-tint:  #{$light-blue-50-tint};
-  --light-blue-25-shade:  #{$light-blue-25-shade};
-  --red-primary:  #{$red-primary};
-  --red-25-tint:  #{$red-25-tint};
-  --red-50-tint:  #{$red-50-tint};
-  --red-25-shade:  #{$red-25-shade};
-  --dark-grey-1:  #{$dark-grey-1};
-  --dark-grey-2:  #{$dark-grey-2};
-  //grey: $grey,
-  --mid-grey-1:  #{$mid-grey-1};
-  --mid-grey-2:  #{$mid-grey-2};
-  --light-grey-1:  #{$light-grey-1};
-  --light-grey-2:  #{$light-grey-2};
- // white: $white,
-  --orange-primary:  #{$orange-primary};
-  --dark-orange:  #{$dark-orange};
-  --green-primary:  #{$green-primary};
-  --green-25-tint:  #{$green-25-tint};
-  --green-50-tint:  #{$green-50-tint};
-  --green-25-shade:  #{$green-25-shade};
-  --purple-primary:  #{$purple-primary};
-  --purple-25-tint:  #{$purple-25-tint};
-  --purple-50-tint:  #{$purple-50-tint};
-  --purple-25-shade:  #{$purple-25-shade};
-  --burgundy-primary:  #{$burgundy-primary};
-  --burgundy-25-tint:  #{$burgundy-25-tint};
-  --burgundy-50-tint:  #{$burgundy-50-tint};
-  --burgundy-25-shade:  #{$burgundy-25-shade};
-  --success:  #{$success};
-  --information:  #{$information};
-  --warning:  #{$warning};
-  --danger:  #{$danger};
+    // Dark theme settings
+    --page-background-color: #{$page-background-color};
+    --page-text-color: #{$page-text-color};
+    --page-font-family:#{$page-font-family};
+
+    // Link colors
+    --link-color:#{$link-color};
+    --link-hover-color:#{$link-hover-color};
+    --link-active-color:#{$link-active-color};
+    --link-focus-color:#{$link-focus-color};
+    --link-focus-background:#{$link-focus-background};
+    --link-focus-outline:#{$link-focus-outline};
   }
 }
