@@ -2,7 +2,7 @@
 @import './variables/light-theme';
 @import './variables/dark-theme';
 
-// Used to apply theme colurs
+// Used to apply theme colours
 // theme vars can be called within scss using:
 // var(--page-background-color)
 @mixin apply-theme($theme-map) {
@@ -26,7 +26,7 @@
 }
 
 // Can be used to apply dark mode styles
-// whilst in light mode.
+// when in light mode.
 // TODO: this is not working with the grid. 
 .dark{
   @include apply-theme($theme-dark);
