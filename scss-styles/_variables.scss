@@ -18,13 +18,12 @@
   red-25-shade: $red-25-shade,
   dark-grey-1: $dark-grey-1,
   dark-grey-2: $dark-grey-2,
- // grey: $grey,
+  grey: $grey,
   mid-grey-1: $mid-grey-1,
   mid-grey-2: $mid-grey-2,
   light-grey-1: $light-grey-1,
   light-grey-2: $light-grey-2,
- // white: $white,
- 
+  white: $white,
   orange-primary: $orange-primary,
   dark-orange: $dark-orange,
   dark-orange-25-shade: $dark-orange-25-shade,
@@ -45,13 +44,14 @@
   warning: $warning,
   danger: $danger
 ) {
+
   // Background color classes
-  .bg-#{$color-name} {
+ .bg-#{color-name} {
     background-color: $color-value;
   }
 
   // Text color classes
-  .text-#{$color-name} {
+   .text#{color-name} {
     color: $color-value;
   }
 }
