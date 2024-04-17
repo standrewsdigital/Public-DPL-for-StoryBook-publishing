@@ -1,6 +1,10 @@
+@import 'themes';
 @import 'variables';
 @import 'typography';
 @import 'mixins';
+@import 'global';
+
+// Patterns
 @import 'grid';
 @import 'header';
 @import 'footer';
