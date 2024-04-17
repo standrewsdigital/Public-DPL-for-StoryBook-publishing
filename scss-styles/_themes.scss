@@ -1,0 +1,34 @@
+// Supported themes
+@import './variables/light-theme';
+@import './variables/dark-theme';
+
+// Used to apply theme colours
+// theme vars can be called within scss using:
+// var(--page-background-color)
+@mixin apply-theme($theme-map) {
+  @each $key, $value in $theme-map {
+    --#{$key}: #{$value};
+  }
+}
+
+// Load in the default light theme.
+:root {
+  @include apply-theme($theme-light);
+}
+
+// Check for user's preference. 
+// switch to dark mode is set.
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Dark theme settings
+    @include apply-theme($theme-dark);
+  }
+}
+
+// Can be used to apply dark mode styles
+// when in light mode.
+// TODO: this is not working with the grid. 
+.dark{
+  @include apply-theme($theme-dark);
+  background-color: var(--page-background-color);
+}
