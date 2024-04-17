@@ -1,20 +1,17 @@
-*,
-*:after,
-*:before {
-  box-sizing: border-box; // Ensures padding is included in each element's width
+*, *:after, *:before {
+  box-sizing: border-box;
 }
 
 .container {
   width: 100%;
   display: grid;
-  grid-row: auto;
-  gap: 10px 20px;
+  gap: 20px;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-flow: row;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px; // This padding is for the right side of the container
-  padding-left: 15px; // This padding is for the left side of the container
+  padding-right: 15px;
+  padding-left: 15px;
 
   @include respond-to(xxs) {
     max-width: 280px;
@@ -39,46 +36,74 @@
   }
 
   .row {
-    display: contents; // This allows the child divs to behave as if they were directly within the grid container
+    display: contents;
+    gap: 20px;
   }
   .row:first-child {
     padding-top: 0px;
   }
-
   .row:last-child {
     padding-bottom: 0px;
   }
 }
 
 .col {
-  float: left; // This property might not be necessary with grid layout
-}
+  float: left;
+  grid-column: span 12; // Default to span full width
 
-.col:first-child {
-  padding-left: 0;
-}
-
-.col:last-child {
-  padding-right: 0;
-}
-
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    grid-column: span #{$i};
+  @include respond-to(xxs) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-xxs {
+        grid-column: span #{$i};
+      }
+    }
   }
-}
 
-// Direct media query for max-width of 540px
-@media (max-width: 540px) {
-  .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-    grid-column: span 12; // Make each column span full width on small screens
-    width: 94%;
+  @include respond-to(xs) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-xs {
+        grid-column: span #{$i};
+      }
+    }
   }
-}
 
-@media (max-width: 720px) {
-  .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-    grid-column: span 12; // Make each column span full width on small screens
-    width: 94%;
+  @include respond-to(sm) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-sm {
+        grid-column: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-md {
+        grid-column: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(lg) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-lg {
+        grid-column: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(xl) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-xl {
+        grid-column: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(xxl) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-xxl {
+        grid-column: span #{$i};
+      }
+    }
   }
 }
