@@ -1,0 +1,19 @@
+$breakpoints: (
+  'xxs': 320px, // Extra small smartphones (portrait)
+  'xs': 480px,  // Extra small smartphones (landscape) and small tablets
+  'sm': 576px,  // Small tablets and larger smartphones (portrait)
+  'md': 768px,  // Medium tablets and smaller laptops
+  'lg': 992px,  // Large tablets and larger laptops
+  'xl': 1200px, // Desktops
+  'xxl': 1440px // Large desktops
+);
+
+$max-container-widths: (
+  'xxs': 280px, // Recommended maximum container width for extra small screens
+  'xs': 400px,  // Recommended maximum container width for extra small screens
+  'sm': 540px,  // Recommended maximum container width for small screens
+  'md': 720px,  // Recommended maximum container width for medium screens
+  'lg': 960px,  // Recommended maximum container width for large screens
+  'xl': 1140px, // Recommended maximum container width for extra large screens
+  'xxl': 1366px // Recommended maximum container width for extra extra large screens
+);

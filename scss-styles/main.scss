@@ -1,6 +1,12 @@
+@import 'themes';
 @import 'variables';
 @import 'typography';
 @import 'mixins';
+@import 'global';
+@import 'text-colors';
+@import 'bg-colors';
+
+// Patterns
 @import 'grid';
 @import 'header';
 @import 'footer';
