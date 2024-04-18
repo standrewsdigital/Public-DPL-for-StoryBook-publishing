@@ -48,7 +48,6 @@
 }
 
 .col {
-  float: left;
   grid-column: span 12; // Default to span full width
 
   @include respond-to(xxs) {
