@@ -41,7 +41,7 @@
             }
               // Active (or "selected") state
             &:active, &.selected {
-                border-radius: $link-focus-outline;
+                border-radius: var(--link-focus-outline);
                 border-radius: 1px;
                 -webkit-border-radius: 1px;
                 -moz-border-radius: 1px;
@@ -80,11 +80,11 @@
           }
             // Active (or "selected") state
           &:active, &.selected {
-              border-radius: $link-focus-outline;
-              -webkit-border-radius: $link-focus-outline;
-              -moz-border-radius: $link-focus-outline;
-              -ms-border-radius: $link-focus-outline;
-              -o-border-radius: $link-focus-outline;
+              border-radius: var(--link-focus-outline);
+              -webkit-border-radius: var(--link-focus-outline);
+              -moz-border-radius: var(--link-focus-outline);
+              -ms-border-radius: var(--link-focus-outline);
+              -o-border-radius: var(--link-focus-outline);
               background-color: $light-blue-primary;
               color: $blue-25-shade;
 }
