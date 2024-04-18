@@ -4,5 +4,3 @@ uploadToSftp.js
 
 # Ignore all node modules
 node_modules/
-
-compiled-css/
