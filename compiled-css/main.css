@@ -1769,13 +1769,12 @@ html, body {
 }
 
 .article-list .snippet {
-  width: 70%;
   padding-left: 1em;
 }
 .article-list .snippet .heading {
   font-size: 1.2em;
   line-height: 1.25;
-  margin: 20px 0 5px 0;
+  margin: 0 0 5px 0;
 }
 .article-list .snippet dl {
   margin: 0;
@@ -1804,13 +1803,6 @@ html, body {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 10px;
-}
-@media only screen and (max-width: 570px) {
-  .article-list .snippet dl dd {
-    font-weight: bold;
-    display: block;
-    line-height: 0;
-  }
 }
 .article-list .snippet .description {
   margin: 0 0 5px 0;
