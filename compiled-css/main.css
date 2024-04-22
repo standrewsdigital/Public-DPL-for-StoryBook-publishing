@@ -1913,11 +1913,19 @@ html, body {
 }
 .accordion-group details > summary::before {
   float: right;
-  content: "▲";
+  content: "expand_more";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
   color: #0f0f11;
 }
 .accordion-group details[open] > summary::before {
-  content: "▼";
+  content: "expand_less";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
 }
 .accordion-group details .accordion-content {
   padding: 15px;
