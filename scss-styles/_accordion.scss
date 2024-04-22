@@ -1,0 +1,70 @@
+.accordion-group {
+	margin-bottom: 1.2em;
+
+	details {
+		border-top: 1px solid $dark-grey-2;
+	
+		&:last-child {
+			border-bottom: 1px solid $dark-grey-2;
+		}
+	
+		> summary {
+			@include responsive-font-size(1.2em, 0.05em, 36em, 75em);
+			font-weight: 700;
+			color: $light-blue-primary;
+			cursor: pointer;
+			padding: 15px;
+			list-style: none;
+	
+			&:hover {
+				text-decoration: underline;
+			}
+			&:focus {
+				outline: 3px solid $orange-primary;
+				text-decoration: underline;
+			}
+			
+			&::before {
+				float: right;
+				content: '▲';
+				color: $dark-grey-2;
+			}
+		}
+	
+		&[open] > summary{
+			&::before {
+				content: '▼';
+			}
+		}
+	
+		.accordion-content {
+			padding: 15px;
+	
+			& > :first-child {
+				margin-top: 0;
+			}
+			& > :last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&:has(> .accordion-group-open) {
+		details:first-of-type {
+			clear: both;
+		}
+	}
+
+}
+
+.accordion-group-open {
+	font-family: var(--page-font-family);
+	color: $light-blue-primary;
+	border: none;
+	background: none;
+	font-size: 1em;
+	margin-bottom: 0.5rem;
+	text-decoration: underline;
+	float: right;
+	cursor: pointer;
+}
