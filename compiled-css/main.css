@@ -1877,4 +1877,71 @@ html, body {
   margin: 0;
 }
 
+.accordion-group {
+  margin-bottom: 1.2em;
+}
+.accordion-group details {
+  border-top: 1px solid #0f0f11;
+}
+.accordion-group details:last-child {
+  border-bottom: 1px solid #0f0f11;
+}
+.accordion-group details > summary {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #0071b3;
+  cursor: pointer;
+  padding: 15px;
+  list-style: none;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .accordion-group details > summary {
+    font-size: calc(1.2em + 0.05em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .accordion-group details > summary {
+    font-size: calc(1.2em + 0.05em);
+  }
+}
+.accordion-group details > summary:hover {
+  text-decoration: underline;
+}
+.accordion-group details > summary:focus {
+  outline: 3px solid #ffb400;
+  text-decoration: underline;
+}
+.accordion-group details > summary::before {
+  float: right;
+  content: "▲";
+  color: #0f0f11;
+}
+.accordion-group details[open] > summary::before {
+  content: "▼";
+}
+.accordion-group details .accordion-content {
+  padding: 15px;
+}
+.accordion-group details .accordion-content > :first-child {
+  margin-top: 0;
+}
+.accordion-group details .accordion-content > :last-child {
+  margin-bottom: 0;
+}
+.accordion-group:has(> .accordion-group-open) details:first-of-type {
+  clear: both;
+}
+
+.accordion-group-open {
+  font-family: var(--page-font-family);
+  color: #0071b3;
+  border: none;
+  background: none;
+  font-size: 1em;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  float: right;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=main.css.map */
