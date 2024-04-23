@@ -377,6 +377,13 @@
   src: local("PT Serif Bold Italic"), local("PTSerif-BoldItalic"), url(//fonts.gstatic.com/s/ptserif/v8/Foydq9xJp--nfYIx2TBz9WaVI6zN22yiurzcBKxPjFE.woff2) format("woff2"), url("../assets/fonts/pt-serif/bolditalic/PTF76F-webfont.woff") format("woff");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://fonts.gstatic.com/s/materialsymbolsoutlined/v175/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 body {
   background-color: var(--page-background-color);
   color: var(--page-text-color);
@@ -782,6 +789,22 @@ a:focus, .link:focus {
 
 .bg-danger {
   background-color: #ea1a13;
+}
+
+.material-icons-outlined {
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 1;
+  vertical-align: middle;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
 }
 
 *, *:after, *:before {
@@ -1526,6 +1549,13 @@ footer .footer-links a:hover, footer .footer-links a:focus {
   src: local("PT Serif Bold Italic"), local("PTSerif-BoldItalic"), url(//fonts.gstatic.com/s/ptserif/v8/Foydq9xJp--nfYIx2TBz9WaVI6zN22yiurzcBKxPjFE.woff2) format("woff2"), url("../assets/fonts/pt-serif/bolditalic/PTF76F-webfont.woff") format("woff");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://fonts.gstatic.com/s/materialsymbolsoutlined/v175/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 .category-header {
   background-color: #0071b3;
   color: #ffffff;
@@ -1544,7 +1574,7 @@ footer .footer-links a:hover, footer .footer-links a:focus {
 }
 
 .breadcrumbs {
-  padding: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .breadcrumbs ul {
@@ -1552,12 +1582,21 @@ footer .footer-links a:hover, footer .footer-links a:focus {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center; /* This ensures all items are aligned on the same line */
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center; /* Aligns the text and icons vertically */
 }
 
 .breadcrumbs li:not(:first-child)::before {
   display: inline-block;
-  margin: 0 0.25rem 0.25rem 0.25rem;
-  content: ">";
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+  content: "chevron_right";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
 }
 
 html, body {
@@ -1874,11 +1913,19 @@ html, body {
 }
 .accordion-group details > summary::before {
   float: right;
-  content: "▲";
+  content: "expand_more";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
   color: #0f0f11;
 }
 .accordion-group details[open] > summary::before {
-  content: "▼";
+  content: "expand_less";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
 }
 .accordion-group details .accordion-content {
   padding: 15px;
