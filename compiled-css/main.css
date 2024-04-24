@@ -1952,4 +1952,25 @@ html, body {
   cursor: pointer;
 }
 
+.text-banner-content {
+  text-align: center;
+}
+.text-banner-content.left {
+  text-align: left;
+}
+.text-banner-content.right {
+  text-align: right;
+}
+.text-banner-content a {
+  color: #fafafa;
+  text-decoration: underline;
+}
+.text-banner-content a:hover {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+.text-banner-content a:focus {
+  color: var(--link-focus-color);
+}
+
 /*# sourceMappingURL=main.css.map */
