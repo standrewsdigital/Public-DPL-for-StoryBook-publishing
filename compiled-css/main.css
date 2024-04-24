@@ -2097,7 +2097,6 @@ html, body {
 
 .article-list {
   padding: 1em 0;
-  border-bottom: 1px dashed black;
 }
 .article-list .snippet .heading {
   font-size: 1.2em;
@@ -2148,12 +2147,7 @@ html, body {
   }
 }
 
-.container {
-  justify-content: space-evenly;
-}
-
 .metadata-list {
-  margin-left: -23px !important;
   font-size: 1rem;
   overflow: auto;
 }
@@ -2169,6 +2163,15 @@ html, body {
 }
 .metadata-list .no-icon::after {
   content: ":";
+}
+
+.metadata-list_no-icon {
+  margin-left: -23px !important;
+}
+
+.pattern-wrapper {
+  border-bottom: 1px #6a6a6b dashed;
+  margin-bottom: 30px;
 }
 
 .alert {
