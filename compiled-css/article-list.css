@@ -1,5 +1,6 @@
 .article-list {
-  padding-bottom: 1em;
+  padding: 1em 0;
+  border-bottom: 1px dashed black;
 }
 .article-list .snippet .heading {
   font-size: 1.2em;
@@ -20,7 +21,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  content: "chevron_right";
+  content: "";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
 }
@@ -37,7 +38,7 @@
   content: "folder_open";
 }
 .article-list .snippet dd {
-  display: inline-block;
+  display: block;
   margin-bottom: 10px;
   margin-left: 20px;
 }
@@ -52,6 +53,25 @@
 
 .container {
   justify-content: space-evenly;
+}
+
+.metadata-list {
+  margin-left: -23px !important;
+  font-size: 1rem;
+  overflow: auto;
+}
+.metadata-list .full {
+  clear: left;
+  float: left;
+  display: block;
+  font-weight: 900;
+}
+.metadata-list .no-icon {
+  margin-right: 0.5rem;
+  width: auto !important;
+}
+.metadata-list .no-icon::after {
+  content: ":";
 }
 
 /*# sourceMappingURL=article-list.css.map */
