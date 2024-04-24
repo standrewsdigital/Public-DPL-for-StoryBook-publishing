@@ -1821,34 +1821,44 @@ html, body {
   margin: 0;
 }
 .article-list .snippet dl dt {
+  position: relative;
+  padding-left: 1.5em;
+}
+.article-list .snippet dl dt::before {
   display: inline-block;
-  visibility: hidden;
-}
-.article-list .snippet dl dt i {
-  font-style: italic;
-}
-.article-list .snippet dl dt span {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
   position: absolute;
-  width: 1px;
+  left: 0;
+  top: 0;
+  content: "chevron_right";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
 }
-.article-list .snippet dl dd {
+.article-list .snippet dl .date::before {
+  content: "event";
+}
+.article-list .snippet dl .time::before {
+  content: "schedule";
+}
+.article-list .snippet dl .location::before {
+  content: "place";
+}
+.article-list .snippet dl .folder-open::before {
+  content: "folder_open";
+}
+.article-list .snippet dd {
   display: inline-block;
   margin-bottom: 10px;
+  margin-left: 20px;
 }
-.article-list .snippet .description {
+.article-list .description {
   margin: 0 0 5px 0;
 }
 @media only screen and (max-width: 540px) {
-  .article-list .snippet .description {
+  .article-list .description {
     display: none;
   }
 }
+
 .container {
   justify-content: space-evenly;
 }
