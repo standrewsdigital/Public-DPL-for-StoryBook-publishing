@@ -1,6 +1,6 @@
 .article-list {
   padding: 1em 0;
-  border-bottom: 1px dashed grayscale($color: #000000);
+  
   .snippet {
     .heading {
       font-size: 1.2em;
@@ -62,17 +62,12 @@
   }
 }
 
-.container {
-  justify-content: space-evenly; 
-
-}
 
 .metadata-list {
-  margin-left: -23px !important;
+ //. margin-left: -23px !important;
   font-size: 1rem;
   overflow: auto;
-  //color: #6a6a6b;
- // border: 1px solid green;
+
  
   .full {
     clear: left;
@@ -88,4 +83,15 @@
   .no-icon::after {
     content: ":";
   }
+}
+
+.metadata-list_no-icon{
+    margin-left: -23px !important;
+}
+
+.pattern-wrapper {
+    border-bottom: 1px #6a6a6b dashed;
+   // border-top: 1px #6a6a6b dashed;
+    margin-bottom: 30px;
+   
 }
