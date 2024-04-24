@@ -1,5 +1,5 @@
-.article-list .snippet {
-  padding-left: 1em;
+.article-list {
+  padding-bottom: 1em;
 }
 .article-list .snippet .heading {
   font-size: 1.2em;
@@ -7,17 +7,16 @@
   margin: 0 0 5px 0;
 }
 .article-list .snippet dl {
-  margin: 0;
   font-size: 1rem;
   overflow: auto;
+  margin: 0;
 }
 .article-list .snippet dl dt {
   display: inline-block;
-  line-height: 1.5;
-  font-weight: bold;
+  visibility: hidden;
 }
 .article-list .snippet dl dt i {
-  font-weight: 400;
+  font-style: italic;
 }
 .article-list .snippet dl dt span {
   border: 0;
@@ -30,17 +29,19 @@
   width: 1px;
 }
 .article-list .snippet dl dd {
-  font-weight: bold;
   display: inline-block;
   margin-bottom: 10px;
 }
 .article-list .snippet .description {
   margin: 0 0 5px 0;
 }
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 540px) {
   .article-list .snippet .description {
     display: none;
   }
+}
+.container {
+  justify-content: space-evenly;
 }
 
 /*# sourceMappingURL=article-list.css.map */
