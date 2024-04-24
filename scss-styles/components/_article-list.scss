@@ -1,84 +1,91 @@
 .article-list {
-
-padding-bottom: 1em;
-    .snippet {
-
-        .heading {
-            font-size: 1.2em;
-            line-height: 1.25;
-            margin: 0 0 5px 0;
-        }
-
-        dl {
-            font-size: 1rem;
-            overflow: auto;
-            margin: 0;
-
-            dt {
-                position: relative; // Ensure the icon is positioned correctly relative to the dt
-                padding-left: 1.5em; // Give some space for the icon
-                &::before {
-                  display: inline-block;
-                  position: absolute;
-                  left: 0; // Position icon at the start of the dt
-                  top: 0; // Align icon with the top of the text
-                  content: 'chevron_right'; // Icon content will be defined for each specific dt class
-                  font-family: 'Material Symbols Outlined';
-                  font-feature-settings: 'liga'; // Enable ligatures
-                }
-            }
-
-                .date::before {
-                content: 'event';
-                }
-                .time::before {
-                content: 'schedule';
-                }
-                .location::before {
-                content: 'place';
-                }
-                //Folder open class, to be added to dt tag
-                .folder-open::before {
-                content: 'folder_open';
-                }
-            }
-
-            dd {
-                display: inline-block;
-                margin-bottom: 10px;
-                margin-left: 20px;
-                // margin-left: -35px;
-                // font-weight:100;
-                // font-style: initial;
-            }
-
-        }
-
-        .description {
-            margin: 0 0 5px 0;
-        }
-
-        @media only screen and (max-width: 540px) {
-            .description {
-                display: none;
-            }
-        }
+  padding: 1em 0;
+  border-bottom: 1px dashed grayscale($color: #000000);
+  .snippet {
+    .heading {
+      font-size: 1.2em;
+      line-height: 1.25;
+      margin: 0 0 5px 0;
     }
 
-@media (min-width: 540px) {
-    .image {
-       // width:25%
+    dl {
+      font-size: 1rem;
+      overflow: auto;
+      margin: 0;
+
+      dt {
+        position: relative; // Ensure the icon is positioned correctly relative to the dt
+        padding-left: 1.5em; // Give some space for the icon
+        &::before {
+          display: inline-block;
+          position: absolute;
+          left: 0; // Position icon at the start of the dt
+          top: 0; // Align icon with the top of the text
+          content: ""; // Icon content will be defined for each specific dt class
+          font-family: "Material Symbols Outlined";
+          font-feature-settings: "liga"; // Enable ligatures
+          
+        }
+       
+      }
+
+      .date::before {
+        content: "event";
+      }
+      .time::before {
+        content: "schedule";
+      }
+      .location::before {
+        content: "place";
+      }
+      //Folder open class, to be added to dt tag
+      .folder-open::before {
+        content: "folder_open";
+      }
     }
+
+    dd {
+      display: block;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+  }
+
+  .description {
+    margin: 0 0 5px 0;
+  }
+
+  @media only screen and (max-width: 540px) {
+    .description {
+      display: none;
+    }
+  }
 }
 
-
-// .rotate {
-//   transform: rotate(90deg);
-// }
-// .container {
-//   margin: 80px 0 80px 0;
-// }
-
 .container {
-    justify-content: space-evenly;
+  justify-content: space-evenly; 
+
+}
+
+.metadata-list {
+  margin-left: -23px !important;
+  font-size: 1rem;
+  overflow: auto;
+  //color: #6a6a6b;
+ // border: 1px solid green;
+ 
+  .full {
+    clear: left;
+    float: left;
+    display: block;
+    font-weight: 900;
+    //color:grey;
+  }
+  .no-icon {
+    margin-right: 0.5rem;
+    width:auto !important;
+  }
+  .no-icon::after {
+    content: ":";
+  }
 }
