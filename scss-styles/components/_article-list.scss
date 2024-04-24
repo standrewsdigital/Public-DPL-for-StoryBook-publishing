@@ -10,37 +10,48 @@ padding-bottom: 1em;
         }
 
         dl {
-      font-size: 1rem;
+            font-size: 1rem;
             overflow: auto;
             margin: 0;
 
             dt {
-                display: inline-block;
-                visibility: hidden;
-
-                i {
-                    font-style: italic;
+                position: relative; // Ensure the icon is positioned correctly relative to the dt
+                padding-left: 1.5em; // Give some space for the icon
+                &::before {
+                  display: inline-block;
+                  position: absolute;
+                  left: 0; // Position icon at the start of the dt
+                  top: 0; // Align icon with the top of the text
+                  content: 'chevron_right'; // Icon content will be defined for each specific dt class
+                  font-family: 'Material Symbols Outlined';
+                  font-feature-settings: 'liga'; // Enable ligatures
                 }
+            }
 
-                span {
-                    border: 0;
-                    clip: rect(0, 0, 0, 0);
-                    height: 1px;
-                    margin: -1px;
-                    overflow: hidden;
-                    padding: 0;
-                    position: absolute;
-                    width: 1px;
+                .date::before {
+                content: 'event';
+                }
+                .time::before {
+                content: 'schedule';
+                }
+                .location::before {
+                content: 'place';
+                }
+                //Folder open class, to be added to dt tag
+                .folder-open::before {
+                content: 'folder_open';
                 }
             }
 
             dd {
                 display: inline-block;
                 margin-bottom: 10px;
+                margin-left: 20px;
                 // margin-left: -35px;
                 // font-weight:100;
                 // font-style: initial;
             }
+
         }
 
         .description {
@@ -59,7 +70,7 @@ padding-bottom: 1em;
        // width:25%
     }
 }
-}
+
 
 // .rotate {
 //   transform: rotate(90deg);
