@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../compiled-css/main.css">
+</head>
+<body>
+    <!--Header-->
+    <header class="container">
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs header-content">
+                <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+            </div>
+        </div>
+    </header>
+    <!--Content-->
+
+		<div class="container">
+			<div class="row">
+				<div class="col col-12-md col-12-sm">
+					<h1>Accordion</h1>
+
+					<h2>Accordion - single</h2>
+					<div class="accordion-group">
+
+						<details>
+							<summary>Single accordion</summary>
+							<div class="accordion-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+							</div>
+
+						</details>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col col-12-md col-12-sm">
+					<h2>Accordion - group</h2>
+					<h3>With name attribute</h3>
+					<p>This group uses the name attribute to group the accordions together. Only one accordion can be open at a time. The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#browser_compatibility">name attribute isn't supported in Firefox</a> yet, but works with Chrome and other Chromium based browsers.</p>
+
+					<div class="accordion-group">
+						<details name="group-1">
+							<summary>Group accordion 1</summary>
+							<div class="accordion-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+							</div>
+						</details>
+						<details name="group-1">
+							<summary>Group accordion 2</summary>
+							<div class="accordion-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+							</div>
+						</details>
+						<details name="group-1">
+							<summary>Group accordion 3</summary>
+							<div class="accordion-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+							</div>
+						</details>
+					</div>
+
+
+
+					<h3>JavaScript-based concept</h3>
+					<p>No name attribute on these accordions means we can open multiple accordions at once. No JS, but a concept for how it could look.</p>
+
+					<div class="accordion-group">
+
+						<button class="accordion-group-open">Open all</button>
+
+						<details>
+							<summary>Group accordion 1</summary>
+							<div class="accordion-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>Group accordion 2</summary>
+							<div class="accordion-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>Group accordion 3</summary>
+							<div class="accordion-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
+								</p>
+							</div>
+						</details>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-lg col-12-xxs">
+                        <div class="footer-text">
+                            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                        </div>
+                        <div class="footer-links">
+                            <a href="/cookie-preferences">Cookie preferences</a>
+                            <a href="/accessibility-statement">Accessibility statement</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/website-help">Website help</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
