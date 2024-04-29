@@ -29,9 +29,73 @@
                     <li><a href="#primary-button-lg">Primary button large</a></li>
                     <li><a href="#action-button">Action button</a></li>
                     <li><a href="#action-button-lg">Action button large</a></li>
+                    <li><a href="#icon-buttons">Icon buttons</a></li>
+                    <!-- <li><a href="#tags">Tags</a></li> -->
+                    <li><a href="#dropdown-buttons">Dropdown buttons</a></li>
                 </ul>
+                <div id="dropdown-buttons">
+                    <h2>Hover dropdown buttons</h2>
 
-                <div id="primary-button">
+                    <div class="hover-dropdown-list">
+                        <button class="btn"
+                            onclick='let child = parentElement.querySelector(".dropdown-content"); let parent = parentElement.closest(".hover-dropdown-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown trigger
+                        </button>
+                        <ul class="dropdown-content" aria-labelledby="dropdown-primary">
+                            <li><a href="">Dropdown option 1</a></li>
+                            <li><a href="">Dropdown option 2</a></li>
+                            <li><a href="">Dropdown option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-dropdown-list">
+                        <button class="btn red" onclick='
+                            
+                            let child = parentElement.querySelector(".dropdown-content");
+                            let parent = parentElement.closest(".hover-dropdown-list"); 
+                             if (parent.classList.contains("selected")) {
+                                parent.classList.remove("selected");
+                            child.classList.remove("show");} else {parent.classList.add("selected");
+                            child.classList.add("show");
+                            }' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown trigger
+                        </button>
+                        <ul class="dropdown-content" aria-labelledby="dropdown-primary">
+                            <li><a href="">Dropdown option 1</a></li>
+                            <li><a href="">Dropdown option 2</a></li>
+                            <li><a href="">Dropdown option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-dropdown-list">
+                        <button class="btn green"
+                            onclick='let child = parentElement.querySelector(".dropdown-content"); let parent = parentElement.closest(".hover-dropdown-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown trigger
+                        </button>
+                        <ul class="dropdown-content" aria-labelledby="dropdown-primary">
+                            <li><a href="">Dropdown option 1</a></li>
+                            <li><a href="">Dropdown option 2</a></li>
+                            <li><a href="">Dropdown option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-dropdown-list">
+                        <button class="btn grey"
+                            onclick='let child = parentElement.querySelector(".dropdown-content"); let parent = parentElement.closest(".hover-dropdown-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown trigger
+                        </button>
+                        <ul class="dropdown-content" aria-labelledby="dropdown-primary">
+                            <li><a href="">Dropdown option 1</a></li>
+                            <li><a href="">Dropdown option 2Dropdown option 2Dropdown option 2Dropdown option 2</a></li>
+                            <li><a href="">Dropdown option 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="">
                     <h2>Primary buttons</h2>
                     <a type="button" class="btn" href="#">Primary</a>
                     <a type="button" class="btn red" href="#">Primary red</a>
@@ -42,16 +106,7 @@
                     <a type="button" class="btn purple" href="#">Primary purple</a>
                     <a type="button" class="btn white" href="#">Primary white</a>
                 </div>
-                <div id="primary-button">
-                    <h2>Primary buttons - AAA contrast complaint</h2>
-                    <a type="button" class="btn aaa-blue" href="#">Primary</a>
-                    <a type="button" class="btn aaa-red" href="#">Primary red</a>
-                    <a type="button" class="btn aaa-orange" href="#">Primary orange</a>
-                    <a type="button" class="btn aaa-green" href="#">Primary green</a>
-                    <a type="button" class="btn aaa-grey" href="#">Primary grey</a>
-                    <a type="button" class="btn aaa-burgundy" href="#">Primary burgundy</a>
-                    <a type="button" class="btn aaa-purple" href="#">Primary purple</a>
-                </div>
+
                 <div id="primary-button-lg">
                     <h2>Primary button - larger size</h2>
                     <a type="button" class="btn lg" href="#">Primary</a>
@@ -79,7 +134,7 @@
                     <a type="button" class="btn orange lg action" href="#">Primary orange</a>
                     <a type="button" class="btn white action lg" href="#">Primary white</a>
                 </div>
-
+                <!--
                 <div id="icon-buttons">
                     <h2>Icon buttons</h2>
                     <a type="button" class="btn" href="#">PDF document <i class="fa fa-file-pdf-o"
@@ -91,6 +146,19 @@
                     <a type="button" class="btn white" href="#">Word document <i class="fa fa-file-powerpoint-o"
                             aria-hidden="true"></i></a>
                 </div>
+            -->
+                <!-- tags should be a separate pattern
+                <div id="tags">
+                    <h2>Tags</h2>
+                    <a type="button" class="tag" href="#">Primary tag</a>
+                    <a type="button" class="tag red" href="#">Red tag</a>
+                    <a type="button" class="tag orange" href="#">Orange tag</a>
+                    <a type="button" class="tag green" href="#">Green tag</a>
+                    <a type="button" class="tag grey" href="#">Grey tag</a>
+                    <a type="button" class="tag burgundy" href="#">Burgundy tag</a>
+                    <a type="button" class="tag purple" href="#">Purple tag</a>
+                </div>
+            -->
 
             </div>
         </div>

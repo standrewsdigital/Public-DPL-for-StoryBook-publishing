@@ -1,8 +1,81 @@
+// Dropdown behaviour changes depending on the screen width.
+ $breakpoint-value: map-get($breakpoints, 'lg');
+
 @mixin options() {
     
-    // Colour options
-    // green, orange, red, grey, burgundy, purple, white
+    // ---- Colour options ----//
+    /*  The default primary colour is blue but other colours are supported
+        supported colour options:
+            burgundy,     
+            green, 
+            grey, 
+            orange,
+            purple,  
+            red, 
+            white
+    */
 
+    // burgundy buttons
+    &.burgundy {
+        background-color: $burgundy-primary;
+    }
+    &.burgundy:focus {
+        background-color: $burgundy-25-shade;
+    }
+    &.burgundy:hover {
+        background-color: $burgundy-25-shade;
+    }
+    // green buttons
+    &.green {
+        background-color: $green-primary;
+    }
+    &.green:focus {
+        background-color: $green-25-shade;
+    }
+    &.green:hover { 
+        background-color: $green-25-shade;
+    }
+    // grey buttons
+    &.grey {
+        background-color: $mid-grey-1;
+    }
+    &.grey:focus {
+        background-color: $dark-grey-3;
+    }
+    &.grey:hover {
+        background-color: $dark-grey-3;
+    }
+    // orange buttons
+    &.orange {
+        background-color: $dark-orange;
+    }
+    &.orange:focus {
+        background-color: $dark-orange-25-shade;
+    }
+    &.orange:hover {
+        background-color: $dark-orange-25-shade;
+    }
+    // purple buttons
+    &.purple {
+        background-color: $purple-primary;
+    }
+    &.purple:focus {
+        background-color: $purple-25-shade;
+    }
+    &.purple:hover {
+        background-color: $purple-25-shade;
+    }
+    // red buttons
+    &.red {
+        background-color: $red-primary;
+    }
+    &.red:focus {
+        background-color: $red-25-shade ;
+    }
+    &.red:hover {
+        background-color: $red-25-shade;
+    }
+    // white buttons
     &.white {
         background-color: #fff;
         color: $blue-primary;
@@ -21,123 +94,70 @@
         text-decoration: underline;
     }
 
-    &.green {
-        background-color: $green-primary;
-    }
-    &.green:focus {
-        background-color: $green-25-shade;
-    }
-    &.green:hover { 
-        background-color: $green-25-shade;
-    }
-
-    &.orange {
-        background-color: $dark-orange;
-    }
-    &.orange:focus {
-        background-color: $dark-orange-25-shade;
-    }
-    &.orange:hover {
-        background-color: $dark-orange-25-shade;
-    }
-
-    &.red {
-        background-color: $red-primary;
-    }
-    &.red:focus {
-        background-color: $red-25-shade ;
-    }
-    &.red:hover {
-        background-color: $red-25-shade;
-    }
-
-    &.grey {
-        background-color: $mid-grey-1;
-    }
-    &.grey:focus {
-        background-color: $dark-grey-3;
-    }
-    &.grey:hover {
-        background-color: $dark-grey-3;
-    }
-
-    &.burgundy {
-        background-color: $burgundy-primary;
-    }
-    &.burgundy:focus {
-        background-color: $burgundy-25-shade;
-    }
-    &.burgundy:hover {
-        background-color: $burgundy-25-shade;
-    }
-
-    &.purple {
-        background-color: $purple-primary;
-    }
-    &.purple:focus {
-        background-color: $purple-25-shade;
-    }
-    &.purple:hover {
-        background-color: $purple-25-shade;
-    }
-
-    // Size options
-    // lg
+    // ------ Size options ------//
+    // Size options: lg
     &.lg {
         font-size: 1em;
         line-height: 1.5;
     }
 
-    // Size options
-    // action
+    // ----- action buttons -----//
     &.action{
+        top:0.1rem;
         border-bottom: 3px $blue-25-shade solid;
         font-weight: bold;
         color: white;
         position: relative;
         text-align: left;
-        padding-top: 0.1rem;
+        padding-top: 0.3rem;
+        padding-left: 1rem;
+    
+ 
+
+        // Colour options 
+        // for the action bottom border
+        &.green{
+            border-bottom: 3px $green-25-shade solid;
+        }
+        &.orange{
+            border-bottom: 3px $dark-orange-25-shade solid;
+        }
+        &.red{
+            border-bottom: 3px $red-25-shade solid;
+        }
+        &.burgundy{
+            border-bottom: 3px $burgundy-25-shade solid;
+        }
+        &.green{
+            border-bottom: 3px $green-25-shade solid;
+        }
+        &.purple{
+            border-bottom: 3px $purple-25-shade solid;
+        }
+        &.grey{
+            border-bottom: 3px $dark-grey-3 solid;
+        }
+        &.white{
+            background-color: #fff;
+            color: $blue-primary;
+            border: 1px $blue-25-shade solid;
+            border-bottom: 3px #0071b3 solid;
+            padding-bottom: 6px;
+        }
     }
 
-    // Colour options for the action bottom border
-    &.action.green{
-        border-bottom: 3px $green-25-shade solid;
-    }
-    &.action.orange{
-        border-bottom: 3px $dark-orange-25-shade solid;
-    }
-    &.action.red{
-        border-bottom: 3px $red-25-shade solid;
-    }
-    &.action.burgundy{
-        border-bottom: 3px $burgundy-25-shade solid;
-    }
-    &.action.green{
-        border-bottom: 3px $green-25-shade solid;
-    }
-    &.action.purple{
-        border-bottom: 3px $purple-25-shade solid;
-    }
-    &.action.grey{
-        border-bottom: 3px $dark-grey-3 solid;
-    }
-    &.action.white{
-        background-color: #fff;
-        color: $blue-primary;
-        border: 1px $blue-25-shade solid;
-        border-bottom: 3px #0071b3 solid;
-        padding-bottom: 6px;
-    }
     // Add the > arrow to action buttons
     &.action:after{
         content: "";
-        margin-bottom: -0.2rem;
-        margin-top: 0.7rem;
-        margin-left: 0.8rem;
+        right: 0rem;
+        margin-bottom: -0.1rem;
+        margin-top: 0.1rem;
+        margin-left: 0.2rem;
+        margin-right: 0rem;
         border: 1rem solid #fff;
         border-width: 0px 0.3rem 0.3rem 0px;
         display: inline-block;
-        padding: 0.4rem;
+        padding: 0.3rem;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
     }
@@ -145,94 +165,134 @@
         border: 1rem solid $blue-primary;
         border-width: 0px 0.3rem 0.3rem 0px;
     }
-
-    // &.aaa-green {
-    //     background-color: $aaa-green-primary;
-    // }
     
-    // &.aaa-green:focus {
-    //     background-color: $aaa-green-25-shade;
-    // }
-
-    // &.aaa-green:hover {
-    //     color: #fff;    
-    //     background-color: $aaa-green-25-shade;
-    // }
-
-    // &.aaa-orange {
-    //     background-color: $aaa-dark-orange;
-    // }
-    // &.aaa-orange:focus {
-    //     color: #fff;    
-    //     background-color: $aaa-dark-orange-25-shade;
-    // }
-    // &.aaa-orange:hover {
-    //     color: #fff;    
-    //     background-color: $aaa-dark-orange-25-shade;
-    // }
-
-    // &.aaa-red {
-    //     background-color: $aaa-red-primary;
-    // }
-    // &.aaa-red:focus {
-    //     color: #fff;    
-    //     background-color: $aaa-red-25-shade ;
-    // }
-    // &.aaa-red:hover {
-    //     color: #fff;    
-    //     background-color: $aaa-red-25-shade;
-    // }
-
-    // &.aaa-grey {
-    //     background-color:$aaa-dark-grey;
-    // }
-    // &.aaa-grey:focus {
-    //     color: #fff;    
-    //     background-color: $aaa-dark-grey-25-shade;
-    // }
-    // &.aaa-grey:hover {
-    //     color: #fff;    
-    //     background-color: $aaa-dark-grey-25-shade;
-    // }
-
-    // &.aaa-burgundy {
-    //     background-color: $aaa-burgundy-primary;
-    // }
-    // &.aaa-burgundy:focus {
-    //     color: #fff;    
-    //     background-color: $aaa-burgundy-25-shade;
-    // }
-    // &.aaa-burgundy:hover {
-    //     color: #fff;    
-    //     background-color: $aaa-burgundy-25-shade;
-    // }
-
-    // &.aaa-purple {
-    //     background-color: $aaa-purple-primary;
-    // }
-    // &.aaa-purple:focus {
-    //     color: #fff;    
-    //     background-color: $aaa-purple-25-shade;
-    // }
-    // &.aaa-purple:hover {
-    //     color: #fff;    
-    //     background-color: $aaa-purple-25-shade;
-    // }
-    // &.aaa-blue {
-    //     background-color: $aaa-blue-primary;
-    // }
-    // &.aaa-blue:focus {
-    //     color: #fff;    
-    //     background-color: $aaa-blue-25-shade;
-    // }
-    // &.aaa-blue:hover {
-    //     color: #fff;    
-    //     background-color: $aaa-blue-25-shade;
-    // }
 }
 
+// --------- Dropdown list styles -----------//
+.hover-dropdown-list{
+    position: relative;
+    display: inline-block;
 
+}
+
+.hover-dropdown-list .btn{
+    margin: 0 !important;
+    padding-right: 3rem;
+}
+
+// Animation for opening and closing the dropdown
+@keyframes out {
+    from   {max-height: 0%;}
+    to {max-height: 100%;}
+}
+
+// On click show dropdown
+.show{
+    display: block !important;
+}
+
+// styles for the dropdown content 
+.dropdown-content{
+    overflow: hidden;
+    position: absolute;
+    background-color: var(--page-background-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0px 0 0;
+    list-style: none;
+    font-size: 1rem;
+    text-align: left;
+    background-color: var(--page-background-color);
+    border: 1px solid #6a6a6b;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+    background-clip: padding-box;
+
+    & >li>a{
+        display: block;
+        padding: 6px 22px;
+        clear: both;
+        font-weight: normal;
+        line-height: 1.5;
+        color: var(--page-text-color);
+    }
+
+    & >li>a:hover{
+        background: var(--page-highlight-background-color);
+        color: var(--page-text-color);
+        text-decoration: none;
+    }
+}
+
+// Adds the > to the button
+ .hover-dropdown-list:after {
+    content: "";
+    position: absolute;
+    pointer-events: all;
+    right: 0.9rem;
+    top: 0.6rem;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:focus, .btn:active{
+    outline: 3px solid #FFB400;
+}
+
+// On click close dropdown 
+@media (min-width: 800px) {
+    .hover-dropdown-list:not(.selected):hover .btn:hover:after{
+        top: 1rem;
+        transform: rotate(135deg);
+        pointer-events: all;
+    }
+}
+
+// On click open dropdown 
+.selected:after {
+    top: 0.6rem;
+    transform: rotate(135deg);
+    pointer-events: all;
+}
+
+// On click close dropdown 
+@media (min-width: 800px) {
+    .hover-dropdown-list:not(.selected):hover .dropdown-content   {
+        display: block;
+        animation-name: out;
+        animation-duration: 0.2s;
+    }
+}
+
+@media (min-width:$breakpoint-value) {
+// Only apply the hover action to full size screens
+.hover-dropdown-list:not(.selected):hover .btn:after  {
+    top: 1rem;
+    transform: rotate(135deg);
+    pointer-events: all;  
+}
+}
+
+// --------- End dropdown list styles -----------//
+
+// Styling for the default blue button with white text
 .btn {
+    z-index: 1;
     margin-bottom: 5px;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -252,7 +312,7 @@
     @include options;
 }
 
-// Styling for the default blue button
+
 .btn:focus {
     color: #fff;    
     background-color: $blue-25-shade;
@@ -265,5 +325,5 @@
 
 .btn:active {
     color: #202024;    
-    background-color: $link-focus-background;
+    background-color: var(--link-focus-background);
 }
