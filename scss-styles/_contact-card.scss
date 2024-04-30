@@ -1,0 +1,73 @@
+.contact-card {
+	display: grid;
+	grid-template-columns: 6rem 1fr auto;
+	column-gap: 1em;
+	padding: 1em 0;
+
+	.contact-card-avatar {
+		img {
+			height: auto;
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+
+	.contact-card-information {
+		> * {
+			margin: 0;
+		}
+
+		h2, h3, h4, h5, h6 {
+			@include responsive-font-size(1.44em, 0.1225em, 36em, 75em);
+		}
+
+		.contact-card-summary {
+			margin-top: 10px;
+		}
+	}
+
+	.contact-card-contact {
+		> div[class^='contact-card-contact'] {
+			text-align: right;
+			margin-bottom: 0.3em;
+		}
+		
+		.contact-card-link {
+			padding: 0.4em 0.5em;
+			display: inline-block;
+			border: 1px solid $mid-grey-1;
+
+			&::before {
+				font-family: 'Material Symbols Outlined';
+				font-feature-settings: 'liga';
+				-webkit-font-feature-settings: 'liga';
+				-moz-font-feature-settings: 'liga';
+				font-variation-settings: 'FILL' 1;
+
+				text-decoration: none;
+				display: inline-block;
+				color: $dark-grey-1;
+				opacity: 0.7;
+				font-size: 26px;
+
+				position: relative;
+				top: 8px;
+				left: 0;
+				line-height: 0;
+				margin-right: 0.2em;
+			}
+		}
+
+		.contact-card-contact-phone {
+			.contact-card-link::before {
+				content: 'phone_enabled';
+			}
+		}
+		.contact-card-contact-email {
+			.contact-card-link::before {
+				content: 'mail';
+			}
+		}
+	}
+
+}
