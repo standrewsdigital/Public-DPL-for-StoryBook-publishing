@@ -7,7 +7,7 @@ before_script:
   # Install necessary utilities
   - sudo apt-get install -y wget zip unzip curl software-properties-common
   # Download and install Node.js
-  - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+  - curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
   - sudo apt-get install -y nodejs
   # Verify Node.js and npm installation
   - node -v
@@ -29,6 +29,6 @@ run_tests:
     - ./node_modules/.bin/http-server ./html-examples -p 8080 &
     # Wait a bit to ensure the server is up
     - sleep 5
-    - npm run ./test/test-html-css
+    - npm run ./test/test-html-css.js
     # Stop the BrowserStack Local
     - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
