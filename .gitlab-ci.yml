@@ -29,6 +29,6 @@ run_tests:
     - ./node_modules/.bin/http-server ./html-examples -p 8080 &
     # Wait a bit to ensure the server is up
     - sleep 5
-    - npm run test-html-css
+    - npm run ./test/test-html-css
     # Stop the BrowserStack Local
     - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
