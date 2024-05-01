@@ -1,14 +1,19 @@
-image: node:latest
-
 stages:
   - test
 
 before_script:
+  # Update package lists
+  - sudo apt-get update
+  # Install necessary utilities
+  - sudo apt-get install -y wget zip unzip curl software-properties-common
+  # Download and install Node.js
+  - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+  - sudo apt-get install -y nodejs
+  # Verify Node.js and npm installation
+  - node -v
+  - npm -v
   # Download the BrowserStack binary file
   - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
-  # For OS X systems, replace the above command with the appropriate one
-  # Install zip and unzip
-  - apt-get install zip unzip
   # Unzip the BrowserStack Local binary file
   - unzip BrowserStackLocal-linux-x64.zip
   # Run the file with your access key
