@@ -1,7 +1,27 @@
+image: node:latest
+
 stages:
   - test
 
-pass_no_matter_what:
+before_script:
+   #Download the browserstack binary file
+   - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
+   #For OS X systems, use the following command
+   #install zip unzip bash file
+   - apt-get install zip unzip
+   #Unzip the BrowserStack Local binary file
+   - unzip BrowserStackLocal-linux-x64.zip
+   #Run the file with your access key
+   - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
+   # Install Node.js dependencies including http-server
+  - npm install puppeteer mocha chai http-server
+
+run_tests:
   stage: test
   script:
-    - echo "This job passes no matter what."
+    # Start the server in the background; serve files from the 'public' directory
+    - ./node_modules/.bin/http-server ./html-examples -p 8080 &
+    # Wait a bit to ensure the server is up
+    - sleep 5
+    - npm run test-html-css
+    - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
