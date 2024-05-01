@@ -1,25 +1,25 @@
 stages:
   - test
 
-before_script:
-  # Update package lists
-  - sudo apt-get update
-  # Install necessary utilities
-  - sudo apt-get install -y wget zip unzip curl software-properties-common
-  # Download and install Node.js
-  - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
-  # Verify Node.js and npm installation
-  - node -v
-  - npm -v
-  # Download the BrowserStack binary file
-  - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
-  # Unzip the BrowserStack Local binary file
-  - unzip BrowserStackLocal-linux-x64.zip
-  # Run the file with your access key
-  - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
-  # Install Node.js dependencies including http-server
-  - npm install puppeteer mocha chai http-server
+# before_script:
+#   # Update package lists
+#   - sudo apt-get update
+#   # Install necessary utilities
+#   - sudo apt-get install -y wget zip unzip curl software-properties-common
+#   # Download and install Node.js
+#   - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+#   - sudo apt-get install -y nodejs
+#   # Verify Node.js and npm installation
+#   - node -v
+#   - npm -v
+#   # Download the BrowserStack binary file
+#   - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
+#   # Unzip the BrowserStack Local binary file
+#   - unzip BrowserStackLocal-linux-x64.zip
+#   # Run the file with your access key
+#   - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
+#   # Install Node.js dependencies including http-server
+#   - npm install puppeteer mocha chai http-server
 
 run_tests:
   stage: test
