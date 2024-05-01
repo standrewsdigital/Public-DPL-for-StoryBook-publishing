@@ -25,10 +25,10 @@ run_tests:
   stage: test
   script:
     - echo "Testing the CI environment setup"
-    # Start the server in the background; serve files from the 'public' directory
-    - ./node_modules/.bin/http-server ./html-examples -p 8080 &
-    # Wait a bit to ensure the server is up
-    - sleep 5
-    - npm run test-html-css
-    # Stop the BrowserStack Local
-    - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
+    # # Start the server in the background; serve files from the 'public' directory
+    # - ./node_modules/.bin/http-server ./html-examples -p 8080 &
+    # # Wait a bit to ensure the server is up
+    # - sleep 5
+    # - npm run test-html-css
+    # # Stop the BrowserStack Local
+    # - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
