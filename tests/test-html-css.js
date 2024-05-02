@@ -1,5 +1,7 @@
-const puppeteer = require('puppeteer');
-const expect = require('chai').expect;
+import puppeteer from 'puppeteer';
+import chai from 'chai';
+
+const expect = chai.expect;
 
 // This test should fail
 
