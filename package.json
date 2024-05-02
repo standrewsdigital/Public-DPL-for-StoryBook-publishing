@@ -4,8 +4,9 @@
   "description": "the css library for the sta website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss": "sass --watch scss-styles/:compiled-css/"
+    "test": "node ./test/test-script.js",
+    "compile-scss": "sass --watch scss-styles/:compiled-css/",
+    "postinstall": "npm update browserstack-node-sdk"
   },
   "author": "teo udrea",
   "license": "ISC",
@@ -13,6 +14,10 @@
     "basic-ftp": "^5.0.4",
     "dotenv": "^16.4.5",
     "sass": "^1.75.0",
+    "selenium-webdriver": "^4.20.0",
     "ssh2-sftp-client": "^10.0.0"
+  },
+  "devDependencies": {
+    "browserstack-node-sdk": "^1.32.8"
   }
 }

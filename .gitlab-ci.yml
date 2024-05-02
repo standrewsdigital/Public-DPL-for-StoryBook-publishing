@@ -1,7 +1,22 @@
 stages:
   - test
 
-pass_no_matter_what:
-  stage: test
-  script:
-    - echo "This job passes no matter what."
+
+before_script:
+   #Download the browserstack binary file
+   - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
+   #For OS X systems, use the following command
+   #- wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip"
+   #Unzip the BrowserStack Local binary file
+   - unzip BrowserStackLocal-linux-x64.zip
+   #Run the file with your access key
+   - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
+
+   #For Windows machine - Download and start the browserstack binary file .
+   - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-win32.zip"
+   - powershell.exe D:\BrowserStackLocal.exe
+
+test:
+   script:
+         - npm run test
+         - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
