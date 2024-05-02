@@ -1,8 +1,14 @@
 .contact-card {
+	container-type: inline-size;
 	display: grid;
 	grid-template-columns: 6rem 1fr auto;
 	column-gap: 1em;
 	padding: 1em 0;
+	
+
+	& + .contact-card {
+		border-top: 1px solid $mid-grey-2;
+	}
 
 	.contact-card-avatar {
 		img {
@@ -22,7 +28,23 @@
 		}
 
 		.contact-card-summary {
-			margin-top: 10px;
+			margin-top: 0.8em;
+		}
+	}
+
+	.contact-card-link {
+		padding: 0.4em 0.5em;
+		display: inline-block;
+		border: 1px solid $mid-grey-1;
+		font-size: 0.9em;
+
+		&:hover {
+			background: $mid-grey-2;
+			color: $dark-grey-1;
+		}
+		&:focus {
+			text-decoration: none;
+			background: $mid-grey-2;
 		}
 	}
 
@@ -33,10 +55,6 @@
 		}
 		
 		.contact-card-link {
-			padding: 0.4em 0.5em;
-			display: inline-block;
-			border: 1px solid $mid-grey-1;
-
 			&::before {
 				font-family: 'Material Symbols Outlined';
 				font-feature-settings: 'liga';
@@ -70,4 +88,109 @@
 		}
 	}
 
+	.contact-card-tags {
+		grid-column: 2 / -1;
+		padding: 0;
+		display: inline-block;
+		list-style-type: none;
+		margin: 0.8em 0 0 0;
+
+		.contact-card-tag {
+			display: inline-block;
+		}
+	}
+
+	.contact-card-link-small {
+		font-size: 0.8em;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.contact-card {
+		.contact-card-contact {
+			.contact-card-link {
+
+				&::before {
+					color: $light-grey-1;
+				}
+				&:hover::before {
+					color: $dark-grey-2;
+				}
+
+			}
+		}
+
+		.contact-card-link {
+			&:focus {
+				color: $dark-grey-2;
+
+				&::before {
+					color: $dark-grey-2;
+				}
+			}
+		}
+	}
+}
+
+@container (max-width: 900px) {
+	.contact-card {
+		grid-template-columns: 6em 1fr;
+		.contact-card-information {
+			grid-column: 2;
+		}
+		.contact-card-contact {
+			grid-column: 2;
+			grid-row: 2;
+			margin-top: 0.4em;
+
+			> div[class^='contact-card-contact'] {
+				display: inline-block;
+				text-align: left;
+				margin-bottom: 0.3em;
+			}
+		}
+		.contact-card-tags {
+			margin-top: 0.3em;
+		}
+		.contact-card-link-small {
+			font-size: 0.8em;
+			margin-bottom: 0.3em;
+		}
+	}
+}
+
+@container (max-width: 370px) {
+	.contact-card {
+		.contact-card-contact {
+			> div[class^='contact-card-contact'] {
+				text-align: center;
+				width: 100%;
+
+				.contact-card-link {
+					width: 100%;
+					font-size: 1em;
+				}
+			}
+		}
+		.contact-card-link-small {
+			font-size: 0.9em;
+		}
+	}
+}
+
+@container (max-width: 300px) {
+	.contact-card {
+		.contact-card-information {
+			grid-column: 1 / -1;
+			grid-row: 2;
+		}
+		.contact-card-contact {
+			grid-column: 1 / -1;
+			grid-row: 3;
+		}
+		.contact-card-tags {
+			grid-column: 1 / -1;
+		}
+	}
+	
 }
