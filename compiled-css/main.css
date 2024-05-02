@@ -387,7 +387,7 @@
 body {
   background-color: var(--page-background-color);
   color: var(--page-text-color);
-  font-family: var(--page-font-family);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 100%;
 }
 @media (min-width: 576px) {
@@ -1202,7 +1202,7 @@ footer .footer-links a:hover, footer .footer-links a:focus {
   }
 }
 .main-content {
-  font-family: var(--page-font-family);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 
 .bg-color-name {
@@ -1755,7 +1755,7 @@ html, body {
   color: #00539b;
   text-decoration: none;
   font-weight: bold;
-  font-family: var(--page-font-family);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
 .pagination .page-link:hover {
@@ -1941,7 +1941,7 @@ html, body {
 }
 
 .accordion-group-open {
-  font-family: var(--page-font-family);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #0071b3;
   border: none;
   background: none;
