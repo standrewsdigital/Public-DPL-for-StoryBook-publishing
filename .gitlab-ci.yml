@@ -9,9 +9,9 @@ before_script:
    #Unzip the BrowserStack Local binary file
    - unzip BrowserStackLocal-linux-x64.zip
    #Run the file with your access key
-   - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
+   - ./BrowserStackLocal --key D87TqMzmpus7Fy2iePP4 --daemon start
 
 test:
    script:
          - npm run test
-         - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
+         - ./BrowserStackLocal --key D87TqMzmpus7Fy2iePP4 --daemon stop
