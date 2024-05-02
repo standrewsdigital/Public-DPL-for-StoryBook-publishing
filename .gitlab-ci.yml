@@ -13,5 +13,6 @@ before_script:
 
 test:
    script:
+         - npm install
          - npm run test
          - ./BrowserStackLocal --key D87TqMzmpus7Fy2iePP4 --daemon stop
