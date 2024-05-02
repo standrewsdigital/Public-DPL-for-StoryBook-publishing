@@ -18,6 +18,9 @@ before_script:
   - unzip BrowserStackLocal-linux-x64.zip
   # Run the file with the access key
   - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
+  # Install all Chrome-related libraries in order to run puppeteer
+  - sudo apt-get update
+  - sudo apt-get install -y wget unzip libnss3-dev libglib2.0-0 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxi6 libxtst6 libnss3 libcups2 libxss1 libxrandr2 libasound2 libpangocairo-1.0-0 libatk1.0-0 libatk-bridge2.0-0 libgtk-3-0
   # Install Node.js dependencies including http-server
   - npm install --save -dev puppeteer mocha chai http-server
 
