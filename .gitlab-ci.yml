@@ -16,10 +16,10 @@ before_script:
   - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
   # Unzip the BrowserStack Local binary file
   - unzip BrowserStackLocal-linux-x64.zip
-  # Run the file with your access key
+  # Run the file with the access key
   - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
   # Install Node.js dependencies including http-server
-  - npm install puppeteer mocha chai http-server
+  - npm install --save -dev puppeteer mocha chai http-server
 
 run_tests:
   stage: test
@@ -29,7 +29,7 @@ run_tests:
     - ./node_modules/.bin/http-server ./html-examples -p 8080 &
     # Wait a bit to ensure the server is up
     - sleep 5
-    - node ./tests/test-html-css.js
+    - npm test
     # - npm run ./tests/test-html-css.js
     # Stop the BrowserStack Local
     - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
