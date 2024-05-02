@@ -25,7 +25,7 @@ run_tests:
   stage: test
   script:
     - echo "Testing the CI environment setup"
-    # Start the server in the background; serve files from the 'public' directory
+    # Start the server in the background; serve files from the 'html-examples' directory
     - ./node_modules/.bin/http-server ./html-examples -p 8080 &
     # Wait a bit to ensure the server is up
     - sleep 5
