@@ -19,5 +19,6 @@
   },
   "devDependencies": {
     "browserstack-node-sdk": "^1.32.8"
-  }
+  },
+  "type": "module"
 }
