@@ -1,4 +1,3 @@
-
 .content-section {
 	blockquote {
 		border: 0;
@@ -8,70 +7,104 @@
 		padding: 1em 1.2em;
 	}
 }
+
 .blockquote {
 	border-left: 5px solid #dedede;
 	margin: 0 0 1.5625rem 0;
 	padding: 1em 1.2em;
+
 	&::after {
 		clear: both;
 		content: "";
 		display: block;
 	}
+
 	>blockquote {
 		border: 0;
 		margin: 0;
 		font-size: inherit;
 		padding: 0;
 	}
-}
-.blockquote__author {
-	font-size: 1rem;
-	font-style: normal;
-	line-height: inherit;
-	padding: 1.5625rem 0 0 0;
-	display: flex;
-	align-items: center;
-}
-.blockquote__author-thumbnail {
-	border-radius: 50%;
-	height: 50px;
-	width: 50px;
-	overflow: hidden;
-	position: relative;
-	margin-right: 1rem;
-	img {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
+
+	.author {
+		font-size: 1rem;
+		font-style: normal;
+		line-height: inherit;
+		padding: 1.5625rem 0 0 0;
+		display: flex;
+		align-items: center;
 	}
-}
-.blockquote--pull {
-	background: none;
-	border-left: 0;
-	font-size: 1.2em;
-	margin: 0 auto;
-	max-width: 70ch;
-	padding: 0;
-}
-@media (min-width: 576px) {
-	.blockquote__author {
-		float: right;
+
+	.author-thumbnail {
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		overflow: hidden;
+		position: relative;
+		margin-right: 1rem;
+
+		img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
 	}
-	.blockquote__author-thumbnail {
-		height: 80px;
-		width: 80px;
+
+	.pull {
+		background: none;
+		border-left: 0;
+		font-size: 1.2em;
+		margin: 0 auto;
+		max-width: 70ch;
+		padding: 0;
 	}
-}
-@media (min-width: 36em) and (max-width: 75em) {
-	.blockquote--pull {
-		font-size: calc( 1.2em + .05 * ( ( 100vw - 36em) / 39 ) );
+
+	@media (min-width: 576px) {
+		.author {
+			float: right;
+		}
+
+		.author-thumbnail {
+			height: 80px;
+			width: 80px;
+		}
 	}
-}
-@media (min-width: 75em) {
-	.blockquote--pull {
-		font-size: 1.25em;
+
+	@media (min-width: 36em) and (max-width: 75em) {
+		.pull {
+			font-size: calc(1.2em + .05 * ((100vw - 36em) / 39));
+		}
 	}
+
+	@media (min-width: 75em) {
+		.pull {
+			font-size: 1.25em;
+		}
+	}
+
+
+	.font-scale-2 {
+		font-size: 1.44em !important;
+		line-height: inherit !important
+	}
+
+	@media (min-width: 36em) and (max-width: 75em) {
+		.font-scale-2 {
+			font-size: calc(1.44em + .1225 * ((100vw - 36em) / 39)) !important
+		}
+	}
+
+	@media (min-width: 75em) {
+		.font-scale-2 {
+			font-size: 1.5625em !important
+		}
+	}
+
 }
 
+.blockquote.pull {
+	border-left: none;
+	margin: 0 auto;
+}

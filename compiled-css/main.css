@@ -1976,8 +1976,7 @@ html, body {
   font-size: inherit;
   padding: 0;
 }
-
-.blockquote__author {
+.blockquote .author {
   font-size: 1rem;
   font-style: normal;
   line-height: inherit;
@@ -1985,8 +1984,7 @@ html, body {
   display: flex;
   align-items: center;
 }
-
-.blockquote__author-thumbnail {
+.blockquote .author-thumbnail {
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -1994,15 +1992,14 @@ html, body {
   position: relative;
   margin-right: 1rem;
 }
-.blockquote__author-thumbnail img {
+.blockquote .author-thumbnail img {
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
-.blockquote--pull {
+.blockquote .pull {
   background: none;
   border-left: 0;
   font-size: 1.2em;
@@ -2010,25 +2007,43 @@ html, body {
   max-width: 70ch;
   padding: 0;
 }
-
 @media (min-width: 576px) {
-  .blockquote__author {
+  .blockquote .author {
     float: right;
   }
-  .blockquote__author-thumbnail {
+  .blockquote .author-thumbnail {
     height: 80px;
     width: 80px;
   }
 }
 @media (min-width: 36em) and (max-width: 75em) {
-  .blockquote--pull {
+  .blockquote .pull {
     font-size: calc(1.2em + 0.05 * (100vw - 36em) / 39);
   }
 }
 @media (min-width: 75em) {
-  .blockquote--pull {
+  .blockquote .pull {
     font-size: 1.25em;
   }
+}
+.blockquote .font-scale-2 {
+  font-size: 1.44em !important;
+  line-height: inherit !important;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .blockquote .font-scale-2 {
+    font-size: calc(1.44em + 0.1225 * (100vw - 36em) / 39) !important;
+  }
+}
+@media (min-width: 75em) {
+  .blockquote .font-scale-2 {
+    font-size: 1.5625em !important;
+  }
+}
+
+.blockquote.pull {
+  border-left: none;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */
