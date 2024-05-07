@@ -1,28 +1,31 @@
-.content-section blockquote {
+.container {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+.container blockquote {
   border: 0;
   border-left: 5px solid #dedede;
   font-size: inherit;
   margin: 0 0 1.5625rem 0;
   padding: 1em 1.2em;
 }
-
-.blockquote {
+.container .blockquote {
   border-left: 5px solid #dedede;
   margin: 0 0 1.5625rem 0;
   padding: 1em 1.2em;
 }
-.blockquote::after {
+.container .blockquote::after {
   clear: both;
   content: "";
   display: block;
 }
-.blockquote > blockquote {
+.container .blockquote > blockquote {
   border: 0;
   margin: 0;
   font-size: inherit;
   padding: 0;
 }
-.blockquote .author {
+.container .blockquote .author {
   font-size: 1rem;
   font-style: normal;
   line-height: inherit;
@@ -30,7 +33,7 @@
   display: flex;
   align-items: center;
 }
-.blockquote .author-thumbnail {
+.container .blockquote .author-thumbnail {
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -38,14 +41,14 @@
   position: relative;
   margin-right: 1rem;
 }
-.blockquote .author-thumbnail img {
+.container .blockquote .author-thumbnail img {
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.blockquote .pull {
+.container .blockquote .pull {
   background: none;
   border-left: 0;
   font-size: 1.2em;
@@ -54,40 +57,39 @@
   padding: 0;
 }
 @media (min-width: 576px) {
-  .blockquote .author {
+  .container .blockquote .author {
     float: right;
   }
-  .blockquote .author-thumbnail {
+  .container .blockquote .author-thumbnail {
     height: 80px;
     width: 80px;
   }
 }
 @media (min-width: 36em) and (max-width: 75em) {
-  .blockquote .pull {
+  .container .blockquote .pull {
     font-size: calc(1.2em + 0.05 * (100vw - 36em) / 39);
   }
 }
 @media (min-width: 75em) {
-  .blockquote .pull {
+  .container .blockquote .pull {
     font-size: 1.25em;
   }
 }
-.blockquote .font-scale-2 {
+.container .blockquote .font-scale-2 {
   font-size: 1.44em !important;
   line-height: inherit !important;
 }
 @media (min-width: 36em) and (max-width: 75em) {
-  .blockquote .font-scale-2 {
+  .container .blockquote .font-scale-2 {
     font-size: calc(1.44em + 0.1225 * (100vw - 36em) / 39) !important;
   }
 }
 @media (min-width: 75em) {
-  .blockquote .font-scale-2 {
+  .container .blockquote .font-scale-2 {
     font-size: 1.5625em !important;
   }
 }
-
-.blockquote.pull {
+.container .blockquote.pull {
   border-left: none;
   margin: 0 auto;
 }
