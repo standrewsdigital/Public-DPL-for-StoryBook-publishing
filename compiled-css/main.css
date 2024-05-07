@@ -384,6 +384,10 @@
   src: url("https://fonts.gstatic.com/s/materialsymbolsoutlined/v175/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+:root {
+  --page-font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+
 body {
   background-color: var(--page-background-color);
   color: var(--page-text-color);
@@ -1173,7 +1177,7 @@ footer {
   background-color: #0f0f11;
   color: #f0f0f0;
   padding: calc(1vw + 1rem) 0 calc(1vw + 1rem) 0;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--page-font-family);
   font-size: 18px;
   text-align: left;
   line-height: 1.5;
@@ -1617,7 +1621,7 @@ html, body {
   background-color: #202024;
   color: #f0f0f0;
   padding: calc(1vw + 1rem) 0;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--page-font-family);
   font-size: 18px;
   text-align: left;
   line-height: 1.5;
@@ -1787,7 +1791,7 @@ html, body {
 }
 
 .article-header {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--page-font-family);
   border-bottom: 1px #dedede solid;
   margin-bottom: calc(1.5vw + 1rem);
 }
@@ -1950,6 +1954,161 @@ html, body {
   text-decoration: underline;
   float: right;
   cursor: pointer;
+}
+
+.contact-card {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: 6rem 1fr auto;
+  column-gap: 1em;
+  padding: 1em 0;
+}
+.contact-card + .contact-card {
+  border-top: 1px solid #dedede;
+}
+.contact-card .contact-card-avatar img {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+}
+.contact-card .contact-card-information > * {
+  margin: 0;
+}
+.contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
+  font-size: 1.44em;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
+    font-size: calc(1.44em + 0.1225em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
+    font-size: calc(1.44em + 0.1225em);
+  }
+}
+.contact-card .contact-card-information .contact-card-summary {
+  margin-top: 0.8em;
+}
+.contact-card .contact-card-link {
+  padding: 0.4em 0.5em;
+  display: inline-block;
+  border: 1px solid #949494;
+  font-size: 0.9em;
+}
+.contact-card .contact-card-link:hover {
+  background: #dedede;
+  color: #202024;
+}
+.contact-card .contact-card-link:focus {
+  text-decoration: none;
+  background: #dedede;
+}
+.contact-card .contact-card-contact > div[class^=contact-card-contact] {
+  text-align: right;
+  margin-bottom: 0.3em;
+}
+.contact-card .contact-card-contact .contact-card-link::before {
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  font-variation-settings: "FILL" 1;
+  text-decoration: none;
+  display: inline-block;
+  color: #202024;
+  opacity: 0.7;
+  font-size: 26px;
+  position: relative;
+  top: 8px;
+  left: 0;
+  line-height: 0;
+  margin-right: 0.2em;
+}
+.contact-card .contact-card-contact .contact-card-contact-phone .contact-card-link::before {
+  content: "phone_enabled";
+}
+.contact-card .contact-card-contact .contact-card-contact-email .contact-card-link::before {
+  content: "mail";
+}
+.contact-card .contact-card-tags {
+  grid-column: 2/-1;
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0.8em 0 0 0;
+}
+.contact-card .contact-card-tags .contact-card-tag {
+  display: inline-block;
+}
+.contact-card .contact-card-link-small {
+  font-size: 0.8em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-card .contact-card-contact .contact-card-link::before {
+    color: #f0f0f0;
+  }
+  .contact-card .contact-card-contact .contact-card-link:hover::before {
+    color: #0f0f11;
+  }
+  .contact-card .contact-card-link:focus {
+    color: #0f0f11;
+  }
+  .contact-card .contact-card-link:focus::before {
+    color: #0f0f11;
+  }
+}
+@container (max-width: 900px) {
+  .contact-card {
+    grid-template-columns: 6em 1fr;
+  }
+  .contact-card .contact-card-information {
+    grid-column: 2;
+  }
+  .contact-card .contact-card-contact {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0.4em;
+  }
+  .contact-card .contact-card-contact > div[class^=contact-card-contact] {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 0.3em;
+  }
+  .contact-card .contact-card-tags {
+    margin-top: 0.3em;
+  }
+  .contact-card .contact-card-link-small {
+    font-size: 0.8em;
+    margin-bottom: 0.3em;
+  }
+}
+@container (max-width: 370px) {
+  .contact-card .contact-card-contact > div[class^=contact-card-contact] {
+    text-align: center;
+    width: 100%;
+  }
+  .contact-card .contact-card-contact > div[class^=contact-card-contact] .contact-card-link {
+    width: 100%;
+    font-size: 1em;
+  }
+  .contact-card .contact-card-link-small {
+    font-size: 0.9em;
+  }
+}
+@container (max-width: 300px) {
+  .contact-card .contact-card-information {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+  .contact-card .contact-card-contact {
+    grid-column: 1/-1;
+    grid-row: 3;
+  }
+  .contact-card .contact-card-tags {
+    grid-column: 1/-1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
