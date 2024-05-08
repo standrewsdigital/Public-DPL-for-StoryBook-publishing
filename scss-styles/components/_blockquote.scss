@@ -2,7 +2,7 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 
 .container {
 	font-family: $article-font-family;
-	font-size: 1em;
+	//font-size: 0.9em;
 
 
 	blockquote {
@@ -65,6 +65,8 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 			margin: 0 auto;
 			max-width: 70ch;
 			padding: 0;
+			
+			
 		}
 
 		@media (min-width: 576px) {
@@ -113,5 +115,10 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 	.blockquote.pull {
 		border-left: none;
 		margin: 0 auto;
+		width: 70ch;
+	
+		blockquote p {
+			font-size: 1.25em;
+		}
 	}
 }
