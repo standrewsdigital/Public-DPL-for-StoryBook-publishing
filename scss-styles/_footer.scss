@@ -1,7 +1,6 @@
 $footer-background: $dark-grey-2;
 $footer-text-color: $light-grey-1;
 $footer-link-color: $light-grey-1;
-$footer-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 
 // Footer styles
 footer {
@@ -9,7 +8,7 @@ footer {
   background-color: $footer-background;
   color: $footer-text-color;
   padding: calc(1vw + 1rem) 0 calc(1vw + 1rem) 0;
-  font-family: $footer-font-family;
+  font-family: var(--page-font-family);
   font-size: 18px;
   text-align: left;
   line-height: 1.5;
