@@ -1,6 +1,5 @@
 .container {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: 1em;
 }
 .container blockquote {
   border: 0;
@@ -92,6 +91,10 @@
 .container .blockquote.pull {
   border-left: none;
   margin: 0 auto;
+  width: 70ch;
+}
+.container .blockquote.pull blockquote p {
+  font-size: 1.25em;
 }
 
 /*# sourceMappingURL=blockquote.css.map */
