@@ -1,20 +1,20 @@
 .search-results {
     ol {
       padding-left: 0;
-  
+
       li {
         list-style-type: none;
         margin-bottom: 10px;
-  
+
         h4, .label {
           display: inline;
           margin: 1rem 0;
-  
+
           &.label {
             position: relative; // Positions the icon relative to the label text
             margin-left: 1rem;
             font-size: medium;
-  
+
             &::before {
               content: 'check_indeterminate_small';
               font-family: 'Material Symbols Outlined';
@@ -34,7 +34,10 @@
           margin-top: 2px;
           margin-bottom: 2px;
         }
-        .metadata {
+        dd{
+          margin-left: 0;
+        }
+        .metadata{
           display: inline-block; // Default to inline-block for larger screens
           margin-right: 1rem; // Adds spacing between metadata items
           &::before {
@@ -78,4 +81,3 @@
       }
     }
   }
-  
