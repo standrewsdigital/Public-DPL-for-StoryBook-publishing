@@ -5,16 +5,17 @@
   list-style-type: none;
   margin-bottom: 10px;
 }
-.search-results ol li h4, .search-results ol li .label {
+.search-results ol li h2, .search-results ol li h3, .search-results ol li h4, .search-results ol li h5, .search-results ol li h6, .search-results ol li .label {
+  font-size: 1.2em;
   display: inline;
   margin: 1rem 0;
 }
-.search-results ol li h4.label, .search-results ol li .label.label {
+.search-results ol li h2.label, .search-results ol li h3.label, .search-results ol li h4.label, .search-results ol li h5.label, .search-results ol li h6.label, .search-results ol li .label.label {
   position: relative;
   margin-left: 1rem;
   font-size: medium;
 }
-.search-results ol li h4.label::before, .search-results ol li .label.label::before {
+.search-results ol li h2.label::before, .search-results ol li h3.label::before, .search-results ol li h4.label::before, .search-results ol li h5.label::before, .search-results ol li h6.label::before, .search-results ol li .label.label::before {
   content: "check_indeterminate_small";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
