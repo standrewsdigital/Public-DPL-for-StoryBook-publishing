@@ -50,7 +50,7 @@ First, ensure your `package.json` file includes the following script:
 
 ```json
 "scripts": {
-  "compile-scss": "node-sass -w scss-styles/ -o compiled-css/"
+  "compile-scss": "sass --watch scss-styles/:compiled-css/"
 }
 ```
 
