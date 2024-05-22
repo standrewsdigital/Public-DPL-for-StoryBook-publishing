@@ -391,7 +391,7 @@
 body {
   background-color: var(--page-background-color);
   color: var(--page-text-color);
-  font-family: var(--page-font-family);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 100%;
 }
 @media (min-width: 576px) {
@@ -1206,7 +1206,7 @@ footer .footer-links a:hover, footer .footer-links a:focus {
   }
 }
 .main-content {
-  font-family: var(--page-font-family);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 
 .bg-color-name {
@@ -1759,7 +1759,7 @@ html, body {
   color: #00539b;
   text-decoration: none;
   font-weight: bold;
-  font-family: var(--page-font-family);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
 .pagination .page-link:hover {
@@ -1945,7 +1945,7 @@ html, body {
 }
 
 .accordion-group-open {
-  font-family: var(--page-font-family);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #0071b3;
   border: none;
   background: none;
@@ -1954,6 +1954,27 @@ html, body {
   text-decoration: underline;
   float: right;
   cursor: pointer;
+}
+
+.text-banner-content {
+  text-align: center;
+}
+.text-banner-content.left {
+  text-align: left;
+}
+.text-banner-content.right {
+  text-align: right;
+}
+.text-banner-content a {
+  color: #fafafa;
+  text-decoration: underline;
+}
+.text-banner-content a:hover {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+.text-banner-content a:focus {
+  color: var(--link-focus-color);
 }
 
 .contact-card {
@@ -2109,27 +2130,6 @@ html, body {
   .contact-card .contact-card-tags {
     grid-column: 1/-1;
   }
-}
-
-.text-banner-content {
-  text-align: center;
-}
-.text-banner-content.left {
-  text-align: left;
-}
-.text-banner-content.right {
-  text-align: right;
-}
-.text-banner-content a {
-  color: #fafafa;
-  text-decoration: underline;
-}
-.text-banner-content a:hover {
-  color: #f0f0f0;
-  text-decoration: none;
-}
-.text-banner-content a:focus {
-  color: var(--link-focus-color);
 }
 
 /*# sourceMappingURL=main.css.map */
