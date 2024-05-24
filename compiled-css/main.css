@@ -2035,6 +2035,103 @@ html, body {
   cursor: pointer;
 }
 
+.container {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+.container blockquote {
+  border: 0;
+  border-left: 5px solid #dedede;
+  font-size: inherit;
+  margin: 0 0 1.5625rem 0;
+  padding: 1em 1.2em;
+}
+.container .blockquote {
+  border-left: 5px solid #dedede;
+  margin: 0 0 1.5625rem 0;
+  padding: 1em 1.2em;
+}
+.container .blockquote::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.container .blockquote > blockquote {
+  border: 0;
+  margin: 0;
+  font-size: inherit;
+  padding: 0;
+}
+.container .blockquote .author {
+  font-size: 1rem;
+  font-style: normal;
+  line-height: inherit;
+  padding: 1.5625rem 0 0 0;
+  display: flex;
+  align-items: center;
+}
+.container .blockquote .author-thumbnail {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 1rem;
+}
+.container .blockquote .author-thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.container .blockquote .pull {
+  background: none;
+  border-left: 0;
+  font-size: 1.2em;
+  margin: 0 auto;
+  padding-left: 10%;
+}
+@media (min-width: 576px) {
+  .container .blockquote .author {
+    float: right;
+  }
+  .container .blockquote .author-thumbnail {
+    height: 80px;
+    width: 80px;
+  }
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .container .blockquote .pull {
+    font-size: calc(1.2em + 0.05 * (100vw - 36em) / 39);
+  }
+}
+@media (min-width: 75em) {
+  .container .blockquote .pull {
+    font-size: 1.25em;
+  }
+}
+.container .blockquote .font-scale-2 {
+  font-size: 1.44em !important;
+  line-height: inherit !important;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .container .blockquote .font-scale-2 {
+    font-size: calc(1.44em + 0.1225 * (100vw - 36em) / 39) !important;
+  }
+}
+@media (min-width: 75em) {
+  .container .blockquote .font-scale-2 {
+    font-size: 1.5625em !important;
+  }
+}
+.container .blockquote.pull {
+  border-left: none;
+  margin: 0 0 0 10%;
+}
+.container .blockquote.pull blockquote p {
+  font-size: 1.25em;
+}
+
 .text-banner-content {
   text-align: center;
 }
