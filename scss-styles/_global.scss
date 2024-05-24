@@ -1,7 +1,11 @@
+:root {
+  --page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+
 body {
   background-color: var(--page-background-color);
   color: var(--page-text-color);
-  font-family: var(--page-font-family);
+  font-family: $page-font-family;
   @include typography(font-size, ('xs': 100%, 'sm': 112.5%));
 }
 

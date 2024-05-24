@@ -1,17 +1,84 @@
-.search-results{
-    ol{
-        padding-left: 0px;
-        li{
+.search-results {
+    ol {
+      padding-left: 0;
+
+      li {
         list-style-type: none;
         margin-bottom: 10px;
-        p{
-            margin-top: 2px;
-            margin-bottom: 2px;
+
+        h2, h3, h4, h5, h6, .label {
+          font-size: 1.2em;
+          display: inline;
+          margin: 1rem 0;
+
+          &.label {
+            position: relative; // Positions the icon relative to the label text
+            margin-left: 1rem;
+            font-size: medium;
+
+            &::before {
+              content: 'check_indeterminate_small';
+              font-family: 'Material Symbols Outlined';
+              font-feature-settings: 'liga';
+              -webkit-font-feature-settings: 'liga';
+              -moz-font-feature-settings: 'liga';
+              position: absolute;
+              left: -1rem;
+              top: 0;
+              vertical-align: bottom; // Aligns the icon's bottom with the text's bottom
+            }
+          }
         }
-        h4{
-            margin-top: 2px;
-            margin-bottom: 2px;
+
+        p {
+          display: block;
+          margin-top: 2px;
+          margin-bottom: 2px;
         }
+        dd{
+          margin-left: 0;
+        }
+        .metadata{
+          display: inline-block; // Default to inline-block for larger screens
+          margin-right: 1rem; // Adds spacing between metadata items
+          &::before {
+            font-family: 'Material Symbols Outlined';
+            font-feature-settings: 'liga';
+            -webkit-font-feature-settings: 'liga';
+            -moz-font-feature-settings: 'liga';
+            margin-right: 0.5rem; // Space between icon and text
+            vertical-align: bottom; // Ensures the icon aligns with the bottom of the text
+          }
+
+          &.full-width {
+            display: block; // Make full-width metadata span the whole line
+          }
+          &.date::before {
+            content: 'event'; // Calendar icon for date
+          }
+
+          &.type::before {
+            content: 'description'; // Description icon for type
+          }
+
+          &.audience::before {
+            content: 'group'; // Group icon for audience
+          }
+
+          &.email::before {
+            content: 'mail'; // Group icon for audience
+          }
+        }
+      }
     }
+  }
+
+  // Media Query for smaller screens
+  @media (max-width: 768px) {
+    .search-results {
+      .metadata {
+        display: block; // Stack the metadata vertically on small screens
+        margin-right: 0; // Remove right margin on small screens
+      }
     }
-}
+  }
