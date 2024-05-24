@@ -2307,5 +2307,165 @@ html, body {
     grid-column: 1/-1;
   }
 }
+.page-intro .container {
+  margin-top: 2rem;
+}
+
+.lead {
+  font-size: 1.373rem;
+}
+
+.heading--large {
+  font-size: 3.125rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  border-radius: 0px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+.btn-action {
+  background: #0071b3;
+  border: 1px #0071b3 solid;
+  border-bottom: 3px #005586 solid;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.3;
+  position: relative;
+  padding: 0.5em 2.4rem calc(0.5rem - 2px) 15px;
+  text-align: left;
+}
+.btn-action:hover, .btn-action:focus {
+  background: #005586;
+  border-color: #005586;
+  color: white;
+  text-decoration: underline;
+}
+.btn-action:active {
+  background: #FFB400;
+  border-color: #FFB400;
+  color: #202024;
+}
+.btn-action .material-icons-outlined {
+  position: absolute;
+  top: 28%;
+  padding-left: 1rem;
+  font-weight: 900;
+}
+
+.btn-action-secondary {
+  background: white;
+  border: 1px #0071b3 solid;
+  border-bottom: 3px #0071b3 solid;
+  color: #0071b3;
+  font-size: 1.2rem;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.3;
+  position: relative;
+  padding: 0.5rem 2.4rem calc(0.5rem - 2px) 15px;
+  text-align: left;
+  text-decoration: none;
+  white-space: normal;
+}
+.btn-action-secondary:hover, .btn-action-secondary:focus {
+  background: white;
+  border-color: #005586;
+  color: #005586;
+  text-decoration: underline;
+}
+.btn-action-secondary:active {
+  background: #FFB400;
+  border-color: #FFB400;
+  color: #202024;
+}
+.btn-action-secondary .material-icons-outlined {
+  position: absolute;
+  top: 30%;
+  padding-left: 1rem;
+  font-weight: 1000;
+  right: 5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.search-bar {
+  position: relative;
+  background: #054fb9;
+  padding: 0.5em 1em 8em 1em;
+}
+.search-bar .constrained {
+  position: absolute;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.search-bar .heading {
+  color: white;
+  font-size: 1.5em;
+  width: 100%;
+}
+.search-bar form.dpl-form {
+  display: inline-block;
+  width: 90%;
+  left: 7%;
+  overflow: hidden;
+}
+.search-bar form.dpl-form input[type=text] {
+  padding: 0.6em;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+.search-bar .input-group input[type=text]:focus {
+  border: 5px solid #F57600;
+  padding: 5px 5px 10px 5px;
+}
+.search-bar form.dpl-form button {
+  float: left;
+  width: 50px;
+  padding: 0.75em 0.75em 0.23em 0.75em;
+  background: #0461cf;
+  color: white;
+  font-size: 1em;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+.search-bar form.dpl-form button:hover {
+  background-color: #0073e6;
+}
+.search-bar form.dpl-form button:focus {
+  border: 2px solid #F57600;
+}
+
+@media only screen and (max-width: 479px) {
+  .search-bar {
+    height: 200px;
+  }
+}
+img.image {
+  max-width: 100%;
+  padding-top: 2rem;
+}
 
 /*# sourceMappingURL=main.css.map */
