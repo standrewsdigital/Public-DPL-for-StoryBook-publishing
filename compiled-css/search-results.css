@@ -1,11 +1,72 @@
 .search-results ol {
-  padding-left: 0px; }
-  .search-results ol li {
-    list-style-type: none;
-    margin-bottom: 10px; }
-    .search-results ol li p {
-      margin-top: 2px;
-      margin-bottom: 2px; }
-    .search-results ol li h4 {
-      margin-top: 2px;
-      margin-bottom: 2px; }
+  padding-left: 0;
+}
+.search-results ol li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.search-results ol li h2, .search-results ol li h3, .search-results ol li h4, .search-results ol li h5, .search-results ol li h6, .search-results ol li .label {
+  font-size: 1.2em;
+  display: inline;
+  margin: 1rem 0;
+}
+.search-results ol li h2.label, .search-results ol li h3.label, .search-results ol li h4.label, .search-results ol li h5.label, .search-results ol li h6.label, .search-results ol li .label.label {
+  position: relative;
+  margin-left: 1rem;
+  font-size: medium;
+}
+.search-results ol li h2.label::before, .search-results ol li h3.label::before, .search-results ol li h4.label::before, .search-results ol li h5.label::before, .search-results ol li h6.label::before, .search-results ol li .label.label::before {
+  content: "check_indeterminate_small";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  vertical-align: bottom;
+}
+.search-results ol li p {
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.search-results ol li dd {
+  margin-left: 0;
+}
+.search-results ol li .metadata {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.search-results ol li .metadata::before {
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  margin-right: 0.5rem;
+  vertical-align: bottom;
+}
+.search-results ol li .metadata.full-width {
+  display: block;
+}
+.search-results ol li .metadata.date::before {
+  content: "event";
+}
+.search-results ol li .metadata.type::before {
+  content: "description";
+}
+.search-results ol li .metadata.audience::before {
+  content: "group";
+}
+.search-results ol li .metadata.email::before {
+  content: "mail";
+}
+
+@media (max-width: 768px) {
+  .search-results .metadata {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=search-results.css.map */

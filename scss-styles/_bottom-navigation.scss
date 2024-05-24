@@ -1,7 +1,6 @@
 $website-footer-background: $dark-grey-1;
 $website-footer-text-color: $light-grey-1;
 $website-footer-link-color: $light-grey-1;
-$website-footer-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 
 // Set the body and html to 100% height
 html, body {
@@ -24,7 +23,7 @@ html, body {
   background-color: $website-footer-background;
   color: $website-footer-text-color;
   padding: calc(1vw + 1rem) 0;
-  font-family: $website-footer-font-family;
+  font-family: var(--page-font-family);
   font-size: 18px;
   text-align: left;
   line-height: 1.5;

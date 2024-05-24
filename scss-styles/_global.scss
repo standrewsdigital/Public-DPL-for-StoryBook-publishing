@@ -1,4 +1,6 @@
-@import 'variables';
+:root {
+  --page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
 
 body {
   background-color: var(--page-background-color);
