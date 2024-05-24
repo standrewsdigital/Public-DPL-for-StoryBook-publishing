@@ -52,8 +52,7 @@
   border-left: 0;
   font-size: 1.2em;
   margin: 0 auto;
-  max-width: 70ch;
-  padding: 0;
+  padding-left: 10%;
 }
 @media (min-width: 576px) {
   .container .blockquote .author {
@@ -90,8 +89,7 @@
 }
 .container .blockquote.pull {
   border-left: none;
-  margin: 0 auto;
-  width: 70ch;
+  margin: 0 0 0 10%;
 }
 .container .blockquote.pull blockquote p {
   font-size: 1.25em;

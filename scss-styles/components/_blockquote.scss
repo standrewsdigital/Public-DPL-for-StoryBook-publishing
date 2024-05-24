@@ -63,8 +63,9 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 			border-left: 0;
 			font-size: 1.2em;
 			margin: 0 auto;
-			max-width: 70ch;
-			padding: 0;
+			// max-width: 70ch; //Removed max-width so the quote doesn't go off the screen on smaller devices
+			padding-left: 10%;
+			// padding: 0;
 
 
 		}
@@ -114,8 +115,8 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 
 	.blockquote.pull {
 		border-left: none;
-		margin: 0 auto;
-		width: 70ch;
+		margin: 0 0 0 10%;
+		// width: 70ch;
 
 		blockquote p {
 			font-size: 1.25em;
