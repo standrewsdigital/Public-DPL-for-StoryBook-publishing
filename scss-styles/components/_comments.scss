@@ -1,0 +1,120 @@
+$color_1: #202024;
+
+.comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2+.comment-list {
+    margin-top: calc(1vw + 1rem);
+}
+
+h3+.comment-list {
+    margin-top: calc(1vw + 1rem);
+}
+
+.comment {
+    margin-bottom: calc(3vw + 1rem);
+
+    .meta {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        >* {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .replies {
+        list-style: none;
+        margin: calc(-1 * (1.5vw + 1rem)) 0 0 0;
+        padding: 0;
+    }
+
+    &.reply {
+        padding: 1rem;
+        background: #f0f0f0;
+
+        &:not(:last-child) {
+            margin-bottom: calc(1.5vw + 1rem);
+        }
+
+    }
+
+    .meta-group {
+        flex: 1 1 auto;
+    }
+
+    .image {
+        border: 2px solid #fafafa;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        overflow: hidden;
+        position: relative;
+        margin-right: 1rem;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    a.image {
+        outline: 0;
+
+        &:active {
+            box-shadow: 0px 0px 0px 3px #ffb400;
+        }
+
+        &:hover {
+            img {
+                opacity: 0.8;
+            }
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 0px 3px #ffb400;
+        }
+    }
+
+    .meta-author {
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+
+    .meta-date {
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+
+.btn-tag {
+    border: 1px solid #6a6a6b;
+    color: $color_1;
+}
+
+
+ul.replies {
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    .comment.replies {
+        margin-left: 48px;
+    }
+}
