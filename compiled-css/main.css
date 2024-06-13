@@ -2310,6 +2310,7 @@ html, body {
 .list-group {
   margin-bottom: 20px;
   padding-left: 0;
+  width: 20%;
 }
 
 .list-group-item {
