@@ -2321,12 +2321,10 @@ html, body {
   background-color: #fff;
   border: 1px solid #dedede;
 }
-
 .list-group-item:first-child {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
 }
-
 .list-group-item:last-child {
   margin-bottom: 0;
   border-bottom-right-radius: 0px;
@@ -2337,12 +2335,29 @@ a.list-group-item {
   color: #202024;
   text-decoration: none;
 }
-
-a.list-group-item .list-group-item-heading, button.list-group-item .list-group-item-heading {
+a.list-group-item .list-group-item-heading {
   color: #202024;
 }
+a.list-group-item:hover {
+  text-decoration: none;
+  color: inherit;
+  background-color: #f0f0f0;
+}
+a.list-group-item:focus {
+  text-decoration: none;
+  color: inherit;
+  background-color: #f0f0f0;
+}
 
-a.list-group-item:hover, a.list-group-item:focus, button.list-group-item:hover, button.list-group-item:focus {
+button.list-group-item .list-group-item-heading {
+  color: #202024;
+}
+button.list-group-item:hover {
+  text-decoration: none;
+  color: inherit;
+  background-color: #f0f0f0;
+}
+button.list-group-item:focus {
   text-decoration: none;
   color: inherit;
   background-color: #f0f0f0;
@@ -2352,8 +2367,11 @@ a {
   color: #0071b3;
   text-decoration: none;
 }
-
-a:hover, a:focus {
+a:hover {
+  color: #005586;
+  text-decoration: underline;
+}
+a:focus {
   color: #005586;
   text-decoration: underline;
 }
@@ -2369,7 +2387,15 @@ a:hover, a:focus {
   border: 0;
 }
 
-.sr-only-focusable:active, .sr-only-focusable:focus {
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
