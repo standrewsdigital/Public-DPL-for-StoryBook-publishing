@@ -503,6 +503,10 @@ a:focus, .link:focus {
   white-space: nowrap;
 }
 
+.font-weight-bold {
+  font-weight: 700;
+}
+
 .text-blue-primary {
   color: #00539b;
 }
@@ -2667,6 +2671,23 @@ img.image {
     display: grid;
     grid-template-columns: auto 1fr;
   }
+}
+.paired-values-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.paired-values-list dd {
+  margin: 0;
+}
+.paired-values-list dd, .paired-values-list dt {
+  line-height: 1.5;
+  padding: 0.2em 1.3em 0.2em 0;
+}
+.paired-values-list.paired-values-list-divided dt:not(:first-child), .paired-values-list.paired-values-list-divided dd:not(:nth-child(2)) {
+  border-top: 1px solid #dedede;
+}
+.paired-values-list.paired-values-list-divided dd, .paired-values-list.paired-values-list-divided dt {
+  padding: 0.5em 1.5em 0.5em 0;
 }
 
 /*# sourceMappingURL=main.css.map */
