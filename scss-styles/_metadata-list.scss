@@ -1,0 +1,64 @@
+.metadata-list {
+	color: $grey;
+
+	dt {
+		margin-right: 5px;
+
+		&.metadata-date::before {
+			@include icon('calendar_month', $grey);
+			font-variation-settings: 'wght' 700;
+		}
+
+		&.metadata-time::before {
+			@include icon('schedule', $grey);
+			font-variation-settings: 'wght' 700;
+		}
+
+		&.metadata-location::before {
+			@include icon('location_on', $grey);
+			font-variation-settings: 'OPSZ' 20, 'wght' 700, 'FILL' 1;
+		}
+
+		&:not([class^="metadata-"]) {
+			font-weight: 700;
+			color: $dark-grey-2;
+			&::after {
+				content: ':';
+			}
+		}
+	}
+
+	dd {
+		margin: 0 20px 5px 0;
+
+		a {
+			color: $grey;
+
+			&:hover {
+				color: $dark-grey-1;
+			}
+			
+			&:focus {
+				color: $dark-grey-1;
+			}
+		}
+	}
+
+	dt, dd {
+		display: inline;
+		line-height: 1.5;
+		text-wrap: wrap;
+	}
+
+	&.metadata-list-full {
+		display: grid;
+		grid-template-columns: auto 1fr;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.metadata-list {
+		display: grid;
+		grid-template-columns: auto 1fr;
+	}
+}
