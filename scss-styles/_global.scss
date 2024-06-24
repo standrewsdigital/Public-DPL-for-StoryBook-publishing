@@ -64,6 +64,19 @@ a, .link {
     }
 }
 
+// Hide elements but still make it accessible for screen readers
+.visually-hidden {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 // Bold utility class
 .font-weight-bold {
   font-weight: 700;
