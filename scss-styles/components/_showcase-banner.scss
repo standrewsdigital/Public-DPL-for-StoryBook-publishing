@@ -1,0 +1,32 @@
+.banner-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+@media (max-width: 540px) {
+    .banner-image {
+      display: none;
+    }
+  }
+
+  .banner-text {
+    line-height: 1.6;
+    font-size: 1.125rem;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      color: #ffffff;
+      font-weight: bold;
+   }
+
+    a {
+      text-decoration: none;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+        -moz-text-decoration-color: #ffffff;
+}
+    }
+  }
