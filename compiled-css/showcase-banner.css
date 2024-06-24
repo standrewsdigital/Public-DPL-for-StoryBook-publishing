@@ -1,3 +1,30 @@
+.banner-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 
+@media (max-width: 540px) {
+  .banner-image {
+    display: none;
+  }
+}
+.banner-text {
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+.banner-text h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+  font-weight: bold;
+}
+.banner-text a {
+  text-decoration: none;
+}
+.banner-text a:hover, .banner-text a:focus {
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+}
 
 /*# sourceMappingURL=showcase-banner.css.map */
