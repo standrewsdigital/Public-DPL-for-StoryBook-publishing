@@ -519,6 +519,10 @@ a:focus, .link:focus {
   white-space: nowrap;
 }
 
+.font-weight-bold {
+  font-weight: 700;
+}
+
 .text-blue-primary {
   color: #00539b;
 }
@@ -2629,6 +2633,92 @@ html, body {
 }
 img.image {
   max-width: 100%;
+}
+
+.metadata-list {
+  color: #6a6a6b;
+}
+.metadata-list dt {
+  margin-right: 5px;
+}
+.metadata-list dt.metadata-date::before {
+  content: "calendar_month";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  color: #6a6a6b;
+  font-variation-settings: "wght" 700;
+}
+.metadata-list dt.metadata-time::before {
+  content: "schedule";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  color: #6a6a6b;
+  font-variation-settings: "wght" 700;
+}
+.metadata-list dt.metadata-location::before {
+  content: "location_on";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  color: #6a6a6b;
+  font-variation-settings: "OPSZ" 20, "wght" 700, "FILL" 1;
+}
+.metadata-list dt:not([class^=metadata-]) {
+  font-weight: 700;
+  color: #0f0f11;
+}
+.metadata-list dt:not([class^=metadata-])::after {
+  content: ":";
+}
+.metadata-list dd {
+  margin: 0 20px 5px 0;
+}
+.metadata-list dd a {
+  color: #6a6a6b;
+}
+.metadata-list dd a:hover {
+  color: #202024;
+}
+.metadata-list dd a:focus {
+  color: #202024;
+}
+.metadata-list dt, .metadata-list dd {
+  display: inline;
+  line-height: 1.5;
+  text-wrap: wrap;
+}
+.metadata-list.metadata-list-full {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+@media screen and (max-width: 575px) {
+  .metadata-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}
+.paired-values-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.paired-values-list dd {
+  margin: 0;
+}
+.paired-values-list dd, .paired-values-list dt {
+  line-height: 1.5;
+  padding: 0.2em 1.3em 0.2em 0;
+}
+.paired-values-list.paired-values-list-divided dt:not(:first-child), .paired-values-list.paired-values-list-divided dd:not(:nth-child(2)) {
+  border-top: 1px solid #dedede;
+}
+.paired-values-list.paired-values-list-divided dd, .paired-values-list.paired-values-list-divided dt {
+  padding: 0.5em 1.5em 0.5em 0;
 }
 
 /*# sourceMappingURL=main.css.map */
