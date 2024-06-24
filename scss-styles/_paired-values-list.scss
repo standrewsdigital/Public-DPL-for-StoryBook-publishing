@@ -1,0 +1,24 @@
+.paired-values-list {
+
+	display: grid;
+	grid-template-columns: auto 1fr;
+
+	dd {
+		margin: 0;
+	}
+
+	dd, dt {
+		line-height: 1.5;
+		padding: 0.2em 1.3em 0.2em 0;
+	}
+
+	&.paired-values-list-divided {
+		dt:not(:first-child), dd:not(:nth-child(2)) {
+			border-top: 1px solid $mid-grey-2;
+		}
+
+		dd, dt {
+			padding: 0.5em 1.5em 0.5em 0;
+		}
+	}
+}
