@@ -51,5 +51,15 @@
         padding-top: 0.05rem;
     }
 
+    .flex {
+        display: flex;
+    }
 
+    @media (max-width: 576px) {
+        .flex {
+            display: block;
+            clear: both;
+            width: 100%;
+        }
+    }
 }
