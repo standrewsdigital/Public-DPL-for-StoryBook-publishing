@@ -38,5 +38,15 @@
   clear: both;
   padding-top: 0.05rem;
 }
+.featured-people .flex {
+  display: flex;
+}
+@media (max-width: 576px) {
+  .featured-people .flex {
+    display: block;
+    clear: both;
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=featured-people.css.map */
