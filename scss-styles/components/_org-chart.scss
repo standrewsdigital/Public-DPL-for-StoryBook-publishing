@@ -4,7 +4,7 @@ $border-color: #cccccc; // Light grey border color
 @mixin generation-colors($depth) {
   @for $i from 1 through $depth {
     .generation-#{$i} {
-      background-color: lighten($base-color, $i * 10%);
+      background-color: darken($base-color, $i * 5%);
     }
   }
 }
@@ -52,4 +52,4 @@ $border-color: #cccccc; // Light grey border color
     font-size: 3em !important; // Relative font size for chevron icon
 }
 
-@include generation-colors(10); // Change 10 to the desired maximum generation depth
+@include generation-colors(10);
