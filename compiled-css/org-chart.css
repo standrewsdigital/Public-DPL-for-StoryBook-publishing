@@ -1,0 +1,68 @@
+.org-chart {
+  width: 100%;
+}
+
+.org-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.org-image {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.children {
+  margin-left: 20px;
+  width: 100%;
+}
+
+.generation-1 {
+  background-color: white;
+}
+
+.generation-2 {
+  background-color: white;
+}
+
+.generation-3 {
+  background-color: white;
+}
+
+.generation-4 {
+  background-color: white;
+}
+
+.generation-5 {
+  background-color: white;
+}
+
+.generation-6 {
+  background-color: white;
+}
+
+.generation-7 {
+  background-color: white;
+}
+
+.generation-8 {
+  background-color: white;
+}
+
+.generation-9 {
+  background-color: white;
+}
+
+.generation-10 {
+  background-color: white;
+}
+
+/*# sourceMappingURL=org-chart.css.map */

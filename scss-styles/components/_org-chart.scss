@@ -1,0 +1,39 @@
+$base-color: #ffffff;
+$color-step: #101010; // Adjust the step value to control the color change between generations
+
+@mixin generation-colors($depth) {
+  @for $i from 1 through $depth {
+    .generation-#{$i} {
+      background-color: lighten($base-color, $i * 10%);
+    }
+  }
+}
+
+.org-chart {
+  width: 100%;
+}
+
+.org-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.org-image {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.children {
+  margin-left: 20px;
+  width: 100%;
+}
+
+@include generation-colors(10); // Change 10 to the desired maximum generation depth
