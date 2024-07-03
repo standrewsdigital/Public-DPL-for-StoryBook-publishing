@@ -142,7 +142,7 @@ const orgData = [
                                 name: "Hannah Williams",
                                 role: "Junior IT Support",
                                 description: "Junior IT Support in IT Support Team",
-                                imgSrc: "../assets/female-009-medium.jpg",
+                                imgSrc: "../assets/female-9.jpg",
                                 children: []
                             }
                         ]
@@ -151,20 +151,20 @@ const orgData = [
                         name: "Isabella Taylor",
                         role: "Team Lead",
                         description: "Lead of Development Team",
-                        imgSrc: "../assets/female-010-medium.jpg",
+                        imgSrc: "../assets/female-10.jpg",
                         children: [
                             {
                                 name: "Jack Wilson",
                                 role: "Senior Developer",
                                 description: "Senior Developer in Development Team",
-                                imgSrc: "../assets/male-012-medium.jpg",
+                                imgSrc: "../assets/male-12.jpg",
                                 children: []
                             },
                             {
                                 name: "Karen Martinez",
                                 role: "Junior Developer",
                                 description: "Junior Developer in Development Team",
-                                imgSrc: "../assets/female-011-medium.jpg",
+                                imgSrc: "../assets/female-11.jpg",
                                 children: []
                             }
                         ]
@@ -175,26 +175,26 @@ const orgData = [
                 name: "Michael Clark",
                 role: "Manager",
                 description: "Manager of Network Department",
-                imgSrc: "../assets/male-013-medium.jpg",
+                imgSrc: "../assets/male-13.jpg",
                 children: [
                     {
                         name: "Nina Lewis",
                         role: "Team Lead",
                         description: "Lead of Network Team A",
-                        imgSrc: "../assets/female-012-medium.jpg",
+                        imgSrc: "../assets/female-12.jpg",
                         children: [
                             {
                                 name: "Oliver Scott",
                                 role: "Senior Network Engineer",
                                 description: "Senior Network Engineer in Network Team A",
-                                imgSrc: "../assets/male-014-medium.jpg",
+                                imgSrc: "../assets/male-14.jpg",
                                 children: []
                             },
                             {
                                 name: "Pamela Walker",
                                 role: "Junior Network Engineer",
                                 description: "Junior Network Engineer in Network Team A",
-                                imgSrc: "../assets/female-013-medium.jpg",
+                                imgSrc: "../assets/female-13.jpg",
                                 children: []
                             }
                         ]
@@ -203,20 +203,20 @@ const orgData = [
                         name: "Quincy Hall",
                         role: "Team Lead",
                         description: "Lead of Network Team B",
-                        imgSrc: "../assets/male-015-medium.jpg",
+                        imgSrc: "../assets/male-15.jpg",
                         children: [
                             {
                                 name: "Rachel Adams",
                                 role: "Senior Network Engineer",
                                 description: "Senior Network Engineer in Network Team B",
-                                imgSrc: "../assets/female-014-medium.jpg",
+                                imgSrc: "../assets/female-14.jpg",
                                 children: []
                             },
                             {
                                 name: "Steve Harris",
                                 role: "Junior Network Engineer",
                                 description: "Junior Network Engineer in Network Team B",
-                                imgSrc: "../assets/male-016-medium.jpg",
+                                imgSrc: "../assets/male-16.jpg",
                                 children: []
                             }
                         ]
@@ -232,16 +232,21 @@ function createPersonRow(person, generation) {
     row.classList.add('row', `generation-${generation}`);
 
     const col1 = document.createElement('div');
-    col1.classList.add('col', 'col-2-sm', 'col-2-md', 'col-2-lg', 'org-image-container');
+    col1.classList.add('col', 'col-6-xxs', 'col-4-xs', 'col-4-sm', 'col-2-md', 'col-2-lg', 'org-image-container');
     col1.innerHTML = `<img class="org-image" src="${person.imgSrc}" onclick="openModal('${person.name}', '${person.role}', '${person.description}')" />`;
 
     const col2 = document.createElement('div');
-    col2.classList.add('col', 'col-9-sm', 'col-9-md', 'col-9-lg', 'org-info');
+    col2.classList.add('col', 'col-4-xxs', 'col-6-xs', 'col-6-sm', 'col-9-md', 'col-9-lg', 'org-info');
     col2.innerHTML = `<h2>${person.name}</h2><p>${person.role}</p>`;
 
     const col3 = document.createElement('div');
-    col3.classList.add('col', 'col-1-sm', 'col-1-md', 'col-1-lg');
-    col3.innerHTML = `<span class="material-icons-outlined toggle-children" onclick="toggleChildren(this)">keyboard_arrow_down</span>`;
+    col3.classList.add('col', 'col-2-xxs', 'col-2-xs', 'col-2-sm', 'col-1-md', 'col-1-lg', 'chevron-container');
+
+    if (person.children && person.children.length > 0) {
+        col3.innerHTML = `<a><span class="material-icons-outlined toggle-children chevron-icon" onclick="toggleChildren(this)">keyboard_arrow_down</span></a>`;
+    } else {
+        col3.innerHTML = ''; // Empty if no children
+    }
 
     row.appendChild(col1);
     row.appendChild(col2);
@@ -262,6 +267,17 @@ function createPersonRow(person, generation) {
     return row;
 }
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     const orgChartContainer = document.getElementById('orgChart');
+//     const container = document.createElement('div');
+//     container.classList.add('container');
+//     orgData.forEach(person => {
+//         container.appendChild(createPersonRow(person, 1));
+//     });
+//     orgChartContainer.appendChild(container);
+// });
+
+
 function openModal(name, role, description) {
     const modal = document.getElementById('modal');
     document.getElementById('modalName').textContent = name;
@@ -278,7 +294,7 @@ function closeModal() {
 function toggleChildren(element) {
     const parentRow = element.closest('.row');
     const childrenContainer = parentRow.querySelector('.children');
-    
+
     if (childrenContainer) {
         const isHidden = childrenContainer.style.display === 'none';
         childrenContainer.style.display = isHidden ? 'contents' : 'none';

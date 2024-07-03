@@ -1,5 +1,5 @@
 $base-color: #ffffff;
-$color-step: #101010; // Adjust the step value to control the color change between generations
+$border-color: #cccccc; // Light grey border color
 
 @mixin generation-colors($depth) {
   @for $i from 1 through $depth {
@@ -29,11 +29,27 @@ $color-step: #101010; // Adjust the step value to control the color change betwe
   align-items: center;
   width: 100%;
   margin-bottom: 10px;
+  padding: 10px 0;
+  position: relative;
+  border-bottom: 1px solid $border-color; // Add bottom border
+  font-size: 1rem; // Base font size for rows
 }
 
 .children {
   margin-left: 20px;
   width: 100%;
+}
+
+.chevron-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold; // Make chevron bold
+  cursor: pointer;
+}
+
+.chevron-icon {
+    font-size: 3em !important; // Relative font size for chevron icon
 }
 
 @include generation-colors(10); // Change 10 to the desired maximum generation depth
