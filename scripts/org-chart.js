@@ -267,17 +267,6 @@ function createPersonRow(person, generation) {
     return row;
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const orgChartContainer = document.getElementById('orgChart');
-//     const container = document.createElement('div');
-//     container.classList.add('container');
-//     orgData.forEach(person => {
-//         container.appendChild(createPersonRow(person, 1));
-//     });
-//     orgChartContainer.appendChild(container);
-// });
-
-
 function openModal(name, role, description) {
     const modal = document.getElementById('modal');
     document.getElementById('modalName').textContent = name;
