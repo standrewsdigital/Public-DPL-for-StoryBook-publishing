@@ -30,7 +30,7 @@ const orgData = [
                                 name: "Laura Collins",
                                 role: "Junior Developer",
                                 description: "Junior Developer in Sales Team A",
-                                imgSrc: "../assets/female-003-medium.jpg",
+                                imgSrc: "../assets/female-3.jpg",
                                 children: []
                             }
                         ]
@@ -52,7 +52,7 @@ const orgData = [
                                 name: "Clark Kent",
                                 role: "Junior Developer",
                                 description: "Junior Developer in Sales Team B",
-                                imgSrc: "../assets/male-005-medium.jpg",
+                                imgSrc: "../assets/male-5.jpg",
                                 children: []
                             }
                         ]
@@ -63,26 +63,26 @@ const orgData = [
                 name: "Alice Johnson",
                 role: "Manager",
                 description: "Manager of Marketing Department",
-                imgSrc: "../assets/female-004-medium.jpg",
+                imgSrc: "../assets/female-4.jpg",
                 children: [
                     {
                         name: "Samuel Green",
                         role: "Team Lead",
                         description: "Lead of Marketing Team A",
-                        imgSrc: "../assets/male-006-medium.jpg",
+                        imgSrc: "../assets/male-6.jpg",
                         children: [
                             {
                                 name: "Nancy Drew",
                                 role: "Senior Marketing Specialist",
                                 description: "Senior Marketing Specialist in Marketing Team A",
-                                imgSrc: "../assets/female-005-medium.jpg",
+                                imgSrc: "../assets/female-5.jpg",
                                 children: []
                             },
                             {
                                 name: "Harry Potter",
                                 role: "Junior Marketing Specialist",
                                 description: "Junior Marketing Specialist in Marketing Team A",
-                                imgSrc: "../assets/male-007-medium.jpg",
+                                imgSrc: "../assets/male-7.jpg",
                                 children: []
                             }
                         ]
@@ -91,20 +91,20 @@ const orgData = [
                         name: "Lisa Simpson",
                         role: "Team Lead",
                         description: "Lead of Marketing Team B",
-                        imgSrc: "../assets/female-006-medium.jpg",
+                        imgSrc: "../assets/female-6.jpg",
                         children: [
                             {
                                 name: "Bart Simpson",
                                 role: "Senior Marketing Specialist",
                                 description: "Senior Marketing Specialist in Marketing Team B",
-                                imgSrc: "../assets/male-008-medium.jpg",
+                                imgSrc: "../assets/male-8.jpg",
                                 children: []
                             },
                             {
                                 name: "Marge Simpson",
                                 role: "Junior Marketing Specialist",
                                 description: "Junior Marketing Specialist in Marketing Team B",
-                                imgSrc: "../assets/female-007-medium.jpg",
+                                imgSrc: "../assets/female-7.jpg",
                                 children: []
                             }
                         ]
@@ -117,25 +117,25 @@ const orgData = [
         name: "David Brown",
         role: "CTO",
         description: "Chief Technology Officer",
-        imgSrc: "../assets/male-009-medium.jpg",
+        imgSrc: "../assets/male-9.jpg",
         children: [
             {
                 name: "Eve Davis",
                 role: "Manager",
                 description: "Manager of IT Department",
-                imgSrc: "../assets/female-008-medium.jpg",
+                imgSrc: "../assets/female-8.jpg",
                 children: [
                     {
                         name: "Frank Miller",
                         role: "Team Lead",
                         description: "Lead of IT Support Team",
-                        imgSrc: "../assets/male-010-medium.jpg",
+                        imgSrc: "../assets/male-10.jpg",
                         children: [
                             {
                                 name: "Gabriel Smith",
                                 role: "Senior IT Support",
                                 description: "Senior IT Support in IT Support Team",
-                                imgSrc: "../assets/male-011-medium.jpg",
+                                imgSrc: "../assets/male-11.jpg",
                                 children: []
                             },
                             {
