@@ -2742,17 +2742,17 @@ img.image {
   font-weight: normal;
   text-decoration: underline;
 }
-.filter-box ul {
+.filter-box .list {
   padding: 0;
   list-style: none;
 }
-.filter-box ul li {
+.filter-box .list li {
   display: inline-block;
 }
-.filter-box ul li a {
+.filter-box .list li a {
   font-weight: bold;
 }
-.filter-box ul li .button {
+.filter-box .list li .button {
   display: inline-block;
   margin: 0.5rem 0.5rem 0 0;
   background: white;
@@ -2763,11 +2763,11 @@ img.image {
   padding: 0.4rem 0.5rem;
   text-decoration: none;
 }
-.filter-box ul li .button .material-icons-outlined {
+.filter-box .list li .button .material-icons-outlined {
   font-weight: 700;
 }
 @media only screen and (max-width: 250px) {
-  .filter-box ul li .button .material-icons-outlined {
+  .filter-box .list li .button .material-icons-outlined {
     display: block;
   }
 }
