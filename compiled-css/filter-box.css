@@ -1,18 +1,52 @@
-/* Error: Undefined mixin.
- *   ,
- * 6 |   @include responsive-font-size(1.2em, 0.05em, 36em, 75em);
- *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss-styles\components\_filter-box.scss 6:3  @import
- *   scss-styles\filter-box.scss 1:9              root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 6 \2502    @include responsive-font-size(1.2em, 0.05em, 36em, 75em);\d\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss-styles\\components\\_filter-box.scss 6:3  @import\a   scss-styles\\filter-box.scss 1:9              root stylesheet";
+.filter-box {
+  background: #f0f0f0;
+  padding: 1.5625rem;
+  margin: 0;
+  margin-bottom: 1.5625rem;
+  font-size: 1.2em;
 }
+@media (min-width: 36em) and (max-width: 75em) {
+  .filter-box {
+    font-size: calc(1.2em + 0.05em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .filter-box {
+    font-size: calc(1.2em + 0.05em);
+  }
+}
+.filter-box .clear {
+  font-weight: normal;
+  text-decoration: underline;
+}
+.filter-box .list {
+  padding: 0;
+  list-style: none;
+}
+.filter-box .list li {
+  display: inline-block;
+}
+.filter-box .list li a {
+  font-weight: bold;
+}
+.filter-box .list li .button {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0 0;
+  background: white;
+  border: 1px #949494 solid;
+  color: #202024;
+  font-size: 0.83333em;
+  font-weight: normal;
+  padding: 0.4rem 0.5rem;
+  text-decoration: none;
+}
+.filter-box .list li .button .material-icons-outlined {
+  font-weight: 700;
+}
+@media only screen and (max-width: 250px) {
+  .filter-box .list li .button .material-icons-outlined {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=filter-box.css.map */
