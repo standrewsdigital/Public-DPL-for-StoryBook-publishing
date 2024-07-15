@@ -21,7 +21,6 @@
 @mixin checkboxRadioBase() {
 	appearance: none;
 	aspect-ratio: 1;
-	font-size: 1em;
 	background: Field;
 	border: 2px solid CanvasText;
 	height: 25px;
@@ -35,9 +34,9 @@
 	}
 
 	&::after {
+		position: relative;
 		display: inline-block;
 		border: none;
-		box-sizing: border-box;
 		content: '';
 	}
 
@@ -119,6 +118,11 @@
 				height: 16px;
 				width: 16px;
 				font-size: 0.6em;
+
+				&:checked::after {
+					margin: 0 0 10% 30%;
+					border-width: 0 0.2em 0.2em 0;
+				}
 			}
 		}
 
@@ -138,7 +142,7 @@
 		}
 	}
 
-	input:not([type="checkbox"], [type="radio"]), textarea {
+	input:not([type="checkbox"], [type="radio"]), textarea, select {
 		@include baseInput();
 	}
 
@@ -151,11 +155,13 @@
 		@include checkboxRadioBase();
 		
 		&:checked::after {
+			height: 80%;
 			border-style: solid;
-			border-width: 0 0.15em 0.15em 0;
+			border-width: 0 0.25em 0.25em 0;
+			// background-color: CanvasText;
 			aspect-ratio: 1 / 1.8;
 			rotate: 40deg;
-			width: 0.5em;
+			width: 40%;
 			margin-left: 30%;
 		}
 	}
@@ -167,16 +173,23 @@
 		&::after {
 			border-radius: 100%;
 			height: 13px;
-			margin: auto;
-			position: relative;
-			top: -1px;
-			left: 4px;
 			width: 13px;
-			vertical-align: middle;
+			margin: 4px;
 		}
 
 		&:checked::after {
 			background: CanvasText;
+		}
+	}
+
+	.conditional-content {
+
+		border-left: 5px solid $grey;
+		padding: 0.5em 1em;
+		margin-top: 0.5em;
+
+		&[aria-hidden="true"] {
+			display: none;
 		}
 	}
 
