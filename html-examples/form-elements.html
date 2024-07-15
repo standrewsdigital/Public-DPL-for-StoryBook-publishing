@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form elements</title>
     <link rel="stylesheet" href="../compiled-css/main.css">
+	<script src="../scripts/form-elements.js" defer></script>
 </head>
 <body>
     <header class="container">
@@ -216,6 +217,85 @@
 						</ul>
 
 					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Radio buttons - Inline</legend>
+						<p class="input-help" id="example-inline-radio-help">Select a number.</p>
+						<ul class="inline">
+							<li>
+								<input type="radio" id="radio-inline-option1-id" name="radio-inline-option" value="one">
+								<label for="radio-inline-option1-id">One</label>
+							</li>
+							<li>
+								<input type="radio" id="radio-inline-option2-id" name="radio-inline-option" value="two">
+								<label for="radio-inline-option2-id">Two</label>
+							</li>
+							<li>
+								<input type="radio" id="radio-inline-option3-id" name="radio-inline-option" value="three">
+								<label for="radio-inline-option3-id">Three</label>
+							</li>
+						</ul>
+
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Radio buttons - Stacked with conditional</legend>
+						<p class="input-help" id="example-conditional-radio-help">The radio button that shows the conditional input must have a value of 'conditional' and the div container for the input must have a class of 'conditional-content' for this to work.</p>
+						<ul>
+							<li>
+								<input class="conditional-input" type="radio" id="radio-conditional-option1-id" name="radio-conditional-option" value="one">
+								<label for="radio-conditional-option1-id">One</label>
+							</li>
+							<li>
+								<input class="conditional-input" type="radio" id="radio-conditional-option2-id" name="radio-conditional-option" value="two">
+								<label for="radio-conditional-option2-id">Two</label>
+							</li>
+							<li>
+								<input class="conditional-input" type="radio" id="radio-conditional-option3-id" name="radio-conditional-option" value="three">
+								<label for="radio-conditional-option3-id">Three</label>
+							</li>
+							<li>
+								<input class="conditional-input" type="radio" id="radio-conditional-option4-id" name="radio-conditional-option" value="conditional">
+								<label for="radio-conditional-option4-id">Other</label>
+							</li>
+						</ul>
+
+					</fieldset>
+					<div class="conditional-content" aria-hidden="true">
+						<label for="conditional-input1">Other</label>
+						<input type="text" name="radio-conditional-option" id="conditional-input1" class="form-input" disabled>
+					</div>
+				</div>
+
+				<div class="form-group select-box">
+					<label for="select-box">Select box</label>
+					<p class="input-help" id="select-box-help">Please select your student status.</p>
+					<select name="select-box-input" id="select-box" class="form-input" aria-describedby="select-box-help">
+						<option value="">Please select one of the following:</option>
+						<option value="ug">Undergraduate</option>
+						<option value="pgr">Research postgraduate</option>
+						<option value="pgt">Taught postgraduate</option>
+					</select>
+				</div>
+
+				<div class="form-group select-box">
+					<label for="select-box">Select box with conditional</label>
+					<p class="input-help" id="select-box-help">Please select your student status.</p>
+					<select name="select-box-input" id="select-box" class="form-input conditional-input" aria-describedby="select-box-help">
+						<option value="">Please select one of the following:</option>
+						<option value="ug">Undergraduate</option>
+						<option value="pgr">Research postgraduate</option>
+						<option value="pgt">Taught postgraduate</option>
+						<option value="conditional">Other</option>
+					</select>
+					<div class="conditional-content" aria-hidden="true">
+						<label for="select-conditional-input1">Other</label>
+						<input type="text" name="select-conditional-option" id="select-conditional-input1" class="form-input" disabled>
+					</div>
 				</div>
 
 			</fieldset>
