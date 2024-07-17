@@ -2738,6 +2738,100 @@ img.image {
     grid-template-columns: auto 1fr;
   }
 }
+.event-grid {
+  padding: calc(3vw + 1rem) 0;
+}
+.event-grid .event-grid-heading {
+  margin: 0;
+}
+.event-grid .featured-event {
+  display: flex;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+.event-grid .featured-event:hover {
+  background: #fafafa;
+  box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.event-grid .featured-event:focus-within {
+  box-shadow: none;
+  outline: 3px solid #ffb400;
+}
+.event-grid .featured-event .featured-event-image {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+}
+.event-grid .featured-event .featured-event-image img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  display: block;
+  left: 50%;
+  top: 50%;
+}
+.event-grid .featured-event .featured-event-details {
+  width: 70%;
+  padding: 1em;
+}
+.event-grid .featured-event .featured-event-details .featured-event-heading {
+  font-size: 1.2em;
+  margin: 0;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .event-grid .featured-event .featured-event-details .featured-event-heading {
+    font-size: calc(1.2em + 0.05em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .event-grid .featured-event .featured-event-details .featured-event-heading {
+    font-size: calc(1.2em + 0.05em);
+  }
+}
+.event-grid .featured-event .featured-event-details .featured-event-heading a {
+  text-decoration: none;
+}
+.event-grid .featured-event .featured-event-details .featured-event-heading a::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  overflow: hidden;
+}
+.event-grid .featured-event .featured-event-details .featured-event-heading a:hover {
+  text-decoration: underline;
+}
+.event-grid .featured-event .featured-event-details .featured-event-heading a:focus {
+  outline: none;
+  background: none;
+  box-shadow: none;
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+.event-grid .featured-event .featured-event-details .metadata-list {
+  color: #0f0f11;
+  margin-bottom: 0;
+}
+.event-grid .featured-event .featured-event-details .metadata-list [class^=metadata-]::before {
+  color: #0f0f11;
+}
+
+@media screen and (max-width: 575px) {
+  .event-grid .featured-event {
+    flex-direction: column;
+  }
+  .event-grid .featured-event .featured-event-image,
+  .event-grid .featured-event .featured-event-details {
+    width: 100%;
+  }
+  .event-grid .featured-event .featured-event-image {
+    height: 150px;
+  }
+}
 .paired-values-list {
   display: grid;
   grid-template-columns: auto 1fr;
