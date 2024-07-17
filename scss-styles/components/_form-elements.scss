@@ -142,7 +142,7 @@
 		}
 	}
 
-	input:not([type="checkbox"], [type="radio"]), textarea, select {
+	input:not([type="checkbox"], [type="radio"], [type="file"]), textarea, select {
 		@include baseInput();
 	}
 
@@ -193,5 +193,33 @@
 		}
 	}
 
-}
+	input[type="file"] {
+		display: block;
+		font-size: 1em;
+	}
 
+	.input-group {
+		display: flex;
+		flex-wrap: nowrap;
+		height: 46px;
+		text-wrap: nowrap;
+
+		.input-group-addon {
+			display: flex;
+			align-items: center;
+			border: 1px solid $grey;
+			padding: 6px 12px;
+			height: 100%;
+			background-color: ButtonBorder;
+			z-index: -1;
+
+			&:last-child {
+				border-left: 0;
+			}
+			&:first-child {
+				border-right: 0;
+			}
+		}
+	}
+
+}
