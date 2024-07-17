@@ -1,0 +1,52 @@
+.filter-box {
+  background: #f0f0f0;
+  padding: 1.5625rem;
+  margin: 0;
+  margin-bottom: 1.5625rem;
+  font-size: 1.2em;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .filter-box {
+    font-size: calc(1.2em + 0.05em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .filter-box {
+    font-size: calc(1.2em + 0.05em);
+  }
+}
+.filter-box .clear {
+  font-weight: normal;
+  text-decoration: underline;
+}
+.filter-box .list {
+  padding: 0;
+  list-style: none;
+}
+.filter-box .list li {
+  display: inline-block;
+}
+.filter-box .list li a {
+  font-weight: bold;
+}
+.filter-box .list li .button {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0 0;
+  background: white;
+  border: 1px #949494 solid;
+  color: #202024;
+  font-size: 0.83333em;
+  font-weight: normal;
+  padding: 0.4rem 0.5rem;
+  text-decoration: none;
+}
+.filter-box .list li .button .material-icons-outlined {
+  font-weight: 700;
+}
+@media only screen and (max-width: 250px) {
+  .filter-box .list li .button .material-icons-outlined {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=filter-box.css.map */
