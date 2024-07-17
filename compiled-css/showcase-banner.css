@@ -1,0 +1,31 @@
+.banner-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 540px) {
+  .banner-image {
+    display: none;
+  }
+}
+.banner-text {
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+.banner-text h2 {
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+.banner-text h2 a {
+  color: #ffffff;
+}
+.banner-text h2 a:focus {
+  color: #0f0f11;
+}
+
+.banner-image a img {
+  display: block;
+}
+
+/*# sourceMappingURL=showcase-banner.css.map */
