@@ -33,68 +33,84 @@
                     <!-- <li><a href="#tags">Tags</a></li> -->
                     <li><a href="#dropdown-buttons">Dropdown buttons</a></li>
                 </ul>
-                <div id="dropdown-buttons">
-                    <h2>Hover dropdown buttons</h2>
+                <div id="drop-buttons">
+                    <h2>Hover drop buttons</h2>
 
-                    <div class="hover-dropdown-list">
+                    <!-- <div class="hover-drop-list">
                         <button class="btn"
-                            onclick='let child = parentElement.querySelector(".dropdown-content"); let parent = parentElement.closest(".hover-dropdown-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            onclick='let child = parentElement.querySelector(".drop-content"); let parent = parentElement.closest(".hover-drop-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
+                            data-toggle="drop" aria-haspopup="true" aria-expanded="false">
                             Dropdown trigger
                         </button>
-                        <ul class="dropdown-content" aria-labelledby="dropdown-primary">
+                        <ul class="drop-content" aria-labelledby="drop-primary">
                             <li><a href="">Dropdown option 1</a></li>
                             <li><a href="">Dropdown option 2</a></li>
                             <li><a href="">Dropdown option 3</a></li>
                         </ul>
                     </div>
 
-                    <div class="hover-dropdown-list">
+                    <div class="hover-drop-list">
                         <button class="btn red" onclick='
                             
-                            let child = parentElement.querySelector(".dropdown-content");
-                            let parent = parentElement.closest(".hover-dropdown-list"); 
+                            let child = parentElement.querySelector(".drop-content");
+                            let parent = parentElement.closest(".hover-drop-list"); 
                              if (parent.classList.contains("selected")) {
                                 parent.classList.remove("selected");
                             child.classList.remove("show");} else {parent.classList.add("selected");
                             child.classList.add("show");
-                            }' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            }' data-toggle="drop" aria-haspopup="true" aria-expanded="false">
                             Dropdown trigger
                         </button>
-                        <ul class="dropdown-content" aria-labelledby="dropdown-primary">
-                            <li><a href="">Dropdown option 1</a></li>
-                            <li><a href="">Dropdown option 2</a></li>
-                            <li><a href="">Dropdown option 3</a></li>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="">Drop option 1</a></li>
+                            <li><a href="">Drop option 2</a></li>
+                            <li><a href="">Drop option 3</a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
-                    <div class="hover-dropdown-list">
+                    <div class="hover-drop-list down">
                         <button class="btn green"
-                            onclick='let child = parentElement.querySelector(".dropdown-content"); let parent = parentElement.closest(".hover-dropdown-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown trigger
+                            onclick='let child = parentElement.querySelector(".drop-content"); let parent = parentElement.closest(".hover-drop-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
+                            data-toggle="drop" aria-haspopup="true" aria-expanded="false">
+                            Drop trigger
                         </button>
-                        <ul class="dropdown-content" aria-labelledby="dropdown-primary">
-                            <li><a href="">Dropdown option 1</a></li>
-                            <li><a href="">Dropdown option 2</a></li>
-                            <li><a href="">Dropdown option 3</a></li>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="">Drop option 1</a></li>
+                            <li><a href="">Drop option 2</a></li>
+                            <li><a href="">Drop option 3</a></li>
                         </ul>
                     </div>
 
-                    <div class="hover-dropdown-list">
+                    <div class="hover-drop-list down">
                         <button class="btn grey"
-                            onclick='let child = parentElement.querySelector(".dropdown-content"); let parent = parentElement.closest(".hover-dropdown-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown trigger
+                            onclick='let child = parentElement.querySelector(".drop-content"); let parent = parentElement.closest(".hover-drop-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
+                            data-toggle="drop" aria-haspopup="true" aria-expanded="false">
+                            Drop trigger
                         </button>
-                        <ul class="dropdown-content" aria-labelledby="dropdown-primary">
-                            <li><a href="">Dropdown option 1</a></li>
-                            <li><a href="">Dropdown option 2Dropdown option 2Dropdown option 2Dropdown option 2</a></li>
-                            <li><a href="">Dropdown option 3</a></li>
+                        <ul class="drop-content" aria-labelledby="dropdown-primary">
+                            <li><a href="">Drop option 1</a></li>
+                            <li><a href="">Drop option 2Dropdown option 2Dropdown option 2Dropdown option 2</a></li>
+                            <li><a href="">Drop option 3</a></li>
                         </ul>
                     </div>
                 </div>
 
+                <div id="drop-buttons">
+                    <h2>Hover drop up buttons</h2>
+
+                    <div class="hover-drop-list up">
+                        <button class="btn"
+                            onclick='let child = parentElement.querySelector(".drop-content"); let parent = parentElement.closest(".hover-drop-list"); if (parent.classList.contains("selected")) {parent.classList.remove("selected");child.classList.remove("show");} else {parent.classList.add("selected");child.classList.add("show");}'
+                            data-toggle="drop" aria-haspopup="true" aria-expanded="false">
+                            Drop up trigger
+                        </button>
+                        <ul class="drop-content" aria-labelledby="dropdown-primary">
+                            <li><a href="">Drop option 1</a></li>
+                            <li><a href="">Drop option 2</a></li>
+                            <li><a href="">Drop option 3</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div id="">
                     <h2>Primary buttons</h2>
                     <a type="button" class="btn" href="#">Primary</a>
@@ -134,6 +150,8 @@
                     <a type="button" class="btn orange lg action" href="#">Primary orange</a>
                     <a type="button" class="btn white action lg" href="#">Primary white</a>
                 </div>
+
+
                 <!--
                 <div id="icon-buttons">
                     <h2>Icon buttons</h2>
@@ -159,7 +177,60 @@
                     <a type="button" class="tag purple" href="#">Purple tag</a>
                 </div>
             -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const elements = document.querySelectorAll('.hover-drop-list.up, .hover-drop-list.down');
+                        const initialClasses = new Map();
 
+                        // Store the initial classes
+                        elements.forEach(element => {
+                            initialClasses.set(element, element.className);
+                        });
+
+                        // Function to toggle classes based on scroll position
+                        function toggleClassOnScroll() {
+                            const scrollPosition = window.scrollY;
+                            const viewportHeight = window.innerHeight;
+                            const thresholdTop = 25; // Distance from the top to trigger the change
+                            const thresholdBottom = 80; // Distance from the bottom to trigger the change
+
+                            elements.forEach(element => {
+                                console.log(element);
+
+                                const elementRect = element.getBoundingClientRect();
+                                const elementTop = elementRect.top + scrollPosition;
+                                const elementBottom = elementTop + elementRect.height;
+
+                                if (elementTop <= scrollPosition + thresholdTop) {
+                                    console.log('at the top' + elementTop);
+                                    // If the element is near the top of the page
+                                    if (element.classList.contains('up')) {
+                                        element.classList.remove('up');
+                                        element.classList.add('down');
+                                    }
+                                } else if (elementBottom >= scrollPosition + viewportHeight - thresholdBottom) {
+                                    console.log('at the bottom');
+                                    // If the element is near the bottom of the page
+                                    if (element.classList.contains('down')) {
+                                        element.classList.remove('down');
+                                        element.classList.add('up');
+                                    }
+                                } else {
+                                    console.log('at the middle');
+                                    // If the element is in the middle of the page, revert to initial class
+                                    const initialClass = initialClasses.get(element);
+                                    element.className = initialClass;
+                                }
+                            });
+                        }
+
+                        // Attach the scroll event listener
+                        document.addEventListener('scroll', toggleClassOnScroll);
+
+                        // Initial call to check the position on page load
+                        toggleClassOnScroll();
+                    });
+                </script>
             </div>
         </div>
     </main>

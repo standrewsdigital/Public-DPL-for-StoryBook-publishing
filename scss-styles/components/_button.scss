@@ -168,14 +168,133 @@
     
 }
 
+// // --------- Dropdown list styles -----------//
+// .hover-dropdown-list{
+//     position: relative;
+//     display: inline-block;
+
+// }
+
+// .hover-dropdown-list .btn{
+//     margin: 0 !important;
+//     padding-right: 3rem;
+// }
+
+// // Animation for opening and closing the dropdown
+// @keyframes out {
+//     from   {max-height: 0%;}
+//     to {max-height: 100%;}
+// }
+
+// // On click show dropdown
+// .show{
+//     display: block !important;
+// }
+
+// // styles for the dropdown content 
+// .dropdown-content{
+//     overflow: hidden;
+//     position: absolute;
+//     background-color: var(--page-background-color);
+//     min-width: 160px;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//     padding: 12px 16px;
+//     top: 100%;
+//     left: 0;
+//     z-index: 1000;
+//     display: none;
+//     float: left;
+//     min-width: 160px;
+//     max-width: 100%;
+//     padding: 0;
+//     margin: 0px 0 0;
+//     list-style: none;
+//     font-size: 1rem;
+//     text-align: left;
+//     background-color: var(--page-background-color);
+//     border: 1px solid #6a6a6b;
+//     border-radius: 0px;
+//     -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+//     box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+//     background-clip: padding-box;
+
+//     & >li>a{
+//         display: block;
+//         padding: 6px 22px;
+//         clear: both;
+//         font-weight: normal;
+//         line-height: 1.5;
+//         color: var(--page-text-color);
+//     }
+
+//     & >li>a:hover{
+//         background: var(--page-highlight-background-color);
+//         color: var(--page-text-color);
+//         text-decoration: none;
+//     }
+// }
+
+// // Adds the > to the button
+//  .hover-dropdown-list:after {
+//     content: "";
+//     position: absolute;
+//     pointer-events: all;
+//     right: 0.9rem;
+//     top: 0.6rem;
+//     width: 1rem;
+//     height: 1rem;
+//     cursor: pointer;
+//     transform: rotate(-45deg);
+//     border-left: 4px solid #fff;
+//     border-bottom: 4px solid #fff;
+//     transition: 0.2s ease-in-out;
+// }
+
+// .btn:focus, .btn:active{
+//     outline: 3px solid #FFB400;
+// }
+
+// // On click close dropdown 
+// @media (min-width: 800px) {
+//     .hover-dropdown-list:not(.selected):hover .btn:hover:after{
+//         top: 1rem;
+//         transform: rotate(135deg);
+//         pointer-events: all;
+//     }
+// }
+
+// // On click open dropdown 
+// .selected:after {
+//     top: 0.6rem;
+//     transform: rotate(135deg);
+//     pointer-events: all;
+// }
+
+// // On click close dropdown 
+// @media (min-width: 800px) {
+//     .hover-dropdown-list:not(.selected):hover .dropdown-content   {
+//         display: block;
+//         animation-name: out;
+//         animation-duration: 0.2s;
+//     }
+// }
+
+// @media (min-width:$breakpoint-value) {
+// // Only apply the hover action to full size screens
+// .hover-dropdown-list:not(.selected):hover .btn:after  {
+//     top: 1rem;
+//     transform: rotate(135deg);
+//     pointer-events: all;  
+// }
+// }
 // --------- Dropdown list styles -----------//
-.hover-dropdown-list{
+.hover-drop-list{
     position: relative;
     display: inline-block;
 
 }
 
-.hover-dropdown-list .btn{
+.hover-drop-list .btn{
     margin: 0 !important;
     padding-right: 3rem;
 }
@@ -192,14 +311,16 @@
 }
 
 // styles for the dropdown content 
-.dropdown-content{
+.drop-content{
     overflow: hidden;
     position: absolute;
     background-color: var(--page-background-color);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
-    top: 100%;
+   // top: 100%;
+  // top: auto; 
+ //  bottom: 100%;
     left: 0;
     z-index: 1000;
     display: none;
@@ -218,6 +339,8 @@
     box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
     background-clip: padding-box;
 
+
+
     & >li>a{
         display: block;
         padding: 6px 22px;
@@ -233,9 +356,19 @@
         text-decoration: none;
     }
 }
-
+.hover-drop-list.up{
+    & >.drop-content{
+        top: auto; 
+        bottom: 100%;
+    }
+}
+.hover-drop-list.down{
+    & >.drop-content{
+        top: 100%;
+    }
+}
 // Adds the > to the button
- .hover-dropdown-list:after {
+ .hover-drop-list:after {
     content: "";
     position: absolute;
     pointer-events: all;
@@ -256,9 +389,14 @@
 
 // On click close dropdown 
 @media (min-width: 800px) {
-    .hover-dropdown-list:not(.selected):hover .btn:hover:after{
+    .hover-drop-list:not(.selected):hover .btn:hover:after{
         top: 1rem;
         transform: rotate(135deg);
+        pointer-events: all;
+    }
+    .hover-drop-list.up:not(.selected):hover .btn:hover:after{
+        top: 1rem;
+        transform: rotate(90deg);
         pointer-events: all;
     }
 }
@@ -272,7 +410,7 @@
 
 // On click close dropdown 
 @media (min-width: 800px) {
-    .hover-dropdown-list:not(.selected):hover .dropdown-content   {
+    .hover-drop-list:not(.selected):hover .drop-content   {
         display: block;
         animation-name: out;
         animation-duration: 0.2s;
@@ -281,13 +419,12 @@
 
 @media (min-width:$breakpoint-value) {
 // Only apply the hover action to full size screens
-.hover-dropdown-list:not(.selected):hover .btn:after  {
+.hover-drop-list:not(.selected):hover .btn:after  {
     top: 1rem;
     transform: rotate(135deg);
     pointer-events: all;  
 }
 }
-
 // --------- End dropdown list styles -----------//
 
 // Styling for the default blue button with white text
@@ -326,4 +463,5 @@
 .btn:active {
     color: #202024;    
     background-color: var(--link-focus-background);
+
 }
