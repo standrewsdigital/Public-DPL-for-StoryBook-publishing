@@ -1,6 +1,6 @@
 // Global variables with values that apply to all themes
 @import './variables/breakpoints';
-@import './variables/main_colours';
+@import './variables/main-colors';
 
 $page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 
@@ -32,10 +32,12 @@ $page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   green-primary: $green-primary,
   green-25-tint: $green-25-tint,
   green-50-tint: $green-50-tint,
+  green-10-shade: $green-10-shade,
   green-25-shade: $green-25-shade,
   purple-primary: $purple-primary,
   purple-25-tint: $purple-25-tint,
   purple-50-tint: $purple-50-tint,
+  purple-10-shade: $purple-10-shade,
   purple-25-shade: $purple-25-shade,
   burgundy-primary: $burgundy-primary,
   burgundy-25-tint: $burgundy-25-tint,
@@ -48,12 +50,12 @@ $page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 ) {
 
   // Background color classes
- .bg-#{color-name} {
+ .bg-#{$color-name} {
     background-color: $color-value;
   }
 
   // Text color classes
-   .text#{color-name} {
+   .text-#{$color-name} {
     color: $color-value;
   }
 }

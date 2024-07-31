@@ -1,0 +1,38 @@
+.numerical-list {
+	counter-reset: my-sec-counter;
+	margin-bottom: 30px;
+
+	.list-group-item {
+		display: block;
+		padding: 20px 15px;
+		margin-bottom: -1px;
+		text-decoration: none;
+		color: $dark-grey-2;
+		border: 1px solid $mid-grey-1;
+		background-color: $light-grey-2;
+		line-height: 1.5;
+
+		&::before {
+			display: block;
+			color: $blue-primary;
+			counter-increment: my-sec-counter;
+			content: counter(my-sec-counter);
+			float: right;
+			margin-left: 1.44em;
+			font-size: 1.44em;
+			line-height: 1;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: inherit;
+			background-color: $light-grey-1;
+		}
+
+		&:focus {
+			text-decoration: none;
+			color: inherit;
+			background-color: $light-grey-1;
+		}
+	}
+}
