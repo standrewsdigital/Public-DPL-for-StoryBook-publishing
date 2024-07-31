@@ -1,6 +1,5 @@
-$article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 .article-header {
-  font-family: $article-font-family;
+  font-family: var(--page-font-family);
   border-bottom: 1px #dedede solid;
   margin-bottom: calc(1.5vw + 1rem);
 }
