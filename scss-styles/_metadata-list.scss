@@ -5,17 +5,17 @@
 		margin-right: 5px;
 
 		&.metadata-date::before {
-			@include icon('calendar_month', $grey);
+			@include icon('calendar_month', '', $grey);
 			font-variation-settings: 'wght' 700;
 		}
 
 		&.metadata-time::before {
-			@include icon('schedule', $grey);
+			@include icon('schedule', '', $grey);
 			font-variation-settings: 'wght' 700;
 		}
 
 		&.metadata-location::before {
-			@include icon('location_on', $grey);
+			@include icon('location_on', '', $grey);
 			font-variation-settings: 'OPSZ' 20, 'wght' 700, 'FILL' 1;
 		}
 
