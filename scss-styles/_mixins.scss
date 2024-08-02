@@ -36,9 +36,8 @@
   }
 
 // Mixin for icon CSS
-// TODO: Include content alt text as an argument when universally supported
-@mixin icon($content, $colour: $dark-grey-2) {
-  content: $content;
+@mixin icon($content, $altText, $colour: $dark-grey-2) {
+  content: $content / $altText;
   font-family: 'Material Symbols Outlined';
   font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';
