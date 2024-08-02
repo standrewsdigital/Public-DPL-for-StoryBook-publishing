@@ -3018,6 +3018,10 @@ code {
 }
 
 table {
+  display: block;
+  max-width: fit-content;
+  white-space: nowrap;
+  overflow-x: auto;
   width: 100%;
   text-align: left;
   border-collapse: collapse;
@@ -3050,6 +3054,16 @@ table.tertiary-2 thead {
 }
 table.tertiary-3 thead {
   background-color: #7b439a;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+.table-wrapper table {
+  display: table;
+  white-space: unset;
+  max-width: unset;
+  overflow-x: unset;
 }
 
 /*# sourceMappingURL=main.css.map */
