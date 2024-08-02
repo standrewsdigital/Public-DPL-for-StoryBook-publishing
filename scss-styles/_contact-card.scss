@@ -78,12 +78,12 @@
 
 		.contact-card-contact-phone {
 			.contact-card-link::before {
-				content: 'phone_enabled';
+				content: 'phone_enabled' / '';
 			}
 		}
 		.contact-card-contact-email {
 			.contact-card-link::before {
-				content: 'mail';
+				content: 'mail' / '';
 			}
 		}
 	}

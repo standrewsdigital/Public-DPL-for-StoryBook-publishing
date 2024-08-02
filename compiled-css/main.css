@@ -1646,7 +1646,7 @@ footer .footer-links a:hover, footer .footer-links a:focus {
   display: inline-block;
   margin-right: 0.25rem;
   margin-left: 0.25rem;
-  content: "chevron_right";
+  content: "chevron_right"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
 }
@@ -1886,16 +1886,16 @@ html, body {
   font-feature-settings: "liga";
 }
 .article-list .snippet dl .date::before {
-  content: "event";
+  content: "event"/"Date";
 }
 .article-list .snippet dl .time::before {
-  content: "schedule";
+  content: "schedule"/"Time";
 }
 .article-list .snippet dl .location::before {
-  content: "place";
+  content: "place"/"Location";
 }
 .article-list .snippet dl .folder-open::before {
-  content: "folder_open";
+  content: "folder_open"/"Category";
 }
 .article-list .snippet dd {
   display: block;
@@ -2046,7 +2046,7 @@ html, body {
 }
 .accordion-group details > summary::before {
   float: right;
-  content: "expand_more";
+  content: "expand_more"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -2054,7 +2054,7 @@ html, body {
   color: #0f0f11;
 }
 .accordion-group details[open] > summary::before {
-  content: "expand_less";
+  content: "expand_less"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -2273,10 +2273,10 @@ html, body {
   margin-right: 0.2em;
 }
 .contact-card .contact-card-contact .contact-card-contact-phone .contact-card-link::before {
-  content: "phone_enabled";
+  content: "phone_enabled"/"";
 }
 .contact-card .contact-card-contact .contact-card-contact-email .contact-card-link::before {
-  content: "mail";
+  content: "mail"/"";
 }
 .contact-card .contact-card-tags {
   grid-column: 2/-1;
@@ -2524,7 +2524,7 @@ img.image {
   margin-right: 5px;
 }
 .metadata-list dt.metadata-date::before {
-  content: "calendar_month";
+  content: "calendar_month"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -2533,7 +2533,7 @@ img.image {
   font-variation-settings: "wght" 700;
 }
 .metadata-list dt.metadata-time::before {
-  content: "schedule";
+  content: "schedule"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -2542,7 +2542,7 @@ img.image {
   font-variation-settings: "wght" 700;
 }
 .metadata-list dt.metadata-location::before {
-  content: "location_on";
+  content: "location_on"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
