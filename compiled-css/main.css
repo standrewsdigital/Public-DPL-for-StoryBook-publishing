@@ -148,14 +148,6 @@
   color: #0f0f11;
 }
 
-.bg-grey {
-  background-color: #6a6a6b;
-}
-
-.text-grey {
-  color: #6a6a6b;
-}
-
 .bg-mid-grey-1 {
   background-color: #949494;
 }
@@ -186,14 +178,6 @@
 
 .text-light-grey-2 {
   color: #fafafa;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.text-white {
-  color: #ffffff;
 }
 
 .bg-orange-primary {
@@ -1380,14 +1364,6 @@ footer .footer-links a:hover, footer .footer-links a:focus {
   color: #0f0f11;
 }
 
-.bg-grey {
-  background-color: #6a6a6b;
-}
-
-.text-grey {
-  color: #6a6a6b;
-}
-
 .bg-mid-grey-1 {
   background-color: #949494;
 }
@@ -1418,14 +1394,6 @@ footer .footer-links a:hover, footer .footer-links a:focus {
 
 .text-light-grey-2 {
   color: #fafafa;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.text-white {
-  color: #ffffff;
 }
 
 .bg-orange-primary {
@@ -1731,16 +1699,344 @@ html, body {
   padding: 0;
 }
 
+/* 
+This SCSS file defines the styles for various button 
+components and dropdown menus. It includes 
+mixins for color options, size options, 
+and action buttons. The file also generates
+icon button classes based on a list of supported icons.
+*/
+.btn.icon-word {
+  padding: 0.5rem !important;
+}
+
+.icon-word::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "text_snippet";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-expand_more {
+  padding: 0.5rem !important;
+}
+
+.icon-expand_more::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "expand_more";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-pdf {
+  padding: 0.5rem !important;
+}
+
+.icon-pdf::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "picture_as_pdf";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-zip {
+  padding: 0.5rem !important;
+}
+
+.icon-zip::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "folder_zip";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-edit {
+  padding: 0.5rem !important;
+}
+
+.icon-edit::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "edit";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-folder {
+  padding: 0.5rem !important;
+}
+
+.icon-folder::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "folder";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-person {
+  padding: 0.5rem !important;
+}
+
+.icon-person::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "person";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-mail {
+  padding: 0.5rem !important;
+}
+
+.icon-mail::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "mail";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-delete {
+  padding: 0.5rem !important;
+}
+
+.icon-delete::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "delete";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-home {
+  padding: 0.5rem !important;
+}
+
+.icon-home::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "home";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-menu {
+  padding: 0.5rem !important;
+}
+
+.icon-menu::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "menu";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-settings {
+  padding: 0.5rem !important;
+}
+
+.icon-settings::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "settings";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-pin {
+  padding: 0.5rem !important;
+}
+
+.icon-pin::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "pin";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-schedule {
+  padding: 0.5rem !important;
+}
+
+.icon-schedule::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "schedule";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-date {
+  padding: 0.5rem !important;
+}
+
+.icon-date::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "date_range";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-chevron_right {
+  padding: 0.5rem !important;
+}
+
+.icon-chevron_right::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "chevron_right";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
+.btn.icon-chevron_left {
+  padding: 0.5rem !important;
+}
+
+.icon-chevron_left::before {
+  color: inherit;
+  float: right;
+  font-size: 1.3rem;
+  padding: 0;
+  padding-left: 8px;
+  padding-top: 5px;
+  line-height: 1rem;
+  content: "chevron_left";
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+
 .hover-drop-list {
   position: relative;
   display: inline-block;
 }
-
 .hover-drop-list .btn {
   margin: 0 !important;
   padding-right: 3rem;
 }
-
 @keyframes out {
   from {
     max-height: 0%;
@@ -1749,11 +2045,10 @@ html, body {
     max-height: 100%;
   }
 }
-.show {
+.hover-drop-list .show {
   display: block !important;
 }
-
-.drop-content {
+.hover-drop-list .drop-content {
   overflow: hidden;
   position: absolute;
   background-color: var(--page-background-color);
@@ -1764,21 +2059,16 @@ html, body {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
   max-width: 100%;
   padding: 0;
   margin: 0px 0 0;
   list-style: none;
   font-size: 1rem;
   text-align: left;
-  background-color: var(--page-background-color);
   border: 1px solid #6a6a6b;
-  border-radius: 0px;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  background-clip: padding-box;
 }
-.drop-content > li > a {
+.hover-drop-list .drop-content > li > a {
   display: block;
   padding: 6px 22px;
   clear: both;
@@ -1786,21 +2076,18 @@ html, body {
   line-height: 1.5;
   color: var(--page-text-color);
 }
-.drop-content > li > a:hover {
+.hover-drop-list .drop-content > li > a:hover {
   background: var(--page-highlight-background-color);
   color: var(--page-text-color);
   text-decoration: none;
 }
-
 .hover-drop-list.up > .drop-content {
   top: auto;
   bottom: 100%;
 }
-
 .hover-drop-list.down > .drop-content {
   top: 100%;
 }
-
 .hover-drop-list:after {
   content: "";
   position: absolute;
@@ -1820,6 +2107,21 @@ html, body {
   outline: 3px solid #FFB400;
 }
 
+.btn:focus {
+  color: #fff;
+  background-color: #003e74;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #003e74;
+}
+
+.btn:active {
+  color: #202024;
+  background-color: var(--link-focus-background);
+}
+
 @media (min-width: 800px) {
   .hover-drop-list:not(.selected):hover .btn:hover:after {
     top: 1rem;
@@ -1831,14 +2133,6 @@ html, body {
     transform: rotate(90deg);
     pointer-events: all;
   }
-}
-.selected:after {
-  top: 0.6rem;
-  transform: rotate(135deg);
-  pointer-events: all;
-}
-
-@media (min-width: 800px) {
   .hover-drop-list:not(.selected):hover .drop-content {
     display: block;
     animation-name: out;
@@ -1852,6 +2146,12 @@ html, body {
     pointer-events: all;
   }
 }
+.selected:after {
+  top: 0.6rem;
+  transform: rotate(135deg);
+  pointer-events: all;
+}
+
 .btn {
   z-index: 1;
   margin-bottom: 5px;
@@ -1867,94 +2167,63 @@ html, body {
   vertical-align: middle;
   touch-action: manipulation;
   line-height: 1.5;
-  border-radius: 0px;
+  border-radius: 0;
   white-space: nowrap;
   display: inline-block;
-  /*  The default primary colour is blue but other colours are supported
-      supported colour options:
-          burgundy,     
-          green, 
-          grey, 
-          orange,
-          purple,  
-          red, 
-          white
-  */
 }
 .btn.burgundy {
   background-color: #c60c46;
 }
-.btn.burgundy:focus {
-  background-color: #950935;
-}
-.btn.burgundy:hover {
+.btn.burgundy:focus, .btn.burgundy:hover {
   background-color: #950935;
 }
 .btn.green {
   background-color: #00853f;
 }
-.btn.green:focus {
-  background-color: #00642f;
-}
-.btn.green:hover {
+.btn.green:focus, .btn.green:hover {
   background-color: #00642f;
 }
 .btn.grey {
   background-color: #949494;
 }
-.btn.grey:focus {
-  background-color: #4f4f4f;
-}
-.btn.grey:hover {
+.btn.grey:focus, .btn.grey:hover {
   background-color: #4f4f4f;
 }
 .btn.orange {
   background-color: #bf5909;
 }
-.btn.orange:focus {
-  background-color: #98490c;
-}
-.btn.orange:hover {
+.btn.orange:focus, .btn.orange:hover {
   background-color: #98490c;
 }
 .btn.purple {
   background-color: #7b439a;
 }
-.btn.purple:focus {
-  background-color: #5c3274;
-}
-.btn.purple:hover {
+.btn.purple:focus, .btn.purple:hover {
   background-color: #5c3274;
 }
 .btn.red {
   background-color: #ea1a13;
 }
-.btn.red:focus {
-  background-color: #b0140e;
-}
-.btn.red:hover {
+.btn.red:focus, .btn.red:hover {
   background-color: #b0140e;
 }
 .btn.white {
   background-color: #fff;
   color: #00539b;
-  border: 1px #003e74 solid;
-  border-bottom: 3px #0071b3 solid;
+  border: 1px solid #003e74;
+  border-bottom: 3px solid #0071b3;
   padding-bottom: 6px;
 }
-.btn.white:focus {
+.btn.white:focus, .btn.white:hover {
   background-color: #fff;
-  color: #00539b;
-  text-decoration: underline;
-}
-.btn.white:hover {
-  background-color: #fff;
-  color: #00539b;
   text-decoration: underline;
 }
 .btn.lg {
   font-size: 1em;
   line-height: 1.5;
+}
+.btn.mrg {
+  margin: 0.3rem;
 }
 .btn.action {
   top: 0.1rem;
@@ -1965,33 +2234,32 @@ html, body {
   text-align: left;
   padding-top: 0.3rem;
   padding-left: 1rem;
+  padding-bottom: 0.3rem;
 }
 .btn.action.green {
-  border-bottom: 3px #00642f solid;
+  border-bottom: 3px solid #00642f;
 }
 .btn.action.orange {
-  border-bottom: 3px #98490c solid;
+  border-bottom: 3px solid #98490c;
 }
 .btn.action.red {
-  border-bottom: 3px #b0140e solid;
+  border-bottom: 3px solid #b0140e;
 }
 .btn.action.burgundy {
-  border-bottom: 3px #950935 solid;
-}
-.btn.action.green {
-  border-bottom: 3px #00642f solid;
+  border-bottom: 3px solid #950935;
 }
 .btn.action.purple {
-  border-bottom: 3px #5c3274 solid;
+  border-bottom: 3px solid #5c3274;
 }
 .btn.action.grey {
-  border-bottom: 3px #4f4f4f solid;
+  border-bottom: 3px solid #4f4f4f;
 }
 .btn.action.white {
+  border-bottom: 3px solid #003e74;
   background-color: #fff;
   color: #00539b;
-  border: 1px #003e74 solid;
-  border-bottom: 3px #0071b3 solid;
+  border: 1px solid #003e74;
+  border-bottom: 3px solid #0071b3;
   padding-bottom: 6px;
 }
 .btn.action:after {
@@ -2011,21 +2279,6 @@ html, body {
 .btn.action.white:after {
   border: 1rem solid #00539b;
   border-width: 0px 0.3rem 0.3rem 0px;
-}
-
-.btn:focus {
-  color: #fff;
-  background-color: #003e74;
-}
-
-.btn:hover {
-  color: #fff;
-  background-color: #003e74;
-}
-
-.btn:active {
-  color: #202024;
-  background-color: var(--link-focus-background);
 }
 
 .image {
