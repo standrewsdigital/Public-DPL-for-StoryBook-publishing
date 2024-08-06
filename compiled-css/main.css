@@ -1665,7 +1665,7 @@ footer .footer-links a:hover, footer .footer-links a:focus {
   display: inline-block;
   margin-right: 0.25rem;
   margin-left: 0.25rem;
-  content: "chevron_right";
+  content: "chevron_right"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
 }
@@ -2487,16 +2487,16 @@ icon button classes based on a list of supported icons.
   font-feature-settings: "liga";
 }
 .article-list .snippet dl .date::before {
-  content: "event";
+  content: "event"/"Date";
 }
 .article-list .snippet dl .time::before {
-  content: "schedule";
+  content: "schedule"/"Time";
 }
 .article-list .snippet dl .location::before {
-  content: "place";
+  content: "place"/"Location";
 }
 .article-list .snippet dl .folder-open::before {
-  content: "folder_open";
+  content: "folder_open"/"Category";
 }
 .article-list .snippet dd {
   display: block;
@@ -2647,7 +2647,7 @@ icon button classes based on a list of supported icons.
 }
 .accordion-group details > summary::before {
   float: right;
-  content: "expand_more";
+  content: "expand_more"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -2655,7 +2655,7 @@ icon button classes based on a list of supported icons.
   color: #0f0f11;
 }
 .accordion-group details[open] > summary::before {
-  content: "expand_less";
+  content: "expand_less"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -2874,10 +2874,10 @@ icon button classes based on a list of supported icons.
   margin-right: 0.2em;
 }
 .contact-card .contact-card-contact .contact-card-contact-phone .contact-card-link::before {
-  content: "phone_enabled";
+  content: "phone_enabled"/"";
 }
 .contact-card .contact-card-contact .contact-card-contact-email .contact-card-link::before {
-  content: "mail";
+  content: "mail"/"";
 }
 .contact-card .contact-card-tags {
   grid-column: 2/-1;
@@ -3125,7 +3125,7 @@ img.image {
   margin-right: 5px;
 }
 .metadata-list dt.metadata-date::before {
-  content: "calendar_month";
+  content: "calendar_month"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -3134,7 +3134,7 @@ img.image {
   font-variation-settings: "wght" 700;
 }
 .metadata-list dt.metadata-time::before {
-  content: "schedule";
+  content: "schedule"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -3143,7 +3143,7 @@ img.image {
   font-variation-settings: "wght" 700;
 }
 .metadata-list dt.metadata-location::before {
-  content: "location_on";
+  content: "location_on"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -3347,6 +3347,200 @@ img.image {
   .filter-box .list li .button .material-icons-outlined {
     display: block;
   }
+}
+
+.form-fieldset {
+  border: 0;
+  padding: 0;
+}
+.form-fieldset legend {
+  padding: 0;
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+}
+.form-fieldset legend > * {
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+.form-group label {
+  display: inline-block;
+  max-width: 100%;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.form-group .input-help {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: #6a6a6b;
+}
+.form-group .input-help .visually-hidden:focus {
+  height: auto;
+  width: auto;
+  clip-path: none;
+  margin-left: 1em;
+}
+.form-group ul {
+  margin: 0;
+  padding: 0;
+}
+.form-group ul li {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+.form-group ul li label {
+  font-weight: normal;
+  margin: 0;
+  vertical-align: middle;
+}
+.form-group ul li label:hover {
+  cursor: pointer;
+}
+.form-group ul.inline li {
+  display: inline-block;
+  margin-right: 1em;
+}
+.form-group ul.small input[type=checkbox] {
+  height: 16px;
+  width: 16px;
+  font-size: 0.6em;
+}
+.form-group ul.small input[type=checkbox]:checked::after {
+  margin: 0 0 10% 30%;
+  border-width: 0 0.2em 0.2em 0;
+}
+.form-group ul.collapsed {
+  border: 1px solid CanvasText;
+  padding: 0.5em 0.5em;
+}
+.form-group ul.collapsed li:last-child {
+  margin-bottom: 0;
+}
+.form-group ul.collapsed[aria-expanded=false] {
+  overflow-y: scroll;
+  max-height: 30vh;
+  min-height: 6em;
+}
+.form-group input:not([type=checkbox], [type=radio], [type=file]), .form-group textarea, .form-group select {
+  display: block;
+  width: 100%;
+  height: 46px;
+  font-size: 1em;
+  padding: 6px 12px;
+  font: inherit;
+  border: 1px solid #6a6a6b;
+  color: #202024;
+}
+.form-group input:not([type=checkbox], [type=radio], [type=file]):focus, .form-group textarea:focus, .form-group select:focus {
+  outline: 3px solid #ffb400;
+  box-shadow: inset 0 0 0 2px #6a6a6b;
+}
+.form-group input:not([type=checkbox], [type=radio], [type=file]).form-input-auto, .form-group textarea.form-input-auto, .form-group select.form-input-auto {
+  width: auto;
+}
+.form-group textarea {
+  height: auto;
+  overflow: auto;
+}
+.form-group input[type=checkbox] {
+  appearance: none;
+  aspect-ratio: 1;
+  background: Field;
+  border: 2px solid CanvasText;
+  height: 25px;
+  width: 25px;
+  margin: 0 0.25em 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.form-group input[type=checkbox]:hover {
+  background: ButtonBorder;
+}
+.form-group input[type=checkbox]::after {
+  position: relative;
+  display: inline-block;
+  border: none;
+  content: "";
+}
+.form-group input[type=checkbox]:checked::after {
+  border-color: CanvasText;
+}
+.form-group input[type=checkbox]:checked::after {
+  height: 80%;
+  border-style: solid;
+  border-width: 0 0.25em 0.25em 0;
+  aspect-ratio: 1/1.8;
+  rotate: 40deg;
+  width: 40%;
+  margin-left: 30%;
+}
+.form-group input[type=radio] {
+  appearance: none;
+  aspect-ratio: 1;
+  background: Field;
+  border: 2px solid CanvasText;
+  height: 25px;
+  width: 25px;
+  margin: 0 0.25em 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.form-group input[type=radio]:hover {
+  background: ButtonBorder;
+}
+.form-group input[type=radio]::after {
+  position: relative;
+  display: inline-block;
+  border: none;
+  content: "";
+}
+.form-group input[type=radio]:checked::after {
+  border-color: CanvasText;
+}
+.form-group input[type=radio]::after {
+  border-radius: 100%;
+  height: 13px;
+  width: 13px;
+  margin: 4px;
+}
+.form-group input[type=radio]:checked::after {
+  background: CanvasText;
+}
+.form-group .conditional-content {
+  border-left: 5px solid #6a6a6b;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+}
+.form-group .conditional-content[aria-hidden=true] {
+  display: none;
+}
+.form-group input[type=file] {
+  display: block;
+  font-size: 1em;
+}
+.form-group .input-group {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 46px;
+  text-wrap: nowrap;
+}
+.form-group .input-group .input-group-addon {
+  display: flex;
+  align-items: center;
+  border: 1px solid #6a6a6b;
+  padding: 6px 12px;
+  height: 100%;
+  background-color: ButtonBorder;
+  z-index: -1;
+}
+.form-group .input-group .input-group-addon:last-child {
+  border-left: 0;
+}
+.form-group .input-group .input-group-addon:first-child {
+  border-right: 0;
 }
 
 .featured-people {
