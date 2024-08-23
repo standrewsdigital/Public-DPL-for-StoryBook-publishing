@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event list</title>
+    <link rel="stylesheet" href="../compiled-css/main.css">
+    <link rel="stylesheet" href="../compiled-css/event-list.css">
+</head>
+<body>
+    <header class="container">
+        <div class="row">
+        <div class="col col-12-lg col-12-xxs header-content">
+            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+        </div>
+    </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h1>Event list</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>Single event list</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Lecture on Quantum Computing</h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>Event with tag</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <!-- Event with a tag (e.g., Cancelled) -->
+                        <div class="event">
+                            <div class="event-tag">Cancelled</div>
+                            <h3>Piano masterclass</h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>10th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>2:00 PM - 4:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Younger Hall</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-capacity" data-icon="group"></dt>
+                                    <dd>50 People</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>Event with link</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <div class="event clickable" onclick="location.href='https://example.com/lecture-on-quantum-computing';">
+                            <h3><a href="https://example.com/lecture-on-quantum-computing">Lecture on Quantum Computing</a></h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>List of simple events</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Lecture on Quantum Computing</h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- Event with a tag (e.g., Cancelled) -->
+                        <div class="event">
+                            <div class="event-tag">Cancelled</div>
+                            <h3>Piano masterclass</h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>10th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>2:00 PM - 4:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Younger Hall</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-capacity" data-icon="group"></dt>
+                                    <dd>50 People</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Lecture on Quantum Computing</h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Lecture on Quantum Computing</h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Lecture on Quantum Computing</h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>List of link events</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <div class="event clickable" onclick="location.href='https://example.com/lecture-on-quantum-computing';">
+                            <h3><a href="https://example.com/lecture-on-quantum-computing">Lecture on Quantum Computing</a></h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="event clickable" onclick="location.href='https://example.com/lecture-on-quantum-computing';">
+                            <h3><a href="https://example.com/lecture-on-quantum-computing">Lecture on Quantum Computing</a></h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="event clickable" onclick="location.href='https://example.com/lecture-on-quantum-computing';">
+                            <h3><a href="https://example.com/lecture-on-quantum-computing">Lecture on Quantum Computing</a></h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="event clickable" onclick="location.href='https://example.com/lecture-on-quantum-computing';">
+                            <h3><a href="https://example.com/lecture-on-quantum-computing">Lecture on Quantum Computing</a></h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-lg col-12-xxs">
+                        <div class="footer-text">
+                            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                        </div>
+                        <div class="footer-links">
+                            <a href="/cookie-preferences">Cookie preferences</a>
+                            <a href="/accessibility-statement">Accessibility statement</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/website-help">Website help</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
