@@ -9,6 +9,7 @@
     "compile-scss": "sass --watch scss-styles/:compiled-css/",
     "dev-vite": "vite",
     "build-vite": "vite build",
+    "buildmain-vite": "vite main build",
     "build-esbuild": "node esbuild.js",
     "build-webpack": "webpack"
   },
