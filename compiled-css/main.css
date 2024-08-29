@@ -3211,4 +3211,53 @@ code {
   font-weight: bold;
 }
 
+table {
+  display: block;
+  max-width: fit-content;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+table th, table td {
+  padding: 15px 10px;
+}
+table thead {
+  background-color: #6a6a6b;
+  color: #ffffff;
+}
+table tbody tr {
+  border-top: 1px solid #949494;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+table.primary thead {
+  background-color: #00539b;
+}
+table.secondary thead {
+  background-color: #0071b3;
+}
+table.tertiary-1 thead {
+  background-color: #00853f;
+}
+table.tertiary-2 thead {
+  background-color: #c60c46;
+}
+table.tertiary-3 thead {
+  background-color: #7b439a;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+.table-wrapper table {
+  display: table;
+  white-space: unset;
+  max-width: unset;
+  overflow-x: unset;
+}
+
 /*# sourceMappingURL=main.css.map */
