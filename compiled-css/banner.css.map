@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss-styles/components/_banner.scss","../scss-styles/variables/_main-colors.scss"],"names":[],"mappings":"AAAA;EACE;EACA;;;AAGF;EACE;IACE;;;AAIJ;EACE;EACA;;AAEA;EACE;EACA;EACA,OCII;;ADFJ;EACE,OCCE;;ADCF;EACE,OCRM;;;ADcd;EACE;EACA;;AAEA;EACE;EACA;EACA,OCrBU;;ADuBV;EACE,OCxBQ;;AD0BR;EACE,OC3BM;;;ADmCV;EACE","file":"banner.css"}
