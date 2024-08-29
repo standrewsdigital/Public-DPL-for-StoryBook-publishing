@@ -30,17 +30,17 @@
       }
 
       .date::before {
-        content: "event";
+        content: "event" / 'Date';
       }
       .time::before {
-        content: "schedule";
+        content: "schedule" / 'Time';
       }
       .location::before {
-        content: "place";
+        content: "place" / 'Location';
       }
       //Folder open class, to be added to dt tag
       .folder-open::before {
-        content: "folder_open";
+        content: "folder_open" / 'Category';
       }
     }
 
