@@ -16,7 +16,7 @@
   font-size: medium;
 }
 .search-results ol li h2.label::before, .search-results ol li h3.label::before, .search-results ol li h4.label::before, .search-results ol li h5.label::before, .search-results ol li h6.label::before, .search-results ol li .label.label::before {
-  content: "check_indeterminate_small";
+  content: "check_indeterminate_small"/"";
   font-family: "Material Symbols Outlined";
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
@@ -50,16 +50,16 @@
   display: block;
 }
 .search-results ol li .metadata.date::before {
-  content: "event";
+  content: "event"/"Date";
 }
 .search-results ol li .metadata.type::before {
-  content: "description";
+  content: "description"/"Category";
 }
 .search-results ol li .metadata.audience::before {
-  content: "group";
+  content: "group"/"Audience";
 }
 .search-results ol li .metadata.email::before {
-  content: "mail";
+  content: "mail"/"Email address  ";
 }
 
 @media (max-width: 768px) {

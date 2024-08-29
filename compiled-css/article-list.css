@@ -25,16 +25,16 @@
   font-feature-settings: "liga";
 }
 .article-list .snippet dl .date::before {
-  content: "event";
+  content: "event"/"Date";
 }
 .article-list .snippet dl .time::before {
-  content: "schedule";
+  content: "schedule"/"Time";
 }
 .article-list .snippet dl .location::before {
-  content: "place";
+  content: "place"/"Location";
 }
 .article-list .snippet dl .folder-open::before {
-  content: "folder_open";
+  content: "folder_open"/"Category";
 }
 .article-list .snippet dd {
   display: block;
