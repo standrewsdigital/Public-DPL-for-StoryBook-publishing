@@ -1,0 +1,55 @@
+@mixin tableBackgroundOptions($class, $bgColour) {
+	&.#{$class} {
+		thead {
+			background-color: $bgColour;
+		}
+	}
+}
+
+table {
+	display: block;
+	max-width: fit-content;
+	white-space: nowrap;
+	overflow-x: auto;
+
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+
+	th, td {
+		padding: 15px 10px;
+	}
+
+	thead {
+		background-color: $grey;
+		color: $white;
+	}
+
+	tbody {
+		tr {
+			border-top: 1px solid $mid-grey-1;
+
+			&:nth-child(odd) {
+				background-color: $light-grey-1;
+			}
+		}
+	}
+
+	@include tableBackgroundOptions('primary', $blue-primary);
+	@include tableBackgroundOptions('secondary', $light-blue-primary);
+	@include tableBackgroundOptions('tertiary-1', $green-primary);
+	@include tableBackgroundOptions('tertiary-2', $burgundy-primary);
+	@include tableBackgroundOptions('tertiary-3', $purple-primary);
+}
+
+.table-wrapper {
+	overflow-x: auto;
+
+	table {
+		display: table;
+		white-space: unset;
+		max-width: unset;
+		overflow-x: unset;
+	}
+}
