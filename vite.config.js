@@ -17,7 +17,7 @@ fs.writeFileSync(tempEntryFile, imports);
 // Function to create input object for individual files
 function createIndividualEntries(dirs) {
   const entries = {};
-  
+
   dirs.forEach(dir => {
     const relativeDir = dir.replace(__dirname, '').replace(/\\/g, '/'); // Ensure correct relative paths
     const files = fs.readdirSync(dir).filter(file => file.endsWith('.js'));
@@ -47,7 +47,7 @@ export default defineConfig({
           // Determine output directory based on entry point
           return chunkInfo.name === 'main'
             ? 'main.js'  // Single bundled file for 'main'
-            : 'separate-js/[name].js';  // Separate files for individual entries
+            : '[name].js';  // Separate files for individual entries
         },
         format: 'es',  // Use ES module format to support multiple entry points
         inlineDynamicImports: false,  // Explicitly set to false
