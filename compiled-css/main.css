@@ -417,7 +417,6 @@ body {
 }
 
 h1 {
-  font-size: 2.0736em;
   font-weight: 700;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -430,9 +429,11 @@ h1 {
     font-size: calc(2.0736em + 0.36780625em);
   }
 }
+h1 {
+  font-size: 2.0736em;
+}
 
 h2 {
-  font-size: 1.728em;
   font-weight: 700;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -445,9 +446,11 @@ h2 {
     font-size: calc(1.728em + 0.225125em);
   }
 }
+h2 {
+  font-size: 1.728em;
+}
 
 h3 {
-  font-size: 1.44em;
   font-weight: 700;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -460,9 +463,11 @@ h3 {
     font-size: calc(1.44em + 0.1225em);
   }
 }
+h3 {
+  font-size: 1.44em;
+}
 
 h4 {
-  font-size: 1.2em;
   font-weight: 700;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -474,6 +479,9 @@ h4 {
   h4 {
     font-size: calc(1.2em + 0.05em);
   }
+}
+h4 {
+  font-size: 1.2em;
 }
 
 h5 {
@@ -1956,7 +1964,6 @@ html, body {
   border-color: #ea1a13;
 }
 .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
-  font-size: 1.44em;
   margin: 0 0 10px 0;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -1968,6 +1975,9 @@ html, body {
   .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
     font-size: calc(1.44em + 0.1225em);
   }
+}
+.alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+  font-size: 1.44em;
 }
 .alert p {
   margin: 0;
@@ -1991,7 +2001,6 @@ html, body {
   border-color: #ea1a13;
 }
 .callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
-  font-size: 1.44em;
   margin: 0 0 10px 0;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -2003,6 +2012,9 @@ html, body {
   .callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
     font-size: calc(1.44em + 0.1225em);
   }
+}
+.callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
+  font-size: 1.44em;
 }
 .callout p {
   margin: 0;
@@ -2020,7 +2032,6 @@ html, body {
   border-bottom: 1px solid #0f0f11;
 }
 .accordion-group details > summary {
-  font-size: 1.2em;
   font-weight: 700;
   color: #0071b3;
   cursor: pointer;
@@ -2036,6 +2047,9 @@ html, body {
   .accordion-group details > summary {
     font-size: calc(1.2em + 0.05em);
   }
+}
+.accordion-group details > summary {
+  font-size: 1.2em;
 }
 .accordion-group details > summary:hover {
   text-decoration: underline;
@@ -2221,9 +2235,6 @@ html, body {
 .contact-card .contact-card-information > * {
   margin: 0;
 }
-.contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
-  font-size: 1.44em;
-}
 @media (min-width: 36em) and (max-width: 75em) {
   .contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
     font-size: calc(1.44em + 0.1225em * (100vw - 36em) / (75em - 36em));
@@ -2233,6 +2244,9 @@ html, body {
   .contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
     font-size: calc(1.44em + 0.1225em);
   }
+}
+.contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
+  font-size: 1.44em;
 }
 .contact-card .contact-card-information .contact-card-summary {
   margin-top: 0.8em;
@@ -2596,6 +2610,15 @@ img.image {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   position: relative;
 }
+.event-grid .featured-event .featured-event-image {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+}
+.event-grid .featured-event .featured-event-details {
+  width: 70%;
+  padding: 1em;
+}
 .event-grid .featured-event:hover {
   background: #fafafa;
   box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
@@ -2603,11 +2626,6 @@ img.image {
 .event-grid .featured-event:focus-within {
   box-shadow: none;
   outline: 3px solid #ffb400;
-}
-.event-grid .featured-event .featured-event-image {
-  width: 40%;
-  position: relative;
-  overflow: hidden;
 }
 .event-grid .featured-event .featured-event-image img {
   position: absolute;
@@ -2619,23 +2637,8 @@ img.image {
   left: 50%;
   top: 50%;
 }
-.event-grid .featured-event .featured-event-details {
-  width: 70%;
-  padding: 1em;
-}
 .event-grid .featured-event .featured-event-details .featured-event-heading {
-  font-size: 1.2em;
   margin: 0;
-}
-@media (min-width: 36em) and (max-width: 75em) {
-  .event-grid .featured-event .featured-event-details .featured-event-heading {
-    font-size: calc(1.2em + 0.05em * (100vw - 36em) / (75em - 36em));
-  }
-}
-@media (min-width: 75em) {
-  .event-grid .featured-event .featured-event-details .featured-event-heading {
-    font-size: calc(1.2em + 0.05em);
-  }
 }
 .event-grid .featured-event .featured-event-details .featured-event-heading a {
   text-decoration: none;
@@ -2658,6 +2661,19 @@ img.image {
   box-shadow: none;
   text-decoration: underline;
   color: var(--link-hover-color);
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .event-grid .featured-event .featured-event-details .featured-event-heading {
+    font-size: calc(1.2em + 0.05em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .event-grid .featured-event .featured-event-details .featured-event-heading {
+    font-size: calc(1.2em + 0.05em);
+  }
+}
+.event-grid .featured-event .featured-event-details .featured-event-heading {
+  font-size: 1.2em;
 }
 .event-grid .featured-event .featured-event-details .metadata-list {
   color: #0f0f11;
@@ -2702,7 +2718,6 @@ img.image {
   padding: 1.5625rem;
   margin: 0;
   margin-bottom: 1.5625rem;
-  font-size: 1.2em;
 }
 @media (min-width: 36em) and (max-width: 75em) {
   .filter-box {
@@ -2713,6 +2728,9 @@ img.image {
   .filter-box {
     font-size: calc(1.2em + 0.05em);
   }
+}
+.filter-box {
+  font-size: 1.2em;
 }
 .filter-box .clear {
   font-weight: normal;
@@ -2876,6 +2894,7 @@ img.image {
   margin-left: 30%;
 }
 .form-group input[type=radio] {
+  border-radius: 50%;
   appearance: none;
   aspect-ratio: 1;
   background: Field;
@@ -2885,7 +2904,6 @@ img.image {
   margin: 0 0.25em 0 0;
   vertical-align: middle;
   cursor: pointer;
-  border-radius: 50%;
 }
 .form-group input[type=radio]:hover {
   background: ButtonBorder;
@@ -3021,7 +3039,6 @@ img.image {
   margin-bottom: 0.5em;
 }
 .featured-news .featured-news-content .featured-news-heading {
-  font-size: 2.0736em;
   margin-bottom: 0.5em;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -3033,6 +3050,9 @@ img.image {
   .featured-news .featured-news-content .featured-news-heading {
     font-size: calc(2.0736em + 0.36780625em);
   }
+}
+.featured-news .featured-news-content .featured-news-heading {
+  font-size: 2.0736em;
 }
 .featured-news .featured-news-content p {
   font-size: 1.1em;
