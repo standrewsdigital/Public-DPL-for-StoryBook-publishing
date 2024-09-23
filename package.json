@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss": "sass --watch scss-styles/:compiled-css/"
+    "compile-scss": "sass --watch scss-styles/:compiled-css/ --verbose"
   },
   "author": "teo udrea",
   "license": "ISC",

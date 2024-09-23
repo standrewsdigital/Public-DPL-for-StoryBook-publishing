@@ -7,18 +7,18 @@
 	font: inherit;
 	border: 1px solid $grey;
 	color: $dark-grey-1;
-
+  
 	&:focus {
-		outline: 3px solid $orange-primary;
-		box-shadow: inset 0 0 0 2px $grey;
+	  outline: 3px solid $orange-primary;
+	  box-shadow: inset 0 0 0 2px $grey;
 	}
-
+  
 	&.form-input-auto {
-		width: auto;
+	  width: auto;
 	}
-}
-
-@mixin checkboxRadioBase() {
+  }
+  
+  @mixin checkboxRadioBase() {
 	appearance: none;
 	aspect-ratio: 1;
 	background: Field;
@@ -28,198 +28,208 @@
 	margin: 0 0.25em 0 0;
 	vertical-align: middle;
 	cursor: pointer;
-
+  
 	&:hover {
-		background: ButtonBorder;
+	  background: ButtonBorder;
 	}
-
+  
 	&::after {
-		position: relative;
-		display: inline-block;
-		border: none;
-		content: '';
+	  position: relative;
+	  display: inline-block;
+	  border: none;
+	  content: '';
 	}
-
+  
+	// Wrap `&:checked::after` to comply with new behavior
 	&:checked::after {
+	  & {
 		border-color: CanvasText;
+	  }
 	}
-}
-
-.form-fieldset {
-
+  }
+  
+  .form-fieldset {
 	border: 0;
 	padding: 0;
-
+  
 	legend {
-		padding: 0;
-		font-weight: bold;
-		margin: 0 0 0.5em 0;
-		 & > * {
-			margin: 0;
-		 }
-	}
-
-}
-	
-
-.form-group {
-	margin-bottom: 1.5em;
-
-	label {
-		display: inline-block;
-		max-width: 100%;
-		font-weight: bold;
-		margin-bottom: 0.5em;
-	}
-
-	.input-help {
-		margin-top: 0;
-		margin-bottom: 0.5em;
-		color: $grey;
-
-		.visually-hidden {
-			&:focus {
-				height: auto;
-				width: auto;
-				clip-path: none;
-				margin-left: 1em;
-			}
-		}
-	}
-
-	ul {
+	  padding: 0;
+	  font-weight: bold;
+	  margin: 0 0 0.5em 0;
+  
+	  & > * {
 		margin: 0;
-		padding: 0;
-
+	  }
+	}
+  }
+  
+  .form-group {
+	margin-bottom: 1.5em;
+  
+	label {
+	  display: inline-block;
+	  max-width: 100%;
+	  font-weight: bold;
+	  margin-bottom: 0.5em;
+	}
+  
+	.input-help {
+	  margin-top: 0;
+	  margin-bottom: 0.5em;
+	  color: $grey;
+  
+	  .visually-hidden {
+		&:focus {
+		  height: auto;
+		  width: auto;
+		  clip-path: none;
+		  margin-left: 1em;
+		}
+	  }
+	}
+  
+	ul {
+	  margin: 0;
+	  padding: 0;
+  
+	  li {
+		list-style: none;
+		margin-bottom: 0.5em;
+  
+		label {
+		  font-weight: normal;
+		  margin: 0;
+		  vertical-align: middle;
+  
+		  &:hover {
+			cursor: pointer;
+		  }
+		}
+	  }
+  
+	  &.inline {
 		li {
-			list-style: none;
-			margin-bottom: 0.5em;
-
-			label {
-				font-weight: normal;
-				margin: 0;
-				vertical-align: middle;
-
-				&:hover {
-					cursor: pointer;
-				}
-			}
+		  display: inline-block;
+		  margin-right: 1em;
 		}
-
-		&.inline {
-			li {
-				display: inline-block;
-				margin-right: 1em;
+	  }
+  
+	  &.small {
+		input[type="checkbox"] {
+		  height: 16px;
+		  width: 16px;
+		  font-size: 0.6em;
+  
+		  // Wrap `&:checked::after` to comply with new behavior
+		  &:checked::after {
+			& {
+			  margin: 0 0 10% 30%;
+			  border-width: 0 0.2em 0.2em 0;
 			}
+		  }
 		}
-
-		&.small {
-			input[type="checkbox"] {
-				height: 16px;
-				width: 16px;
-				font-size: 0.6em;
-
-				&:checked::after {
-					margin: 0 0 10% 30%;
-					border-width: 0 0.2em 0.2em 0;
-				}
-			}
+	  }
+  
+	  &.collapsed {
+		border: 1px solid CanvasText;
+		padding: 0.5em 0.5em;
+  
+		li:last-child {
+		  margin-bottom: 0;
 		}
-
-		&.collapsed {
-			border: 1px solid CanvasText;
-			padding: 0.5em 0.5em;
-
-			li:last-child {
-				margin-bottom: 0;
-			}
-
-			&[aria-expanded="false"] {
-				overflow-y: scroll;
-				max-height: 30vh;
-				min-height: 6em;
-			}
+  
+		&[aria-expanded="false"] {
+		  overflow-y: scroll;
+		  max-height: 30vh;
+		  min-height: 6em;
 		}
+	  }
 	}
-
+  
 	input:not([type="checkbox"], [type="radio"], [type="file"]), textarea, select {
-		@include baseInput();
+	  @include baseInput();
 	}
-
+  
 	textarea {
-		height: auto;
-		overflow: auto;
+	  height: auto;
+	  overflow: auto;
 	}
-
+  
 	input[type="checkbox"] {
-		@include checkboxRadioBase();
-		
-		&:checked::after {
-			height: 80%;
-			border-style: solid;
-			border-width: 0 0.25em 0.25em 0;
-			// background-color: CanvasText;
-			aspect-ratio: 1 / 1.8;
-			rotate: 40deg;
-			width: 40%;
-			margin-left: 30%;
+	  @include checkboxRadioBase();
+  
+	  // Wrap `&:checked::after` to comply with new behavior
+	  &:checked::after {
+		& {
+		  height: 80%;
+		  border-style: solid;
+		  border-width: 0 0.25em 0.25em 0;
+		  aspect-ratio: 1 / 1.8;
+		  rotate: 40deg;
+		  width: 40%;
+		  margin-left: 30%;
 		}
+	  }
 	}
-
+  
 	input[type="radio"] {
-		@include checkboxRadioBase();
-		border-radius: 50%;
-
-		&::after {
-			border-radius: 100%;
-			height: 13px;
-			width: 13px;
-			margin: 4px;
+	  // Move `border-radius` before the nested rule to avoid the warning
+	  border-radius: 50%;
+	  @include checkboxRadioBase();
+  
+	  &::after {
+		border-radius: 100%;
+		height: 13px;
+		width: 13px;
+		margin: 4px;
+	  }
+  
+	  // Wrap `&:checked::after` to comply with new behavior
+	  &:checked::after {
+		& {
+		  background: CanvasText;
 		}
-
-		&:checked::after {
-			background: CanvasText;
-		}
+	  }
 	}
-
+  
 	.conditional-content {
-
-		border-left: 5px solid $grey;
-		padding: 0.5em 1em;
-		margin-top: 0.5em;
-
-		&[aria-hidden="true"] {
-			display: none;
-		}
+	  border-left: 5px solid $grey;
+	  padding: 0.5em 1em;
+	  margin-top: 0.5em;
+  
+	  &[aria-hidden="true"] {
+		display: none;
+	  }
 	}
-
+  
 	input[type="file"] {
-		display: block;
-		font-size: 1em;
+	  display: block;
+	  font-size: 1em;
 	}
-
+  
 	.input-group {
+	  display: flex;
+	  flex-wrap: nowrap;
+	  height: 46px;
+	  text-wrap: nowrap;
+  
+	  .input-group-addon {
 		display: flex;
-		flex-wrap: nowrap;
-		height: 46px;
-		text-wrap: nowrap;
-
-		.input-group-addon {
-			display: flex;
-			align-items: center;
-			border: 1px solid $grey;
-			padding: 6px 12px;
-			height: 100%;
-			background-color: ButtonBorder;
-			z-index: -1;
-
-			&:last-child {
-				border-left: 0;
-			}
-			&:first-child {
-				border-right: 0;
-			}
+		align-items: center;
+		border: 1px solid $grey;
+		padding: 6px 12px;
+		height: 100%;
+		background-color: ButtonBorder;
+		z-index: -1;
+  
+		&:last-child {
+		  border-left: 0;
 		}
+  
+		&:first-child {
+		  border-right: 0;
+		}
+	  }
 	}
-
-}
+  }
+  
