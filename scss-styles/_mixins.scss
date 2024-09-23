@@ -1,48 +1,49 @@
 @mixin respond-to($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-      @media (min-width: map-get($breakpoints, $breakpoint)) {
-        @content;
-      }
-    } @else {
-      @warn "Unknown breakpoint: #{$breakpoint}.";
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
     }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}.";
   }
-//Typography
-// Mixin for applying styles based on breakpoints
+}
+
+// Typography
 @mixin typography($property, $values) {
-    @each $breakpoint, $value in $values {
-      @if $breakpoint == 'xs' {
+  @each $breakpoint, $value in $values {
+    @if $breakpoint == 'xs' {
+      #{$property}: $value;
+    } @else {
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+      @media (min-width: $breakpoint-value) {
         #{$property}: $value;
-      } @else {
-        $breakpoint-value: map-get($breakpoints, $breakpoint);
-        @media (min-width: $breakpoint-value) {
-          #{$property}: $value;
-        }
       }
     }
   }
+}
 
-  // Mixin for responsive typography based on viewport width
-  @mixin responsive-font-size($size, $vw-adjustment, $min-vw, $max-vw) {
-    font-size: $size;
-
-    @media (min-width: $min-vw) and (max-width: $max-vw) {
-      font-size: calc(#{$size} + #{$vw-adjustment} * (100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}));
-    }
-
-    @media (min-width: $max-vw) {
-      font-size: calc(#{$size} + #{$vw-adjustment});
-    }
+// Mixin for responsive typography based on viewport width
+@mixin responsive-font-size($size, $vw-adjustment, $min-vw, $max-vw) {
+  @media (min-width: $min-vw) and (max-width: $max-vw) {
+    font-size: calc(#{$size} + #{$vw-adjustment} * (100vw - #{$min-vw}) / (#{$max-vw} - $min-vw));
   }
+
+  @media (min-width: $max-vw) {
+    font-size: calc(#{$size} + #{$vw-adjustment});
+  }
+
+  // Wrap `font-size` in `& {}` to avoid deprecation warnings
+  & {
+    font-size: $size;
+  }
+}
 
 // Mixin for icon CSS
-// TODO: Include content alt text as an argument when universally supported
-@mixin icon($content, $colour: $dark-grey-2) {
-  content: $content;
+@mixin icon($content, $altText, $colour: $dark-grey-2) {
+  content: $content / $altText;
   font-family: 'Material Symbols Outlined';
   font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';
   -moz-font-feature-settings: 'liga';
   color: $colour;
 }
-
