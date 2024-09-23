@@ -17,7 +17,7 @@
             font-size: medium;
 
             &::before {
-              content: 'check_indeterminate_small';
+              content: 'check_indeterminate_small' / '';
               font-family: 'Material Symbols Outlined';
               font-feature-settings: 'liga';
               -webkit-font-feature-settings: 'liga';
@@ -54,19 +54,19 @@
             display: block; // Make full-width metadata span the whole line
           }
           &.date::before {
-            content: 'event'; // Calendar icon for date
+            content: 'event' / 'Date'; // Calendar icon for date
           }
 
           &.type::before {
-            content: 'description'; // Description icon for type
+            content: 'description' / 'Category'; // Description icon for type
           }
 
           &.audience::before {
-            content: 'group'; // Group icon for audience
+            content: 'group' / 'Audience'; // Group icon for audience
           }
 
           &.email::before {
-            content: 'mail'; // Group icon for audience
+            content: 'mail' / 'Email address  '; // Group icon for audience
           }
         }
       }
