@@ -39,11 +39,8 @@
         }
 
         @media only screen and (max-width: 250px) {
-          // Wrap the nested rule in `& {}` for compliance
-          & {
-            .material-icons-outlined {
-              display: block;
-            }
+          .material-icons-outlined {
+            display: block;
           }
         }
       }

@@ -3,6 +3,7 @@
   padding: 1.5625rem;
   margin: 0;
   margin-bottom: 1.5625rem;
+  font-size: 1.2em;
 }
 @media (min-width: 36em) and (max-width: 75em) {
   .filter-box {
@@ -13,9 +14,6 @@
   .filter-box {
     font-size: calc(1.2em + 0.05em);
   }
-}
-.filter-box {
-  font-size: 1.2em;
 }
 .filter-box .clear {
   font-weight: normal;

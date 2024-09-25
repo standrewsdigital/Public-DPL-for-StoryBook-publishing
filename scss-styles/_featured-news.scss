@@ -20,8 +20,8 @@
 
 	.featured-news-content {
 		.featured-news-heading {
-			margin-bottom: 0.5em;
 			@include responsive-font-size(2.0736em, 0.36780625em, 36em, 75em);
+			margin-bottom: 0.5em;
 		}
 		p {
 			font-size: 1.1em;
