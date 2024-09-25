@@ -2,28 +2,22 @@
     padding: 20px;
     margin-bottom: 20px;
 
-    // Move `border-color` declarations to their respective nested rules
-    // This eliminates redundant declarations in the root of `&`
     &.success {
         border-color: $green-primary;
     }
-
     &.info {
         border-color: $blue-primary;
     }
-
     &.warning {
         border-color: $dark-orange;
     }
-
     &.danger {
         border-color: $red-primary;
     }
 
-    // Adjust nested rules by keeping declarations in the correct order
     h2, h3, h4, h5, h6 {
-        margin: 0 0 10px 0;
         @include responsive-font-size(1.44em, 0.1225em, 36em, 75em);
+        margin: 0 0 10px 0;
     }
 
     p {

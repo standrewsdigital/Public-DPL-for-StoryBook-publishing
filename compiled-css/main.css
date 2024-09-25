@@ -428,6 +428,7 @@ body {
 }
 
 h1 {
+  font-size: 2.0736em;
   font-weight: 700;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -440,11 +441,9 @@ h1 {
     font-size: calc(2.0736em + 0.36780625em);
   }
 }
-h1 {
-  font-size: 2.0736em;
-}
 
 h2 {
+  font-size: 1.728em;
   font-weight: 700;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -457,11 +456,9 @@ h2 {
     font-size: calc(1.728em + 0.225125em);
   }
 }
-h2 {
-  font-size: 1.728em;
-}
 
 h3 {
+  font-size: 1.44em;
   font-weight: 700;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -474,11 +471,9 @@ h3 {
     font-size: calc(1.44em + 0.1225em);
   }
 }
-h3 {
-  font-size: 1.44em;
-}
 
 h4 {
+  font-size: 1.2em;
   font-weight: 700;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -490,9 +485,6 @@ h4 {
   h4 {
     font-size: calc(1.2em + 0.05em);
   }
-}
-h4 {
-  font-size: 1.2em;
 }
 
 h5 {
@@ -2565,6 +2557,7 @@ icon button classes based on a list of supported icons.
   border-color: #ea1a13;
 }
 .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+  font-size: 1.44em;
   margin: 0 0 10px 0;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -2576,9 +2569,6 @@ icon button classes based on a list of supported icons.
   .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
     font-size: calc(1.44em + 0.1225em);
   }
-}
-.alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
-  font-size: 1.44em;
 }
 .alert p {
   margin: 0;
@@ -2602,6 +2592,7 @@ icon button classes based on a list of supported icons.
   border-color: #ea1a13;
 }
 .callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
+  font-size: 1.44em;
   margin: 0 0 10px 0;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -2613,9 +2604,6 @@ icon button classes based on a list of supported icons.
   .callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
     font-size: calc(1.44em + 0.1225em);
   }
-}
-.callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
-  font-size: 1.44em;
 }
 .callout p {
   margin: 0;
@@ -2633,6 +2621,7 @@ icon button classes based on a list of supported icons.
   border-bottom: 1px solid #0f0f11;
 }
 .accordion-group details > summary {
+  font-size: 1.2em;
   font-weight: 700;
   color: #0071b3;
   cursor: pointer;
@@ -2648,9 +2637,6 @@ icon button classes based on a list of supported icons.
   .accordion-group details > summary {
     font-size: calc(1.2em + 0.05em);
   }
-}
-.accordion-group details > summary {
-  font-size: 1.2em;
 }
 .accordion-group details > summary:hover {
   text-decoration: underline;
@@ -2836,6 +2822,9 @@ icon button classes based on a list of supported icons.
 .contact-card .contact-card-information > * {
   margin: 0;
 }
+.contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
+  font-size: 1.44em;
+}
 @media (min-width: 36em) and (max-width: 75em) {
   .contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
     font-size: calc(1.44em + 0.1225em * (100vw - 36em) / (75em - 36em));
@@ -2845,9 +2834,6 @@ icon button classes based on a list of supported icons.
   .contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
     font-size: calc(1.44em + 0.1225em);
   }
-}
-.contact-card .contact-card-information h2, .contact-card .contact-card-information h3, .contact-card .contact-card-information h4, .contact-card .contact-card-information h5, .contact-card .contact-card-information h6 {
-  font-size: 1.44em;
 }
 .contact-card .contact-card-information .contact-card-summary {
   margin-top: 0.8em;
@@ -3211,15 +3197,6 @@ img.image {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   position: relative;
 }
-.event-grid .featured-event .featured-event-image {
-  width: 40%;
-  position: relative;
-  overflow: hidden;
-}
-.event-grid .featured-event .featured-event-details {
-  width: 70%;
-  padding: 1em;
-}
 .event-grid .featured-event:hover {
   background: #fafafa;
   box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
@@ -3227,6 +3204,11 @@ img.image {
 .event-grid .featured-event:focus-within {
   box-shadow: none;
   outline: 3px solid #ffb400;
+}
+.event-grid .featured-event .featured-event-image {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
 }
 .event-grid .featured-event .featured-event-image img {
   position: absolute;
@@ -3238,8 +3220,23 @@ img.image {
   left: 50%;
   top: 50%;
 }
+.event-grid .featured-event .featured-event-details {
+  width: 70%;
+  padding: 1em;
+}
 .event-grid .featured-event .featured-event-details .featured-event-heading {
+  font-size: 1.2em;
   margin: 0;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .event-grid .featured-event .featured-event-details .featured-event-heading {
+    font-size: calc(1.2em + 0.05em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .event-grid .featured-event .featured-event-details .featured-event-heading {
+    font-size: calc(1.2em + 0.05em);
+  }
 }
 .event-grid .featured-event .featured-event-details .featured-event-heading a {
   text-decoration: none;
@@ -3262,19 +3259,6 @@ img.image {
   box-shadow: none;
   text-decoration: underline;
   color: var(--link-hover-color);
-}
-@media (min-width: 36em) and (max-width: 75em) {
-  .event-grid .featured-event .featured-event-details .featured-event-heading {
-    font-size: calc(1.2em + 0.05em * (100vw - 36em) / (75em - 36em));
-  }
-}
-@media (min-width: 75em) {
-  .event-grid .featured-event .featured-event-details .featured-event-heading {
-    font-size: calc(1.2em + 0.05em);
-  }
-}
-.event-grid .featured-event .featured-event-details .featured-event-heading {
-  font-size: 1.2em;
 }
 .event-grid .featured-event .featured-event-details .metadata-list {
   color: #0f0f11;
@@ -3319,6 +3303,7 @@ img.image {
   padding: 1.5625rem;
   margin: 0;
   margin-bottom: 1.5625rem;
+  font-size: 1.2em;
 }
 @media (min-width: 36em) and (max-width: 75em) {
   .filter-box {
@@ -3329,9 +3314,6 @@ img.image {
   .filter-box {
     font-size: calc(1.2em + 0.05em);
   }
-}
-.filter-box {
-  font-size: 1.2em;
 }
 .filter-box .clear {
   font-weight: normal;
@@ -3495,7 +3477,6 @@ img.image {
   margin-left: 30%;
 }
 .form-group input[type=radio] {
-  border-radius: 50%;
   appearance: none;
   aspect-ratio: 1;
   background: Field;
@@ -3505,6 +3486,7 @@ img.image {
   margin: 0 0.25em 0 0;
   vertical-align: middle;
   cursor: pointer;
+  border-radius: 50%;
 }
 .form-group input[type=radio]:hover {
   background: ButtonBorder;
@@ -3640,6 +3622,7 @@ img.image {
   margin-bottom: 0.5em;
 }
 .featured-news .featured-news-content .featured-news-heading {
+  font-size: 2.0736em;
   margin-bottom: 0.5em;
 }
 @media (min-width: 36em) and (max-width: 75em) {
@@ -3651,9 +3634,6 @@ img.image {
   .featured-news .featured-news-content .featured-news-heading {
     font-size: calc(2.0736em + 0.36780625em);
   }
-}
-.featured-news .featured-news-content .featured-news-heading {
-  font-size: 2.0736em;
 }
 .featured-news .featured-news-content p {
   font-size: 1.1em;
@@ -3830,111 +3810,6 @@ code {
 
 .hljs-strong {
   font-weight: bold;
-}
-
-table {
-  display: block;
-  max-width: fit-content;
-  white-space: nowrap;
-  overflow-x: auto;
-  width: 100%;
-  text-align: left;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-table th, table td {
-  padding: 15px 10px;
-}
-table thead {
-  background-color: #6a6a6b;
-  color: #ffffff;
-}
-table tbody tr {
-  border-top: 1px solid #949494;
-}
-table tbody tr:nth-child(odd) {
-  background-color: #f0f0f0;
-}
-table.primary thead {
-  background-color: #00539b;
-}
-table.secondary thead {
-  background-color: #0071b3;
-}
-table.tertiary-1 thead {
-  background-color: #00853f;
-}
-table.tertiary-2 thead {
-  background-color: #c60c46;
-}
-table.tertiary-3 thead {
-  background-color: #7b439a;
-}
-
-.table-wrapper {
-  overflow-x: auto;
-}
-.table-wrapper table {
-  display: table;
-  white-space: unset;
-  max-width: unset;
-  overflow-x: unset;
-}
-
-.embed-responsive {
-  overflow: hidden;
-  position: relative;
-  height: 0;
-  margin: auto;
-}
-.embed-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border: 0;
-}
-.embed-responsive-16by9 {
-  padding-bottom: 56.25%;
-}
-.embed-responsive-4by3 {
-  padding-bottom: 75%;
-}
-
-.navbox {
-  position: relative;
-}
-.navbox .image.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.navbox .title a {
-  position: absolute;
-  bottom: 0;
-  font-weight: bold;
-  font-size: 1.25rem;
-  width: 100%;
-  background-color: #0071b3;
-  padding: 1rem;
-  text-decoration: none;
-}
-.navbox .title a .material-icons-outlined {
-  font-size: 200%;
-  position: absolute;
-  top: 15%;
-  right: 1rem;
-  font-weight: bold;
-}
-
-@media only screen and (max-width: 767px) {
-  .image.image {
-    display: none;
-  }
-  .map-text {
-    margin-bottom: 3rem;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
