@@ -60,7 +60,6 @@
 	}
 
 }
-	
 
 .form-group {
 	margin-bottom: 1.5em;
@@ -153,7 +152,7 @@
 
 	input[type="checkbox"] {
 		@include checkboxRadioBase();
-		
+
 		&:checked::after {
 			height: 80%;
 			border-style: solid;
