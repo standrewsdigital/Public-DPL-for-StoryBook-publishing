@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons Example</title>
+    <link rel="stylesheet" href="../compiled-css/main.css">
+</head>
+
+<body>
+    <!--Header-->
+    <header class="container">
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs header-content">
+                <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main>
+        <div class="container">
+            <div class="row">
+            <div class="col col-12-md col-12-lg">
+                <h1>Buttons</h1>
+                <!-- Navigation Links -->
+                <ul>
+                    <li><a href="#primary-buttons">Primary buttons</a></li>
+                    <li><a href="#primary-button-lg">Primary button large</a></li>
+                    <li><a href="#action-button">Action button</a></li>
+                    <li><a href="#action-button-lg">Action button large</a></li>
+                    <li><a href="#icon-buttons">Icon buttons</a></li>
+                    <li><a href="#dropdown-buttons">Dropdown buttons</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-md col-12-lg">
+                    <!-- Dropdown Buttons -->
+                    <h2>Hover Dropdown Buttons</h2>
+                    <div id="dropdown-buttons">
+                    <div class="hover-drop-list down">
+                        <button class="btn" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Dropdown trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Dropdown option 1</a></li>
+                            <li><a href="#">Dropdown option 2</a></li>
+                            <li><a href="#">Dropdown option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-drop-list down">
+                        <button class="btn red" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Dropdown trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Drop option 1</a></li>
+                            <li><a href="#">Drop option 2</a></li>
+                            <li><a href="#">Drop option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-drop-list down">
+                        <button class="btn green" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Drop trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Drop option 1</a></li>
+                            <li><a href="#">Drop option 2</a></li>
+                            <li><a href="#">Drop option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-drop-list down">
+                        <button class="btn grey" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Drop trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Drop option 1</a></li>
+                            <li><a href="#">Drop option 2</a></li>
+                            <li><a href="#">Drop option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <h2>Hover Drop-Up Buttons</h2>
+
+                    <div class="hover-drop-list up">
+                        <button class="btn" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Drop up trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Drop option 1</a></li>
+                            <li><a href="#">Drop option 2</a></li>
+                            <li><a href="#">Drop option 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Primary Buttons -->
+                <div id="primary-buttons">
+                    <h2>Primary Buttons</h2>
+                    <a type="button" class="btn" href="#">Primary</a>
+                    <a type="button" class="btn red" href="#">Primary red</a>
+                    <a type="button" class="btn orange" href="#">Primary orange</a>
+                    <a type="button" class="btn green" href="#">Primary green</a>
+                    <a type="button" class="btn grey" href="#">Primary grey</a>
+                    <a type="button" class="btn burgundy" href="#">Primary burgundy</a>
+                    <a type="button" class="btn purple" href="#">Primary purple</a>
+                    <a type="button" class="btn white" href="#">Primary white</a>
+                </div>
+
+                <!-- Large Primary Buttons -->
+                <div id="primary-button-lg">
+                    <h2>Primary Button - Larger Size</h2>
+                    <a type="button" class="btn" href="#">Normal</a>
+                    <a type="button" class="btn lg" href="#">Larger</a>
+                    <a type="button" class="btn red lg" href="#">Primary red</a>
+                    <a type="button" class="btn orange lg" href="#">Primary orange</a>
+                    <a type="button" class="btn green lg" href="#">Primary green</a>
+                    <a type="button" class="btn grey lg" href="#">Primary grey</a>
+                    <a type="button" class="btn burgundy lg" href="#">Primary burgundy</a>
+                    <a type="button" class="btn purple lg" href="#">Primary purple</a>
+                    <a type="button" class="btn white lg" href="#">Primary white</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div id="action-button">
+                    <h2>Action Buttons</h2>
+                    <a type="button" class="btn green action" href="#">Primary green</a>
+                    <a type="button" class="btn grey action" href="#">Primary grey</a>
+                    <a type="button" class="btn burgundy action" href="#">Primary burgundy</a>
+                    <a type="button" class="btn purple action" href="#">Primary purple</a>
+                </div>
+
+                <!-- Large Action Buttons -->
+                <div id="action-button-lg">
+                    <h2>Action Button - Larger Size</h2>
+                    <a type="button" class="btn lg action" href="#">Primary</a>
+                    <a type="button" class="btn red lg action" href="#">Primary red</a>
+                    <a type="button" class="btn orange lg action" href="#">Primary orange</a>
+                    <a type="button" class="btn white action lg" href="#">Primary white</a>
+                </div>
+
+                <!-- Icon Buttons -->
+                <div id="icon-buttons">
+                    <h2>Icon Buttons</h2>
+                    <a type="button" class="btn icon-pdf" href="#">PDF document</a>
+                    <a type="button" class="btn icon-pdf lg" href="#">PDF document</a>
+                    <a type="button" class="btn red icon-zip" href="#">ZIP file</a>
+                    <a type="button" class="btn orange icon-word" href="#">Word document</a>
+                    <a type="button" class="btn white icon-word" href="#">Word document</a>
+                    <a type="button" class="btn orange icon-edit" href="#">Edit</a>
+                    <a type="button" class="btn red icon-folder" href="#">Folder</a>
+                    <a type="button" class="btn blue icon-person" href="#">Person</a>
+                    <a type="button" class="btn green icon-mail" href="#">Mail</a>
+                    <a type="button" class="btn grey icon-delete" href="#">Delete</a>
+                    <a type="button" class="btn burgundy icon-home" href="#">Home</a>
+                    <a type="button" class="btn orange icon-menu" href="#">Menu</a>
+                    <a type="button" class="btn purple icon-settings" href="#">Settings</a>
+                    <a type="button" class="btn orange icon-pin" href="#">Pin</a>
+                    <a type="button" class="btn blue icon-schedule" href="#">Schedule</a>
+                    <a type="button" class="btn grey icon-date" href="#">Date</a>
+                    <a type="button" class="btn purple icon-chevron_right" href="#">Chevron Right</a>
+                    <a type="button" class="btn green icon-chevron_left" href="#">Chevron Left</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+                <script>
+                    // DPL JavaScript of the use of drop list buttons 
+                    // Function to toggle dropdown visibility
+                    function toggleDropdown(button) {
+                        let child = button.parentElement.querySelector(".drop-content");
+                        let parent = button.closest(".hover-drop-list");
+                        if (parent.classList.contains("selected")) {
+                            parent.classList.remove("selected");
+                            child.classList.remove("show");
+                        } else {
+                            closeAllDropdowns(); // Close other dropdowns
+                            parent.classList.add("selected");
+                            child.classList.add("show");
+                        }
+                    }
+
+                    // Function to close all open dropdowns
+                    function closeAllDropdowns() {
+                        document.querySelectorAll('.hover-drop-list.selected').forEach(function (element) {
+                            element.classList.remove('selected');
+                            element.querySelector('.drop-content').classList.remove('show');
+                        });
+                    }
+
+                    // Event listener to close dropdowns when clicking outside of them
+                    document.addEventListener('click', function (event) {
+                        if (!event.target.closest('.hover-drop-list')) {
+                            closeAllDropdowns();
+                        }
+                    });
+
+                    // Function to toggle dropdown class based on scroll position
+                    function toggleClassOnScroll() {
+                        const elements = document.querySelectorAll('.hover-drop-list.up, .hover-drop-list.down');
+                        const initialClasses = new Map();
+
+                        // Store the initial classes
+                        elements.forEach(element => {
+                            initialClasses.set(element, element.className);
+                        });
+
+                        const scrollPosition = window.scrollY;
+                        const viewportHeight = window.innerHeight;
+                        const thresholdTop = 50; // Distance from the top to trigger the change
+                        const thresholdBottom = 80; // Distance from the bottom to trigger the change
+
+                        elements.forEach(element => {
+                            const elementRect = element.getBoundingClientRect();
+                            const elementTop = elementRect.top + scrollPosition;
+                            const elementBottom = elementTop + elementRect.height;
+
+                            if (elementTop <= scrollPosition + thresholdTop) {
+                                if (element.classList.contains('up')) {
+                                    element.classList.remove('up');
+                                    element.classList.add('down');
+                                }
+                            } else if (elementBottom >= scrollPosition + viewportHeight - thresholdBottom) {
+                                if (element.classList.contains('down')) {
+                                    element.classList.remove('down');
+                                    element.classList.add('up');
+                                }
+                            } else {
+                                const initialClass = initialClasses.get(element);
+                                element.className = initialClass;
+                            }
+                        });
+                    }
+
+                    // Attach the scroll event listener
+                    document.addEventListener('scroll', toggleClassOnScroll);
+
+                    // Initial call to check the position on page load
+                    document.addEventListener('DOMContentLoaded', toggleClassOnScroll);
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-lg col-12-xxs">
+                        <div class="footer-text">
+                            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                        </div>
+                        <div class="footer-links">
+                            <a href="/cookie-preferences">Cookie preferences</a>
+                            <a href="/accessibility-statement">Accessibility statement</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/website-help">Website help</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
