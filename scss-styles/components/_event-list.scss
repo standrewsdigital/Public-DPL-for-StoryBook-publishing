@@ -1,0 +1,96 @@
+@import "../variables/main-colors";
+
+.event-list {
+    margin-bottom: 1rem;
+    .event {
+        border: 1px solid $mid-grey-1;
+        padding: 1.25rem;
+        margin-bottom: 0; // Remove bottom margin to avoid thick borders
+        position: relative;
+        background-color: #ffffff;
+        border-radius: 1px;
+        transition: background-color 0.3s ease; // Smooth transition for hover
+
+        &:not(:last-child) {
+            border-bottom: none; // Remove bottom border except for the last child
+        }
+
+        &:hover {
+            background-color: $light-grey-1; // Change background color on hover
+        }
+
+        // If the event has a link, make the whole div clickable
+        &.clickable {
+            cursor: pointer;
+
+            h3 a {
+                color: $blue-primary; // Your preferred link color
+                text-decoration: none; // Remove underline by default
+
+                &:hover {
+                    text-decoration: underline; // Underline on hover
+                }
+            }
+        }
+
+        .event-tag {
+            background-color: $white;
+            color: $red-primary;
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            border-width: 1px;
+            border-radius: 2px;
+            border-color: $red-primary;
+            border-style: solid;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            clear: both;
+        }
+
+        b {
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .event-details {
+            margin-top: 0.75rem;
+
+            .event-item {
+                display: flex;
+                align-items: center; // Center align items vertically
+                margin-bottom: 0.75rem;
+
+                dt {
+                    font-weight: bold;
+                    margin-right: 4px;
+                    position: relative;
+                    display: flex; // Ensure content inside dt is also centered
+                    align-items: center;
+
+                    &::before {
+                        content: attr(data-icon);
+                        font-family: 'Material Symbols Outlined';
+                        font-feature-settings: 'liga';
+                        -webkit-font-feature-settings: 'liga';
+                        -moz-font-feature-settings: 'liga';
+                        font-size: 1.25rem;
+                        margin-right: 4px;
+                        vertical-align: middle;
+                        display: inline-block; // Ensure the icon is centered within the dt
+                    }
+                }
+
+                dd {
+                    margin-left: 1rem;
+                    display: flex;
+                    align-items: center; // Ensure content inside dd is also centered
+                }
+            }
+        }
+    }
+}
