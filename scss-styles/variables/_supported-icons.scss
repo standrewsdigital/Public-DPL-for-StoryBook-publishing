@@ -1,0 +1,32 @@
+// list of supported icons
+$icons-list: word, expand_more, pdf, zip, edit, folder,
+person, mail, delete, home, menu, settings, pin,
+schedule, date, chevron_right, chevron_left;
+
+@function get-icon-content($icon-name) {
+  // Map the extracted name to an actual icon content
+  @return map-get(
+    (
+      'expand_more': 'expand_more',
+      'expand_less': 'expand_less',
+      'chevron_right': 'chevron_right',
+      'chevron_left': 'chevron_left',
+      'pdf': 'picture_as_pdf',
+      'zip': 'folder_zip',
+      'word': 'text_snippet',
+      'edit': 'edit',
+      'folder': 'folder',
+      'person': 'person',
+      'mail': 'mail',
+      'delete': 'delete',
+      'home': 'home',
+      'menu': 'menu',
+      'settings': 'settings',
+      'pin': 'pin',
+      'schedule': 'schedule',
+      'date': 'date_range',
+      // Add more icon mappings as needed
+    ),
+    $icon-name
+  );
+}

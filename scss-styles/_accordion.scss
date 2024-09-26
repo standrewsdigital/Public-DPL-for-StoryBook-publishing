@@ -3,6 +3,8 @@
 
 	details {
 		border-top: 1px solid $dark-grey-2;
+		background: $white;
+		color: $dark-grey-2;
 
 		&:last-child {
 			border-bottom: 1px solid $dark-grey-2;
@@ -26,7 +28,7 @@
 
 			&::before {
 				float: right;
-				content: 'expand_more';
+				content: 'expand_more' / '';
 				font-family: 'Material Symbols Outlined';
   				font-feature-settings: 'liga';
   				-webkit-font-feature-settings: 'liga';
@@ -37,7 +39,7 @@
 
 		&[open] > summary{
 			&::before {
-  				content: 'expand_less';
+  				content: 'expand_less' / '';
   				font-family: 'Material Symbols Outlined';
   				font-feature-settings: 'liga';
   				-webkit-font-feature-settings: 'liga';
