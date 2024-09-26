@@ -35,4 +35,13 @@
     }
   }
 
+// Mixin for icon CSS
+@mixin icon($content, $altText, $colour: $dark-grey-2) {
+  content: $content / $altText;
+  font-family: 'Material Symbols Outlined';
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga';
+  color: $colour;
+}
 

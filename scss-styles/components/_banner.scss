@@ -1,0 +1,56 @@
+.banner-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 540px) {
+  .banner-image {
+    display: none;
+  }
+}
+
+.banner-text-white {
+  line-height: 1.6;
+  font-size: 1.125rem;
+
+  h2,h3 {
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    color: $white;
+
+    a {
+      color: $white;
+
+      &:focus {
+        color: $dark-grey-2;
+      }
+    }
+  }
+}
+
+.banner-text-grey {
+  line-height: 1.6;
+  font-size: 1.125rem;
+
+  h2,h3 {
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    color: $dark-grey-2;
+
+    a {
+      color: $dark-grey-2;
+
+      &:focus {
+        color: $dark-grey-2;
+      }
+    }
+  }
+}
+
+.banner-image {
+  a {
+    img {
+      display: block;
+    }
+  }
+}
