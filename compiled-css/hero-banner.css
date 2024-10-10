@@ -1,0 +1,47 @@
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-image .hero-banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.bg-image .banner-box {
+  background-color: white;
+  padding: 1.5rem;
+}
+.bg-image .banner-box .title-box {
+  background-color: #00539b;
+  padding: 1rem;
+  color: white;
+}
+.bg-image .banner-box .title-box h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+.bg-image .banner-box .title-box a {
+  color: white;
+  text-decoration: none;
+}
+.bg-image .banner-box .title-box a:hover {
+  text-decoration: underline;
+}
+.bg-image .banner-box .content-box {
+  background-color: white;
+  padding: 1rem;
+  color: black;
+}
+.bg-image .banner-box .content-box p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=hero-banner.css.map */
