@@ -93,11 +93,17 @@
                 <h2>Featured Media Heading</h2>
             </div>
             <div class="col-centered col-8-lg col-12-xxs">
-                <figure class="video-wrapper">
+                <figure>
+                    <!-- Keep video wrapper separate from figcaption -->
+                    <div class="video-wrapper">
                         <iframe title="Heading goes in here (video)" 
                             src="https://www.youtube.com/embed/JxHfSwpddCU" 
                             allowfullscreen></iframe>
-                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque hendrerit neque et tincidunt.</figcaption>
+                    </div>
+                    <!-- Figcaption is now outside of the wrapper -->
+                    <figcaption>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque hendrerit neque et tincidunt.
+                    </figcaption>
                 </figure>
             </div>
             <div class="col-centered col-8-lg col-12-xs">
