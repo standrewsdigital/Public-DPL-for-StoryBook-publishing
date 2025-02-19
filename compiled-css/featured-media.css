@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
 }
 
 /* Make image responsive */
@@ -17,12 +17,48 @@
 .col figure figcaption {
   width: 100%;
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0.5em 0;
 }
 
-.centered-media {
-  grid-column-start: 2;
+/* Make figure fill the column */
+.col-centered figure {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+/* Make image responsive */
+.col-centered figure img {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Prevents extra spacing */
+}
+
+/* Style the caption */
+.col-centered figure figcaption {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  padding: 0.5em 0;
+}
+
+/* Responsive Video Wrapper */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9; /* Ensures a perfect 16:9 aspect ratio */
+}
+
+/* Responsive Iframe */
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=featured-media.css.map */
