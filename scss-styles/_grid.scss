@@ -37,7 +37,7 @@
   }
 
   .row {
-    display: contents;
+    // display: contents;
     gap: 20px;
   }
   .row:first-child {
@@ -171,4 +171,69 @@
       }
     }
   }
+}
+
+.col-centered {
+  @include respond-to(xxs) {
+    @for $i from 1 through 12 {
+    &.col-#{$i}-xxs {
+      grid-column-start: calc((13 - #{$i}) / 2);
+      grid-column-end: span #{$i};
+    }
+  }
+
+  @include respond-to(xs) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-xs {
+        grid-column-start: calc((13 - #{$i}) / 2);
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(sm) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-sm {
+        grid-column-start: calc((13 - #{$i}) / 2);
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-md {
+        grid-column-start: calc((13 - #{$i}) / 2);
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(lg) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-lg {
+        grid-column-start: calc((13 - #{$i}) / 2);
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(xl) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-xl {
+        grid-column-start: calc((13 - #{$i}) / 2);
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @include respond-to(xxl) {
+    @for $i from 1 through 12 {
+      &.col-#{$i}-xxl {
+        grid-column-start: calc((13 - #{$i}) / 2);
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+}
 }
