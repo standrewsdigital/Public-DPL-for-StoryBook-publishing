@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form elements</title>
+    <link rel="stylesheet" href="../compiled-css/main.css">
+	<script src="../scripts/form-elements.js" defer></script>
+</head>
+<body>
+    <header class="container">
+        <div class="row">
+        <div class="col col-12-lg col-12-xxs header-content">
+            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+        </div>
+    </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="col col-12-xxs main-content">
+            <h1>Form elements</h1>
+			<fieldset class="form-fieldset">
+				<legend><h2 class="form-heading">Individual form elements</h2></legend>
+				
+				<div class="form-group">
+					<label for="text-input-id" class="form-input-label">Text input</label>
+					<input type="text" class="form-input" id="text-input-id" name="text-input" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email-input-id" class="form-input-label">Email input</label>
+					<input type="email" class="form-input" id="email-input-id" name="email-input" required>
+				</div>
+
+				<div class="form-group">
+					<label for="phone-input-id" class="form-input-label">Telephone input (optional)</label>
+					<input type="tel" class="form-input" id="phone-input-id" name="phone-input">
+				</div>
+
+				<div class="form-group">
+					<label for="number-input-id" class="form-input-label">Number input</label>
+					<p class="input-help" id="example-input-help">Use the form-input-auto class with the size attribute to set the input width.</p>
+					<input type="text" class="form-input form-input-auto" id="number-input-id" name="number-input" aria-describedby="example-input-help" size="3" inputmode="numeric" pattern="[0-9]*" required>
+				</div>
+
+				<div class="form-group">
+					<label for="password-input-id" class="form-input-label">Password input</label>
+					<input type="password" class="form-input" id="password-input-id" name="password-input" required>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-primary">Submit</button>
+				</div>
+
+				<div class="form-group">
+					<label for="textarea-id" class="form-input-label">Textarea</label>
+					<textarea name="textarea-input" id="textarea-id" rows="2"></textarea>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Checkboxes - Stacked</legend>
+						<p class="input-help" id="example-stacked-checkbox-help">Select all options that apply.</p>
+						<ul>
+							<li>
+								<input type="checkbox" id="checkbox-stack-option1-id" name="checkbox-stack-option1">
+								<label for="checkbox-stack-option1-id">Gold</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-option2-id" name="checkbox-stack-option2">
+								<label for="checkbox-stack-option2-id">Silver</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-option3-id" name="checkbox-stack-option3">
+								<label for="checkbox-stack-option3-id">Bronze</label>
+							</li>
+						</ul>
+
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Checkboxes - Inline</legend>
+						<p class="input-help" id="example-inline-checkbox-help">Select all options that apply.</p>
+						<ul class="inline">
+							<li>
+								<input type="checkbox" id="checkbox-inline-option1-id" name="checkbox-inline-option1">
+								<label for="checkbox-inline-option1-id">Gold</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-inline-option2-id" name="checkbox-inline-option2">
+								<label for="checkbox-inline-option2-id">Silver</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-inline-option3-id" name="checkbox-inline-option3">
+								<label for="checkbox-inline-option3-id">Bronze</label>
+							</li>
+						</ul>
+
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Checkboxes - Small Stacked</legend>
+						<p class="input-help" id="example-small-stacked-checkbox-help">Select all options that apply.</p>
+						<ul class="small">
+							<li>
+								<input type="checkbox" id="checkbox-small-stack-option1-id" name="checkbox-small-stack-option1">
+								<label for="checkbox-small-stack-option1-id">Gold</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-small-stack-option2-id" name="checkbox-small-stack-option2">
+								<label for="checkbox-small-stack-option2-id">Silver</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-small-stack-option3-id" name="checkbox-small-stack-option3">
+								<label for="checkbox-small-stack-option3-id">Bronze</label>
+							</li>
+						</ul>
+
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Checkboxes - Small Inline</legend>
+						<p class="input-help" id="example-small-inline-checkbox-help">Select all options that apply.</p>
+						<ul class="inline small">
+							<li>
+								<input type="checkbox" id="checkbox-small-inline-option1-id" name="checkbox-small-inline-option1">
+								<label for="checkbox-small-inline-option1-id">Gold</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-small-inline-option2-id" name="checkbox-small-inline-option2">
+								<label for="checkbox-small-inline-option2-id">Silver</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-small-inline-option3-id" name="checkbox-small-inline-option3">
+								<label for="checkbox-small-inline-option3-id">Bronze</label>
+							</li>
+						</ul>
+
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Checkboxes - Stacked and collapsed</legend>
+						<p class="input-help" id="example-stacked-collapsed-checkbox-help">Select all options that apply.</p>
+						<p class="input-help"><button class="checkbox-expand">Expand list</button> <a href="#" class="visually-hidden">Skip this question</a></p>
+						<ul class="collapsed" aria-expanded="false">
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option1-id" name="checkbox-stack-collapsed-option1">
+								<label for="checkbox-stack-collapsed-option1-id">Gold</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option2-id" name="checkbox-stack-collapsed-option2">
+								<label for="checkbox-stack-collapsed-option2-id">Silver</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option3-id" name="checkbox-stack-collapsed-option3">
+								<label for="checkbox-stack-collapsed-option3-id">Bronze</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option4-id" name="checkbox-stack-collapsed-option4">
+								<label for="checkbox-stack-collapsed-option4-id">White</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option5-id" name="checkbox-stack-collapsed-option5">
+								<label for="checkbox-stack-collapsed-option5-id">Black</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option6-id" name="checkbox-stack-collapsed-option6">
+								<label for="checkbox-stack-collapsed-option6-id">Red</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option7-id" name="checkbox-stack-collapsed-option7">
+								<label for="checkbox-stack-collapsed-option7-id">Green</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option8-id" name="checkbox-stack-collapsed-option8">
+								<label for="checkbox-stack-collapsed-option8-id">Blue</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option9-id" name="checkbox-stack-collapsed-option9">
+								<label for="checkbox-stack-collapsed-option9-id">Yellow</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox-stack-collapsed-option10-id" name="checkbox-stack-collapsed-option10">
+								<label for="checkbox-stack-collapsed-option10-id">Pink</label>
+							</li>
+						</ul>
+
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Radio buttons - Stacked</legend>
+						<p class="input-help" id="example-stacked-radio-help">Select a number.</p>
+						<ul>
+							<li>
+								<input type="radio" id="radio-stack-option1-id" name="radio-stack-option" value="one">
+								<label for="radio-stack-option1-id">One</label>
+							</li>
+							<li>
+								<input type="radio" id="radio-stack-option2-id" name="radio-stack-option" value="two">
+								<label for="radio-stack-option2-id">Two</label>
+							</li>
+							<li>
+								<input type="radio" id="radio-stack-option3-id" name="radio-stack-option" value="three">
+								<label for="radio-stack-option3-id">Three</label>
+							</li>
+						</ul>
+
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Radio buttons - Inline</legend>
+						<p class="input-help" id="example-inline-radio-help">Select a number.</p>
+						<ul class="inline">
+							<li>
+								<input type="radio" id="radio-inline-option1-id" name="radio-inline-option" value="one">
+								<label for="radio-inline-option1-id">One</label>
+							</li>
+							<li>
+								<input type="radio" id="radio-inline-option2-id" name="radio-inline-option" value="two">
+								<label for="radio-inline-option2-id">Two</label>
+							</li>
+							<li>
+								<input type="radio" id="radio-inline-option3-id" name="radio-inline-option" value="three">
+								<label for="radio-inline-option3-id">Three</label>
+							</li>
+						</ul>
+
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="form-fieldset">
+						<legend>Radio buttons - Stacked with conditional</legend>
+						<p class="input-help" id="example-conditional-radio-help">The radio button that shows the conditional input must have a value of 'conditional' and the div container for the input must have a class of 'conditional-content' for this to work.</p>
+						<ul>
+							<li>
+								<input class="conditional-input" type="radio" id="radio-conditional-option1-id" name="radio-conditional-option" value="one">
+								<label for="radio-conditional-option1-id">One</label>
+							</li>
+							<li>
+								<input class="conditional-input" type="radio" id="radio-conditional-option2-id" name="radio-conditional-option" value="two">
+								<label for="radio-conditional-option2-id">Two</label>
+							</li>
+							<li>
+								<input class="conditional-input" type="radio" id="radio-conditional-option3-id" name="radio-conditional-option" value="three">
+								<label for="radio-conditional-option3-id">Three</label>
+							</li>
+							<li>
+								<input class="conditional-input" type="radio" id="radio-conditional-option4-id" name="radio-conditional-option" value="conditional">
+								<label for="radio-conditional-option4-id">Other</label>
+							</li>
+						</ul>
+
+					</fieldset>
+					<div class="conditional-content" aria-hidden="true">
+						<label for="conditional-input1">Other</label>
+						<input type="text" name="radio-conditional-option" id="conditional-input1" class="form-input" disabled>
+					</div>
+				</div>
+
+				<div class="form-group select-box">
+					<label for="select-box">Select box</label>
+					<p class="input-help" id="select-box-help">Please select your student status.</p>
+					<select name="select-box-input" id="select-box" class="form-input" aria-describedby="select-box-help">
+						<option value="">Please select one of the following:</option>
+						<option value="ug">Undergraduate</option>
+						<option value="pgr">Research postgraduate</option>
+						<option value="pgt">Taught postgraduate</option>
+					</select>
+				</div>
+
+				<div class="form-group select-box">
+					<label for="select-box">Select box with conditional</label>
+					<p class="input-help" id="select-box-help">Please select your student status.</p>
+					<select name="select-box-input" id="select-box" class="form-input conditional-input" aria-describedby="select-box-help">
+						<option value="">Please select one of the following:</option>
+						<option value="ug">Undergraduate</option>
+						<option value="pgr">Research postgraduate</option>
+						<option value="pgt">Taught postgraduate</option>
+						<option value="conditional">Other</option>
+					</select>
+					<div class="conditional-content" aria-hidden="true">
+						<label for="select-conditional-input">Other</label>
+						<input type="text" name="select-conditional-option" id="select-conditional-input" class="form-input" disabled>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="file-input-id">File upload</label>
+					<input type="file" class="form-input" id="file-input-id" name="file-input">
+				</div>
+
+				<div class="form-group">
+					<label for="input-addon-id1">Input addon - example 1</label>
+					<div class="input-group">
+						<div class="input-group-addon">£</div>
+						<input type="text" class="form-input" id="input-addon-id1" name="input-addon">
+						<div class="input-group-addon">.00</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="input-addon-id2">Input addon - example 2</label>
+					<div class="input-group">
+						<input type="text" class="form-input" id="input-addon-id2" name="input-addon2">
+						<div class="input-group-addon">@st-andrews.ac.uk</div>
+					</div>
+				</div>
+
+			</fieldset>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-xxs">
+                        <div class="footer-text">
+                            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                        </div>
+                        <div class="footer-links">
+                            <a href="/cookie-preferences">Cookie preferences</a>
+                            <a href="/accessibility-statement">Accessibility statement</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/website-help">Website help</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
