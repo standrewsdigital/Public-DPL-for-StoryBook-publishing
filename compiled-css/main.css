@@ -1306,6 +1306,10 @@ a:focus, .link:focus {
   }
 }
 
+.col-centered {
+  grid-column: span 12;
+  grid-row: span 1;
+}
 @media (min-width: 320px) {
   .col-centered.col-1-xxs {
     grid-column-start: calc((13 - 1) / 2);
