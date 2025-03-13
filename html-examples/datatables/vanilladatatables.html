@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vanilla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+        h1 {
+            font-family: 'Arial', sans-serif;
+            color: #222;
+        }
+        input[type="text"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .search-row {
+            display: flex;
+            gap: 10px;
+        }
+        .search-row input {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Searchable Table</h1>
+        <div class="search-row">
+            <input type="text" id="searchYear" placeholder="Search Year" onkeyup="filterTable()">
+            <input type="text" id="searchProfile" placeholder="Search Profile Type Code" onkeyup="filterTable()">
+            <input type="text" id="searchAttendance" placeholder="Search Mode of Attendance" onkeyup="filterTable()">
+            <input type="text" id="searchFeeStatus" placeholder="Search Fee Status" onkeyup="filterTable()">
+            <input type="text" id="searchSemester" placeholder="Search Semester" onkeyup="filterTable()">
+            <input type="text" id="searchFeeAmount" placeholder="Search Fee Amount" onkeyup="filterTable()">
+        </div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Profile Type Code</th>
+                    <th>Mode of Attendance</th>
+                    <th>Fee Status</th>
+                    <th>Semester</th>
+                    <th>Fee Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE DISS</td>
+        <td>Distance Learning attempting 60 credits</td>
+        <td>Home (UK and EU)</td>
+        <td>Full Year</td>
+        <td>3150</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE DISS</td>
+        <td>Distance Learning attempting 60 credits</td>
+        <td>Home (UK and EU)</td>
+        <td>Semester 1</td>
+        <td>3150</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE DISS</td>
+        <td>Distance Learning attempting 60 credits</td>
+        <td>Home (UK and EU)</td>
+        <td>Semester 2</td>
+        <td>3150</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE MOD</td>
+        <td>Distance Learning attempting 40 credits</td>
+        <td>Home funded</td>
+        <td>Semester 1</td>
+        <td>2100</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE MOD</td>
+        <td>Distance Learning attempting 40 credits</td>
+        <td>Home funded</td>
+        <td>Semester 2</td>
+        <td>2100</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE MOD</td>
+        <td>Distance Learning attempting 40 credits</td>
+        <td>Home non-funded (UK exc. Scotland)</td>
+        <td>Semester 1</td>
+        <td>2100</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE MOD</td>
+        <td>Distance Learning attempting 40 credits</td>
+        <td>Home non-funded (UK exc. Scotland)</td>
+        <td>Semester 2</td>
+        <td>2100</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE DISS</td>
+        <td>Distance Learning attempting 60 credits</td>
+        <td>Overseas</td>
+        <td>Full Year</td>
+        <td>6470</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE MOD</td>
+        <td>Distance Learning attempting 40 credits</td>
+        <td>Overseas</td>
+        <td>Semester 1</td>
+        <td>4310</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE DISS</td>
+        <td>Distance Learning attempting 60 credits</td>
+        <td>Overseas</td>
+        <td>Semester 1</td>
+        <td>6470</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE DISS</td>
+        <td>Distance Learning attempting 60 credits</td>
+        <td>Overseas</td>
+        <td>Semester 2</td>
+        <td>6470</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>BIBLE MOD</td>
+        <td>Distance Learning attempting 40 credits</td>
+        <td>Overseas</td>
+        <td>Semester 2</td>
+        <td>4310</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>CSTPV DISS</td>
+        <td>Distance Learning attempting 60 credits</td>
+        <td>Home (UK and EU)</td>
+        <td>Full Year</td>
+        <td>3820</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>CSTPV MOD</td>
+        <td>Distance Learning</td>
+        <td>Home (UK and EU)</td>
+        <td>null</td>
+        <td>1900</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>CSTPV DISS</td>
+        <td>Distance Learning attempting 60 credits</td>
+        <td>Overseas</td>
+        <td>Full Year</td>
+        <td>7690</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>CSTPV MOD</td>
+        <td>Distance Learning</td>
+        <td>Overseas</td>
+        <td>null</td>
+        <td>3850</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>EVENING</td>
+        <td>Part-time attempting 10 credits</td>
+        <td>Home funded</td>
+        <td>null</td>
+        <td>152</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>EVENING</td>
+        <td>Part-time attempting 100 credits</td>
+        <td>Home funded</td>
+        <td>null</td>
+        <td>1517</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>EVENING</td>
+        <td>Part-time attempting 15 credits</td>
+        <td>Home funded</td>
+        <td>null</td>
+        <td>228</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>EVENING</td>
+        <td>Part-time attempting 20 credits</td>
+        <td>Home funded</td>
+        <td>null</td>
+        <td>303</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>EVENING</td>
+        <td>Part-time attempting 30 credits</td>
+        <td>Home funded</td>
+        <td>null</td>
+        <td>455</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>EVENING</td>
+        <td>Part-time attempting 40 credits</td>
+        <td>Home funded</td>
+        <td>null</td>
+        <td>607</td>
+    </tr>
+
+    <tr>
+        <td>2020/1</td>
+        <td>EVENING</td>
+        <td>Part-time attempting 50 credits</td>
+        <td>Home funded</td>
+        <td>null</td>
+        <td>758</td>
+    </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function filterTable() {
+            const filters = {
+                Year: document.getElementById('searchYear').value.toLowerCase(),
+                "Profile Type Code": document.getElementById('searchProfile').value.toLowerCase(),
+                "Mode of Attendance": document.getElementById('searchAttendance').value.toLowerCase(),
+                "Fee Status": document.getElementById('searchFeeStatus').value.toLowerCase(),
+                Semester: document.getElementById('searchSemester').value.toLowerCase(),
+                "Fee Amount": document.getElementById('searchFeeAmount').value.toLowerCase(),
+            };
+
+            const table = document.getElementById('dataTable');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let showRow = true;
+
+                Object.keys(filters).forEach((key, index) => {
+                    if (filters[key] && !cells[index].innerText.toLowerCase().includes(filters[key])) {
+                        showRow = false;
+                    }
+                });
+
+                rows[i].style.display = showRow ? '' : 'none';
+            }
+        }
+    </script>
+</body>
+</html>
