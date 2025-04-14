@@ -1,0 +1,42 @@
+.col figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0rem 0rem 0rem;
+}
+
+/* Make image responsive */
+.col figure img {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Prevents extra spacing */
+}
+
+/* Style the caption */
+.col figure figcaption {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  padding: 0.5em 0;
+}
+
+.news-excerpt {
+  flex: 1 1 auto;
+}
+.news-excerpt h4, .news-excerpt h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.news-item figure {
+  flex: 0 0 auto;
+  width: 150px;
+}
+
+/*# sourceMappingURL=news-and-updates.css.map */
