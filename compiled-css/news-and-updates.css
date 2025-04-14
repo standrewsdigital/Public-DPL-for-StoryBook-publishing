@@ -20,4 +20,23 @@
   padding: 0.5em 0;
 }
 
+.news-excerpt {
+  flex: 1 1 auto;
+}
+.news-excerpt h4, .news-excerpt h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.news-item figure {
+  flex: 0 0 auto;
+  width: 150px;
+}
+
 /*# sourceMappingURL=news-and-updates.css.map */

@@ -239,3 +239,26 @@
   }
 }
 }
+
+// Utility for placing an element starting from column 1 (start)
+@each $bp in (xxs, xs, sm, md, lg, xl, xxl) {
+  @include respond-to(#{$bp}) {
+    @for $i from 1 through 12 {
+      .start-col-#{$i}-#{$bp} {
+        grid-column: 1 / span #{$i};
+      }
+    }
+  }
+}
+
+// Utility for placing an element ending at column 13 (right end), spanning backwards
+@each $bp in (xxs, xs, sm, md, lg, xl, xxl) {
+  @include respond-to(#{$bp}) {
+    @for $i from 1 through 12 {
+      // Start at (13 - i), end at 13
+      .end-col-#{$i}-#{$bp} {
+        grid-column: #{13 - $i} / span #{$i};
+      }
+    }
+  }
+}
