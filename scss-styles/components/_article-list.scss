@@ -19,13 +19,15 @@
         &::before {
           display: inline-block;
           position: absolute;
-          left: 0; // Position icon at the start of the dt
-          top: 0; // Align icon with the top of the text
-          content: ""; // Icon content will be defined for each specific dt class
-          font-family: "Material Symbols Outlined";
-          font-feature-settings: "liga"; // Enable ligatures
-          
-        }
+          left: 0;
+          //Positioniconatthestartofthedttop: 0;
+          //Aligniconwiththetopofthetextcontent: "";
+          //Iconcontentwillbedefinedforeachspecificdtclassfont-family: "Material Symbols Outlined";
+          font-feature-settings: "liga";
+           // Enable ligatures                  :;
+          -webkit-font-feature-settings: "liga";
+          -moz-font-feature-settings: "liga";
+}
        
       }
 
