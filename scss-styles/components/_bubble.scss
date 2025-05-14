@@ -1,0 +1,201 @@
+.bubble-wrapper {
+    margin: 0 auto;
+    max-width: 1500px;
+
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 0 2em;
+
+    &:has(>.bubble>.bubble-inline) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: stretch;
+    }
+}
+
+.bubble {
+    box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 2em auto;
+    background: #fafafa;
+
+    &:has(>.bubble-inline) {
+        padding: 1em;
+        max-width: 1100px;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+        gap: 0;
+    }
+
+    &.bubble--full-width {
+        width: 100%;
+    }
+
+    p, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+}
+
+.bubble-inline {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 0 1em;
+
+    &:not(:last-child) {
+        border-width: 2px;
+        border-style: solid;
+        border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 15%, rgba(222, 222, 222, 1) 35%, rgba(222, 222, 222, 1) 65%, rgba(255, 255, 255, 1) 85%) 5% 100% 5% 0;
+    }
+
+    &.text-left {
+        text-align: left;
+    }
+
+    p, h2, h3, h4, h5, h6, dl {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+
+    dl {
+        text-align: center;
+
+        dt, dd {
+            display: block;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .bubble-wrapper {
+        margin: 2em 1em;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .bubble-wrapper {
+        &:has(> :nth-child(3)) {
+            grid-template-columns: 1fr 1fr;
+            grid-auto-flow: unset;
+
+            .bubble {
+                margin: 1em auto;
+
+                &:is(:last-child:nth-child(3)) {
+                    grid-column: 1 / -1;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .bubble-wrapper {
+        &:has(> :nth-child(4)) {
+            grid-template-columns: 1fr 1fr;
+            grid-auto-flow: unset;
+
+            .bubble {
+                margin: 1em auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .bubble-wrapper {
+        .bubble {
+            &:has(>.bubble-inline) {
+                grid-template-columns: 1fr 1fr;
+                grid-auto-flow: unset;
+                grid-gap: 1em 0;
+
+                &:has(> :last-child:nth-child(1)) {
+                    grid-template-columns: 1fr;
+                }
+
+                .bubble-inline {
+                    &:nth-child(even) {
+                        border-right: none;
+                    }
+
+                    &:is(:last-child:nth-child(3)) {
+                        grid-column: 1 / -1;
+                    }
+                }
+            }
+        }
+    }
+
+    .bubble-wrapper {
+        &:has(> :nth-child(1)) {
+            grid-template-columns: 1fr;
+            grid-auto-flow: unset;
+        }
+
+        .bubble {
+            margin: 1em auto;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+}
+
+@media screen and (max-width: 430px) {
+    .bubble-wrapper {
+        .bubble {
+            &:has(>.bubble-inline) {
+                grid-template-columns: 1fr;
+                flex-grow: 2;
+
+                .bubble-inline {
+                    &:nth-child(odd) {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .bubble {
+        &.bubble-inline {
+            grid-template-columns: 1fr;
+
+            .bubble-item {
+                &:nth-child(odd) {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .bubble-wrapper {
+        --page-text-color: #000000;
+        --link-color: #0071b3;
+        --link-hover-color: #005586;
+        --link-active-color: #c60c46;
+        --link-focus-color: #202024;
+        --link-focus-background: #ffb400;
+        --link-focus-outline: 3px solid #ffb400;
+
+        color: var(--page-text-color);
+    }
+
+    .bubble {
+        box-shadow: none;
+    }
+}
