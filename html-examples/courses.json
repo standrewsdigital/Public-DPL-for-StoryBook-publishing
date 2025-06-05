@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Ancient History MA (Honours)",
+        "subject_list": "ancient history, archaeology",
+        "study_level": "Undergraduate",
+        "subject_name": "Ancient History",
+        "path": "/subjects/ancient-history/ancient-history-ma/",
+        "suffix": "MA"
+    },
+    {
+        "title": "Biochemistry BSc (Honours)",
+        "subject_list": "biology, chemistry",
+        "study_level": "Undergraduate",
+        "subject_name": "Biochemistry",
+        "path": "/subjects/biology/biochemistry-bsc/",
+        "suffix": "BSc"
+    },
+    {
+        "title": "Digital Art History (PGCert, PGDip, MLitt)",
+        "subject_list": "art history, digital media",
+        "study_level": "Postgraduate",
+        "subject_name": "Digital Art History",
+        "path": "/subjects/art-history/digital-art-history-online/",
+        "suffix": "MLitt"
+    },
+    {
+        "title": "Animal Behaviour (MSc)",
+        "subject_list": "biology, marine biology, zoology",
+        "study_level": "Postgraduate",
+        "subject_name": "Animal Behaviour",
+        "path": "/subjects/biology/animal-behaviour-msc/",
+        "suffix": "MSc"
+    }
+]

@@ -4929,6 +4929,406 @@ code {
   font-weight: bold;
 }
 
+/*List search results*/
+.results-container-list {
+  display: none; /* Hidden initially */
+  margin-top: 20px;
+  background-color: #fff; /* Smokey-white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-out; /* Slide down effect */
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.no-courses {
+  font-style: italic;
+  color: red;
+}
+
+/* Button Styling */
+.course-button {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f0f0f0; /* Off-white background */
+  color: #333; /* Dark text color */
+  border: 2px solid #ccc; /* Border for better visibility */
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Hover Effects */
+.course-button:hover {
+  background-color: #e0e0e0; /* Slightly darker on hover */
+  border-color: #999; /* Darker border on hover */
+  color: #000; /* Darker text on hover */
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/******************Buttons results*****************************/
+.results-container-buttons {
+  display: none; /* Hidden initially */
+  margin-top: 20px;
+  background-color: #fff; /* Smokey-white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-out; /* Slide down effect */
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.no-courses {
+  font-style: italic;
+  color: red;
+}
+
+/* Button Styling */
+.course-button {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f0f0f0; /* Off-white background */
+  color: #333; /* Dark text color */
+  border: 2px solid #ccc; /* Border for better visibility */
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Hover Effects */
+.course-button:hover {
+  background-color: #e0e0e0; /* Slightly darker on hover */
+  border-color: #999; /* Darker border on hover */
+  color: #000; /* Darker text on hover */
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*------List and button search for smaller screens------*/
+@media (max-width: 500px) {
+  .columns {
+    display: block;
+  }
+}
+section.no-links {
+  padding-bottom: 3rem;
+}
+
+.wrapper {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  min-width: 100px;
+  height: 3rem;
+  font-size: 2rem;
+}
+.wrapper .search {
+  position: absolute;
+  border: 2px solid #0f0f11;
+  height: 3rem;
+  width: 95%;
+  padding: 2px 23px 2px 25px;
+  outline: 0;
+  background-color: white;
+  border-top-left-radius: none;
+  border-bottom-left-radius: none;
+}
+.wrapper .search-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #0071b3;
+  padding: 0.75rem 1rem;
+  min-width: 5%;
+  color: white;
+  font-weight: 900;
+  border-top-right-radius: none;
+  border-bottom-right-radius: none;
+}
+.wrapper button:focus-within .search-icon {
+  outline: 3px solid #ffb400;
+  z-index: 1;
+}
+.wrapper .search-icon:hover {
+  background-color: #00539b;
+  outline: 3px solid #ffb400;
+}
+.wrapper .clear-icon {
+  position: absolute;
+  top: 10px;
+  right: 120px;
+  width: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.wrapper .mic-icon-on,
+.wrapper .mic-icon-off {
+  position: absolute;
+  top: 10px;
+  right: 90px;
+  width: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  visibility: visible;
+}
+.wrapper .mic-icon-on:hover,
+.wrapper .mic-icon-on:focus,
+.wrapper .mic-icon-off:hover,
+.wrapper .mic-icon-off:focus {
+  position: absolute;
+  top: 10px;
+  right: 90px;
+  width: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  visibility: visible;
+  z-index: 100;
+}
+.wrapper ::placeholder {
+  position: absolute;
+  top: 20%;
+  font-size: x-large;
+}
+.wrapper input.search:hover,
+.wrapper input.search:focus {
+  background-color: #fff;
+  border: 3px solid #ffb400;
+}
+
+/** Links for large screen list**/
+.links .list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+.links .list li {
+  font-size: medium;
+}
+.links .list li a {
+  color: #0f0f11;
+}
+.links .list li:after {
+  content: "|";
+  padding: 0 0.5rem;
+  color: #949494;
+}
+.links .list li:last-child:after {
+  content: "";
+}
+.links .chevron {
+  rotate: 90deg;
+}
+.links .dropdown-wrapper {
+  position: relative;
+}
+.links .dropdown-wrapper button {
+  border: none;
+}
+.links .dropdown-wrapper .subList {
+  position: absolute;
+  padding: 0.2rem;
+  z-index: 2;
+  list-style: none;
+  width: max-content;
+  background-color: #fff;
+  border-radius: none;
+  border: 2px solid #0f0f11;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+}
+.links .dropdown-wrapper .subList li {
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.links .dropdown-wrapper .subList li a {
+  text-decoration: none;
+}
+.links .dropdown-wrapper .subList li:hover {
+  background-color: #dedede;
+}
+.links .dropdown-wrapper .subList li:after {
+  content: "";
+  color: #949494;
+}
+.links .dropdown-wrapper summary {
+  text-decoration: underline;
+  list-style: none;
+}
+
+/**Small screens**/
+@media (max-width: 768px) {
+  .toggle {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: -15px;
+  }
+  .toggle .toggle-list {
+    width: 100%;
+    color: #00539b;
+    border: 2px solid black;
+    font-size: 20px;
+    background-color: #fff;
+    padding: 10px 0 10px 5px;
+    text-decoration: underline;
+    text-align: left;
+  }
+  .links .list {
+    background-color: #fff;
+    line-height: 3;
+    display: flow;
+    border: 2px solid black;
+  }
+  .links .list li {
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  .links .list li a {
+    text-decoration: none;
+  }
+  .links .list li:after {
+    content: "";
+    margin-left: 30px;
+    text-decoration: none;
+  }
+  .links .list ::before {
+    display: block;
+    padding: 0 1rem;
+    width: 100%;
+    color: #00539b;
+    line-height: 2;
+    border-bottom: 1px solid #0f0f11;
+  }
+  .links .list .dropdown-wrapper {
+    width: 100%;
+    padding: 5px;
+    position: relative;
+  }
+  .links .list .toggle-subList {
+    position: absolute;
+    width: 100%;
+    background: none;
+    top: 0;
+    left: 0;
+    height: 40px;
+  }
+  .links .list .toggle-subList a {
+    font-size: larger;
+    float: left;
+  }
+  .links .list .toggle-subList .chevron {
+    font-size: larger;
+    float: right;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  .links .list .toggle-subList:hover,
+  .links .list .toggle-subList:focus {
+    border: 3px solid #ffb400;
+  }
+  .links .list #subList {
+    position: absolute;
+    width: 100%;
+    top: 42px;
+    left: 0;
+    border-radius: none;
+    z-index: 2;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+  }
+  .links .list #subList li a {
+    text-decoration: none;
+  }
+  .clear-icon {
+    position: absolute;
+    top: 40px;
+    right: 80px !important;
+    width: 20px;
+    font-weight: 900;
+    margin-right: 5px;
+    cursor: pointer;
+    /*visibility: hidden;*/
+  }
+  .mic-icon-on,
+  .mic-icon-off {
+    position: absolute;
+    top: 10px !important;
+    right: 60px !important;
+    width: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    visibility: visible;
+  }
+  .mic-icon-on:hover,
+  .mic-icon-on:focus,
+  .mic-icon-off:hover,
+  .mic-icon-off:focus {
+    position: absolute;
+    top: 20px;
+    right: 90px;
+    width: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    visibility: visible;
+    z-index: 100;
+  }
+}
 .secondary-call {
   padding: 2em 0;
   background-color: #f0f0f0;
