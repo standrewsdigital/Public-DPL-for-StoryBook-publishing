@@ -1,1 +1,3 @@
-@import 'components/alert';
+@import "../scss-styles/variables/main-colors";
+@import "../scss-styles/mixins"; // This is correct
+@import "./components/alert";
