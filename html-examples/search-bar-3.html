@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formal Search Bar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Grid-based search wrapper */
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            background: #fff;
+            padding: 0;
+            width: 100%;
+            max-width: 1200px; /* Set fixed width */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Search input */
+        .search {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        .search:focus {
+            border: 3px solid orange;
+        }
+
+        /* Clear button (hidden by default) */
+        .clear-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #555;
+            position: absolute;
+            right: 55px;
+        }
+
+        /* Show clear button when input has text */
+        .search:not(:placeholder-shown) + .clear-icon {
+            display: block;
+        }
+
+        /* Search button */
+        .toggle-list {
+            background: blue;
+            border: none;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .toggle-list .search-icon {
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .wrapper {
+                max-width: 100%; /* Make it fully responsive */
+            }
+
+            .search {
+                font-size: 14px;
+            }
+
+            /* Change placeholder text to "Search.." */
+            .search::placeholder {
+                content: "Search..";
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <form class="wrapper" action="" role="search">
+        <input class="search" id="default-search" required type="text"
+            aria-label="Search the University website" maxlength="256" name="search"
+            placeholder="Search the University website">
+        <span class="clear-icon material-icons-outlined" aria-hidden="true" onclick="clearSearch()">close</span>
+        <button type="submit" class="toggle-list">
+            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+        </button>
+    </form>
+
+    <script>
+        // Clear input field when clicking the "clear" button
+        function clearSearch() {
+            document.getElementById("default-search").value = "";
+            document.getElementById("default-search").focus();
+        }
+
+        // Change placeholder text on smaller screens
+        function updatePlaceholder() {
+            const searchInput = document.getElementById("default-search");
+            if (window.innerWidth <= 768) {
+                searchInput.placeholder = "Search..";
+            } else {
+                searchInput.placeholder = "Search the University website";
+            }
+        }
+
+        // Call function on page load and window resize
+        updatePlaceholder();
+        window.addEventListener("resize", updatePlaceholder);
+    </script>
+
+</body>
+</html>

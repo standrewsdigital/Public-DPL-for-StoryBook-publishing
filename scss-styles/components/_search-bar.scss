@@ -1,0 +1,138 @@
+/*List search results*/
+
+.results-container-list {
+    display: none; /* Hidden initially */
+    margin-top: 20px;
+    background-color: #fff; /* Smokey-white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out; /* Slide down effect */
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.no-courses {
+    font-style: italic;
+    color: red;
+}
+
+/* Button Styling */
+.course-button {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;  /* Off-white background */
+    color: #333;                /* Dark text color */
+    border: 2px solid #ccc;      /* Border for better visibility */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    white-space: nowrap;         /* Prevent text wrapping */
+}
+
+/* Hover Effects */
+.course-button:hover {
+    background-color: #e0e0e0;  /* Slightly darker on hover */
+    border-color: #999;         /* Darker border on hover */
+    color: #000;                /* Darker text on hover */
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/******************Buttons results*****************************/
+
+.results-container-buttons {
+    display: none; /* Hidden initially */
+    margin-top: 20px;
+    background-color: #fff; /* Smokey-white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out; /* Slide down effect */
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.no-courses {
+    font-style: italic;
+    color: red;
+}
+
+/* Button Styling */
+.course-button {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;  /* Off-white background */
+    color: #333;                /* Dark text color */
+    border: 2px solid #ccc;      /* Border for better visibility */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    white-space: nowrap;         /* Prevent text wrapping */
+}
+
+/* Hover Effects */
+.course-button:hover {
+    background-color: #e0e0e0;  /* Slightly darker on hover */
+    border-color: #999;         /* Darker border on hover */
+    color: #000;                /* Darker text on hover */
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*------List and button search for smaller screens------*/
+
+ @media (max-width: 500px) {
+    .columns {
+        display: block;
+    }
+ }
