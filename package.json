@@ -1,11 +1,14 @@
 {
+  "type": "module",
   "name": "@stadigicomms/dpl",
   "version": "1.4.1",
   "description": "the css library for the sta website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss": "sass --watch scss-styles/:compiled-css/"
+    "compile-scss": "sass --watch scss-styles/:compiled-css/",
+    "dev-vite": "vite",
+    "build-vite": "vite build"
   },
   "author": "teo udrea",
   "license": "ISC",
@@ -13,6 +16,12 @@
     "basic-ftp": "^5.0.4",
     "dotenv": "^16.4.5",
     "sass": "^1.75.0",
-    "ssh2-sftp-client": "^10.0.0"
+    "ssh2-sftp-client": "^10.0.0",
+    "vite": "^6.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "babel-loader": "^9.1.3"
   }
 }
