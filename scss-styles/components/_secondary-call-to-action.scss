@@ -1,0 +1,31 @@
+.secondary-call {
+	padding: 2em 0;
+	background-color: $light-grey-1;
+
+	.call-heading {
+		margin: 0;
+		font-size: 2.5em;
+	}
+
+	p {
+		max-width: 70ch;
+		font-size: 1.2em;
+	}
+
+	&.bg-blue-primary {
+		.call-buttons {
+			.btn.lg.action:not(.white) {
+				border-bottom: 3px solid $dark-orange-25-shade;
+				background-color: $dark-orange;
+				
+				&:hover, &:focus {
+					background-color: $dark-orange-25-shade;
+				}
+			}
+		}
+	}
+
+	&.bg-blue-primary, &.bg-dark-orange, &.bg-burgundy-primary, &.bg-purple-primary {
+		color: white;
+	}
+}

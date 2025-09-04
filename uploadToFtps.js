@@ -50,18 +50,20 @@ async function uploadDirectory(client, localDirPath, remoteDirPath) {
             const localFilePath = path.join(localDirPath, localFile);
 
             if (fs.statSync(localFilePath).isDirectory()) {
-                await uploadDirectory(client, localFilePath, remoteDirPath);
+                // THIS LINE IS THE FIXED ONE:
+                await uploadDirectory(client, localFilePath, path.join(remoteDirPath, localFile));
             } else {
-                const remoteFilePath = localFile; // Using the original file name
+                const remoteFilePath = localFile;
                 await client.uploadFrom(localFilePath, remoteFilePath);
                 console.log(`Uploaded ${localFile}`);
             }
         }
-        await client.cd('..'); // Go back to parent directory
+        await client.cd('..');
     } catch (err) {
         console.error(`Error uploading directory ${localDirPath}:`, err.message);
     }
 }
+
 
 async function uploadFiles(version) {
     const client = new ftp.Client();
