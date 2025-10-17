@@ -192,4 +192,18 @@
   border-right: 0;
 }
 
+/* Error state: make the border red (and keep it red on focus) */
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+  border: 1.25px solid #ea1a13;
+  box-shadow: inset 0 0 0 1px #ea1a13;
+}
+.form-group input.error:focus,
+.form-group textarea.error:focus,
+.form-group select.error:focus {
+  outline: 1.25px solid #ea1a13;
+  box-shadow: inset 0 0 0 1px #ea1a13;
+}
+
 /*# sourceMappingURL=form-elements.css.map */
