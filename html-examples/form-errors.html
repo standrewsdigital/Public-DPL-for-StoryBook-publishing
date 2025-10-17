@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form errors</title>
     <link rel="stylesheet" href="../compiled-css/main.css">
-    <link rel="stylesheet" href="../compiled-css/"
+    <link rel="stylesheet" href="../compiled-css/form-errors.css">
+
 </head>
 
 <body>
@@ -56,7 +57,7 @@
                             <!-- <label for="text-input-id" class="form-input-label">Full name</label> -->
                             <p>As shown on your birth certificate or passport</p>
                             <p class="text-red-primary"><b>Please enter your full name</b></p>
-                            <input type="text" class="form-input" id="text-input-id" name="text-input" required>
+                            <input type="text" class="form-input error" id="text-input-id" name="text-input" required>
                         </div>
                     </fieldset>
                 </div>
@@ -66,7 +67,7 @@
                         <div class="form-group">
                             <!-- <label for="text-input-id" class="form-input-label">Phone number</label> -->
                             <p class="text-red-primary"><b>Please enter a valid telephone number using only digits</b></p>
-                            <input type="text" class="form-input" id="text-input-id" name="text-input" required>
+                            <input type="text" class="form-input error" id="text-input-id" name="text-input" required>
                         </div>
                     </fieldset>
                 </div>
@@ -116,7 +117,7 @@
                         </fieldset>
                     </div>
                 </div>
-                <button>Continue</button>
+                <a type="button" class="btn" href="#">Continue</a>
             </div>
         </div>
     </div>

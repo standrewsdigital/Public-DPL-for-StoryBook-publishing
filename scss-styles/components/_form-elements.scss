@@ -222,3 +222,20 @@
 	}
 
 }
+
+/* Error state: make the border red (and keep it red on focus) */
+.form-group {
+  input.error,
+  textarea.error,
+  select.error {
+    border: 1.25px solid $red-primary;      // or use your $red variable
+    box-shadow: inset 0 0 0 1px $red-primary; // overrides the grey focus shadow
+  }
+
+  input.error:focus,
+  textarea.error:focus,
+  select.error:focus {
+    outline: 1.25px solid $red-primary; // optional; or keep your orange
+    box-shadow: inset 0 0 0 1px $red-primary;
+  }
+}
