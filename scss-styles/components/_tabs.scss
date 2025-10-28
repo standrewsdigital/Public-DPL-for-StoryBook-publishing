@@ -1,0 +1,163 @@
+// _tabs.scss
+// CSS-only tabs using radio inputs + labels.
+// Expected markup:
+/*
+<div class="tabs">
+    <div class="tabs__nav">
+        <input id="tab-1" type="radio" name="tabs" checked>
+        <label for="tab-1" class="tabs__nav-item">Tab 1</label>
+
+        <input id="tab-2" type="radio" name="tabs">
+        <label for="tab-2" class="tabs__nav-item">Tab 2</label>
+
+        <!-- add more input+label pairs as needed -->
+    </div>
+
+    <div class="tabs__box">
+        <div id="panel-1" class="tabs__panel">Content for Tab 1</div>
+        <div id="panel-2" class="tabs__panel">Content for Tab 2</div>
+        <!-- panels should have ids that match your panel selectors below -->
+    </div>
+</div>
+*/
+
+$tabs-bg: #fff;
+$tabs-border: #e0e0e0;
+$tabs-accent: #2b6cb0;
+$tabs-text: #333;
+$tabs-active-text: #fff;
+$tabs-radius: 6px;
+$tabs-gap: 8px;
+$tabs-padding: 16px;
+
+.tabs {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: $tabs-text;
+    width: 100%;
+    box-sizing: border-box;
+
+    // visually hide native radio inputs but keep them accessible
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+    }
+
+    // NAV (labels act as tab heads)
+    .tabs__nav {
+        display: flex;
+        gap: $tabs-gap;
+        align-items: flex-end; // allow overlap with box border
+        margin-bottom: 0;
+        // place labels on top of the box by overlapping its top border
+        padding-left: 0;
+    }
+
+    .tabs__nav-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        background: transparent;
+        border: 1px solid transparent;
+        border-bottom: none;
+        border-radius: $tabs-radius $tabs-radius 0 0;
+        cursor: pointer;
+        user-select: none;
+        transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+        color: $tabs-text;
+        font-size: 14px;
+        line-height: 1;
+
+        &:hover {
+            background: lighten($tabs-bg, 2%);
+        }
+
+        // focus when keyboard navigating (label receives focus when it controls input)
+        &:focus {
+            outline: 2px solid rgba($tabs-accent, 0.25);
+            outline-offset: 2px;
+        }
+    }
+
+    // box that contains panels — tabs appear attached to its top
+    .tabs__box {
+        background: $tabs-bg;
+        border: 1px solid $tabs-border;
+        border-radius: $tabs-radius;
+        padding: $tabs-padding;
+        margin-top: -1px; // pull up to connect with nav labels
+        box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+        min-height: 80px;
+        overflow: auto;
+    }
+
+    .tabs__panel {
+        display: none;
+        // panel content styling
+        padding: 0;
+        margin: 0;
+        color: inherit;
+        line-height: 1.4;
+        // allow smooth cross-fade (optional)
+        opacity: 0;
+        transform: translateY(6px);
+        transition: opacity .18s ease, transform .18s ease;
+    }
+
+    // When a radio is checked, style its label as active.
+    // This selector assumes each input is immediately followed by its label:
+    // <input id="tab-1"> <label for="tab-1">...</label>
+    input[type="radio"]:checked + .tabs__nav-item {
+        background: $tabs-accent;
+        color: $tabs-active-text;
+        box-shadow: 0 4px 8px rgba(43,108,176,0.12);
+        border-color: rgba($tabs-accent, 0.15);
+    }
+
+    // Show the matching panel. This relies on inputs being siblings (before) the .tabs__box
+    // and panels having matching ids (e.g. id="panel-1"). Example:
+    // <input id="tab-1" ...> ... <div class="tabs__box"> <div id="panel-1">...</div> </div>
+    // For each tab input add a corresponding rule below (or generate via a preprocessor loop).
+    // Example generic pattern (using IDs): #tab-1:checked ~ .tabs__box #panel-1 { display:block; ... }
+
+    // If you use many tabs you can duplicate the following pattern per tab:
+    #tab-1:checked ~ .tabs__box #panel-1,
+    #tab-2:checked ~ .tabs__box #panel-2,
+    #tab-3:checked ~ .tabs__box #panel-3 {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    // small screens: wrap nav if many labels
+    @media (max-width: 520px) {
+        .tabs__nav {
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tabs__nav-item {
+            padding: 8px 10px;
+            font-size: 13px;
+        }
+    }
+}
+
+// Utility: simple mixin to generate many tab-panel rules if you prefer
+// Usage (in a .scss file that imports this partial):
+// @include tabs-panel-rules(6); // generates rules for #tab-1..#tab-6 and #panel-1..#panel-6
+@mixin tabs-panel-rules($count) {
+    $rules: ();
+    @for $i from 1 through $count {
+        $rules: append($rules, "#{'#tab-#{$i}'}:checked ~ .tabs__box #{'#panel-#{$i}'}", comma);
+    }
+    // Emit combined selector
+    #{ $rules } {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
