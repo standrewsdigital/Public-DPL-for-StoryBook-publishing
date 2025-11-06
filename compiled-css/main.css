@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --page-background-color: #ffffff;
   --page-highlight-background-color: rgba(240, 240, 240, 0.8549019608);
@@ -3317,6 +3318,29 @@ icon button classes based on a list of supported icons.
   margin-bottom: 0px;
 }
 
+.panel {
+  box-shadow: 0px 2px 2px #949494;
+  margin-bottom: 1rem;
+}
+
+.panel-heading {
+  padding: 1rem 1.25rem; /* ensure readable over brand colours */
+}
+.panel-heading h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.panel-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+.panel-body p {
+  margin: 0;
+  line-height: 1.7;
+}
+
 .navigation-bar {
   width: 100%;
   margin: 0;
@@ -3484,6 +3508,7 @@ icon button classes based on a list of supported icons.
 .article-list .snippet dl dt {
   position: relative;
   padding-left: 1.5em;
+  float: left;
 }
 .article-list .snippet dl dt::before {
   display: inline-block;
@@ -3508,7 +3533,7 @@ icon button classes based on a list of supported icons.
 .article-list .snippet dd {
   display: block;
   margin-bottom: 10px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .article-list .description {
   margin: 0 0 5px 0;
@@ -3517,24 +3542,6 @@ icon button classes based on a list of supported icons.
   .article-list .description {
     display: none;
   }
-}
-
-.metadata-list {
-  font-size: 1rem;
-  overflow: auto;
-}
-.metadata-list .full {
-  clear: left;
-  float: left;
-  display: block;
-  font-weight: 900;
-}
-.metadata-list .no-icon {
-  margin-right: 0.5rem;
-  width: auto !important;
-}
-.metadata-list .no-icon::after {
-  content: ":";
 }
 
 .metadata-list_no-icon {
@@ -4202,9 +4209,6 @@ img.image {
   font-weight: 700;
   color: #0f0f11;
 }
-.metadata-list dt:not([class^=metadata-])::after {
-  content: ":";
-}
 .metadata-list dd {
   margin: 0 20px 5px 0;
 }
@@ -4588,6 +4592,90 @@ img.image {
 }
 .form-group .input-group .input-group-addon:first-child {
   border-right: 0;
+}
+
+/* Error state: make the border red (and keep it red on focus) */
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+  border: 1.25px solid #ea1a13;
+  box-shadow: inset 0 0 0 1px #ea1a13;
+}
+.form-group input.error:focus,
+.form-group textarea.error:focus,
+.form-group select.error:focus {
+  outline: 1.25px solid #ea1a13;
+  box-shadow: inset 0 0 0 1px #ea1a13;
+}
+
+.alert {
+  border: 5px solid #6a6a6b;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.alert.success {
+  border-color: #00853f;
+}
+.alert.info {
+  border-color: #00539b;
+}
+.alert.warning {
+  border-color: #bf5909;
+}
+.alert.danger {
+  border-color: #ea1a13;
+}
+.alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+  font-size: 1.44em;
+  margin: 0 0 10px 0;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+    font-size: calc(1.44em + 0.1225em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+    font-size: calc(1.44em + 0.1225em);
+  }
+}
+.alert p {
+  margin: 0;
+}
+
+.callout {
+  border-left: 5px solid #6a6a6b;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.callout.success {
+  border-color: #00853f;
+}
+.callout.info {
+  border-color: #00539b;
+}
+.callout.warning {
+  border-color: #bf5909;
+}
+.callout.danger {
+  border-color: #ea1a13;
+}
+.callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
+  font-size: 1.44em;
+  margin: 0 0 10px 0;
+}
+@media (min-width: 36em) and (max-width: 75em) {
+  .callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
+    font-size: calc(1.44em + 0.1225em * (100vw - 36em) / (75em - 36em));
+  }
+}
+@media (min-width: 75em) {
+  .callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
+    font-size: calc(1.44em + 0.1225em);
+  }
+}
+.callout p {
+  margin: 0;
 }
 
 .featured-people {
@@ -5723,6 +5811,59 @@ section.no-links {
 
 .bg-danger {
   background-color: #ea1a13;
+}
+
+/* ---------- RADIUS + BORDER UTILITIES ---------- */
+/* Define a border color map — you can reuse existing colors */
+/* Generate .radius-[name] utility classes */
+.radius-xs {
+  border-radius: min(2px, 0.8vw);
+}
+
+.radius-sm {
+  border-radius: min(4px, 1.2vw);
+}
+
+.radius-md {
+  border-radius: min(6px, 2vw);
+}
+
+.radius-lg {
+  border-radius: min(10px, 3vw);
+}
+
+.radius-xl {
+  border-radius: min(14px, 4vw);
+}
+
+/* Generate .border-[color-name] classes */
+.border-light, .rounded-border {
+  border: 1px solid #fafafa;
+}
+
+.border-mid {
+  border: 1px solid #dedede;
+}
+
+.border-dark {
+  border: 1px solid #202024;
+}
+
+.border-primary {
+  border: 1px solid #00539b;
+}
+
+.border-orange {
+  border: 1px solid #ffb400;
+}
+
+/* Combine into a rounded-border utility */
+.rounded-border {
+  border-radius: 980px;
+  -webkit-border-radius: 980px;
+  -moz-border-radius: 980px;
+  -ms-border-radius: 980px;
+  -o-border-radius: 980px;
 }
 
 /*# sourceMappingURL=main.css.map */

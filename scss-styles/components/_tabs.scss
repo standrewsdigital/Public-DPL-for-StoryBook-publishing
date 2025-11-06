@@ -1,0 +1,83 @@
+// Tabs
+.tabs {
+  margin-block: 1rem;
+
+  .tabs-list {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    border-bottom: 1px solid $mid-grey-2;
+    padding-bottom: 0.25rem;
+  }
+
+  .tabs-tab {
+    /* reset/button */
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0.4rem 0.25rem;
+    margin: 0;
+    font: inherit;
+    color: $light-blue-25-shade;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    line-height: 1.2;
+
+    /* underline baseline for inactive tabs */
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.26rem;
+      height: 3px;
+      background: transparent;
+      border-radius: 2px 2px 0 0;
+      transition: background-color .15s ease;
+    }
+
+    &:hover { text-decoration: underline; }
+
+    /* accessible focus */
+    &:focus-visible {
+      outline: 2px solid $orange-primary;
+      outline-offset: 2px;
+      text-decoration: none;
+    }
+
+    /* active tab look */
+    &[aria-selected="true"] {
+      font-weight: 700;
+      color: $dark-grey-2;
+      text-decoration: none;
+
+      &::after {
+        background: $orange-primary;
+      }
+    }
+  }
+
+  .tabs-panel {
+    padding: 1rem;
+    border: 1px solid $mid-grey-2;
+    border-top: 0;
+    background: $white;
+    line-height: 1.55;
+
+    p { margin: 0 0 .75rem; }
+    ul { margin: 0 0 .75rem 1.25rem; }
+    li + li { margin-top: .25rem; }
+  }
+
+  /* Small screens: wrap tabs cleanly */
+  @media (max-width: 520px) {
+    .tabs-list { flex-wrap: wrap; gap: .5rem 1rem; }
+    .tabs-tab::after { bottom: -0.22rem; }
+  }
+
+  /* Respect reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .tabs-tab::after { transition: none; }
+  }
+}

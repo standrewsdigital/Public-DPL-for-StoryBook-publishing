@@ -1,0 +1,88 @@
+.tabs {
+  margin-block: 1rem;
+  /* Small screens: wrap tabs cleanly */
+  /* Respect reduced-motion */
+}
+.tabs .tabs-list {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 0.25rem;
+}
+.tabs .tabs-tab {
+  /* reset/button */
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0.4rem 0.25rem;
+  margin: 0;
+  font: inherit;
+  color: #005586;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  line-height: 1.2;
+  /* underline baseline for inactive tabs */
+  /* accessible focus */
+  /* active tab look */
+}
+.tabs .tabs-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.26rem;
+  height: 3px;
+  background: transparent;
+  border-radius: 2px 2px 0 0;
+  transition: background-color 0.15s ease;
+}
+.tabs .tabs-tab:hover {
+  text-decoration: underline;
+}
+.tabs .tabs-tab:focus-visible {
+  outline: 2px solid #ffb400;
+  outline-offset: 2px;
+  text-decoration: none;
+}
+.tabs .tabs-tab[aria-selected=true] {
+  font-weight: 700;
+  color: #0f0f11;
+  text-decoration: none;
+}
+.tabs .tabs-tab[aria-selected=true]::after {
+  background: #ffb400;
+}
+.tabs .tabs-panel {
+  padding: 1rem;
+  border: 1px solid #dedede;
+  border-top: 0;
+  background: #ffffff;
+  line-height: 1.55;
+}
+.tabs .tabs-panel p {
+  margin: 0 0 0.75rem;
+}
+.tabs .tabs-panel ul {
+  margin: 0 0 0.75rem 1.25rem;
+}
+.tabs .tabs-panel li + li {
+  margin-top: 0.25rem;
+}
+@media (max-width: 520px) {
+  .tabs .tabs-list {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+  .tabs .tabs-tab::after {
+    bottom: -0.22rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tabs .tabs-tab::after {
+    transition: none;
+  }
+}
+
+/*# sourceMappingURL=tabs.css.map */
