@@ -14,7 +14,7 @@
 .article-list .snippet dl dt {
   position: relative;
   padding-left: 1.5em;
-  float:left;
+  float: left;
 }
 .article-list .snippet dl dt::before {
   display: inline-block;

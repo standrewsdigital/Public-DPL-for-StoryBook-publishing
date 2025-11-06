@@ -22,9 +22,9 @@
 		&:not([class^="metadata-"]) {
 			font-weight: 700;
 			color: $dark-grey-2;
-			&::after {
-				content: ':';
-			}
+			// &::after {
+			// 	content: ':';
+			// }
 		}
 	}
 

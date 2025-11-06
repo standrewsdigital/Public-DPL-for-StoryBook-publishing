@@ -16,6 +16,7 @@
       dt {
         position: relative; // Ensure the icon is positioned correctly relative to the dt
         padding-left: 1.5em; // Give some space for the icon
+        float: left;
         &::before {
           display: inline-block;
           position: absolute;
@@ -49,7 +50,7 @@
     dd {
       display: block;
       margin-bottom: 10px;
-      margin-left: 20px;
+      margin-left: 30px;
     }
   }
 
@@ -65,27 +66,27 @@
 }
 
 
-.metadata-list {
- //. margin-left: -23px !important;
-  font-size: 1rem;
-  overflow: auto;
+// .metadata-list {
+//  //. margin-left: -23px !important;
+//   font-size: 1rem;
+//   overflow: auto;
 
  
-  .full {
-    clear: left;
-    float: left;
-    display: block;
-    font-weight: 900;
-    //color:grey;
-  }
-  .no-icon {
-    margin-right: 0.5rem;
-    width:auto !important;
-  }
-  .no-icon::after {
-    content: ":";
-  }
-}
+//   .full {
+//     clear: left;
+//     float: left;
+//     display: block;
+//     font-weight: 900;
+//     //color:grey;
+//   }
+//   .no-icon {
+//     margin-right: 0.5rem;
+//     width:auto !important;
+//   }
+//   .no-icon::after {
+//     content: ":";
+//   }
+// }
 
 .metadata-list_no-icon{
     margin-left: -23px !important;
