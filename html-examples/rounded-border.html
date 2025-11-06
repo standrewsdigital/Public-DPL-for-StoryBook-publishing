@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header and Footer example</title>
+    <link rel="stylesheet" href="../compiled-css/main.css">
+    <style>
+        .col {
+            min-height: 100px;
+            background-color: #a98585;
+            text-align: center;
+            line-height: 100px;
+            /* margin-bottom: 15px; Space between rows for clarity */
+        }
+
+        /* Highlight the first and last columns for visual aid */
+        .col:first-child {
+            background-color: #a98585;
+        }
+
+        .col:last-child {
+            background-color: #a98585;
+        }
+
+        /* Container styling for better visibility */
+        .container {
+            margin-bottom: 20px;
+            padding: 0; /* Override if needed based on your grid system CSS */
+        }
+
+        .col-centered {
+            min-height: 100px;
+            background-color: #f0f0f0;
+            text-align: center;
+            line-height: 100px;
+            /* margin-bottom: 15px; Space between rows for clarity */
+        }
+
+        /* Highlight the first and last columns for visual aid */
+        .col-centered:first-child {
+            background-color: #a98585;
+        }
+
+        .col-centered:last-child {
+            background-color: #a98585;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col start-col-4-md border-primary radius-xs"> <!-- First 4 columns -->
+            <p>border-primary radius-xs</p>
+        </div>
+        <div class="col end-col-8-md border-primary radius-xs"> <!-- First 4 columns -->
+            <p>border-primary radius-xs</p>
+        </div>
+        <div class="col start-col-4-md border-primary radius-sm"> <!-- First 4 columns -->
+            <p>border-primary radius-sm</p>
+        </div>
+        <div class="col end-col-8-md border-primary radius-sm"> <!-- First 4 columns -->
+            <p>border-primary radius-sm</p>
+        </div>
+        <div class="col start-col-4-md border-primary radius-md"> <!-- First 4 columns -->
+            <p>border-primary radius-md</p>
+        </div>
+        <div class="col end-col-8-md border-primary radius-md"> <!-- First 4 columns -->
+            <p>border-primary radius-md</p>
+        </div>
+        <div class="col start-col-4-md border-primary radius-lg"> <!-- First 4 columns -->
+            <p>border-primary radius-lg</p>
+        </div>
+        <div class="col end-col-8-md border-primary radius-lg"> <!-- First 4 columns -->
+            <p>border-primary radius-lg</p>
+        </div>
+        <div class="col start-col-4-md border-primary radius-xl"> <!-- First 4 columns -->
+            <p>border-primary radius-xl</p>
+        </div>
+        <div class="col end-col-8-md border-primary radius-xl"> <!-- First 4 columns -->
+            <p>border-primary radius-xl</p>
+        </div>
+        <div class="col start-col-4-md border-primary rounded-border"> <!-- First 4 columns -->
+            <p>border-primary rounded-border</p>
+        </div>
+        <div class="col end-col-8-md border-primary rounded-border"> <!-- First 4 columns -->
+            <p>border-primary rounded-border</p>
+        </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
