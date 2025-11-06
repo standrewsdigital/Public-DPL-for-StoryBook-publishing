@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --page-background-color: #ffffff;
   --page-highlight-background-color: rgba(240, 240, 240, 0.8549019608);
@@ -3507,6 +3508,7 @@ icon button classes based on a list of supported icons.
 .article-list .snippet dl dt {
   position: relative;
   padding-left: 1.5em;
+  float: left;
 }
 .article-list .snippet dl dt::before {
   display: inline-block;
@@ -3531,7 +3533,7 @@ icon button classes based on a list of supported icons.
 .article-list .snippet dd {
   display: block;
   margin-bottom: 10px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .article-list .description {
   margin: 0 0 5px 0;
@@ -3540,24 +3542,6 @@ icon button classes based on a list of supported icons.
   .article-list .description {
     display: none;
   }
-}
-
-.metadata-list {
-  font-size: 1rem;
-  overflow: auto;
-}
-.metadata-list .full {
-  clear: left;
-  float: left;
-  display: block;
-  font-weight: 900;
-}
-.metadata-list .no-icon {
-  margin-right: 0.5rem;
-  width: auto !important;
-}
-.metadata-list .no-icon::after {
-  content: ":";
 }
 
 .metadata-list_no-icon {
@@ -4224,9 +4208,6 @@ img.image {
 .metadata-list dt:not([class^=metadata-]) {
   font-weight: 700;
   color: #0f0f11;
-}
-.metadata-list dt:not([class^=metadata-])::after {
-  content: ":";
 }
 .metadata-list dd {
   margin: 0 20px 5px 0;
@@ -5830,6 +5811,59 @@ section.no-links {
 
 .bg-danger {
   background-color: #ea1a13;
+}
+
+/* ---------- RADIUS + BORDER UTILITIES ---------- */
+/* Define a border color map — you can reuse existing colors */
+/* Generate .radius-[name] utility classes */
+.radius-xs {
+  border-radius: min(2px, 0.8vw);
+}
+
+.radius-sm {
+  border-radius: min(4px, 1.2vw);
+}
+
+.radius-md {
+  border-radius: min(6px, 2vw);
+}
+
+.radius-lg {
+  border-radius: min(10px, 3vw);
+}
+
+.radius-xl {
+  border-radius: min(14px, 4vw);
+}
+
+/* Generate .border-[color-name] classes */
+.border-light, .rounded-border {
+  border: 1px solid #fafafa;
+}
+
+.border-mid {
+  border: 1px solid #dedede;
+}
+
+.border-dark {
+  border: 1px solid #202024;
+}
+
+.border-primary {
+  border: 1px solid #00539b;
+}
+
+.border-orange {
+  border: 1px solid #ffb400;
+}
+
+/* Combine into a rounded-border utility */
+.rounded-border {
+  border-radius: 980px;
+  -webkit-border-radius: 980px;
+  -moz-border-radius: 980px;
+  -ms-border-radius: 980px;
+  -o-border-radius: 980px;
 }
 
 /*# sourceMappingURL=main.css.map */
