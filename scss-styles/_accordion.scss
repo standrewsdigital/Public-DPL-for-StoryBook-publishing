@@ -1,80 +1,146 @@
 .accordion-group {
-	margin-bottom: 1.2em;
+  margin-bottom: 1.2em;
 
-	details {
-		border-top: 1px solid $dark-grey-2;
-		background: $white;
-		color: $dark-grey-2;
+  details {
+    border-top: 1px solid $dark-grey-2;
+    background: $white;
+    color: $dark-grey-2;
 
-		&:last-child {
-			border-bottom: 1px solid $dark-grey-2;
-		}
+    &:last-child {
+      border-bottom: 1px solid $dark-grey-2;
+    }
 
-		> summary {
-			@include responsive-font-size(1.2em, 0.05em, 36em, 75em);
-			font-weight: 700;
-			color: $light-blue-primary;
-			cursor: pointer;
-			padding: 15px;
-			list-style: none;
+    > summary {
+      @include responsive-font-size(1.2em, 0.05em, 36em, 75em);
+      font-weight: 700;
+      color: $light-blue-primary;
+      cursor: pointer;
+      padding: 15px;
+      list-style: none;
 
-			&:hover {
-				text-decoration: underline;
-			}
-			&:focus {
-				outline: 3px solid $orange-primary;
-				text-decoration: underline;
-			}
+      &span:hover {
+        text-decoration: underline;
+      }
+      &:focus {
+        outline: 3px solid $orange-primary;
+        text-decoration: underline;
+      }
 
-			&::before {
-				float: right;
-				content: 'expand_more' / '';
-				font-family: 'Material Symbols Outlined';
-  				font-feature-settings: 'liga';
-  				-webkit-font-feature-settings: 'liga';
-  				-moz-font-feature-settings: 'liga';
-				color: $dark-grey-2;
-			}
-		}
+      &::before {
+        float: right;
+        content: "expand_more" / "";
+        font-family: "Material Symbols Outlined";
+        font-feature-settings: "liga";
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga";
+        color: $dark-grey-2;
+      }
 
-		&[open] > summary{
-			&::before {
-  				content: 'expand_less' / '';
-  				font-family: 'Material Symbols Outlined';
-  				font-feature-settings: 'liga';
-  				-webkit-font-feature-settings: 'liga';
-  				-moz-font-feature-settings: 'liga';
-			}
-		}
+      h2,
+      h3,
+      h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
 
-		.accordion-content {
-			padding: 15px;
+      p {
+        margin-bottom: 0;
+        color: grey;
+        font-size: medium;
+        font-weight: 300;
+      }
+      .horizontal {
+        display: flex;
+        /* dt dd pairs all on one line */
+        gap: 2em;
+        /* space between each pair */
+        flex-wrap: nowrap;
+        /* keep everything on a single line */
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
 
-			& > :first-child {
-				margin-top: 0;
-			}
-			& > :last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
+      .horizontal .pair {
+        display: flex;
+        /* dt + dd inside each pair */
+        flex-direction: row;
+        align-items: center;
+        gap: 0.4em;
+        /* space between dt and dd */
+        font-size: medium;
+        font-weight: 300;
+        color: grey;
+        margin-top: 10px;
+      }
 
-	&:has(> .accordion-group-open) {
-		details:first-of-type {
-			clear: both;
-		}
-	}
+      .horizontal.pair dd a {
+        text-decoration: none !important;
+      }
 
+      .horizontal dt,
+      .horizontal dd {
+        margin: 0;
+        padding: 0;
+      }
+
+      /*Vertical meta*/
+      .vertical .row {
+        display: flex;
+        /* dt + dd on same line */
+        flex-direction: row;
+        align-items: center;
+        /* keep text aligned */
+        gap: 0.5em;
+        margin-bottom: 0.5em;
+        /* space between rows */
+      }
+
+      .vertical dt,
+      .vertical dd {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &[open] > summary {
+      &::before {
+        content: "expand_less" / "";
+        font-family: "Material Symbols Outlined";
+        font-feature-settings: "liga";
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga";
+      }
+    }
+
+    .accordion-content {
+      padding: 15px;
+
+      & > :first-child {
+        margin-top: 0;
+      }
+      & > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &:has(> .accordion-group-open) {
+    details:first-of-type {
+      clear: both;
+    }
+  }
 }
 
 .accordion-group-open {
-	font-family: $page-font-family;
-	color: $light-blue-primary;
-	border: none;
-	background: none;
-	font-size: 1em;
-	margin-bottom: 0.5rem;
-	text-decoration: underline;
-	float: right;
-	cursor: pointer;
+  font-family: $page-font-family;
+  color: $light-blue-primary;
+  border: none;
+  background: none;
+  font-size: 1em;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  float: right;
+  cursor: pointer;
+  display: none;
 }
