@@ -3583,12 +3583,8 @@ icon button classes based on a list of supported icons.
     font-size: calc(1.2em + 0.05em);
   }
 }
-.accordion-group details > summaryspan:hover {
-  text-decoration: underline;
-}
 .accordion-group details > summary:focus {
   outline: 3px solid #ffb400;
-  text-decoration: underline;
 }
 .accordion-group details > summary::before {
   float: right;
@@ -3605,11 +3601,18 @@ icon button classes based on a list of supported icons.
   margin-top: 0;
   margin-bottom: 0;
 }
+.accordion-group details > summary span:hover {
+  text-decoration: underline;
+}
 .accordion-group details > summary p {
   margin-bottom: 0;
-  color: grey;
+  color: #0f0f11;
   font-size: medium;
   font-weight: 300;
+}
+.accordion-group details > summary dt,
+.accordion-group details > summary dd {
+  text-decoration: none;
 }
 .accordion-group details > summary .horizontal {
   display: flex;
@@ -3631,7 +3634,7 @@ icon button classes based on a list of supported icons.
   /* space between dt and dd */
   font-size: medium;
   font-weight: 300;
-  color: grey;
+  color: #0f0f11;
   margin-top: 10px;
 }
 .accordion-group details > summary .horizontal.pair dd a {
@@ -3656,6 +3659,13 @@ icon button classes based on a list of supported icons.
 .accordion-group details > summary .vertical dd {
   margin: 0;
   padding: 0;
+}
+@media (max-width: 760px) {
+  .accordion-group details > summary .horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
 }
 .accordion-group details[open] > summary::before {
   content: "expand_less"/"";

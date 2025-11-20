@@ -18,12 +18,9 @@
       padding: 15px;
       list-style: none;
 
-      &span:hover {
-        text-decoration: underline;
-      }
       &:focus {
         outline: 3px solid $orange-primary;
-        text-decoration: underline;
+        // text-decoration: underline;
       }
 
       &::before {
@@ -43,12 +40,22 @@
         margin-bottom: 0;
       }
 
+      span:hover {
+        text-decoration: underline;
+      }
+
       p {
         margin-bottom: 0;
-        color: grey;
+        color: $dark-grey-2;
         font-size: medium;
         font-weight: 300;
       }
+
+      dt,
+      dd {
+        text-decoration: none;
+      }
+
       .horizontal {
         display: flex;
         /* dt dd pairs all on one line */
@@ -70,7 +77,7 @@
         /* space between dt and dd */
         font-size: medium;
         font-weight: 300;
-        color: grey;
+        color: $dark-grey-2;
         margin-top: 10px;
       }
 
@@ -101,6 +108,14 @@
         margin: 0;
         padding: 0;
       }
+
+      @media (max-width: 760px) {
+        .horizontal {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2px;
+        }
+      }
     }
 
     &[open] > summary {
@@ -119,6 +134,7 @@
       & > :first-child {
         margin-top: 0;
       }
+
       & > :last-child {
         margin-bottom: 0;
       }
