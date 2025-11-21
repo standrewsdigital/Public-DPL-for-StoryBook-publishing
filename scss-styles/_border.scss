@@ -1,4 +1,4 @@
-@use './variables/main-colors' as colors; // reuse your palette
+@use './variables/main-colors' as colors;
 
 /* ---------- RADIUS + BORDER UTILITIES ---------- */
 
@@ -10,7 +10,7 @@ $radius-map: (
   "xl": min(14px, 4vw)
 );
 
-/* Define a border color map — you can reuse existing colors */
+/* Define a border color map*/
 $border-color-map: (
   "light": colors.$light-grey-2,
   "mid": colors.$mid-grey-2,
@@ -33,7 +33,7 @@ $border-color-map: (
   }
 }
 
-/* Combine into a rounded-border utility */
+/* Rounded-border utility */
 .rounded-border {
   @extend.border-light;
   border-radius: 980px;

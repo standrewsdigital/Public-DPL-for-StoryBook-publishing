@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spacing Utilities Demo</title>
+  <link rel="stylesheet" href="../compiled-css/main.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    .container {
+      margin-bottom: 30px;
+    }
+
+    .helper-text {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- PADDING DEMO ---------- */
+
+    /* centers the fixed-size demo inside the grid column */
+    .padding-demo-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* outer element: the one that gets the .p-* classes */
+    .padding-outer {
+      background-color: #d6e5ff; /* light blue */
+      border: 1px solid #6c8cd5;
+      position: relative;
+      width: 140px;
+      height: 140px;
+      box-sizing: border-box;
+      /* IMPORTANT: no flex centering here; we want the inner box to be
+         naturally top-left so padding is clearly seen pushing it in */
+    }
+
+    /* shows where the content would be */
+    .padding-inner {
+      background-color: #ffffff;
+      border: 2px solid #333;
+      width: 50px;
+      height: 50px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+    }
+
+    /* a faint outline showing the "no padding" corner reference */
+    .padding-outer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border: 1px dashed rgba(0, 0, 0, 0.25);
+      pointer-events: none;
+    }
+
+    /* label under each example */
+    .padding-label {
+      text-align: center;
+      margin-top: 6px;
+      font-size: 0.8rem;
+    }
+
+    /* ---------- MARGIN DEMO ---------- */
+
+    .margin-demo-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .margin-frame {
+      border: 1px dashed #999;
+      background-color: #f8f8f8;
+      width: 160px;
+      height: 120px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .margin-box {
+      background-color: rgba(60, 179, 113, 0.25); /* light green */
+      border: 1px solid rgba(60, 179, 113, 0.8);
+      min-width: 60px;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .margin-label {
+      text-align: center;
+      margin-top: 6px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container"><div class="row"><div class="col col-12-md col-12-xs">
+  <h1>Spacing Utilities Demo</h1>
+  <p class="helper-text">
+    <strong>Blue = padding</strong> (space inside the element).<br />
+    <strong>Green = margin</strong> (space outside the element).
+  </p>
+
+  <!-- ================= PADDING ================= -->
+  <h2>Padding Utilities (Improved Visibility)</h2>
+  <p class="helper-text">
+    The inner white box is fixed at the top-left. The <strong>blue area</strong> between the corner and the white box is the padding.
+    A dashed square in the corner shows where the content would be with <code>.p-0</code>.
+  </p>
+
+  <h3>All-Sides Padding (.p-*)</h3>
+</div></div></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-4-lg">
+        <div class="padding-demo-wrapper">
+          <div class="padding-outer p-0">
+            <div class="padding-inner">content</div>
+          </div>
+        </div>
+        <div class="padding-label">.p-0</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="padding-demo-wrapper">
+          <div class="padding-outer p-xs">
+            <div class="padding-inner">content</div>
+          </div>
+        </div>
+        <div class="padding-label">.p-xs</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="padding-demo-wrapper">
+          <div class="padding-outer p-sm">
+            <div class="padding-inner">content</div>
+          </div>
+        </div>
+        <div class="padding-label">.p-sm</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="padding-demo-wrapper">
+          <div class="padding-outer p-md">
+            <div class="padding-inner">content</div>
+          </div>
+        </div>
+        <div class="padding-label">.p-md</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="padding-demo-wrapper">
+          <div class="padding-outer p-lg">
+            <div class="padding-inner">content</div>
+          </div>
+        </div>
+        <div class="padding-label">.p-lg</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="padding-demo-wrapper">
+          <div class="padding-outer p-xl">
+            <div class="padding-inner">content</div>
+          </div>
+        </div>
+        <div class="padding-label">.p-xl</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="padding-demo-wrapper">
+          <div class="padding-outer p-2xl">
+            <div class="padding-inner">content</div>
+          </div>
+        </div>
+        <div class="padding-label">.p-2xl</div>
+      </div>
+    </div>
+  </div>
+<div class="container"><div class="row"><div class="col col-12-md col-12-xs">
+  <h3 style="margin-top: 40px;">Directional Padding (.pt-*, .pr-*, .pb-*, .pl-*, .px-*, .py-*)</h3>
+</div></div></div>
+<div class="container">
+  <div class="row">
+
+    <!-- Padding Top -->
+    <div class="col col-4-lg">
+      <div class="padding-demo-wrapper">
+        <div class="padding-outer pt-lg">
+          <div class="padding-inner">content</div>
+        </div>
+      </div>
+      <div class="padding-label">.pt-lg</div>
+    </div>
+
+    <!-- Padding Right -->
+    <div class="col col-4-lg">
+      <div class="padding-demo-wrapper">
+        <div class="padding-outer pr-lg">
+          <div class="padding-inner">content</div>
+        </div>
+      </div>
+      <div class="padding-label">.pr-lg</div>
+    </div>
+
+    <!-- Padding Bottom -->
+    <div class="col col-4-lg">
+      <div class="padding-demo-wrapper">
+        <div class="padding-outer pb-lg">
+          <div class="padding-inner">content</div>
+        </div>
+      </div>
+      <div class="padding-label">.pb-lg</div>
+    </div>
+
+    <!-- Padding Left -->
+    <div class="col col-4-lg">
+      <div class="padding-demo-wrapper">
+        <div class="padding-outer pl-lg">
+          <div class="padding-inner">content</div>
+        </div>
+      </div>
+      <div class="padding-label">.pl-lg</div>
+    </div>
+
+    <!-- Padding X (left + right) -->
+    <div class="col col-4-lg">
+      <div class="padding-demo-wrapper">
+        <div class="padding-outer px-lg">
+          <div class="padding-inner">content</div>
+        </div>
+      </div>
+      <div class="padding-label">.px-lg</div>
+    </div>
+
+    <!-- Padding Y (top + bottom) -->
+    <div class="col col-4-lg">
+      <div class="padding-demo-wrapper">
+        <div class="padding-outer py-lg">
+          <div class="padding-inner">content</div>
+        </div>
+      </div>
+      <div class="padding-label">.py-lg</div>
+    </div>
+
+  </div>
+</div>
+
+
+  <hr />
+
+  <!-- ================= MARGIN ================= -->
+  <div class="container"><div class="row"><div class="col col-12-md col-12-xs">
+  <h2>Margin Utilities</h2>
+  <p class="helper-text">
+    Each green box sits inside a dashed grey frame. The space between the frame and the green box is the <strong>margin</strong>.
+  </p>
+
+  <h3>All-Sides Margin (.m-*)</h3>
+  </div></div></div>
+  <div class="container">
+    <div class="row">
+      <div class="col col-4-lg">
+        <div class="margin-demo-wrapper">
+          <div class="margin-frame">
+            <div class="margin-box m-0">.m-0</div>
+          </div>
+        </div>
+        <div class="margin-label">.m-0</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="margin-demo-wrapper">
+          <div class="margin-frame">
+            <div class="margin-box m-xs">.m-xs</div>
+          </div>
+        </div>
+        <div class="margin-label">.m-xs</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="margin-demo-wrapper">
+          <div class="margin-frame">
+            <div class="margin-box m-sm">.m-sm</div>
+          </div>
+        </div>
+        <div class="margin-label">.m-sm</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="margin-demo-wrapper">
+          <div class="margin-frame">
+            <div class="margin-box m-md">.m-md</div>
+          </div>
+        </div>
+        <div class="margin-label">.m-md</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="margin-demo-wrapper">
+          <div class="margin-frame">
+            <div class="margin-box m-lg">.m-lg</div>
+          </div>
+        </div>
+        <div class="margin-label">.m-lg</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="margin-demo-wrapper">
+          <div class="margin-frame">
+            <div class="margin-box m-xl">.m-xl</div>
+          </div>
+        </div>
+        <div class="margin-label">.m-xl</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="margin-demo-wrapper">
+          <div class="margin-frame">
+            <div class="margin-box m-2xl">.m-2xl</div>
+          </div>
+        </div>
+        <div class="margin-label">.m-2xl</div>
+      </div>
+
+      <div class="col col-4-lg">
+        <div class="margin-demo-wrapper">
+          <div class="margin-frame">
+            <div class="margin-box m-auto">.m-auto</div>
+          </div>
+        </div>
+        <div class="margin-label">.m-auto</div>
+      </div>
+    </div>
+  </div>
+<div class="container"><div class="row"><div class="col col-12-md col-12-xs">
+  <h3 style="margin-top: 40px;">Directional Margin (.mt-*, .mr-*, .mb-*, .ml-*, .mx-*, .my-*)</h3>
+</div></div></div>
+<div class="container">
+  <div class="row">
+
+    <!-- Margin Top -->
+    <div class="col col-4-lg">
+      <div class="margin-demo-wrapper">
+        <div class="margin-frame">
+          <div class="margin-box mt-lg">.mt-lg</div>
+        </div>
+      </div>
+      <div class="margin-label">.mt-lg</div>
+    </div>
+
+    <!-- Margin Right -->
+    <div class="col col-4-lg">
+      <div class="margin-demo-wrapper">
+        <div class="margin-frame">
+          <div class="margin-box mr-lg">.mr-lg</div>
+        </div>
+      </div>
+      <div class="margin-label">.mr-lg</div>
+    </div>
+
+    <!-- Margin Bottom -->
+    <div class="col col-4-lg">
+      <div class="margin-demo-wrapper">
+        <div class="margin-frame">
+          <div class="margin-box mb-lg">.mb-lg</div>
+        </div>
+      </div>
+      <div class="margin-label">.mb-lg</div>
+    </div>
+
+    <!-- Margin Left -->
+    <div class="col col-4-lg">
+      <div class="margin-demo-wrapper">
+        <div class="margin-frame">
+          <div class="margin-box ml-lg">.ml-lg</div>
+        </div>
+      </div>
+      <div class="margin-label">.ml-lg</div>
+    </div>
+
+    <!-- Margin X (left + right) -->
+    <div class="col col-4-lg">
+      <div class="margin-demo-wrapper">
+        <div class="margin-frame">
+          <div class="margin-box mx-lg">.mx-lg</div>
+        </div>
+      </div>
+      <div class="margin-label">.mx-lg</div>
+    </div>
+
+    <!-- Margin Y (top + bottom) -->
+    <div class="col col-4-lg">
+      <div class="margin-demo-wrapper">
+        <div class="margin-frame">
+          <div class="margin-box my-lg">.my-lg</div>
+        </div>
+      </div>
+      <div class="margin-label">.my-lg</div>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
