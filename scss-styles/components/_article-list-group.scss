@@ -1,0 +1,21 @@
+.article-list {
+  padding: 1em 0;
+  
+
+  .description {
+    margin: 0 0 5px 0;
+  }
+
+  @media only screen and (max-width: 540px) {
+    .description {
+      display: none;
+    }
+  }
+}
+
+
+.pattern-wrapper {
+    border-bottom: 1px #6a6a6b dashed;
+   // border-top: 1px #6a6a6b dashed;
+    margin-bottom: 30px;
+}

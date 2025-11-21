@@ -1,0 +1,56 @@
+.article-list {
+  padding: 1em 0;
+}
+.article-list .description {
+  margin: 0 0 5px 0;
+}
+@media only screen and (max-width: 540px) {
+  .article-list .description {
+    display: none;
+  }
+}
+
+.pattern-wrapper {
+  border-bottom: 1px #6a6a6b dashed;
+  margin-bottom: 30px;
+}
+
+/*Horizontal meta*/
+.horizontal {
+  display: flex; /* dt dd pairs all on one line */
+  gap: 2em; /* space between each pair */
+  flex-wrap: nowrap; /* keep everything on a single line */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal .pair {
+  display: flex; /* dt + dd inside each pair */
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4em; /* space between dt and dd */
+}
+
+.horizontal dt,
+.horizontal dd {
+  margin: 0;
+  padding: 0;
+}
+
+/*Vertical meta*/
+.vertical .row {
+  display: flex; /* dt + dd on same line */
+  flex-direction: row;
+  align-items: center; /* keep text aligned */
+  gap: 0.5em;
+  margin-bottom: 0.5em; /* space between rows */
+}
+
+.vertical dt,
+.vertical dd {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=article-list-group.css.map */
