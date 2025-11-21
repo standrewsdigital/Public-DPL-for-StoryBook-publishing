@@ -3570,6 +3570,7 @@ icon button classes based on a list of supported icons.
   cursor: pointer;
   padding: 15px;
   list-style: none;
+  /*Vertical meta*/
 }
 @media (min-width: 36em) and (max-width: 75em) {
   .accordion-group details > summary {
@@ -3581,12 +3582,8 @@ icon button classes based on a list of supported icons.
     font-size: calc(1.2em + 0.05em);
   }
 }
-.accordion-group details > summary:hover {
-  text-decoration: underline;
-}
 .accordion-group details > summary:focus {
   outline: 3px solid #ffb400;
-  text-decoration: underline;
 }
 .accordion-group details > summary::before {
   float: right;
@@ -3596,6 +3593,78 @@ icon button classes based on a list of supported icons.
   -webkit-font-feature-settings: "liga";
   -moz-font-feature-settings: "liga";
   color: #0f0f11;
+}
+.accordion-group details > summary h2,
+.accordion-group details > summary h3,
+.accordion-group details > summary h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.accordion-group details > summary span:hover {
+  text-decoration: underline;
+}
+.accordion-group details > summary p {
+  margin-bottom: 0;
+  color: #0f0f11;
+  font-size: medium;
+  font-weight: 300;
+}
+.accordion-group details > summary dt,
+.accordion-group details > summary dd {
+  text-decoration: none;
+}
+.accordion-group details > summary .horizontal {
+  display: flex;
+  /* dt dd pairs all on one line */
+  gap: 2em;
+  /* space between each pair */
+  flex-wrap: nowrap;
+  /* keep everything on a single line */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.accordion-group details > summary .horizontal .pair {
+  display: flex;
+  /* dt + dd inside each pair */
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4em;
+  /* space between dt and dd */
+  font-size: medium;
+  font-weight: 300;
+  color: #0f0f11;
+  margin-top: 10px;
+}
+.accordion-group details > summary .horizontal.pair dd a {
+  text-decoration: none !important;
+}
+.accordion-group details > summary .horizontal dt,
+.accordion-group details > summary .horizontal dd {
+  margin: 0;
+  padding: 0;
+}
+.accordion-group details > summary .vertical .row {
+  display: flex;
+  /* dt + dd on same line */
+  flex-direction: row;
+  align-items: center;
+  /* keep text aligned */
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+  /* space between rows */
+}
+.accordion-group details > summary .vertical dt,
+.accordion-group details > summary .vertical dd {
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 760px) {
+  .accordion-group details > summary .horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
 }
 .accordion-group details[open] > summary::before {
   content: "expand_less"/"";
@@ -3627,6 +3696,7 @@ icon button classes based on a list of supported icons.
   text-decoration: underline;
   float: right;
   cursor: pointer;
+  display: none;
 }
 
 .container {
