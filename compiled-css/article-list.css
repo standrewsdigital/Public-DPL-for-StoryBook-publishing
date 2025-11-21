@@ -49,14 +49,32 @@
     display: none;
   }
 }
+/*
+.metadata-list {
+  font-size: 1rem;
+  overflow: auto;
+}
+.metadata-list .full {
+  clear: left;
+  float: left;
+  display: block;
+  font-weight: 900;
+}
+.metadata-list .no-icon {
+  margin-right: 0.5rem;
+  width: auto !important;
+}
+.metadata-list .no-icon::after {
+  content: ":";
+}
 
 .metadata-list_no-icon {
   margin-left: -23px !important;
 }
-
+*/
 .pattern-wrapper {
   border-bottom: 1px #6a6a6b dashed;
-  margin-bottom: 30px;
+  margin-bottom: 30px;  
 }
 
 /*# sourceMappingURL=article-list.css.map */
