@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --page-background-color: #ffffff;
   --page-highlight-background-color: rgba(240, 240, 240, 0.8549019608);
@@ -5884,7 +5883,7 @@ section.no-links {
 }
 
 /* ---------- RADIUS + BORDER UTILITIES ---------- */
-/* Define a border color map — you can reuse existing colors */
+/* Define a border color map*/
 /* Generate .radius-[name] utility classes */
 .radius-xs {
   border-radius: min(2px, 0.8vw);
@@ -5927,13 +5926,471 @@ section.no-links {
   border: 1px solid #ffb400;
 }
 
-/* Combine into a rounded-border utility */
+/* Rounded-border utility */
 .rounded-border {
   border-radius: 980px;
   -webkit-border-radius: 980px;
   -moz-border-radius: 980px;
   -ms-border-radius: 980px;
   -o-border-radius: 980px;
+}
+
+/* ---------- MARGIN UTILITIES ---------- */
+/* Generate .m-[size] for all sides */
+.m-0 {
+  margin: 0;
+}
+
+.m-xs {
+  margin: min(2px, 0.5vw);
+}
+
+.m-sm {
+  margin: min(4px, 1vw);
+}
+
+.m-md {
+  margin: min(8px, 2vw);
+}
+
+.m-lg {
+  margin: min(16px, 3vw);
+}
+
+.m-xl {
+  margin: min(24px, 4vw);
+}
+
+.m-2xl {
+  margin: min(32px, 5vw);
+}
+
+.m-auto {
+  margin: auto;
+}
+
+/* Generate .mt-, .mr-, .mb-, .ml- (individual sides) */
+.mt-0 {
+  margin-top: 0;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.mt-xs {
+  margin-top: min(2px, 0.5vw);
+}
+
+.mr-xs {
+  margin-right: min(2px, 0.5vw);
+}
+
+.mb-xs {
+  margin-bottom: min(2px, 0.5vw);
+}
+
+.ml-xs {
+  margin-left: min(2px, 0.5vw);
+}
+
+.mt-sm {
+  margin-top: min(4px, 1vw);
+}
+
+.mr-sm {
+  margin-right: min(4px, 1vw);
+}
+
+.mb-sm {
+  margin-bottom: min(4px, 1vw);
+}
+
+.ml-sm {
+  margin-left: min(4px, 1vw);
+}
+
+.mt-md {
+  margin-top: min(8px, 2vw);
+}
+
+.mr-md {
+  margin-right: min(8px, 2vw);
+}
+
+.mb-md {
+  margin-bottom: min(8px, 2vw);
+}
+
+.ml-md {
+  margin-left: min(8px, 2vw);
+}
+
+.mt-lg {
+  margin-top: min(16px, 3vw);
+}
+
+.mr-lg {
+  margin-right: min(16px, 3vw);
+}
+
+.mb-lg {
+  margin-bottom: min(16px, 3vw);
+}
+
+.ml-lg {
+  margin-left: min(16px, 3vw);
+}
+
+.mt-xl {
+  margin-top: min(24px, 4vw);
+}
+
+.mr-xl {
+  margin-right: min(24px, 4vw);
+}
+
+.mb-xl {
+  margin-bottom: min(24px, 4vw);
+}
+
+.ml-xl {
+  margin-left: min(24px, 4vw);
+}
+
+.mt-2xl {
+  margin-top: min(32px, 5vw);
+}
+
+.mr-2xl {
+  margin-right: min(32px, 5vw);
+}
+
+.mb-2xl {
+  margin-bottom: min(32px, 5vw);
+}
+
+.ml-2xl {
+  margin-left: min(32px, 5vw);
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+/* Generate .mx-[size] and .my-[size] (axis utilities) */
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mx-xs {
+  margin-left: min(2px, 0.5vw);
+  margin-right: min(2px, 0.5vw);
+}
+
+.my-xs {
+  margin-top: min(2px, 0.5vw);
+  margin-bottom: min(2px, 0.5vw);
+}
+
+.mx-sm {
+  margin-left: min(4px, 1vw);
+  margin-right: min(4px, 1vw);
+}
+
+.my-sm {
+  margin-top: min(4px, 1vw);
+  margin-bottom: min(4px, 1vw);
+}
+
+.mx-md {
+  margin-left: min(8px, 2vw);
+  margin-right: min(8px, 2vw);
+}
+
+.my-md {
+  margin-top: min(8px, 2vw);
+  margin-bottom: min(8px, 2vw);
+}
+
+.mx-lg {
+  margin-left: min(16px, 3vw);
+  margin-right: min(16px, 3vw);
+}
+
+.my-lg {
+  margin-top: min(16px, 3vw);
+  margin-bottom: min(16px, 3vw);
+}
+
+.mx-xl {
+  margin-left: min(24px, 4vw);
+  margin-right: min(24px, 4vw);
+}
+
+.my-xl {
+  margin-top: min(24px, 4vw);
+  margin-bottom: min(24px, 4vw);
+}
+
+.mx-2xl {
+  margin-left: min(32px, 5vw);
+  margin-right: min(32px, 5vw);
+}
+
+.my-2xl {
+  margin-top: min(32px, 5vw);
+  margin-bottom: min(32px, 5vw);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* ---------- PADDING UTILITIES ---------- */
+/* Generate .p-[size] for all sides */
+.p-0 {
+  padding: 0;
+}
+
+.p-xs {
+  padding: min(2px, 0.5vw);
+}
+
+.p-sm {
+  padding: min(4px, 1vw);
+}
+
+.p-md {
+  padding: min(8px, 2vw);
+}
+
+.p-lg {
+  padding: min(16px, 3vw);
+}
+
+.p-xl {
+  padding: min(24px, 4vw);
+}
+
+.p-2xl {
+  padding: min(32px, 5vw);
+}
+
+/* Generate .pt-, .pr-, .pb-, .pl- (individual sides) */
+.pt-0 {
+  padding-top: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.pt-xs {
+  padding-top: min(2px, 0.5vw);
+}
+
+.pr-xs {
+  padding-right: min(2px, 0.5vw);
+}
+
+.pb-xs {
+  padding-bottom: min(2px, 0.5vw);
+}
+
+.pl-xs {
+  padding-left: min(2px, 0.5vw);
+}
+
+.pt-sm {
+  padding-top: min(4px, 1vw);
+}
+
+.pr-sm {
+  padding-right: min(4px, 1vw);
+}
+
+.pb-sm {
+  padding-bottom: min(4px, 1vw);
+}
+
+.pl-sm {
+  padding-left: min(4px, 1vw);
+}
+
+.pt-md {
+  padding-top: min(8px, 2vw);
+}
+
+.pr-md {
+  padding-right: min(8px, 2vw);
+}
+
+.pb-md {
+  padding-bottom: min(8px, 2vw);
+}
+
+.pl-md {
+  padding-left: min(8px, 2vw);
+}
+
+.pt-lg {
+  padding-top: min(16px, 3vw);
+}
+
+.pr-lg {
+  padding-right: min(16px, 3vw);
+}
+
+.pb-lg {
+  padding-bottom: min(16px, 3vw);
+}
+
+.pl-lg {
+  padding-left: min(16px, 3vw);
+}
+
+.pt-xl {
+  padding-top: min(24px, 4vw);
+}
+
+.pr-xl {
+  padding-right: min(24px, 4vw);
+}
+
+.pb-xl {
+  padding-bottom: min(24px, 4vw);
+}
+
+.pl-xl {
+  padding-left: min(24px, 4vw);
+}
+
+.pt-2xl {
+  padding-top: min(32px, 5vw);
+}
+
+.pr-2xl {
+  padding-right: min(32px, 5vw);
+}
+
+.pb-2xl {
+  padding-bottom: min(32px, 5vw);
+}
+
+.pl-2xl {
+  padding-left: min(32px, 5vw);
+}
+
+/* Generate .px-[size] and .py-[size] (axis utilities) */
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.px-xs {
+  padding-left: min(2px, 0.5vw);
+  padding-right: min(2px, 0.5vw);
+}
+
+.py-xs {
+  padding-top: min(2px, 0.5vw);
+  padding-bottom: min(2px, 0.5vw);
+}
+
+.px-sm {
+  padding-left: min(4px, 1vw);
+  padding-right: min(4px, 1vw);
+}
+
+.py-sm {
+  padding-top: min(4px, 1vw);
+  padding-bottom: min(4px, 1vw);
+}
+
+.px-md {
+  padding-left: min(8px, 2vw);
+  padding-right: min(8px, 2vw);
+}
+
+.py-md {
+  padding-top: min(8px, 2vw);
+  padding-bottom: min(8px, 2vw);
+}
+
+.px-lg {
+  padding-left: min(16px, 3vw);
+  padding-right: min(16px, 3vw);
+}
+
+.py-lg {
+  padding-top: min(16px, 3vw);
+  padding-bottom: min(16px, 3vw);
+}
+
+.px-xl {
+  padding-left: min(24px, 4vw);
+  padding-right: min(24px, 4vw);
+}
+
+.py-xl {
+  padding-top: min(24px, 4vw);
+  padding-bottom: min(24px, 4vw);
+}
+
+.px-2xl {
+  padding-left: min(32px, 5vw);
+  padding-right: min(32px, 5vw);
+}
+
+.py-2xl {
+  padding-top: min(32px, 5vw);
+  padding-bottom: min(32px, 5vw);
 }
 
 /*# sourceMappingURL=main.css.map */
