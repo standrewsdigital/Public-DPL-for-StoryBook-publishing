@@ -1,0 +1,39 @@
+/* ---------- MARGIN UTILITIES ---------- */
+
+$margin-map: (
+  "0": 0,
+  "xs": min(2px, 0.5vw),
+  "sm": min(4px, 1vw),
+  "md": min(8px, 2vw),
+  "lg": min(16px, 3vw),
+  "xl": min(24px, 4vw),
+  "2xl": min(32px, 5vw),
+  "auto": auto
+);
+
+/* Generate .m-[size] for all sides */
+@each $name, $val in $margin-map {
+  .m-#{$name} {
+    margin: $val;
+  }
+}
+
+/* Generate .mt-, .mr-, .mb-, .ml- (individual sides) */
+@each $name, $val in $margin-map {
+  .mt-#{$name} { margin-top: $val; }
+  .mr-#{$name} { margin-right: $val; }
+  .mb-#{$name} { margin-bottom: $val; }
+  .ml-#{$name} { margin-left: $val; }
+}
+
+/* Generate .mx-[size] and .my-[size] (axis utilities) */
+@each $name, $val in $margin-map {
+  .mx-#{$name} {
+    margin-left: $val;
+    margin-right: $val;
+  }
+  .my-#{$name} {
+    margin-top: $val;
+    margin-bottom: $val;
+  }
+}
