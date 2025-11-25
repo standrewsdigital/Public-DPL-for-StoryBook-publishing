@@ -39,7 +39,7 @@
 }
 
 /*Vertical meta*/
-.vertical .row {
+.vertical .line {
   display: flex; /* dt + dd on same line */
   flex-direction: row;
   align-items: center; /* keep text aligned */
