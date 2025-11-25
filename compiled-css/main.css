@@ -854,6 +854,368 @@ a:focus, .link:focus {
   -webkit-font-smoothing: antialiased;
 }
 
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.icon--sm {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.icon--lg {
+  width: 3rem;
+  height: 3rem;
+}
+.icon--xl {
+  width: 12rem;
+  height: 12rem;
+}
+
+.icon--99-bus {
+  background-image: url("../assets/icons//99-bus.svg");
+}
+
+.icon--arrows {
+  background-image: url("../assets/icons//arrows.svg");
+}
+
+.icon--art-palette {
+  background-image: url("../assets/icons//art-palette.svg");
+}
+
+.icon--atoms {
+  background-image: url("../assets/icons//atoms.svg");
+}
+
+.icon--bagpipes {
+  background-image: url("../assets/icons//bagpipes.svg");
+}
+
+.icon--beach-walk {
+  background-image: url("../assets/icons//beach-walk.svg");
+}
+
+.icon--bike {
+  background-image: url("../assets/icons//bike.svg");
+}
+
+.icon--books {
+  background-image: url("../assets/icons//books.svg");
+}
+
+.icon--briefcase {
+  background-image: url("../assets/icons//briefcase.svg");
+}
+
+.icon--calculator {
+  background-image: url("../assets/icons//calculator.svg");
+}
+
+.icon--calendar {
+  background-image: url("../assets/icons//calendar.svg");
+}
+
+.icon--car {
+  background-image: url("../assets/icons//car.svg");
+}
+
+.icon--cathedral {
+  background-image: url("../assets/icons//cathedral.svg");
+}
+
+.icon--chalkboard {
+  background-image: url("../assets/icons//chalkboard.svg");
+}
+
+.icon--cliffs {
+  background-image: url("../assets/icons//cliffs.svg");
+}
+
+.icon--clock {
+  background-image: url("../assets/icons//clock.svg");
+}
+
+.icon--coffee {
+  background-image: url("../assets/icons//coffee.svg");
+}
+
+.icon--coins {
+  background-image: url("../assets/icons//coins.svg");
+}
+
+.icon--cooking {
+  background-image: url("../assets/icons//cooking.svg");
+}
+
+.icon--crest-book {
+  background-image: url("../assets/icons//crest-book.svg");
+}
+
+.icon--crest {
+  background-image: url("../assets/icons//crest.svg");
+}
+
+.icon--dragon-claw {
+  background-image: url("../assets/icons//dragon-claw.svg");
+}
+
+.icon--dragon-head {
+  background-image: url("../assets/icons//dragon-head.svg");
+}
+
+.icon--email-sign {
+  background-image: url("../assets/icons//email-sign.svg");
+}
+
+.icon--film {
+  background-image: url("../assets/icons//film.svg");
+}
+
+.icon--friends {
+  background-image: url("../assets/icons//friends.svg");
+}
+
+.icon--globe {
+  background-image: url("../assets/icons//globe.svg");
+}
+
+.icon--golf-tee {
+  background-image: url("../assets/icons//golf-tee.svg");
+}
+
+.icon--golf {
+  background-image: url("../assets/icons//golf.svg");
+}
+
+.icon--gown {
+  background-image: url("../assets/icons//gown.svg");
+}
+
+.icon--graduation-scroll {
+  background-image: url("../assets/icons//graduation-scroll.svg");
+}
+
+.icon--hand {
+  background-image: url("../assets/icons//hand.svg");
+}
+
+.icon--handshake {
+  background-image: url("../assets/icons//handshake.svg");
+}
+
+.icon--hello-languages {
+  background-image: url("../assets/icons//hello-languages.svg");
+}
+
+.icon--highland-cow {
+  background-image: url("../assets/icons//highland-cow.svg");
+}
+
+.icon--key {
+  background-image: url("../assets/icons//key.svg");
+}
+
+.icon--laptop {
+  background-image: url("../assets/icons//laptop.svg");
+}
+
+.icon--lightbulb {
+  background-image: url("../assets/icons//lightbulb.svg");
+}
+
+.icon--links {
+  background-image: url("../assets/icons//links.svg");
+}
+
+.icon--location-pin {
+  background-image: url("../assets/icons//location-pin.svg");
+}
+
+.icon--lock {
+  background-image: url("../assets/icons//lock.svg");
+}
+
+.icon--mace {
+  background-image: url("../assets/icons//mace.svg");
+}
+
+.icon--medal {
+  background-image: url("../assets/icons//medal.svg");
+}
+
+.icon--meditation {
+  background-image: url("../assets/icons//meditation.svg");
+}
+
+.icon--microscope {
+  background-image: url("../assets/icons//microscope.svg");
+}
+
+.icon--mobile {
+  background-image: url("../assets/icons//mobile.svg");
+}
+
+.icon--money {
+  background-image: url("../assets/icons//money.svg");
+}
+
+.icon--mountains {
+  background-image: url("../assets/icons//mountains.svg");
+}
+
+.icon--music {
+  background-image: url("../assets/icons//music.svg");
+}
+
+.icon--nightclub {
+  background-image: url("../assets/icons//nightclub.svg");
+}
+
+.icon--number-1 {
+  background-image: url("../assets/icons//number-1.svg");
+}
+
+.icon--old-course-bridge {
+  background-image: url("../assets/icons//old-course-bridge.svg");
+}
+
+.icon--people {
+  background-image: url("../assets/icons//people.svg");
+}
+
+.icon--pie-chart {
+  background-image: url("../assets/icons//pie-chart.svg");
+}
+
+.icon--pier {
+  background-image: url("../assets/icons//pier.svg");
+}
+
+.icon--plane {
+  background-image: url("../assets/icons//plane.svg");
+}
+
+.icon--play-button {
+  background-image: url("../assets/icons//play-button.svg");
+}
+
+.icon--popper {
+  background-image: url("../assets/icons//popper.svg");
+}
+
+.icon--power-button {
+  background-image: url("../assets/icons//power-button.svg");
+}
+
+.icon--pub {
+  background-image: url("../assets/icons//pub.svg");
+}
+
+.icon--quad {
+  background-image: url("../assets/icons//quad.svg");
+}
+
+.icon--rocket {
+  background-image: url("../assets/icons//rocket.svg");
+}
+
+.icon--saints-sport {
+  background-image: url("../assets/icons//saints-sport.svg");
+}
+
+.icon--salvator-tower {
+  background-image: url("../assets/icons//salvator-tower.svg");
+}
+
+.icon--science {
+  background-image: url("../assets/icons//science.svg");
+}
+
+.icon--scotland {
+  background-image: url("../assets/icons//scotland.svg");
+}
+
+.icon--seagull {
+  background-image: url("../assets/icons//seagull.svg");
+}
+
+.icon--shortbread {
+  background-image: url("../assets/icons//shortbread.svg");
+}
+
+.icon--speech-bubble {
+  background-image: url("../assets/icons//speech-bubble.svg");
+}
+
+.icon--sport {
+  background-image: url("../assets/icons//sport.svg");
+}
+
+.icon--st-andrews-castle {
+  background-image: url("../assets/icons//st-andrews-castle.svg");
+}
+
+.icon--sunrise {
+  background-image: url("../assets/icons//sunrise.svg");
+}
+
+.icon--sunset {
+  background-image: url("../assets/icons//sunset.svg");
+}
+
+.icon--taste {
+  background-image: url("../assets/icons//taste.svg");
+}
+
+.icon--teaching {
+  background-image: url("../assets/icons//teaching.svg");
+}
+
+.icon--test-tubes {
+  background-image: url("../assets/icons//test-tubes.svg");
+}
+
+.icon--thistle {
+  background-image: url("../assets/icons//thistle.svg");
+}
+
+.icon--train {
+  background-image: url("../assets/icons//train.svg");
+}
+
+.icon--trophy {
+  background-image: url("../assets/icons//trophy.svg");
+}
+
+.icon--umbrella {
+  background-image: url("../assets/icons//umbrella.svg");
+}
+
+.icon--up-arrow {
+  background-image: url("../assets/icons//up-arrow.svg");
+}
+
+.icon--waves {
+  background-image: url("../assets/icons//waves.svg");
+}
+
+.icon--weights {
+  background-image: url("../assets/icons//weights.svg");
+}
+
+.icon--west-sands {
+  background-image: url("../assets/icons//west-sands.svg");
+}
+
+.icon--your-union {
+  background-image: url("../assets/icons//your-union.svg");
+}
+
 *, *:after, *:before {
   box-sizing: border-box;
 }
