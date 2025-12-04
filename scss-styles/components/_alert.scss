@@ -31,6 +31,20 @@
     @include options;
 }
 
+
+.callout-row > .col {
+  display: flex;           // flex layout inside each grid cell
+}
+
+
+.callout-row > .col > .callout {
+  height: 100%;            // fill the grid cell
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // optional – vertically centre text
+}
+
+
 .callout {
     border-left: 5px solid $grey;
     @include options;
