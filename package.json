@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss": "sass --watch scss-styles/:compiled-css/",
+    "compile-scss": "sass scss-styles/featured-media.scss compiled-css/youtube-embed.css && sass --watch scss-styles/:compiled-css/",
     "dev-vite": "vite",
     "build-vite": "vite build"
   },
