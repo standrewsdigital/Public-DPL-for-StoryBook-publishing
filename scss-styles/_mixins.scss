@@ -45,3 +45,10 @@
   color: $colour;
 }
 
+@mixin mq-up($key) {
+  @if map-has-key($breakpoints, $key) {
+    @media (min-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  }
+}

@@ -1,95 +1,67 @@
 .navigation-bar {
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  &-primary {
+    background-color: $blue-primary;
+  }
+
+  &-secondary {
+    background-color: $light-blue-primary;
+  }
+
+  &-nav {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
     padding: 0;
-    &-primary{
-        background-color: $blue-primary;
+    margin: 0;
+    list-style: none;
+
+    li {
+      flex: 0 1 auto;
+      text-align: center;
+
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: white;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:hover {
+          text-decoration: underline;
+          background-color: $blue-25-shade;
+        }
+
+        &:active,
+        &:focus,
+        &.selected {
+          outline: none;
+          box-shadow: inset 0 0 0 2px $orange-primary;
+          background-color: $light-blue-primary;
+        }
+      }
     }
-    &-secondary{
-        background-color: $light-blue-primary;
-    }
-    &-nav {
-      display: flex;
+
+    @include mq-up('lg') {
+      flex-wrap: nowrap;
       justify-content: space-between;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
 
-      &.primary-nav {
-        background-color: $blue-primary;
-        margin-bottom: 3px;
-        margin-top: 3px;
-
-        li {
-          flex: 1;
-          text-align: center;
-          margin-right: 3px;
-          &:first-child {
-            padding-left: 0;
-          }
-
-          a {
-            display: block;
-            padding: 10px 10px 10px;
-            text-decoration: none;
-            color: white;
-            white-space: nowrap;
-
-            &:hover {
-                text-decoration: underline; // Underline on hover
-                background-color: $blue-25-shade;
-            }
-              // Active (or "selected") state
-            &:active, &.selected {
-                border-radius: var(--link-focus-outline);
-                border-radius: 1px;
-                -webkit-border-radius: 1px;
-                -moz-border-radius: 1px;
-                -ms-border-radius: 1px;
-                -o-border-radius: 1px;
-                background-color: $light-blue-primary;
-}
-          }
-        }
+      li {
+        flex: 1;
       }
+    }
 
-      &.secondary-nav {
-        background-color: $light-blue-primary;
-        margin-bottom: 3px;
-        margin-top: 3px;
+    &.primary-nav {
+      background-color: $blue-primary;
+    }
 
-        li {
-          flex: 1;
-          text-align: center;
-          margin-right: 3px;
-
-          &:first-child {
-            padding-left: 0;
-          }
-
-          a {
-            display: block;
-            padding: 10px 10px 10px;
-            text-decoration: none;
-            color: white;
-            white-space: nowrap;
-
-            &:hover {
-              text-decoration: underline; // Underline on hover
-              background-color: $blue-25-shade;
-          }
-            // Active (or "selected") state
-          &:active, &.selected {
-              border-radius: var(--link-focus-outline);
-              -webkit-border-radius: var(--link-focus-outline);
-              -moz-border-radius: var(--link-focus-outline);
-              -ms-border-radius: var(--link-focus-outline);
-              -o-border-radius: var(--link-focus-outline);
-              background-color: $light-blue-primary;
-              color: $blue-25-shade;
-}
-          }
-        }
-      }
+    &.secondary-nav {
+      background-color: $light-blue-primary;
     }
   }
+}
