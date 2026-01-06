@@ -1,40 +1,34 @@
 (function () {
-  const toggles = document.querySelectorAll('.navigation-toggle');
-
-  toggles.forEach((btn) => {
-    const menuId = btn.getAttribute('aria-controls');
-    const menu = document.getElementById(menuId);
-
-    if (!menu) return;
-
-    // On load, ensure mobile menus start hidden
-    btn.setAttribute('aria-expanded', 'false');
-    menu.hidden = true;
-
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      menu.hidden = expanded;
-    });
-  });
-
-  // Optional: when switching to desktop width, ensure menus are visible
-  const mq = window.matchMedia('(min-width: 992px)');
-  mq.addEventListener('change', (e) => {
-    document.querySelectorAll('.navigation-toggle').forEach((btn) => {
-      const menuId = btn.getAttribute('aria-controls');
-      const menu = document.getElementById(menuId);
-      if (!menu) return;
-
-      if (e.matches) {
-        // desktop
-        btn.setAttribute('aria-expanded', 'false');
-        menu.hidden = false;
-      } else {
-        // mobile
-        btn.setAttribute('aria-expanded', 'false');
-        menu.hidden = true;
+      var LG_MIN = 992;
+      function isLgUp() {
+        return window.matchMedia("(min-width: " + LG_MIN + "px)").matches;
       }
-    });
-  });
-})();
+
+      function closeNav(navEl) {
+        navEl.classList.remove("is-open");
+        var btn = navEl.querySelector(".navigation-bar-toggle");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      }
+
+      function sync(navEl) {
+        if (isLgUp()) closeNav(navEl);
+      }
+
+      document.querySelectorAll("[data-nav]").forEach(function (navEl) {
+        var btn = navEl.querySelector(".navigation-bar-toggle");
+        if (!btn) return;
+
+        btn.addEventListener("click", function () {
+          if (isLgUp()) return;
+          var open = navEl.classList.toggle("is-open");
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+
+        sync(navEl);
+      });
+
+      var mq = window.matchMedia("(min-width: " + LG_MIN + "px)");
+      mq.addEventListener("change", function () {
+        document.querySelectorAll("[data-nav]").forEach(sync);
+      });
+    })();

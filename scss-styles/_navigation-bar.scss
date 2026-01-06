@@ -3,34 +3,81 @@
   margin: 0;
   padding: 0;
 
-  &-primary {
-    background-color: $blue-primary;
+  &-primary { background-color: $blue-primary; }
+  &-secondary { background-color: $light-blue-primary; }
+
+  .row > .navigation-bar-inner {
+    width: 100%;
+    grid-column: 1 / -1;
+    min-width: 0;
   }
 
-  &-secondary {
-    background-color: $light-blue-primary;
+  .navigation-bar-inner {
+    display: block;
+  }
+
+  &-toggle {
+    display: none; /* only on < lg */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    /* make sure it behaves like a full-width bar */
+    padding: 1rem;
+    margin: 0;
+
+    border: 0;
+    cursor: pointer;
+
+    color: white;
+    background: transparent;
+    // box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      text-decoration: underline;
+      background-color: $blue-25-shade;
+      box-shadow: inset 0 0 0 1px $orange-primary;
+    }
+
+    &::after {
+      content: "";
+      width: 0.55rem;
+      height: 0.55rem;
+      border-right: 2px solid rgba(255, 255, 255, 0.9);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+      transform: rotate(45deg);
+      transition: transform 0.15s ease-in-out;
+    }
+
+    &[aria-expanded="true"]::after {
+      transform: rotate(-135deg);
+    }
   }
 
   &-nav {
-    display: flex;
-
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
+    width: 100%;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     list-style: none;
 
+    &.primary-nav { background-color: $blue-primary; }
+    &.secondary-nav { background-color: $light-blue-primary; }
+
     li {
-      flex: 0 1 auto;
       text-align: center;
 
       a {
         display: block;
-        padding: 0.5rem 1rem;
         color: white;
         text-decoration: none;
-        white-space: nowrap;
 
         &:hover {
           text-decoration: underline;
@@ -41,27 +88,69 @@
         &:focus,
         &.selected {
           outline: none;
-          box-shadow: inset 0 0 0 2px $orange-primary;
-          background-color: $light-blue-primary;
+          box-shadow: inset 0 0 0 1px $orange-primary;
         }
       }
     }
+  }
 
-    @include mq-up('lg') {
-      flex-wrap: nowrap;
+  /* < lg */
+  @media (max-width: 991.98px) {
+    .navigation-bar-toggle {
+      display: flex; /* ✅ appears */
+    }
+
+    .navigation-bar-nav {
+      display: none; /* ✅ hidden by default */
+      flex-direction: column;
+    }
+
+    &.is-open .navigation-bar-nav {
+      display: flex; /* ✅ toggled open */
+    }
+
+    .navigation-bar-nav li a {
+      padding: 0.5rem 1rem;
+      white-space: normal;
+    }
+  }
+
+  /* >= lg */
+  @media (min-width: 992px) {
+    .navigation-bar-toggle {
+      display: none;
+    }
+
+    .navigation-bar-nav {
+      display: flex;
       justify-content: space-between;
+      flex-direction: row;
 
-      li {
-        flex: 1;
+      /* original: no wrap */
+      flex-wrap: nowrap;
+
+      padding: 0;
+      margin: 0;
+    }
+
+    .navigation-bar-nav li {
+      flex: 1;
+      text-align: center;
+      margin-left: 3px;
+
+      &:first-child {
+        margin-left: 0;
       }
     }
 
-    &.primary-nav {
-      background-color: $blue-primary;
+    .navigation-bar-nav.primary-nav li a {
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
     }
 
-    &.secondary-nav {
-      background-color: $light-blue-primary;
+    .navigation-bar-nav.secondary-nav li a {
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
     }
   }
 }
