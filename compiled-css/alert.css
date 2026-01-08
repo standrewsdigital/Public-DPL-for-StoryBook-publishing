@@ -67,5 +67,8 @@
 .callout p {
   margin: 0;
 }
+.callout .callout-icon {
+  width: 65px;
+}
 
 /*# sourceMappingURL=alert.css.map */
