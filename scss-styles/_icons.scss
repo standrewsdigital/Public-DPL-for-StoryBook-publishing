@@ -18,11 +18,13 @@
 // _icons.scss
 
 // where the SVGs live
-$icon-path: "../assets/icons/";
+$icon-path-regular: "../assets/icons";
+$icon-path-colored: "../assets/icons/icons-colored";
 
 // sizes
-$icon-size-sm: 1.5rem;
-$icon-size-lg: 3rem;
+$icon-size-sm: 4rem;
+$icon-size-md: 6rem;
+$icon-size-lg: 8rem;
 $icon-size-xl: 12rem;
 
 .icon {
@@ -36,16 +38,22 @@ $icon-size-xl: 12rem;
   width: $icon-size-sm;
   height: $icon-size-sm;
 
-  &--sm {
+  &-sm {
     width: $icon-size-sm;
     height: $icon-size-sm;
   }
 
-  &--lg {
+  &-md {
+    width: $icon-size-md;
+    height: $icon-size-md;
+  }
+
+  &-lg {
     width: $icon-size-lg;
     height: $icon-size-lg;
   }
-  &--xl {
+
+  &-xl {
     width: $icon-size-xl;
     height: $icon-size-xl;
   }
@@ -140,9 +148,20 @@ $icons: (
   "your-union": "your-union"
 );
 
-// generate .icon--name classes
+// regular blue icons
 @each $name, $file in $icons {
-  .icon--#{$name} {
-    background-image: url("#{$icon-path}/#{$file}.svg");
+  .icon-#{$name} {
+    background-image: url("#{$icon-path-regular}/#{$file}.svg");
+  }
+}
+
+// themed coloured icons
+$icon-themes: (burgundy, green, purple);
+
+@each $name, $file in $icons {
+  @each $theme in $icon-themes {
+    .icon-#{$name}-#{$theme} {
+      background-image: url("#{$icon-path-colored}/#{$file}-#{$theme}.svg");
+    }
   }
 }

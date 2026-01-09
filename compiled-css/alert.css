@@ -33,6 +33,17 @@
   margin: 0;
 }
 
+.callout-row > .col {
+  display: flex;
+}
+
+.callout-row > .col > .callout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .callout {
   border-left: 5px solid #6a6a6b;
   padding: 20px;

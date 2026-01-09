@@ -1,95 +1,163 @@
 .navigation-bar {
-    width: 100%;
-    margin: 0;
+  .container{
     padding: 0;
-    &-primary{
-        background-color: $blue-primary;
+  }
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  &-primary { background-color: $blue-primary; }
+  &-secondary { background-color: $light-blue-primary; }
+
+  .row > .navigation-bar-inner {
+    width: 100%;
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+
+  .navigation-bar-inner {
+    display: block;
+    min-width: 0;
+  }
+
+  &-toggle {
+    display: none; /* only on < lg */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    padding: 1rem;
+    margin: 0;
+
+    border: 0;
+    cursor: pointer;
+
+    color: white;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      text-decoration: underline;
+      background-color: $blue-25-shade;
+      box-shadow: inset 0 0 0 1px $orange-primary;
     }
-    &-secondary{
-        background-color: $light-blue-primary;
+
+    &::after {
+      content: "";
+      width: 0.55rem;
+      height: 0.55rem;
+      border-right: 2px solid rgba(255, 255, 255, 0.9);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+      transform: rotate(45deg);
+      transition: transform 0.15s ease-in-out;
     }
-    &-nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
 
-      &.primary-nav {
-        background-color: $blue-primary;
-        margin-bottom: 3px;
-        margin-top: 3px;
+    &[aria-expanded="true"]::after {
+      transform: rotate(-135deg);
+    }
+  }
 
-        li {
-          flex: 1;
-          text-align: center;
-          margin-right: 3px;
-          &:first-child {
-            padding-left: 0;
-          }
+  &-nav {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
-          a {
-            display: block;
-            padding: 10px 10px 10px;
-            text-decoration: none;
-            color: white;
-            white-space: nowrap;
+    &.primary-nav { background-color: $blue-primary; }
+    &.secondary-nav { background-color: $light-blue-primary; }
 
-            &:hover {
-                text-decoration: underline; // Underline on hover
-                background-color: $blue-25-shade;
-            }
-              // Active (or "selected") state
-            &:active, &.selected {
-                border-radius: var(--link-focus-outline);
-                border-radius: 1px;
-                -webkit-border-radius: 1px;
-                -moz-border-radius: 1px;
-                -ms-border-radius: 1px;
-                -o-border-radius: 1px;
-                background-color: $light-blue-primary;
-}
-          }
+    li {
+      text-align: center;
+
+      a {
+        display: block;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          background-color: $blue-25-shade;
         }
-      }
 
-      &.secondary-nav {
-        background-color: $light-blue-primary;
-        margin-bottom: 3px;
-        margin-top: 3px;
-
-        li {
-          flex: 1;
-          text-align: center;
-          margin-right: 3px;
-
-          &:first-child {
-            padding-left: 0;
-          }
-
-          a {
-            display: block;
-            padding: 10px 10px 10px;
-            text-decoration: none;
-            color: white;
-            white-space: nowrap;
-
-            &:hover {
-              text-decoration: underline; // Underline on hover
-              background-color: $blue-25-shade;
-          }
-            // Active (or "selected") state
-          &:active, &.selected {
-              border-radius: var(--link-focus-outline);
-              -webkit-border-radius: var(--link-focus-outline);
-              -moz-border-radius: var(--link-focus-outline);
-              -ms-border-radius: var(--link-focus-outline);
-              -o-border-radius: var(--link-focus-outline);
-              background-color: $light-blue-primary;
-              color: $blue-25-shade;
-}
-          }
+        &:active,
+        &:focus,
+        &.selected {
+          outline: none;
+          box-shadow: inset 0 0 0 1px $orange-primary;
         }
       }
     }
   }
+
+  /* ===== Mobile (< lg) ===== */
+  @media (max-width: 991.98px) {
+    .navigation-bar-toggle {
+      display: flex;
+    }
+
+    /* Collapsible animation */
+    .navigation-bar-nav {
+      display: flex;              /* keep it in flow for measuring */
+      flex-direction: column;
+      gap: 0;
+      overflow: hidden;
+
+      height: 0;                  /* collapsed by default */
+      transition: height 220ms ease;
+    }
+
+    &.is-open .navigation-bar-nav {
+      /* height is set by JS to scrollHeight */
+    }
+
+    .navigation-bar-nav li a {
+      padding: 0.5rem 1rem;
+      white-space: normal;
+    }
+  }
+
+  /* ===== Desktop (>= lg) ===== */
+  @media (min-width: 992px) {
+    .navigation-bar-toggle {
+      display: none;
+    }
+    .navigation-bar-nav {
+    margin-left: -0.5rem;
+  }
+
+    .navigation-bar-nav {
+      display: flex;
+      flex-direction: row;
+
+      /* ✅ allow wrapping */
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 3px;
+
+      padding: 0;
+      margin: 0;
+
+      height: auto;         /* ensure no inline JS height affects desktop */
+      overflow: visible;    /* ensure wrap visible */
+    }
+
+    .navigation-bar-nav li {
+      /* ✅ do NOT force equal widths; it breaks wrapping */
+      flex: 0 0 auto;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .navigation-bar-nav li a {
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+    }
+  }
+}
