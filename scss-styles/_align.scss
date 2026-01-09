@@ -1,0 +1,143 @@
+// _align.scss
+// Atomic alignment utilities with `sta-` prefix
+
+// --------------------
+// Configurable maps
+// --------------------
+
+// Text alignment
+$sta-text-alignments: (
+  left: left,
+  center: center,
+  right: right,
+  justify: justify,
+  start: start,
+  end: end
+);
+
+// Vertical alignment
+$sta-vertical-alignments: (
+  top: top,
+  middle: middle,
+  bottom: bottom,
+  baseline: baseline,
+  text-top: text-top,
+  text-bottom: text-bottom
+);
+
+// Flex/grid main-axis alignment
+$sta-main-alignments: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly
+);
+
+// Flex/grid cross-axis alignment
+$sta-cross-alignments: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline
+);
+
+// Self alignment
+$sta-self-alignments: (
+  auto: auto,
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch
+);
+
+// --------------------
+// Text alignment classes
+// --------------------
+
+@each $name, $value in $sta-text-alignments {
+  .text-#{$name} {
+    text-align: $value;
+  }
+}
+
+// --------------------
+// Vertical alignment classes
+// --------------------
+
+@each $name, $value in $sta-vertical-alignments {
+  .valign-#{$name} {
+    vertical-align: $value;
+  }
+}
+
+
+// --------------------
+// Flex/Grid: main axis (justify-*)
+// --------------------
+
+@each $name, $value in $sta-main-alignments {
+  .justify-#{$name} {
+    justify-content: $value;
+  }
+}
+
+@each $name, $value in $sta-main-alignments {
+  .justify-items-#{$name} {
+    justify-items: $value;
+  }
+}
+
+@each $name, $value in $sta-main-alignments {
+  .justify-self-#{$name} {
+    justify-self: $value;
+  }
+}
+
+// --------------------
+// Flex/Grid: cross axis (align-*)
+// --------------------
+
+@each $name, $value in $sta-cross-alignments {
+  .items-#{$name} {
+    align-items: $value;
+  }
+}
+
+@each $name, $value in $sta-cross-alignments {
+  .content-#{$name} {
+    align-content: $value;
+  }
+}
+
+@each $name, $value in $sta-self-alignments {
+  .self-#{$name} {
+    align-self: $value;
+  }
+}
+
+// --------------------
+// Shorthand center helpers
+// --------------------
+
+.center-both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-center-both {
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
