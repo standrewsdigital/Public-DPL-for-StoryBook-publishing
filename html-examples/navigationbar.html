@@ -30,60 +30,69 @@
   </div>
 
   <!-- Primary Navigation -->
-  <nav class="navigation-bar navigation-bar-primary" data-nav>
-    <div class="container">
-      <div class="row">
-        <div class="navigation-bar-inner">
-          <button
-            class="navigation-bar-toggle text-base"
-            type="button"
-            aria-controls="primary-nav"
-            aria-expanded="false"
-          >
-            Navigation
-          </button>
+<nav class="navigation-bar navigation-bar-primary" aria-label="Main menu" data-nav>
+  <div class="container">
+    <div class="row">
+      <div class="navigation-bar-inner">
+        <button
+          class="navigation-bar-toggle text-base"
+          type="button"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          Navigation
+        </button>
 
-          <ul class="navigation-bar-nav primary-nav my-xs" id="primary-nav">
-            <li><a href="#">Undergraduate</a></li>
-            <li><a href="#">Postgraduate</a></li>
-            <li><a href="#">Non-degree courses</a></li>
-            <li><a href="#">Study abroad</a></li>
-            <li><a href="#">International</a></li>
-            <li><a href="#">Access and outreach</a></li>
-            <li><a href="#">Courses</a></li>
-          </ul>
-        </div>
+        <ul
+          class="navigation-bar-nav primary-nav my-xs"
+          id="primary-nav"
+          data-collapsible="primary"
+        >
+          <li><a href="#">Undergraduate</a></li>
+          <li><a href="#">Postgraduate</a></li>
+          <li><a href="#">Non-degree courses</a></li>
+          <li><a href="#">Study abroad</a></li>
+          <li><a href="#">International</a></li>
+          <li><a href="#">Access and outreach</a></li>
+          <li><a href="#">Courses</a></li>
+        </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Secondary Navigation -->
-  <nav class="navigation-bar navigation-bar-secondary" data-nav>
-    <div class="container">
-      <div class="row">
-        <div class="navigation-bar-inner">
-          <button
-            class="navigation-bar-toggle text-base"
-            type="button"
-            aria-controls="secondary-nav"
-            aria-expanded="false"
-          >
-            Section navigation
-          </button>
+<!-- Secondary Navigation -->
+<nav class="navigation-bar navigation-bar-secondary" data-nav>
+  <div class="container">
+    <div class="row">
+      <div class="navigation-bar-inner">
+        <button
+          class="navigation-bar-toggle text-base"
+          type="button"
+          aria-controls="secondary-nav"
+          aria-expanded="false"
+        >
+          Section navigation
+        </button>
 
-          <ul class="navigation-bar-nav secondary-nav my-xs" id="secondary-nav">
-            <li><a href="#">Study options</a></li>
-            <li><a href="#">Why St Andrews?</a></li>
-            <li><a href="#">Fees and funding</a></li>
-            <li><a href="#">Accommodation</a></li>
-            <li><a href="#">Your future</a></li>
-            <li><a href="#">Meet us</a></li>
-            <li><a href="#">How to Apply</a></li>
-          </ul>
-        </div>
+        <ul
+          class="navigation-bar-nav secondary-nav my-xs"
+          id="secondary-nav"
+          data-collapsible="secondary"
+        >
+          <li><a href="#">Study options</a></li>
+          <li><a href="#">Why St Andrews?</a></li>
+          <li><a href="#">Fees and funding</a></li>
+          <li><a href="#">Accommodation</a></li>
+          <li><a href="#">Your future</a></li>
+          <li><a href="#">Meet us</a></li>
+          <li><a href="#">How to Apply</a></li>
+        </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <div class="container">
     <div class="row">
@@ -116,41 +125,109 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var LG_MIN = 992;
-      function isLgUp() {
-        return window.matchMedia("(min-width: " + LG_MIN + "px)").matches;
+<script>
+  (function () {
+    var LG_MIN = 992;
+
+    function isLgUp() {
+      return window.matchMedia("(min-width: " + LG_MIN + "px)").matches;
+    }
+
+    function getList(navEl) {
+      return navEl.querySelector(".navigation-bar-nav");
+    }
+
+    function setOpen(navEl, open) {
+      var btn = navEl.querySelector(".navigation-bar-toggle");
+      var list = getList(navEl);
+
+      if (open) navEl.classList.add("is-open");
+      else navEl.classList.remove("is-open");
+
+      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+
+      // Desktop: reset
+      if (!list) return;
+      if (isLgUp()) {
+        list.style.height = "";
+        return;
       }
 
-      function closeNav(navEl) {
+      // Mobile: animate height
+      if (open) {
+        // set to explicit px height so it transitions
+        list.style.height = list.scrollHeight + "px";
+      } else {
+        list.style.height = "0px";
+      }
+    }
+
+    function sync(navEl) {
+      var btn = navEl.querySelector(".navigation-bar-toggle");
+      var list = getList(navEl);
+      if (!btn || !list) return;
+
+      if (isLgUp()) {
+        // on desktop everything is just visible & wraps naturally
         navEl.classList.remove("is-open");
-        var btn = navEl.querySelector(".navigation-bar-toggle");
-        if (btn) btn.setAttribute("aria-expanded", "false");
+        btn.setAttribute("aria-expanded", "false");
+        list.style.height = "";
+      } else {
+        // on mobile, if aria says expanded true, ensure height is correct
+        var expanded = btn.getAttribute("aria-expanded") === "true";
+        if (expanded) {
+          navEl.classList.add("is-open");
+          list.style.height = list.scrollHeight + "px";
+        } else {
+          navEl.classList.remove("is-open");
+          list.style.height = "0px";
+        }
       }
+    }
 
-      function sync(navEl) {
-        if (isLgUp()) closeNav(navEl);
-      }
+    // init
+    document.querySelectorAll("[data-nav]").forEach(function (navEl) {
+      var btn = navEl.querySelector(".navigation-bar-toggle");
+      if (!btn) return;
 
-      document.querySelectorAll("[data-nav]").forEach(function (navEl) {
-        var btn = navEl.querySelector(".navigation-bar-toggle");
-        if (!btn) return;
+      // Default collapsed on mobile (your HTML has aria-expanded="false")
+      // Ensure correct height on load
+      sync(navEl);
 
-        btn.addEventListener("click", function () {
-          if (isLgUp()) return;
-          var open = navEl.classList.toggle("is-open");
-          btn.setAttribute("aria-expanded", open ? "true" : "false");
-        });
+      btn.addEventListener("click", function () {
+        if (isLgUp()) return;
 
-        sync(navEl);
+        var currentlyExpanded = btn.getAttribute("aria-expanded") === "true";
+        setOpen(navEl, !currentlyExpanded);
       });
+    });
 
-      var mq = window.matchMedia("(min-width: " + LG_MIN + "px)");
-      mq.addEventListener("change", function () {
-        document.querySelectorAll("[data-nav]").forEach(sync);
-      });
-    })();
-  </script>
+    // Re-sync on resize / breakpoint change
+    var mq = window.matchMedia("(min-width: " + LG_MIN + "px)");
+    mq.addEventListener("change", function () {
+      document.querySelectorAll("[data-nav]").forEach(sync);
+    });
+
+    // Also recalc heights when resizing within mobile (wrap changes scrollHeight)
+    var resizeTimer = null;
+    window.addEventListener("resize", function () {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function () {
+        if (!isLgUp()) {
+          document.querySelectorAll("[data-nav]").forEach(function (navEl) {
+            var btn = navEl.querySelector(".navigation-bar-toggle");
+            var list = getList(navEl);
+            if (!btn || !list) return;
+
+            if (btn.getAttribute("aria-expanded") === "true") {
+              list.style.height = list.scrollHeight + "px";
+            }
+          });
+        }
+      }, 80);
+    });
+  })();
+</script>
+
 </body>
 </html>
