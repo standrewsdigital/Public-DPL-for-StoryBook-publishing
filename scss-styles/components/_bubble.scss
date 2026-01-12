@@ -51,7 +51,7 @@
     &:not(:last-child) {
         border-width: 2px;
         border-style: solid;
-        border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 15%, rgba(222, 222, 222, 1) 35%, rgba(222, 222, 222, 1) 65%, rgba(255, 255, 255, 1) 85%) 5% 100% 5% 0;
+        border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 15%, rgba(222, 222, 222, 1) 35%, rgba(222, 222, 222, 1) 65%, rgba(255, 255, 255, 0) 85%) 5% 100% 5% 0;
     }
 
     &.text-left {
