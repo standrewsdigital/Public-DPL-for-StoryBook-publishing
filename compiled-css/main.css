@@ -6954,7 +6954,7 @@ section.no-links {
 .bubble-inline:not(:last-child) {
   border-width: 2px;
   border-style: solid;
-  border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 15%, rgb(222, 222, 222) 35%, rgb(222, 222, 222) 65%, rgb(255, 255, 255) 85%) 5% 100% 5% 0;
+  border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 15%, rgb(222, 222, 222) 35%, rgb(222, 222, 222) 65%, rgba(255, 255, 255, 0) 85%) 5% 100% 5% 0;
 }
 .bubble-inline.text-left {
   text-align: left;
