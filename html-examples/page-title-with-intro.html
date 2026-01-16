@@ -114,7 +114,7 @@
 <!-- Begin pattern: page intro //-->
 <div class="container">
     <div class="row">
-        <div class="col col-7-sm col-7-md  page-intro">
+        <div class="col col-7-sm col-7-md page-intro">
             <div class="text">
                 <h1 class="heading">This is the heading of the page</h1>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque hendrerit
@@ -123,23 +123,16 @@
                     congue eleifend. Quisque vel aliquet sapien. Duis ultricies dictum justo, et convallis nulla lacinia
                     eget.</p>
 
-                <div class="search-bar">
-                    <div class="constrained">
+                <div class="search-bar bg-blue-primary text-white">
                     <h2 class="heading">Search this section</h2>
-                    <form class="dpl-form" action="">
-                        <div class="input-group">
-                            <input class="form-control" type="text" title="Enter search keywords" maxlength="256"
-                                name="search" placeholder="Search by keyword or phrase">
-                            <span class="input-group-btn">
-                                <button class="btn btn-primary" value="Search" type="submit">
-                                    <span class="material-icons-outlined">
-                                        search
-                                    </span> </a>
-                                </button>
-                            </span>
-                        </div>
-                    </form>
-                </div>
+                        <form class="wrapper" action="" role="search">
+                            <input class="search filter-input" id="default-search" required type="text"
+                                   aria-label="Search the University website" maxlength="256" name="search"
+                                   placeholder="Search the University website">
+                            <!-- <span class="clear-icon material-icons-outlined aria-hidden=" true">close</span> -->
+                            <button><span class="search-icon material-icons-outlined aria-hidden="
+                                          true">search</span></button>
+                        </form>
                 </div>
             </div>
         </div>
