@@ -451,6 +451,14 @@
   list-style-type: none;
 }
 
+.text-serif {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+}
+
+.text-sans {
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
 :root {
   --page-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
@@ -4130,6 +4138,14 @@ footer .footer-links a:hover, footer .footer-links a:focus {
 
 .ul-no-style {
   list-style-type: none;
+}
+
+.text-serif {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+}
+
+.text-sans {
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
 .category-header {
