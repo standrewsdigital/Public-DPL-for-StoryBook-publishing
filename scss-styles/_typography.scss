@@ -129,3 +129,13 @@ $text-sizes: (
 .ul-no-style{
     list-style-type: none;
 }
+
+$font-sans: 'PT Sans', Arial, Helvetica, sans-serif;
+$font-serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+
+.text-serif {
+  font-family: $font-serif;
+}
+.text-sans {
+  font-family: $font-sans;
+}
