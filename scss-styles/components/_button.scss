@@ -19,26 +19,26 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 
     // Generate color variations for buttons
     @each $color, $shade in ( 
-        burgundy: ($burgundy-primary, $burgundy-25-shade),
-        green: ($green-primary, $green-25-shade),
-        grey: ($mid-grey-1, $dark-grey-3),
-        orange: ($dark-orange, $dark-orange-25-shade),
-        purple: ($purple-primary, $purple-25-shade),
-        red: ($red-primary, $red-25-shade),
-        white: (#fff, #fff)
+        "burgundy": ($burgundy-primary, $burgundy-25-shade),
+        "green": ($green-primary, $green-25-shade),
+        "grey": ($mid-grey-1, $dark-grey-3),
+        "orange": ($dark-orange, $dark-orange-25-shade),
+        "purple": ($purple-primary, $purple-25-shade),
+        "red": ($red-primary, $red-25-shade),
+        "white": (#fff, #fff)
     ) {
         &.#{$color} {
             background-color: nth($shade, 1);
-            color: if($color == white, $blue-primary, null);
-            border: if($color == white, 1px solid $blue-25-shade, null);
-            border-bottom: if($color == white, 3px solid #0071b3, null);
-            padding-bottom: if($color == white, 6px, null);
+            color: if($color == "white", $blue-primary, null);
+            border: if($color == "white", 1px solid $blue-25-shade, null);
+            border-bottom: if($color == "white", 3px solid #0071b3, null);
+            padding-bottom: if($color == "white", 6px, null);
         }
 
         &.#{$color}:focus,
         &.#{$color}:hover {
             background-color: nth($shade, 2);
-            text-decoration: if($color == white, underline, null);
+            text-decoration: if($color == "white", underline, null);
         }
     }
 
@@ -65,21 +65,21 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 
         // Colour options for the action bottom border
         @each $color, $shade in (
-            green: $green-25-shade,
-            orange: $dark-orange-25-shade,
-            red: $red-25-shade,
-            burgundy: $burgundy-25-shade,
-            purple: $purple-25-shade,
-            grey: $dark-grey-3,
-            white: $blue-25-shade
+            "green": $green-25-shade,
+            "orange": $dark-orange-25-shade,
+            "red": $red-25-shade,
+            "burgundy": $burgundy-25-shade,
+            "purple": $purple-25-shade,
+            "grey": $dark-grey-3,
+            "white": $blue-25-shade
         ) {
             &.#{$color} {
                 border-bottom: 3px solid $shade;
-                background-color: if($color == white, #fff, null);
-                color: if($color == white, $blue-primary, null);
-                border: if($color == white, 1px solid $blue-25-shade, null);
-                border-bottom: if($color == white, 3px solid #0071b3, null);
-                padding-bottom: if($color == white, 6px, null);
+                background-color: if($color == "white", #fff, null);
+                color: if($color == "white", $blue-primary, null);
+                border: if($color == "white", 1px solid $blue-25-shade, null);
+                border-bottom: if($color == "white", 3px solid #0071b3, null);
+                padding-bottom: if($color == "white", 6px, null);
             }
         }
 
