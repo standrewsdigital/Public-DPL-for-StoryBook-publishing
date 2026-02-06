@@ -156,7 +156,7 @@ $icons: (
 }
 
 // themed coloured icons
-$icon-themes: (burgundy, green, purple);
+$icon-themes: ("burgundy", "green", "purple");
 
 @each $name, $file in $icons {
   @each $theme in $icon-themes {

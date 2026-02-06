@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss-styles/components/_staff-profile.scss"],"names":[],"mappings":"AAIQ;EACI;;AAGJ;EACI;;AAIR;EAEI;;AAOI;EACI","file":"staff-profile.css"}
+{"version":3,"sourceRoot":"","sources":["../scss-styles/components/_staff-profile.scss"],"names":[],"mappings":"AAIQ,iCACI,sBAGJ,oCACI,sBAIR,yBAEI,UAOI,8BACI","file":"staff-profile.css"}

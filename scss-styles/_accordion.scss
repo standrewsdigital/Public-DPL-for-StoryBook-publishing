@@ -11,12 +11,12 @@
     }
 
     > summary {
-      @include responsive-font-size(1.2em, 0.05em, 36em, 75em);
       font-weight: 700;
       color: $light-blue-primary;
       cursor: pointer;
       padding: 15px;
       list-style: none;
+      @include responsive-font-size(1.2em, 0.05em, 36em, 75em);
 
       &:focus {
         outline: 3px solid $orange-primary;
