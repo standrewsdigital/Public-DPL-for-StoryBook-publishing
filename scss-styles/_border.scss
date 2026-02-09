@@ -24,6 +24,16 @@ $border-color-map: (
   .radius-#{$name} {
     border-radius: $radius;
   }
+
+  .radius-top-#{$name} {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+
+  .radius-bottom-#{$name} {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
 }
 
 /* Generate .border-[color-name] classes */
