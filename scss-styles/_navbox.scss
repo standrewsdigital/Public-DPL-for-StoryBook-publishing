@@ -1,27 +1,90 @@
-$navbox-title-blue: $light-blue-primary; // Example blue color, adjust as needed
-
+// navbox
 .navbox {
+  display: block; // because it's an <a>
+  overflow: hidden; // keep image neatly clipped
+  margin-bottom: 1rem;
+
+  text-decoration: none; // remove underline
+  color: inherit; // don't force link blue
+
+  // Optional: if you want it to feel clickable
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid currentColor; // or your token if you have one
+    outline-offset: 3px;
+  }
+
+  // IMAGE AREA
+  &-image {
+    position: relative;
+    aspect-ratio: 3 / 2; // 360x240 look
     width: 100%;
+    overflow: hidden;
 
-  .navbox-image {
-    width: 100%; // Ensure image takes the full width of the navbox
-    min-width: 250px;
-    margin-bottom: 0;
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
-  .navbox-title {
-    width: 100%; // Ensure image takes the full width of the navbox
-    min-width: 250px;
-    background-color: $navbox-title-blue;
-    margin-top: -5px;
-    padding: 5px, 5px, 5px, 5px;
+  // TITLE BAR
+  &-title {
+    position: relative;
+    padding: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    .material-icons-outlined{
+      font-size: 2rem;
+	    font-weight: 1000;
+    }
   }
-  a{
-    color: white;
-    padding: 5px 5px 5px 5px;
+
+  &-title-text {
+    display: block;
   }
-  h4{
-    margin-top: 0px;
-    margin-bottom: 0px;
+
+  // Chevron (Material Icons)
+  &-chevron {
+    flex: 0 0 auto;
+    line-height: 1;
+  }
+
+  // BODY CONTENT
+  &-content {
+    padding: 0rem;
+    margin-bottom: 1rem;
+    color: #333;
+
+    p { margin: 0; }
+  }
+
+  // Only pull the title up when there is an image
+  &.navbox--has-image {
+    .navbox-title {
+      margin-top: -44px; // pull bar up over the image
+    }
+  }
+
+  // No image: title should sit normally
+  &.navbox--no-image {
+    .navbox-title {
+      margin-top: 0;
+    }
   }
 }
