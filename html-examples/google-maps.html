@@ -7,15 +7,59 @@
         <title>Google maps</title>
         <link rel="stylesheet" href="../compiled-css/main.css" />
         <link rel="stylesheet" href="../compiled-css/google-maps.css" />
+
+        <style>
+            .map-wrapper {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%;
+                /* 16:9 ratio */
+                height: 0;
+                overflow: hidden;
+            }
+
+            .map-wrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+                margin-bottom: 300px;
+            }
+        </style>
     </head>
 
     <!-- Header -->
     <header class="container">
-        <div class="col-12 header-content">
+        <div class="col col-12-lg header-content">
             <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
                 alt="University of St Andrews Logo" class="logo" />
         </div>
     </header>
+
+
+  <div class="container">
+            <div class="row">
+                <div class="col col-6-md google-maps">
+                    <div class="main-content">
+
+                        <div class="embed-responsive embed-responsive-16by9 map-wrapper">
+                            <iframe title="Embedded Google map"
+                                src="https://www.google.com/maps/d/embed?mid=167xgAp5IMFyBUp46Vdbw6f21vc0"
+                                class="embed-responsive-item google-map" ></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
 
     <!-- Main Content -->
     <div class="container">
@@ -25,15 +69,14 @@
             </div>
         </div>
     </div>
-    <div class="pattern-wrapper">
+    <section>
         <div class="container">
-
             <div class="row">
-                <div class="col col-12-md google-maps">
+                <div class="col col-12-lg google-maps">
                     <div class="main-content">
 
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe title="Embedded Google map"
+                            <iframe title="Embedded Google map map-wrapper"
                                 src="https://www.google.com/maps/d/embed?mid=167xgAp5IMFyBUp46Vdbw6f21vc0"
                                 class="embed-responsive-item google-map">
                             </iframe>
@@ -43,11 +86,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-
+    <hr>
     <!-- Begin pattern: google-maps //-->
-    <div class="pattern-wrapper">
+    <section>
 
         <div class="google-maps">
             <div class="container">
@@ -89,7 +132,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- End pattern: google-maps //-->
 
@@ -163,9 +206,11 @@
             </div>
         </div>
     </div>
+   
+      
+  
 
-
-
+    <br><br>
     <!-- Footer -->
     <footer>
         <div class="container">
