@@ -1,0 +1,16 @@
+// Import only what's needed
+@import "./variables/breakpoints";
+@import "./variables/main-colors";
+
+// Import only responsive-font-size mixin
+@mixin responsive-font-size($size, $vw-adjustment, $min-vw, $max-vw) {
+	font-size: $size;
+	@media (min-width: $min-vw) and (max-width: $max-vw) {
+		font-size: calc(#{$size} + #{$vw-adjustment} * (100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}));
+	}
+	@media (min-width: $max-vw) {
+		font-size: calc(#{$size} + #{$vw-adjustment});
+	}
+}
+
+@import "./components/featured-news";

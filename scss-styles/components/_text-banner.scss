@@ -1,0 +1,25 @@
+.text-banner-content {
+	text-align: center;
+
+	&.left {
+		text-align: left;
+	}
+
+	&.right {
+		text-align: right;
+	}
+
+	a {
+		color: $light-grey-2;
+		text-decoration: underline;
+	  
+			&:hover {
+			color: $light-grey-1;
+			text-decoration: none;
+			}
+	  
+			&:focus {
+			color: var(--link-focus-color);
+			}
+	  }
+}

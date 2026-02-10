@@ -1,4 +1,13 @@
-@import '../mixins';
+// Import only the responsive-font-size mixin needed
+@mixin responsive-font-size($size, $vw-adjustment, $min-vw, $max-vw) {
+  font-size: $size;
+  @media (min-width: $min-vw) and (max-width: $max-vw) {
+    font-size: calc(#{$size} + #{$vw-adjustment} * (100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}));
+  }
+  @media (min-width: $max-vw) {
+    font-size: calc(#{$size} + #{$vw-adjustment});
+  }
+}
 
 .filter-box {
   background: #f0f0f0;

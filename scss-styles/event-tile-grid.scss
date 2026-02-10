@@ -1,3 +1,27 @@
+// Import only what's needed for this component
+@import "./variables/breakpoints";
 @import "./variables/main-colors";
-@import "./mixins";
+
+// Icon mixin needed for metadata-list
+@mixin icon($content, $altText, $colour: $dark-grey-2) {
+	content: $content / $altText;
+	font-family: 'Material Symbols Outlined';
+	font-feature-settings: 'liga';
+	-webkit-font-feature-settings: 'liga';
+	-moz-font-feature-settings: 'liga';
+	color: $colour;
+}
+
+// Import only the responsive-font-size mixin
+@mixin responsive-font-size($size, $vw-adjustment, $min-vw, $max-vw) {
+	font-size: $size;
+	@media (min-width: $min-vw) and (max-width: $max-vw) {
+		font-size: calc(#{$size} + #{$vw-adjustment} * (100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}));
+	}
+	@media (min-width: $max-vw) {
+		font-size: calc(#{$size} + #{$vw-adjustment});
+	}
+}
+
+@import "./components/metadata-list";
 @import "./components/event-tile-grid";
