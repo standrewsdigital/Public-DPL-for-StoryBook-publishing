@@ -9,19 +9,19 @@ DEST_DIR.mkdir(parents=True, exist_ok=True)
 # 2) Brand themes
 THEMES = {
     "burgundy": {
-        "bg": "#f2c3d2",
-        "line": "#c60c46",
-        "accent": "#d44974",
+        "bg": "#eeb6c8",      # burgundy-70-tint
+        "line": "#c60c46",    # burgundy-primary
+        "accent": "#d44974",  # burgundy-25-tint
     },
     "green": {
-        "bg": "#C0E1CF",
-        "line": "#00853f",
-        "accent": "#40a46f",
+        "bg": "#b3dac5",      # green-70-tint
+        "line": "#00853f",    # green-primary
+        "accent": "#26985c",  # green-15-tint (darker for contrast)
     },
     "purple": {
-        "bg": "#DED0E7",
-        "line": "#7b439a",
-        "accent": "#9c72b3",
+        "bg": "#d7c7e1",      # purple-70-tint
+        "line": "#7b439a",    # purple-primary
+        "accent": "#8f5fa9",  # purple-15-tint (darker for contrast)
     },
 }
 

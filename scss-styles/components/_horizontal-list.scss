@@ -1,0 +1,27 @@
+$link-spacing: 5px;
+$divider-color: $mid-grey-1;
+
+.horizontal-list {
+  background-color: white;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  li {
+    color: $dark-grey-2;
+    &:not(:last-child) {
+      margin-right: $link-spacing;
+      &:after {
+        content: "|";
+        color: $divider-color;
+        margin-left: $link-spacing;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      color: inherit; // Ensures the link color is the same as the li element
+    }
+  }
+}
