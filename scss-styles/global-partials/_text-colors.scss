@@ -1,5 +1,5 @@
 // styles.scss
-@use './variables/main-colors' as colors; // Importing the color variables
+@use '../variables/main-colors' as colors; // Importing the color variables
 
 // Creating a map of color variables
 $color-map: (
