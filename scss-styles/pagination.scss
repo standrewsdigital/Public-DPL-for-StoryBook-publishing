@@ -1,0 +1,7 @@
+// Import only what's needed
+@import "./variables/main-colors";
+
+// Import font family variable
+$page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+
+@import "./components/_pagination";

@@ -1,0 +1,14 @@
+// Import only what's needed
+@import "./variables/main-colors";
+
+// Import only the icon mixin
+@mixin icon($content, $altText, $colour: $dark-grey-2) {
+	content: $content / $altText;
+	font-family: 'Material Symbols Outlined';
+	font-feature-settings: 'liga';
+	-webkit-font-feature-settings: 'liga';
+	-moz-font-feature-settings: 'liga';
+	color: $colour;
+}
+
+@import "./components/_metadata-list";
