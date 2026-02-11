@@ -13,13 +13,13 @@
 		color: $light-grey-2;
 		text-decoration: underline;
 	  
-			&:hover {
+		  &:hover {
 			color: $light-grey-1;
 			text-decoration: none;
-			}
+		  }
 	  
-			&:focus {
+		  &:focus {
 			color: var(--link-focus-color);
-			}
+		  }
 	  }
 }
