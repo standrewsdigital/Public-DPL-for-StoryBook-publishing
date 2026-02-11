@@ -4,3 +4,6 @@ uploadToSftp.js
 
 # Ignore all node modules
 node_modules/
+# Ignore GitHub and GitLab configuration folders
+.github/
+.gitlab/

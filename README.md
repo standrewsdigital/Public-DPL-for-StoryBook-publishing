@@ -14,6 +14,12 @@
 ## Getting started
 To set up and start using the npm package from the repository `sta-dpl-npm`, please follow these steps carefully. This guide assumes you have Git installed on your system. If you don't have Git, please download and install it from [git-scm.com](https://git-scm.com/).
 
+### Requirements
+
+- **Node.js**: v18.x or higher
+- **npm**: v9.x or higher (included with Node.js)
+- **Python**: v3.x (optional - only required if regenerating icons, which is rare)
+
 ### Step 1: Clone the Repository
 
 1. Open your terminal or command prompt.
