@@ -22,11 +22,11 @@
 }
 
 .news-excerpt {
+    flex: 1 1 auto;
     h4,h5{
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    flex: 1 1 auto;
 }
 
 .news-item {
