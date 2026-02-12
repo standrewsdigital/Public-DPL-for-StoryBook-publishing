@@ -1,0 +1,38 @@
+/* ---------- PADDING UTILITIES ---------- */
+
+$padding-map: (
+  "0": 0,
+  "xs": min(2px, 0.5vw),
+  "sm": min(4px, 1vw),
+  "md": min(8px, 2vw),
+  "lg": min(16px, 3vw),
+  "xl": calc(2vw + 1rem),
+  "2xl": calc(3vw + 1rem),
+);
+
+/* Generate .p-[size] for all sides */
+@each $name, $val in $padding-map {
+  .p-#{$name} {
+    padding: $val;
+  }
+}
+
+/* Generate .pt-, .pr-, .pb-, .pl- (individual sides) */
+@each $name, $val in $padding-map {
+  .pt-#{$name} { padding-top: $val; }
+  .pr-#{$name} { padding-right: $val; }
+  .pb-#{$name} { padding-bottom: $val; }
+  .pl-#{$name} { padding-left: $val; }
+}
+
+/* Generate .px-[size] and .py-[size] (axis utilities) */
+@each $name, $val in $padding-map {
+  .px-#{$name} {
+    padding-left: $val;
+    padding-right: $val;
+  }
+  .py-#{$name} {
+    padding-top: $val;
+    padding-bottom: $val;
+  }
+}
