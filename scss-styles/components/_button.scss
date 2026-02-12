@@ -30,15 +30,12 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         &.#{$color} {
             background-color: nth($shade, 1);
             color: if($color == "white", $blue-primary, null);
-            border: if($color == "white", 1px solid $blue-25-shade, null);
-            border-bottom: if($color == "white", 3px solid #0071b3, null);
-            padding-bottom: if($color == "white", 6px, null);
+            border: if($color == "white", 1px solid $blue-primary, null);
         }
 
         &.#{$color}:focus,
         &.#{$color}:hover {
             background-color: nth($shade, 2);
-            text-decoration: if($color == "white", underline, null);
         }
     }
 
@@ -53,17 +50,11 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 
     // ----- Action buttons -----//
     &.action {
-        top: 0.1rem;
-        border-bottom: 3px $blue-25-shade solid;
-        font-weight: bold;
-        color: white;
         position: relative;
         text-align: left;
-        padding-top: 0.3rem;
         padding-left: 1rem;
-        padding-bottom: 0.3rem;
 
-        // Colour options for the action bottom border
+        // Colour options for the action button (text color only)
         @each $color, $shade in (
             "green": $green-25-shade,
             "orange": $dark-orange-25-shade,
@@ -71,15 +62,11 @@ $breakpoint-value: map-get($breakpoints, 'lg');
             "burgundy": $burgundy-25-shade,
             "purple": $purple-25-shade,
             "grey": $dark-grey-3,
-            "white": $blue-25-shade
+            "white": $blue-primary
         ) {
             &.#{$color} {
-                border-bottom: 3px solid $shade;
+                color: if($color == "white", $blue-primary, white);
                 background-color: if($color == "white", #fff, null);
-                color: if($color == "white", $blue-primary, null);
-                border: if($color == "white", 1px solid $blue-25-shade, null);
-                border-bottom: if($color == "white", 3px solid #0071b3, null);
-                padding-bottom: if($color == "white", 6px, null);
             }
         }
 
@@ -92,15 +79,9 @@ $breakpoint-value: map-get($breakpoints, 'lg');
             -moz-font-feature-settings: 'liga';
             font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
             font-size: 1.4rem;
-            line-height: 1;
             display: inline-block;
             margin-left: 0.35rem;
             vertical-align: middle;
-            color: #fff;
-        }
-
-        &.white:after {
-            color: $blue-primary;
         }
     }
 }
@@ -211,16 +192,22 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         transform: translateY(-50%);
         font-size: 1.25rem;
         line-height: 1;
-        transition: transform 0.2s ease-in-out;
+        transition: content 0.2s ease-in-out;
     }
+    
+    // Down dropdown: expand_more by default, expand_less when open
+    &.down.selected .btn:after,
+    &.down:not(.selected):hover .btn:after {
+        content: "expand_less";
+    }
+    
+    // Up dropdown: expand_less by default, expand_more when open
     &.up .btn:after {
-        transform: translateY(-50%) rotate(180deg);
+        content: "expand_less";
     }
-    &.selected .btn:after {
-        transform: translateY(-50%) rotate(180deg);
-    }
-    &.up.selected .btn:after {
-        transform: translateY(-50%) rotate(0deg);
+    &.up.selected .btn:after,
+    &.up:not(.selected):hover .btn:after {
+        content: "expand_more";
     }
 }
 
@@ -246,36 +233,11 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 
 // Dropdown open and close animations
 @media (min-width: 800px) {
-    .hover-drop-list:not(.selected):hover .btn:hover:after {
-        transform: translateY(-50%) rotate(180deg);
-        pointer-events: all;
-    }
-
-    .hover-drop-list.up:not(.selected):hover .btn:hover:after {
-        top: 1rem;
-        transform: rotate(90deg);
-        pointer-events: all;
-    }
-
     .hover-drop-list:not(.selected):hover .drop-content {
         display: block;
         animation-name: out;
         animation-duration: 0.2s;
     }
-}
-
-@media (min-width: $breakpoint-value) {
-    .hover-drop-list:not(.selected):hover .btn:after {
-        top: 1rem;
-        transform: rotate(135deg);
-        pointer-events: all;
-    }
-}
-
-.selected:after {
-    top: 0.6rem;
-    transform: rotate(135deg);
-    pointer-events: all;
 }
 
 // Styling for the default blue button with white text
@@ -289,12 +251,12 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     vertical-align: middle;
     touch-action: manipulation;
     line-height: 1.5;
-    border-radius: 0;
+    border: none;
     white-space: nowrap;
     display: inline-block;
     @include options;
