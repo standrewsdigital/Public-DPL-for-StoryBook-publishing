@@ -31,21 +31,19 @@
     @include options;
 }
 
-
 .callout-row > .col {
-  display: flex;           // flex layout inside each grid cell
+    display: flex;
 }
-
 
 .callout-row > .col > .callout {
-  height: 100%;            // fill the grid cell
-  display: flex;
-  flex-direction: column;
-  justify-content: center; // optional – vertically centre text
+    height: 100%;
 }
-
 
 .callout {
     border-left: 5px solid $grey;
     @include options;
+
+    & .callout-icon {
+        width: 65px;
+    }
 }
