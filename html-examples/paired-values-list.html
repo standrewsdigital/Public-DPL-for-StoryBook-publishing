@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paired Values List</title>
     <link rel="stylesheet" href="../compiled-css/main.css">
+	 <style>
+        /* Make each dt+dd pair share a row background */
+        .paired-values-list dt.alternate-background:nth-of-type(odd),
+        .paired-values-list dt.alternate-background:nth-of-type(odd)+dd {
+            background: #f5f7fa;
+        }
+
+        .paired-values-list dt.alternate-background:nth-of-type(even),
+        .paired-values-list dt.alternate-background:nth-of-type(even)+dd {
+            background: #ffffff;
+        }
+
+        /* Optional styling */
+        .paired-values-name {
+            font-weight: 400;
+        }
+
+        .paired-values-value {
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     <header class="container">
@@ -78,6 +99,42 @@
 
         </div>
     </div>
+
+	    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col col-8-lg col-12-xxs">
+                    <h2>Paired values list with section heading and alternate colours for each row</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col col-8-lg col-12-xxs">
+                    <dl class="paired-values-list paired-values-list-divided">
+                        <dt class="paired-values-name alternate-background">Study level<br>Available to students
+                            studying at:</dt>
+                        <dd class="paired-values-value alternate-background">Postgraduate</dd>
+                        <dt class="paired-values-name alternate-background">Domicile for fee status</dt>
+                        <dd class="paired-values-value alternate-background">No restrictions</dd>
+                        <dt class="paired-values-name alternate-background">Schools<br>Available to faculty members
+                            from:</dt>
+                        <dd class="paired-values-value alternate-background">English</dd>
+                        <dt class="paired-values-name alternate-background">Application assessment</dt>
+                        <dd class="paired-values-value alternate-background">Academic merit</dd>
+                        <dt class="paired-values-name alternate-background">Available to</dt>
+                        <dd class="paired-values-value alternate-background">Prospective students</dd>
+                        <dt class="paired-values-name alternate-background">Mode of study</dt>
+                        <dd class="paired-values-value alternate-background">Full time, Part time - daytime</dd>
+                        <dt class="paired-values-name alternate-background">Geographical criteria</dt>
+                        <dd class="paired-values-value alternate-background">No restrictions</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
