@@ -48,8 +48,8 @@
 			padding: 1em;
 
 			.featured-event-heading {
-				@include responsive-font-size(1.2em, 0.05em, 36em, 75em);
 				margin: 0;
+				@include responsive-font-size(1.2em, 0.05em, 36em, 75em);
 
 				a {
 					text-decoration: none;

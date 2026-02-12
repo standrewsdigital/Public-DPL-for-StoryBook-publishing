@@ -1,149 +1,691 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbox</title>
-    <link rel="stylesheet" href="../compiled-css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbox</title>
+  <link rel="stylesheet" href="../compiled-css/main.css">
+  <link rel="stylesheet" href="../compiled-css/navbox.css">
 </head>
-<body>
-    <!--Header-->
-    <header class="container">
-        <div class="row">
-            <div class="col col-12-lg col-12-xxs header-content">
-                <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
-            </div>
-        </div>
-    </header>
-    <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm">
-                    <h2>Regular navbox with image and paragraph</h2>
-                </div>
-            </div>
-     </div>
-     
-    <!--Content-->
-    <div class="container">
-        <div class="col col-4-md col-12-sm">
-            <div class="navbox">
-                <div class="navbox-image">
-                    <img src="../assets/750x500.png" alt="Description" class="image">
-                </div>
-                <div class="navbox-title">
-                    <a href=""><h4>Study</h4></a>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+<>
+  <!--Header-->
+  <header class="container">
+    <div class="row">
+      <div class="col col-12-lg col-12-xxs header-content">
+        <img
+          src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
+          alt="University of St Andrews Logo"
+          class="logo"
+        >
+      </div>
     </div>
-    <br><hr><br>
-     <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm">
-                    <h2>Large navbox with image and paragraph</h2>
-                </div>
-            </div>
-     </div>
+  </header>
 
-     <div class="container">
-        <div class="col col-6-md col-12-sm">
-            <div class="navbox">
-                <div class="navbox-image">
-                    <img src="../assets/1110x480.png" alt="Description" class="image">
-                </div>
-                <div class="navbox-title">
-                    <a href=""><h4>Study</h4></a>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col col-8-md col-12-sm">
+        <h2>Navbox</h2>
+      </div>
     </div>
-    <br><hr><br>
+  </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col col-8-md col-12-sm">
-                <h2>Large navbox with image only</h2>
-            </div>
-        </div>
+  <!-- Content -->
+  <nav class="container">
+    <div class="row">
+
+      <!-- 1) NAVBOX WITH IMAGE ONLY -->
+       <div class="col-12-lg col col-12-md">
+        <h3>Navbox with image only</h3>
+       </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white" href="/example-1">
+          <div class="navbox-image">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Study</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white" href="/example-1">
+          <div class="navbox-image">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Study</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white" href="/example-1">
+          <div class="navbox-image">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Study</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 2) NAVBOX WITH IMAGE + PARAGRAPH -->
+       <div class="col-12-lg col col-12-md">
+        <h3>Navbox with image and paragraph</h3>
+       </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white" href="/example-2">
+          <div class="navbox-image">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+          <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white" href="/example-2">
+          <div class="navbox-image">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+          <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white" href="/example-2">
+          <div class="navbox-image">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+          <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+
+      <!-- 3) NAVBOX WITH PARAGRAPH, NO IMAGE -->
+       <div class="col-12-lg col col-12-md">
+        <h3>Navbox with paragraph and no image</h3>
+       </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white" href="/example-3">
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+          <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white" href="/example-3">
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+          <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white" href="/example-3">
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+          <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+
+      <!-- 4) NAVBOX WITH TITLE ONLY -->
+    <div class="col-12-lg col col-12-md">
+        <h3>Navbox with title only</h3>
+       </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white" href="/example-3">
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white" href="/example-3">
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white" href="/example-3">
+          <div class="navbox-title text-white bg-blue-primary">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col-12-md">
+      <h3>Image only (2 per row)</h3>
     </div>
 
-    <div class="container">
-        <div class="col col-6-md col-12-sm">
-            <div class="navbox">
-                <div class="navbox-image">
-                    <img src="../assets/1110x480.png" alt="Description" class="image">
-                </div>
-                <div class="navbox-title">
-                    <a href=""><h4>Study</h4></a>
-                </div>
-            </div>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white" href="/study">
+        <div class="navbox-image">
+          <img src="../assets/1110x480.png" alt="">
         </div>
+        <div class="navbox-title text-white bg-blue-primary">
+          <span class="navbox-title-text">Study</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
     </div>
-    <br><hr><br>
 
-   <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm">
-                    <h2>Navbox with paragraph only</h2>
-                </div>
-            </div>
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white" href="/research">
+        <div class="navbox-image">
+          <img src="../assets/1110x480.png" alt="">
         </div>
-    
+        <div class="navbox-title text-white bg-blue-primary">
+          <span class="navbox-title-text">Research</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="col col-12-md">
+      <h3>Image and paragraph (2 per row)</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white" href="/undergraduate">
+        <div class="navbox-image">
+          <img src="../assets/1110x480.png" alt="">
+        </div>
+        <div class="navbox-title text-white bg-blue-primary">
+          <span class="navbox-title-text">Undergraduate</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+      <div class="navbox-content">
+        <p>Explore our undergraduate degrees and student experience.</p>
+      </div>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white" href="/postgraduate">
+        <div class="navbox-image">
+          <img src="../assets/1110x480.png" alt="">
+        </div>
+        <div class="navbox-title text-white bg-blue-primary">
+          <span class="navbox-title-text">Postgraduate</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+      <div class="navbox-content">
+        <p>Find taught and research postgraduate opportunities.</p>
+      </div>
+    </div>
+
+    <div class="col col-12-md">
+      <h3>No image + paragraph (2 per row)</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white" href="/fees">
+        <div class="navbox-title text-white bg-blue-primary">
+          <span class="navbox-title-text">Fees and funding</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+      <div class="navbox-content">
+        <p>Information about tuition fees, funding, and scholarships.</p>
+      </div>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white" href="/apply">
+        <div class="navbox-title text-white bg-blue-primary">
+          <span class="navbox-title-text">How to apply</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+      <div class="navbox-content">
+        <p>Application guidance for all levels of study.</p>
+      </div>
+    </div>
+
+    <div class="col col-12-md">
+      <h3>Title only (2 per row)</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white" href="/open-days">
+        <div class="navbox-title text-white bg-blue-primary">
+          <span class="navbox-title-text">Open days</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white" href="/contact">
+        <div class="navbox-title text-white bg-blue-primary">
+          <span class="navbox-title-text">Contact us</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+    </div>
+
+
+    </div>
+  </nav>
+
+  <hr/>
+  <!-- Rounded examples -->
+  <nav class="container">
+    <div class="row">
+
+      <!-- 1) IMAGE ONLY + ROUNDED -->
+       <div class="col-12-lg col col-12-md">
+        <h2>Rounded Navbox</h2>
+        <h3>Rounded: Navbox with image</h3>
+       </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white radius-md" href="/rounded-1">
+          <div class="navbox-image radius-md">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+            <span class="navbox-title-text">Study</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white radius-md" href="/rounded-1">
+          <div class="navbox-image radius-md">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+            <span class="navbox-title-text">Study</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white radius-md" href="/rounded-1">
+          <div class="navbox-image radius-md">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+            <span class="navbox-title-text">Study</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 2) IMAGE + PARAGRAPH + ROUNDED -->
+       <div class="col-12-lg col col-12-md">
+        <h3>Rounded: Navbox with image and paragraph</h3>
+       </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white radius-md" href="/rounded-2">
+          <div class="navbox-image radius-md">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+        <div class="navbox-content radius-bottom-md">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white radius-md" href="/rounded-2">
+          <div class="navbox-image radius-md">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+        <div class="navbox-content radius-bottom-md">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--has-image bg-white radius-md" href="/rounded-2">
+          <div class="navbox-image radius-md">
+            <img src="../assets/750x500.png" alt="">
+          </div>
+
+          <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+        <div class="navbox-content radius-bottom-md">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+
+      <!-- 3) NAVBOX WITH TITLE AND PARAGRAPH -->
+       <div class="col-12-lg col col-12-md">
+        <h3>Rounded: Navbox with title and paragraph</h3>
+       </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white radius-md" href="/rounded-3">
+          <div class="navbox-title text-white bg-blue-primary radius-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+        <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white radius-md" href="/rounded-3">
+          <div class="navbox-title text-white bg-blue-primary radius-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+        <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white radius-md" href="/rounded-3">
+          <div class="navbox-title text-white bg-blue-primary radius-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+        <div class="navbox-content">
+            <p>Welcome to our university. Make yourselves at home in this...</p>
+          </div>
+      </div>
+
+      <!-- 4) NAVBOX WITHOUT IMAGE AND PARAGRAPH (TITLE ONLY) -->
+       <div class="col-12-lg col col-12-md">
+        <h3>Rounded: Navbox with title only</h3>
+       </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white radius-md" href="/rounded-3">
+          <div class="navbox-title text-white bg-blue-primary radius-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white radius-md" href="/rounded-3">
+          <div class="navbox-title text-white bg-blue-primary radius-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+      <div class="col col-4-md col-12-xs">
+        <a class="navbox navbox--no-image bg-white radius-md" href="/rounded-3">
+          <div class="navbox-title text-white bg-blue-primary radius-md">
+            <span class="navbox-title-text">Navbox</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col-12-md">
+      <h3>Rounded image (2 per row)</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white radius-md" href="/international">
+        <div class="navbox-image radius-md">
+          <img src="../assets/1110x480.png" alt="">
+        </div>
+        <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+          <span class="navbox-title-text">International</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white radius-md" href="/visiting">
+        <div class="navbox-image radius-md">
+          <img src="../assets/1110x480.png" alt="">
+        </div>
+        <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+          <span class="navbox-title-text">Visiting</span>
+          <span class="material-icons-outlined navbox-chevron">chevron_right</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="col col-12-md">
+      <h3>Rounded: image and paragraph (2 per row)</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white radius-md" href="/undergraduate">
+        <div class="navbox-image radius-md">
+          <img src="../assets/1110x480.png" alt="">
+        </div>
+        <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+          <span class="navbox-title-text">Undergraduate</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+      <div class="navbox-content radius-bottom-md">
+        <p>Explore our undergraduate degrees and student experience.</p>
+      </div>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white radius-md" href="/postgraduate">
+        <div class="navbox-image radius-md">
+          <img src="../assets/1110x480.png" alt="">
+        </div>
+        <div class="navbox-title text-white bg-blue-primary radius-bottom-md">
+          <span class="navbox-title-text">Postgraduate</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+      <div class="navbox-content radius-bottom-md">
+        <p>Find taught and research postgraduate opportunities.</p>
+      </div>
+    </div>
+
+    <div class="col col-12-md">
+      <h3>Rounded: image and paragraph (burgundy)</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white radius-md" href="/alumni">
+        <div class="navbox-image radius-md">
+          <img src="../assets/1110x480.png" alt="">
+        </div>
+        <div class="navbox-title text-white bg-burgundy-primary radius-bottom-md">
+          <span class="navbox-title-text">Alumni</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+      <div class="navbox-content radius-bottom-md">
+        <p>Stay connected with the global St Andrews alumni community.</p>
+      </div>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--has-image bg-white radius-md" href="/support-us">
+        <div class="navbox-image radius-md">
+          <img src="../assets/1110x480.png" alt="">
+        </div>
+        <div class="navbox-title text-white bg-burgundy-primary radius-bottom-md">
+          <span class="navbox-title-text">Support us</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+      <div class="navbox-content radius-bottom-md">
+        <p>Discover how your support makes a difference.</p>
+      </div>
+    </div>
+
+    <div class="col col-12-md">
+      <h3>Rounded: title and paragraph (2 per row)</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white radius-md" href="/fees">
+        <div class="navbox-title text-white bg-blue-primary radius-md">
+          <span class="navbox-title-text">Fees and funding</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+      <div class="navbox-content">
+        <p>Information about tuition fees, funding, and scholarships.</p>
+      </div>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white radius-md" href="/apply">
+        <div class="navbox-title text-white bg-blue-primary radius-md">
+          <span class="navbox-title-text">How to apply</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+      <div class="navbox-content">
+        <p>Application guidance for all levels of study.</p>
+      </div>
+    </div>
+
+     <div class="col col-12-md">
+      <h3>Rounded: title only (2 per row)</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white radius-md" href="/open-days">
+        <div class="navbox-title text-white bg-blue-primary radius-md">
+          <span class="navbox-title-text">Open days</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white radius-md" href="/contact">
+        <div class="navbox-title text-white bg-blue-primary radius-md">
+          <span class="navbox-title-text">Contact us</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div class="col col-12-md">
+      <h3>Rounded: mixed colour pair</h3>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white radius-md" href="/wellbeing">
+        <div class="navbox-title text-white bg-green-primary radius-md">
+          <span class="navbox-title-text">Wellbeing</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+      <div class="navbox-content">
+        <p>Support services and wellbeing resources for students and staff.</p>
+      </div>
+    </div>
+
+    <div class="col col-6-md col-12-xs">
+      <a class="navbox navbox--no-image bg-white radius-md" href="/equality">
+        <div class="navbox-title text-white bg-burgundy-primary radius-md">
+          <span class="navbox-title-text">Equality and diversity</span>
+          <span class="material-icons-outlined navbox-chevron" aria-hidden="true">
+            chevron_right
+          </span>
+        </div>
+      </a>
+      <div class="navbox-content">
+        <p>Our commitment to inclusion, fairness and equality.</p>
+      </div>
+    </div>
+
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer>
     <div class="container">
-    <div class="col col-4-md col-12-sm">
-        <div class="navbox">
-            <div class="navbox-image">
-                <!-- <img src="../assets/1110x480.png" alt="Description" class="image"> -->
-            </div>
-            <div class="navbox-title">
-                <a href=""><h4>Study</h4></a>
-            </div>
+      <div class="row">
+        <div class="col col-12-lg col-12-xxs">
+          <div class="footer-text">
+            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+          </div>
+          <div class="footer-links">
+            <a href="/cookie-preferences">Cookie preferences</a>
+            <a href="/accessibility-statement">Accessibility statement</a>
+            <a href="/terms-and-conditions">Terms and conditions</a>
+            <a href="/website-help">Website help</a>
+          </div>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
     </div>
-    </div>
-    <br><hr><br>
-   <div class="container">
-            <div class="row">
-                <div class="col col-6-md col-12-sm">
-                    <h1>Navbox no paragraph or image</h1>
-                </div>
-            </div>
-        </div>
-    <div class="container">
-        <div class="col col-4-md col-12-sm">
-            <div class="navbox">
-                <div class="navbox-image">
-                    <!-- <img src="../assets/1110x480.png" alt="Description" class="image"> -->
-                </div>
-                <div class="navbox-title">
-                    <a href=""><h4>Study</h4></a>
-                </div>
-            </div>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-        </div>
-    </div>
-      <br><hr><br>
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col col-12-lg col-12-xxs">
-                        <div class="footer-text">
-                            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
-                        </div>
-                        <div class="footer-links">
-                            <a href="/cookie-preferences">Cookie preferences</a>
-                            <a href="/accessibility-statement">Accessibility statement</a>
-                            <a href="/terms-and-conditions">Terms and conditions</a>
-                            <a href="/website-help">Website help</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </footer>
+  </footer>
 </body>
 </html>

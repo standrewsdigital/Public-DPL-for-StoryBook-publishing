@@ -166,8 +166,8 @@
 	}
 
 	input[type="radio"] {
-		@include checkboxRadioBase();
 		border-radius: 50%;
+		@include checkboxRadioBase();
 
 		&::after {
 			border-radius: 100%;

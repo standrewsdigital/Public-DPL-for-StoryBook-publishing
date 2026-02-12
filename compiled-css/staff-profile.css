@@ -1,14 +1,1 @@
-.staff-profile .details .heading {
-  margin-bottom: -1.5rem;
-}
-.staff-profile .details .subheading {
-  margin-bottom: -0.5rem;
-}
-.staff-profile img.image {
-  padding: 0;
-}
-.staff-profile .contact dl dt {
-  font-weight: 700;
-}
-
-/*# sourceMappingURL=staff-profile.css.map */
+.staff-profile .details .heading{margin-bottom:-1.5rem}.staff-profile .details .subheading{margin-bottom:-0.5rem}.staff-profile img.image{padding:0}.staff-profile .contact dl dt{font-weight:700}/*# sourceMappingURL=staff-profile.css.map */

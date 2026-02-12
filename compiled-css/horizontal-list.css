@@ -1,0 +1,1 @@
+.horizontal-list{background-color:#fff;list-style:none;display:flex;padding:0;margin:0}.horizontal-list li{color:#0f0f11}.horizontal-list li:not(:last-child){margin-right:5px}.horizontal-list li:not(:last-child):after{content:"|";color:#949494;margin-left:5px}.horizontal-list li a{text-decoration:underline;color:inherit}/*# sourceMappingURL=horizontal-list.css.map */

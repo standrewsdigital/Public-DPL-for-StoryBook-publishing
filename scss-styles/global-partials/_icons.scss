@@ -1,0 +1,168 @@
+.material-icons-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 1; // Ensuring icons are centered and aligned
+    vertical-align: middle;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased; // Improve rendering on webkit browsers
+    font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}
+
+
+// _icons.scss
+
+// where the SVGs live
+$icon-path-regular: "../assets/icons";
+$icon-path-colored: "../assets/icons/icons-colored";
+
+// sizes
+$icon-size-sm: 4rem;
+$icon-size-md: 6rem;
+$icon-size-lg: 8rem;
+$icon-size-xl: 12rem;
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  // default size (if you just use .icon + a name)
+  width: $icon-size-sm;
+  height: $icon-size-sm;
+
+  &-sm {
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+  }
+
+  &-md {
+    width: $icon-size-md;
+    height: $icon-size-md;
+  }
+
+  &-lg {
+    width: $icon-size-lg;
+    height: $icon-size-lg;
+  }
+
+  &-xl {
+    width: $icon-size-xl;
+    height: $icon-size-xl;
+  }
+}
+
+// Map of icon name → file (without .svg)
+$icons: (
+  "99-bus": "99-bus",
+  "arrows": "arrows",
+  "art-palette": "art-palette",
+  "atoms": "atoms",
+  "bagpipes": "bagpipes",
+  "beach-walk": "beach-walk",
+  "bike": "bike",
+  "books": "books",
+  "briefcase": "briefcase",
+  "calculator": "calculator",
+  "calendar": "calendar",
+  "car": "car",
+  "cathedral": "cathedral",
+  "chalkboard": "chalkboard",
+  "cliffs": "cliffs",
+  "clock": "clock",
+  "coffee": "coffee",
+  "coins": "coins",
+  "cooking": "cooking",
+  "crest-book": "crest-book",
+  "crest": "crest",
+  "dragon-claw": "dragon-claw",
+  "dragon-head": "dragon-head",
+  "email-sign": "email-sign",
+  "film": "film",
+  "friends": "friends",
+  "globe": "globe",
+  "golf-tee": "golf-tee",
+  "golf": "golf",
+  "gown": "gown",
+  "graduation-scroll": "graduation-scroll",
+  "hand": "hand",
+  "handshake": "handshake",
+  "hello-languages": "hello-languages",
+  "highland-cow": "highland-cow",
+  "key": "key",
+  "laptop": "laptop",
+  "lightbulb": "lightbulb",
+  "links": "links",
+  "location-pin": "location-pin",
+  "lock": "lock",
+  "mace": "mace",
+  "medal": "medal",
+  "meditation": "meditation",
+  "microscope": "microscope",
+  "mobile": "mobile",
+  "money": "money",
+  "mountains": "mountains",
+  "music": "music",
+  "nightclub": "nightclub",
+  "number-1": "number-1",
+  "old-course-bridge": "old-course-bridge",
+  "people": "people",
+  "pie-chart": "pie-chart",
+  "pier": "pier",
+  "plane": "plane",
+  "play-button": "play-button",
+  "popper": "popper",
+  "power-button": "power-button",
+  "pub": "pub",
+  "quad": "quad",
+  "rocket": "rocket",
+  "saints-sport": "saints-sport",
+  "salvator-tower": "salvator-tower",
+  "science": "science",
+  "scotland": "scotland",
+  "seagull": "seagull",
+  "shortbread": "shortbread",
+  "speech-bubble": "speech-bubble",
+  "sport": "sport",
+  "st-andrews-castle": "st-andrews-castle",
+  "sunrise": "sunrise",
+  "sunset": "sunset",
+  "taste": "taste",
+  "teaching": "teaching",
+  "test-tubes": "test-tubes",
+  "thistle": "thistle",
+  "train": "train",
+  "trophy": "trophy",
+  "umbrella": "umbrella",
+  "up-arrow": "up-arrow",
+  "waves": "waves",
+  "weights": "weights",
+  "west-sands": "west-sands",
+  "your-union": "your-union"
+);
+
+// regular blue icons
+@each $name, $file in $icons {
+  .icon-#{$name} {
+    background-image: url("#{$icon-path-regular}/#{$file}.svg");
+  }
+}
+
+// themed coloured icons
+$icon-themes: ("burgundy", "green", "purple");
+
+@each $name, $file in $icons {
+  @each $theme in $icon-themes {
+    .icon-#{$name}-#{$theme} {
+      background-image: url("#{$icon-path-colored}/#{$file}-#{$theme}.svg");
+    }
+  }
+}

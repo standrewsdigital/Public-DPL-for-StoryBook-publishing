@@ -17,8 +17,8 @@
     }
 
     h2, h3, h4, h5, h6 {
-        @include responsive-font-size(1.44em, 0.1225em, 36em, 75em);
         margin: 0 0 10px 0;
+        @include responsive-font-size(1.44em, 0.1225em, 36em, 75em);
     }
 
     p {
@@ -30,6 +30,20 @@
     border: 5px solid $grey;
     @include options;
 }
+
+
+.callout-row > .col {
+  display: flex;           // flex layout inside each grid cell
+}
+
+
+.callout-row > .col > .callout {
+  height: 100%;            // fill the grid cell
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // optional – vertically centre text
+}
+
 
 .callout {
     border-left: 5px solid $grey;

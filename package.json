@@ -6,7 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss": "sass --watch scss-styles/:compiled-css/",
+    "scss:watch": "sass --watch --style=compressed scss-styles/:compiled-css/",
+    "scss:build": "sass --style=compressed scss-styles/:compiled-css/",
+    "dev": "npm run scss:watch",
+    "build": "npm run scss:build && npm run build-vite",
     "dev-vite": "vite",
     "build-vite": "vite build"
   },
