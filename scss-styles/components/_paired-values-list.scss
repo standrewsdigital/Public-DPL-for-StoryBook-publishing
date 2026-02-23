@@ -1,24 +1,66 @@
 .paired-values-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
 
-	display: grid;
-	grid-template-columns: auto 1fr;
+  dd {
+    margin: 0;
+  }
 
-	dd {
-		margin: 0;
-	}
+  dd,
+  dt {
+    line-height: 1.5;
+    padding: 0.2em 1.3em 0.2em 0;
+  }
 
-	dd, dt {
-		line-height: 1.5;
-		padding: 0.2em 1.3em 0.2em 0;
-	}
+  &.paired-values-list-divided {
+    dt:not(:first-child),
+    dd:not(:nth-child(2)) {
+      border-top: 1px solid $mid-grey-2;
+    }
 
-	&.paired-values-list-divided {
-		dt:not(:first-child), dd:not(:nth-child(2)) {
-			border-top: 1px solid $mid-grey-2;
-		}
-
-		dd, dt {
-			padding: 0.5em 1.5em 0.5em 0;
-		}
-	}
+    dd,
+    dt {
+      padding: 0.5em 1.5em 0.5em 0;
+    }
+  }
 }
+
+/* Make each dt+dd pair share a row background */
+.paired-values-list dt.alternate-background:nth-of-type(odd),
+.paired-values-list dt.alternate-background:nth-of-type(odd) + dd {
+  background: #f5f7fa;
+}
+
+.paired-values-list dt.alternate-background:nth-of-type(even),
+.paired-values-list dt.alternate-background:nth-of-type(even) + dd {
+  background: #ffffff;
+}
+
+/* Optional styling */
+.paired-values-name {
+  font-weight: 400;
+}
+
+.paired-values-value {
+  text-align: left;
+}
+
+        /* Make each dt+dd pair share a row background */
+        .paired-values-list dt.alternate-background:nth-of-type(odd),
+        .paired-values-list dt.alternate-background:nth-of-type(odd)+dd {
+            background: #f5f7fa;
+        }
+
+        .paired-values-list dt.alternate-background:nth-of-type(even),
+        .paired-values-list dt.alternate-background:nth-of-type(even)+dd {
+            background: #ffffff;
+        }
+
+        /* Optional styling */
+        .paired-values-name {
+            font-weight: 400;
+        }
+
+        .paired-values-value {
+            text-align: left;
+        }

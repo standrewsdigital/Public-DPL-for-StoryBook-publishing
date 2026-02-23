@@ -139,3 +139,13 @@ $font-serif: 'PT Serif', Georgia, 'Times New Roman', serif;
 .text-sans {
   font-family: $font-sans;
 }
+
+
+.heading-section::before {
+background-color:#00539b;
+content: '';
+display: block;
+height:5px;
+width:4rem;
+margin: 1em 0 0.5em 0;
+}
