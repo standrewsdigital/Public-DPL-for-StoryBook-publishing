@@ -39,6 +39,7 @@ $border-color-map: (
 /* Generate .border-[color-name] classes */
 @each $name, $color in $border-color-map {
   .border-#{$name} {
+    @extend.border-light;
     border: 1px solid $color;
   }
 }
