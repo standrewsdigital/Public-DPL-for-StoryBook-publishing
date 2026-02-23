@@ -12,6 +12,7 @@
     word-wrap: normal;
     direction: ltr;
     -webkit-font-smoothing: antialiased; // Improve rendering on webkit browsers
+    font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
 }
 
 
@@ -156,7 +157,7 @@ $icons: (
 }
 
 // themed coloured icons
-$icon-themes: (burgundy, green, purple);
+$icon-themes: ("burgundy", "green", "purple");
 
 @each $name, $file in $icons {
   @each $theme in $icon-themes {
