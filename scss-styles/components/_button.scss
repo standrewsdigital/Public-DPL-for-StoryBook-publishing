@@ -206,16 +206,15 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         transform: translateY(-50%);
         font-size: 1.25rem;
         line-height: 1;
-        transition: transform 0.2s ease-in-out;
     }
     &.up .btn:after {
-        transform: translateY(-50%) rotate(180deg);
+        content: "expand_less";
     }
     &.selected .btn:after {
-        transform: translateY(-50%) rotate(180deg);
+        content: "expand_less";
     }
     &.up.selected .btn:after {
-        transform: translateY(-50%) rotate(0deg);
+        content: "expand_more";
     }
 }
 
@@ -242,27 +241,25 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 // Dropdown open and close animations
 @media (min-width: 800px) {
     .hover-drop-list:not(.selected):hover .btn:hover:after {
-        transform: translateY(-50%) rotate(180deg);
+        content: "expand_less";
         pointer-events: all;
     }
 
     .hover-drop-list.up:not(.selected):hover .btn:hover:after {
-        top: 1rem;
-        transform: rotate(90deg);
+        content: "expand_more";
         pointer-events: all;
     }
 
     .hover-drop-list:not(.selected):hover .drop-content {
         display: block;
         animation-name: out;
-        animation-duration: 0.2s;
+        animation-duration: 0.05s;
     }
 }
 
 @media (min-width: $breakpoint-value) {
     .hover-drop-list:not(.selected):hover .btn:after {
-        top: 1rem;
-        transform: rotate(135deg);
+        content: "expand_less";
         pointer-events: all;
     }
 }

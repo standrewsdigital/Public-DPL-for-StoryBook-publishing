@@ -221,6 +221,391 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+                <div class="col col-12-md col-12-xs">
+                    <h3>Vanilla JS datatable using existing styles</h3>
+                    <table class="table table-compact table-striped table-green js-datatable">
+                        <thead>
+                            <tr>
+                                <th>Full</th>
+                                <th>Width</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>Value</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+            const TABLE_SELECTOR = "table.js-datatable";
+            const DEFAULT_PAGE_SIZE = 10;
+
+            function getCellText(td) {
+                return (td?.textContent || "").trim();
+            }
+
+            function inferType(values) {
+                // crude: if most values parse as numbers -> number, else string
+                let num = 0;
+                for (const v of values) {
+                const n = parseFloat(v.replace(/,/g, ""));
+                if (!Number.isNaN(n) && v !== "") num++;
+                }
+                return num >= Math.max(2, Math.floor(values.length * 0.6)) ? "number" : "string";
+            }
+
+            function compare(a, b, type, dir) {
+                if (type === "number") {
+                const na = parseFloat(a.replace(/,/g, ""));
+                const nb = parseFloat(b.replace(/,/g, ""));
+                const va = Number.isNaN(na) ? -Infinity : na;
+                const vb = Number.isNaN(nb) ? -Infinity : nb;
+                return dir === "asc" ? va - vb : vb - va;
+                }
+                // string
+                const va = a.toLowerCase();
+                const vb = b.toLowerCase();
+                if (va < vb) return dir === "asc" ? -1 : 1;
+                if (va > vb) return dir === "asc" ? 1 : -1;
+                return 0;
+            }
+
+            function enhanceTable(table) {
+                const thead = table.querySelector("thead");
+                const tbody = table.querySelector("tbody");
+                if (!thead || !tbody) return;
+
+                const rows = Array.from(tbody.querySelectorAll("tr"));
+                if (!rows.length) return;
+
+                const headers = Array.from(thead.querySelectorAll("th"));
+                if (!headers.length) return;
+
+                // Build controls wrapper
+                const wrapper = document.createElement("div");
+                wrapper.className = "datatable";
+                table.parentNode.insertBefore(wrapper, table);
+                wrapper.appendChild(table);
+
+                const controls = document.createElement("div");
+                controls.className = "datatable__controls";
+                controls.style.display = "flex";
+                controls.style.gap = "0.75rem";
+                controls.style.alignItems = "center";
+                controls.style.flexWrap = "wrap";
+                controls.style.marginBottom = "0.75rem";
+                wrapper.insertBefore(controls, table);
+
+                // Search
+                const search = document.createElement("input");
+                search.type = "search";
+                search.className = "datatable__search";
+                search.placeholder = "Search…";
+                search.setAttribute("aria-label", "Search table");
+                controls.appendChild(search);
+
+                // Page size
+                const pageSize = document.createElement("select");
+                pageSize.className = "datatable__pagesize";
+                pageSize.setAttribute("aria-label", "Rows per page");
+                [10, 25, 50, 100].forEach(n => {
+                const opt = document.createElement("option");
+                opt.value = String(n);
+                opt.textContent = `${n} rows`;
+                if (n === DEFAULT_PAGE_SIZE) opt.selected = true;
+                pageSize.appendChild(opt);
+                });
+                controls.appendChild(pageSize);
+
+                // Pager
+                const pager = document.createElement("div");
+                pager.className = "datatable__pager";
+                pager.style.display = "flex";
+                pager.style.gap = "0.5rem";
+                pager.style.alignItems = "center";
+                controls.appendChild(pager);
+
+                const prevBtn = document.createElement("button");
+                prevBtn.type = "button";
+                prevBtn.textContent = "Prev";
+                const nextBtn = document.createElement("button");
+                nextBtn.type = "button";
+                nextBtn.textContent = "Next";
+                const pageInfo = document.createElement("span");
+                pageInfo.className = "datatable__pageinfo";
+                pager.appendChild(prevBtn);
+                pager.appendChild(pageInfo);
+                pager.appendChild(nextBtn);
+
+                // State
+                let filteredRows = rows.slice();
+                let currentPage = 1;
+                let sortState = { col: -1, dir: "asc", type: "string" };
+
+                // Infer types per column based on current rows
+                const colTypes = headers.map((_, colIdx) => {
+                const vals = rows.map(r => getCellText(r.children[colIdx]));
+                return inferType(vals);
+                });
+
+                // Make headers sortable
+                headers.forEach((th, colIdx) => {
+                th.style.cursor = "pointer";
+                th.setAttribute("tabindex", "0");
+                th.setAttribute("role", "button");
+                th.setAttribute("aria-label", `Sort by ${getCellText(th) || "column"}`);
+
+                function doSort() {
+                    const nextDir = (sortState.col === colIdx && sortState.dir === "asc") ? "desc" : "asc";
+                    sortState = { col: colIdx, dir: nextDir, type: colTypes[colIdx] };
+
+                    filteredRows.sort((ra, rb) => {
+                    const a = getCellText(ra.children[colIdx]);
+                    const b = getCellText(rb.children[colIdx]);
+                    return compare(a, b, sortState.type, sortState.dir);
+                    });
+
+                    currentPage = 1;
+                    render();
+                }
+
+                th.addEventListener("click", doSort);
+                th.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    doSort();
+                    }
+                });
+                });
+
+                function applyFilter() {
+                const q = search.value.trim().toLowerCase();
+                if (!q) {
+                    filteredRows = rows.slice();
+                } else {
+                    filteredRows = rows.filter(r => r.textContent.toLowerCase().includes(q));
+                }
+                currentPage = 1;
+                render();
+                }
+
+                function render() {
+                const size = parseInt(pageSize.value, 10) || DEFAULT_PAGE_SIZE;
+                const total = filteredRows.length;
+                const totalPages = Math.max(1, Math.ceil(total / size));
+                currentPage = Math.min(currentPage, totalPages);
+
+                // Clear tbody
+                tbody.innerHTML = "";
+
+                // Slice page
+                const start = (currentPage - 1) * size;
+                const pageRows = filteredRows.slice(start, start + size);
+                for (const r of pageRows) tbody.appendChild(r);
+
+                // Update pager
+                pageInfo.textContent = `Page ${currentPage} of ${totalPages} (${total} rows)`;
+                prevBtn.disabled = currentPage <= 1;
+                nextBtn.disabled = currentPage >= totalPages;
+                }
+
+                // Events
+                search.addEventListener("input", applyFilter);
+                pageSize.addEventListener("change", () => { currentPage = 1; render(); });
+                prevBtn.addEventListener("click", () => { currentPage--; render(); });
+                nextBtn.addEventListener("click", () => { currentPage++; render(); });
+
+                // Initial render
+                render();
+            }
+
+            function init() {
+                document.querySelectorAll(TABLE_SELECTOR).forEach(enhanceTable);
+            }
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", init);
+            } else {
+                init();
+            }
+            })();
+        </script>
+
     <!-- Footer -->
     <footer>
         <div class="container">
