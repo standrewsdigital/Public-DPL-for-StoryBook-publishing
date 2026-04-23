@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Landing Page</title>
+    <link rel="stylesheet" href="https://www.st-andrews.ac.uk/~cdn/dpl/new/1.4.1/main.css">
+    <link rel="stylesheet" href="https://www.st-andrews.ac.uk/~cdn/dpl/new/1.4.1/page-title-with-intro.css">
+    <link rel="stylesheet" href="https://www.st-andrews.ac.uk/~cdn/dpl/new/1.4.1/featured-media.css">
+    <link rel="stylesheet" href="https://www.st-andrews.ac.uk/~cdn/dpl/new/1.4.1/secondary-call-to-action.css">
+</head>
+<body>
+
+<style>
+    .bubble {
+        box-shadow: rgba(0, 0, 0, .1) 0 5px 10px 0, rgba(0, 0, 0, .16) 0 0 0 1px;
+        border-radius: 10px;
+        padding: 2em;
+        margin: 0 auto;
+        background: #fafafa;
+    // stretch is Chromium only, everything else uses -webkit-fill-available
+    // https://caniuse.com/mdn-css_properties_height_stretch
+    height: stretch;
+        height: -webkit-fill-available;
+
+        &:has(>.bubble-inline) {
+            padding: 1em;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-auto-flow: column;
+            gap: 0;
+        }
+
+        &.inline-hug {
+            &:has(>.bubble-inline) {
+                width: fit-content;
+            }
+        }
+
+        p, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    .bubble-inline {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        padding: 0 1em;
+
+        &:not(:last-child) {
+            border-width: 2px;
+            border-style: solid;
+            border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 15%, rgba(222, 222, 222, 1) 35%, rgba(222, 222, 222, 1) 65%, rgba(255, 255, 255, 0) 85%) 5% 100% 5% 0;
+        }
+
+        &.text-left {
+            text-align: left;
+        }
+
+        p, h2, h3, h4, h5, h6, dl {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+
+        dl {
+            text-align: center;
+
+            dt, dd {
+                display: block;
+                margin: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: map-get($breakpoints, 'lg')) {
+        .bubble {
+            &:has(>.bubble-inline) {
+                grid-template-columns: 1fr 1fr;
+                grid-auto-flow: row;
+                grid-gap: 1em 0;
+
+                &:has(> :last-child:nth-child(1)) {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            & .bubble-inline {
+                &:nth-child(2n) {
+                    border-right: none;
+                }
+
+                &:is(:last-child:nth-child(3)) {
+                    grid-column: 1 / -1;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: map-get($breakpoints, 'md')) {
+
+    }
+
+    @media screen and (max-width: map-get($breakpoints, 'sm')) {
+        .bubble {
+            &:has(>.bubble-inline) {
+                grid-template-columns: 1fr;
+
+                & .bubble-inline {
+                    &:nth-child(2n+1) {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        .bubble:not(:has(> .bubble-inline)) {
+            transition: box-shadow 1s ease;
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, .16) 0 4px 16px 0, rgba(0, 0, 0, .06) 0 0 0 1px;
+                transition: box-shadow 0.2s ease;
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .bubble {
+            --page-text-color: #000000;
+            --link-color: #0071b3;
+            --link-hover-color: #005586;
+            --link-active-color: #c60c46;
+            --link-focus-color: #202024;
+            --link-focus-background: #ffb400;
+            --link-focus-outline: 3px solid #ffb400;
+
+            color: var(--page-text-color);
+
+            box-shadow: none;
+        }
+    }
+
+</style>
+<main id="content-begin">
+    <header class="container">
+        <div class="row">
+            <div class="col-12 header-content">
+                <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
+                     alt="University of St Andrews Logo" class="logo">
+            </div>
+        </div>
+    </header>
+
+
+    <div class="category-header">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-lg col-12-xxs">
+                    <div class="my-lg text-serif text-lg"><a href="#">PG Landing Page</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <nav aria-label="Breadcrumbs" class="breadcrumbs">
+                    <ul>
+                        <li><a href="#">University</a></li>
+                        <li><a href="#">Study at St Andrews</a></li>
+                        <li><span aria-current="page">Postgraduate</span></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-intro">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="page-intro page-intro--has-media"> -->
+                <div class="col col-8-md  main-content text">
+                    <h2 class="heading">Postgraduate study at St Andrews</h2>
+                    <p class="lead">Build on your skills and knowledge to become expert in your chosen field.</p>
+                    <p>At the University of St Andrews, you will have access to cutting-edge resources, academic talks
+                        and conferences, sports clubs and societies, and networking opportunities.</p>
+                    <p>At St Andrews, you'll find a truly diverse and vibrant community with nearly 2000 postgraduate
+                        students from more than 130 countries.</p>
+                </div>
+
+                <div class="col col-4-md media main-content">
+                    <img class="image" src="https://www.st-andrews.ac.uk/dpl/1.27.3/assets/docs/images/placeholders/750x500.png" alt="750 by 500px place holder image"/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bubble -->
+    <div class="container my-xl">
+        <div class="row">
+            <div class="col col-6-lg col-12-sm">
+                <div class="bubble">
+                    <h3>What is masters study?</h3>
+                    <div class="bubble-content">
+                        <p>In a taught postgraduate or masters programme, you would typically have lectures, seminars
+                            and assessments. Depending on the length of your studies, you could achieve an MLitt, MSc,
+                            MRes, PGDip or PGCert.</p>
+                        <p><a class="btn action lg"
+                              href="https://www.st-andrews.ac.uk/study/postgraduate/">Masters study</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6-lg col-12-sm">
+                <div class="bubble">
+                    <h3>What is postgraduate research? </h3>
+                    <div class="bubble-content">
+                        <p>Postgraduate research focuses on an independent research project where you work closely with
+                            academic supervisors to create a substantial piece of work which is examined at the end of
+                            the programme.</p>
+                        <p><a class="btn action lg"
+                              href="https://www.st-andrews.ac.uk/study/postgraduate-research/">Postgraduate research</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured media -->
+    <div class="container">
+        <div class="row">
+            <div class="col col-6-lg col-12-xs">
+                <h3>Considering a career change or online course?</h3>
+                <p>Switch fields with a <strong>conversion course</strong> or develop your professional skills with our
+                    self-paced <strong>online programmes and short courses</strong>.</p>
+                <p>
+                    <a class="btn lg action" href="https://www.st-andrews.ac.uk/study/postgraduate/conversion-courses/">Discover
+                        conversion courses</a>
+                    <a class="btn lg action" href="https://www.st-andrews.ac.uk/study/online/">View
+                        online courses</a>
+                </p>
+            </div>
+            <div class="col col-6-lg col-12-xs">
+                <figure>
+                    <img src="https://www.st-andrews.ac.uk/assets/university/subjects/images/computer-science.jpg"
+                         alt="Lecturer in computer sciences lecture"/>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bubble -->
+    <div class="container my-xl">
+        <div class="row">
+            <div class="col col-6-lg col-12-sm">
+                <div class="bubble">
+                    <h3>Career support</h3>
+                    <div class="bubble-content">
+                        <p>Access to tailored <a href="https://www.st-andrews.ac.uk/careers/">career advice and job
+                            searching workshops</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6-lg col-12-sm">
+                <div class="bubble">
+                    <h3>Scholarships and funding</h3>
+                    <div class="bubble-content">
+                        <p>£XX, XXX awarded in <a href="https://www.st-andrews.ac.uk/study/scholarships/">postgraduate
+                            scholarships</a> and bursaries in the last X years based on academic excellence or financial
+                            need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondary CTA -->
+    <section class="secondary-call bg-blue-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-xss">
+                    <h3 class="call-heading">Begin your next career chapter at the University of St Andrews</h3>
+                    <p>Find out more about our taught Masters degrees and research programmes.</p>
+                    <div class="call-buttons">
+                        <a href="https://www.st-andrews.ac.uk/study/postgraduate/" class="btn lg action">Masters
+                            study</a>
+                        <a href="https://www.st-andrews.ac.uk/study/postgraduate-research/" class="btn white lg action">Postgraduate
+                            research</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-lg col-12-xxs">
+                    <div class="footer-text">
+                        © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                    </div>
+                    <div class="footer-links">
+                        <a href="/cookie-preferences">Cookie preferences</a>
+                        <a href="/accessibility-statement">Accessibility statement</a>
+                        <a href="/terms-and-conditions">Terms and conditions</a>
+                        <a href="/website-help">Website help</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</main>
+</body>
+</html>
