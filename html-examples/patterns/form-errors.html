@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form errors</title>
+    <link rel="stylesheet" href="../../compiled-css/main.css">
+
+</head>
+
+<body>
+    <!--Header-->
+    <header class="container">
+        <div class="col col-12-lg col-12-xxs header-content">
+            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
+                alt="University of St Andrews Logo" class="logo">
+        </div>
+    </header>
+
+    <!--Content-->
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <h1>Form errors</h1>
+                <h2>Errors on input fields</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <div class="alert danger" role="alert">
+                    <h5>Incomplete personal details</h5>
+                    <p>Optional description of errors and how ro correct them</p>
+                    <ul>
+                        <li class="text-red-primary">
+                            <u>
+                                Please enter your full name.
+                            </u>
+                        </li>
+                        <li class="text-red-primary">
+                            <u>
+                                Please enter a valid phone number.
+                            </u>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <h2>Your personal details</h2>
+                <div class="callout danger">
+                    <fieldset class="form-fieldset">
+                        <legend><h2 class="form-heading">Full name</h2></legend>
+                        <div class="form-group">
+                            <!-- <label for="text-input-id" class="form-input-label">Full name</label> -->
+                            <p>As shown on your birth certificate or passport</p>
+                            <p class="text-red-primary"><b>Please enter your full name</b></p>
+                            <input type="text" class="form-input error" id="text-input-id" name="text-input" required>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="callout danger">
+                    <fieldset class="form-fieldset">
+                        <legend><h2 class="form-heading">Telephone number</h2></legend>
+                        <div class="form-group">
+                            <!-- <label for="text-input-id" class="form-input-label">Phone number</label> -->
+                            <p class="text-red-primary"><b>Please enter a valid telephone number using only digits</b></p>
+                            <input type="text" class="form-input error" id="text-input-id" name="text-input" required>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <h2>Errors on radio buttons</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <div class="alert danger" role="alert">
+                    <h5>Incomplete personal details</h5>
+                    <p>Optional description of errors and how ro correct them</p>
+                    <ul>
+                        <li class="text-red-primary">
+                            <u>
+                                Please confirm your personal details are correct and up-to-date.
+                            </u>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <h2>Example form</h2>
+                <div class="callout danger">
+                    <div class="form-group">
+                        <fieldset class="form-fieldset">
+                            <legend>Check your personal details</legend>
+                            <p id="example-stacked-radio-help">Are your personal details correct and up-to-date?</p>
+                            <p class="text-red-primary"><b>Please select an option</b></p>
+                            <ul>
+                                <li>
+                                    <input type="radio" id="radio-stack-option1-id" name="radio-stack-option" value="Yes, my personal details are correct">
+                                    <label for="radio-stack-option1-id">Yes, my personal details are correct</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="radio-stack-option2-id" name="radio-stack-option" value="No, some details are wrong or have changed">
+                                    <label for="radio-stack-option2-id">No, some details are wrong or have changed</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </div>
+                <a type="button" class="btn" href="#">Continue</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-lg col-12-xxs">
+                    <div class="footer">
+                        <div class="footer-text">
+                            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                        </div>
+                        <div class="footer-links">
+                            <a href="/cookie-preferences">Cookie preferences</a>
+                            <a href="/accessibility-statement">Accessibility statement</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/website-help">Website help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
