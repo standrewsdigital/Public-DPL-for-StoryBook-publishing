@@ -1,0 +1,411 @@
+ <!-- Must replace tags with actual tag component. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event list</title>
+    <link rel="stylesheet" href="../../compiled-css/main.css">
+    <link rel="stylesheet" href="../../compiled-css/event-list.css">
+</head>
+<body>
+    <header class="container">
+        <div class="row">
+        <div class="col col-12-lg col-12-xxs header-content">
+            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+        </div>
+    </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h1>Event list</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>Basic event template</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Name of the event</h3>
+                            <b>Short description or important mention</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>Date</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>Time</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Location</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-capacity" data-icon="group"></dt>
+                                    <dd>Capacity</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-price" data-icon="payments"></dt>
+                                    <dd>Ticket price</dd>
+                                </div>
+                                <p> Any other information related to the event</p>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>Single event list</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Medieval History Lecture Series</h3>
+                            <b>Hosted by the Scottish History Society</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>School of History, Room 101</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-capacity" data-icon="group"></dt>
+                                    <dd>80 seats</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-price" data-icon="payments"></dt>
+                                    <dd>£10</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>Event with tag</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <!-- Event with a tag (e.g., Cancelled) -->
+                        <div class="event">
+                            <div class="event-tag">Cancelled</div>
+                            <h3>Charity Bake Sale</h3>
+                            <b>Vegan and vegetarian friendly.</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>10th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>1:00 PM - 8:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Student Union Main Hall</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-price" data-icon="payments"></dt>
+                                    <dd>Free</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>Event with link</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <div class="event clickable" onclick="location.href='#';">
+                            <h3><a href="#">Lecture on Quantum Computing</a></h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-capacity" data-icon="group"></dt>
+                                    <dd>50 People</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-price" data-icon="payments"></dt>
+                                    <dd>Free</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>List of simple events</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Study abroad fair</h3>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>Friday 11th October 2024 to Monday 14th of October</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                                <p>Are you in second year and thinking about studying abroad in 2019-2020? If so, come along to our Study Abroad Fair where there will be a presentation followed by a fair during which you can meet other students who have studied abroad</p>
+                            </dl>
+                        </div>
+                        <!-- Event with a tag (e.g., Cancelled) -->
+                        <div class="event">
+                            <div class="event-tag">Cancelled</div>
+                            <h3>Environmental Science Symposiums</h3>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>28th September 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>9:00 AM - 4:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Gateway Building, Lecture Theatre 3</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-capacity" data-icon="group"></dt>
+                                    <dd>200 people</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Philosophy Debate: Ethics in AI</h3>
+                            <b>Open to non-students</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>9th October 2025</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Parliament Hall</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-price" data-icon="payments"></dt>
+                                    <dd>Free</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>Annual Alumni Dinner</h3>
+                            <b>Invite only</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>1st December 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>7:00 PM - 10:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Lower College Hall</dd>
+                                </div>
+                                <p>Free wine tasting courtesy of XYZ</p>
+                            </dl>
+                        </div>
+                        <!-- Regular Event -->
+                        <div class="event">
+                            <h3>International Relations Career Fair</h3>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>19th November 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>All day</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Buchanan building, room 217</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <h2>List of link events</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-12-xxs col-12-lg">
+                    <div class="event-list">
+                        <div class="event clickable" onclick="location.href='#';">
+                            <h3><a href="#">St Andrews film festival</a></h3>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th March 2025</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>All day</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Byre Theatre</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-price" data-icon="payments"></dt>
+                                    <dd>£30</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="event clickable" onclick="'#';">
+                            <h3><a href="#">Winter Concert by University Choir</a></h3>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>12th December 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>8:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>St Salvator's Chapel</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-capacity" data-icon="group"></dt>
+                                    <dd>Almost sold out</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-price" data-icon="payments"></dt>
+                                    <dd>£8</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="event clickable" onclick="location.href='#';">
+                            <div class="event-tag">Cancelled</div>
+                            <h3><a href="#">Lecture on Quantum Computing</a></h3>
+                            <b>Cancelled due to black hole</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>4th January 2025</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>All day</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Physics Auditorium</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-capacity" data-icon="group"></dt>
+                                    <dd>50 People</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="event clickable" onclick="location.href='#';">
+                            <h3><a href="#">Creative Writing Workshop</a></h3>
+                            <b>Entry is free</b>
+                            <dl class="event-details">
+                                <div class="event-item">
+                                    <dt class="event-date" data-icon="event"></dt>
+                                    <dd>1st October 2024</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-time" data-icon="schedule"></dt>
+                                    <dd>10:00 AM - 12:00 PM</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-place" data-icon="location_on"></dt>
+                                    <dd>Online, on Teams</dd>
+                                </div>
+                                <div class="event-item">
+                                    <dt class="event-price" data-icon="payments"></dt>
+                                    <dd>£20</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-lg col-12-xxs">
+                        <div class="footer-text">
+                            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                        </div>
+                        <div class="footer-links">
+                            <a href="/cookie-preferences">Cookie preferences</a>
+                            <a href="/accessibility-statement">Accessibility statement</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/website-help">Website help</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
