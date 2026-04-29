@@ -10,6 +10,46 @@
   &-primary { background-color: $blue-primary; }
   &-secondary { background-color: $light-blue-primary; }
 
+  &-green { background-color: $green-primary; }
+  &-green-secondary { background-color: $green-25-tint; }
+
+  &-burgundy { background-color: $burgundy-primary; }
+  &-burgundy-secondary { background-color: $burgundy-25-tint; }
+
+  &-purple { background-color: $purple-primary; }
+  &-purple-secondary { background-color: $purple-25-tint; }
+
+  &-primary .navigation-bar-toggle:hover,
+  &-primary .navigation-bar-toggle:focus {
+    background-color: $blue-25-shade;
+  }
+
+  &-secondary .navigation-bar-toggle:hover,
+  &-secondary .navigation-bar-toggle:focus {
+    background-color: $light-blue-25-shade;
+  }
+
+  &-green .navigation-bar-toggle:hover,
+  &-green .navigation-bar-toggle:focus,
+  &-green-secondary .navigation-bar-toggle:hover,
+  &-green-secondary .navigation-bar-toggle:focus {
+    background-color: $green-25-shade;
+  }
+
+  &-burgundy .navigation-bar-toggle:hover,
+  &-burgundy .navigation-bar-toggle:focus,
+  &-burgundy-secondary .navigation-bar-toggle:hover,
+  &-burgundy-secondary .navigation-bar-toggle:focus {
+    background-color: $burgundy-25-shade;
+  }
+
+  &-purple .navigation-bar-toggle:hover,
+  &-purple .navigation-bar-toggle:focus,
+  &-purple-secondary .navigation-bar-toggle:hover,
+  &-purple-secondary .navigation-bar-toggle:focus {
+    background-color: $purple-25-shade;
+  }
+
   .row > .navigation-bar-inner {
     width: 100%;
     grid-column: 1 / -1;
@@ -45,7 +85,7 @@
     &:focus {
       outline: none;
       text-decoration: underline;
-      background-color: $blue-25-shade;
+      background-color: transparent;
       box-shadow: inset 0 0 0 1px $orange-primary;
     }
 
@@ -74,6 +114,46 @@
     &.primary-nav { background-color: $blue-primary; }
     &.secondary-nav { background-color: $light-blue-primary; }
 
+    &.green-nav { background-color: $green-primary; }
+    &.green-secondary-nav { background-color: $green-25-tint; }
+
+    &.burgundy-nav { background-color: $burgundy-primary; }
+    &.burgundy-secondary-nav { background-color: $burgundy-25-tint; }
+
+    &.purple-nav { background-color: $purple-primary; }
+    &.purple-secondary-nav { background-color: $purple-25-tint; }
+
+    &.primary-nav li a:hover,
+    &.primary-nav li a:focus {
+      background-color: $blue-25-shade;
+    }
+
+    &.secondary-nav li a:hover,
+    &.secondary-nav li a:focus {
+      background-color: $light-blue-25-shade;
+    }
+
+    &.green-nav li a:hover,
+    &.green-nav li a:focus,
+    &.green-secondary-nav li a:hover,
+    &.green-secondary-nav li a:focus {
+      background-color: $green-25-shade;
+    }
+
+    &.burgundy-nav li a:hover,
+    &.burgundy-nav li a:focus,
+    &.burgundy-secondary-nav li a:hover,
+    &.burgundy-secondary-nav li a:focus {
+      background-color: $burgundy-25-shade;
+    }
+
+    &.purple-nav li a:hover,
+    &.purple-nav li a:focus,
+    &.purple-secondary-nav li a:hover,
+    &.purple-secondary-nav li a:focus {
+      background-color: $purple-25-shade;
+    }
+
     li {
       text-align: center;
 
@@ -84,7 +164,7 @@
 
         &:hover {
           text-decoration: underline;
-          background-color: $blue-25-shade;
+          background-color: transparent;
         }
 
         &:active,

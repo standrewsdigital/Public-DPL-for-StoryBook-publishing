@@ -4,29 +4,62 @@
 // Local variable needed
 $page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 
-$category-header-background: $light-blue-primary;
+$category-header-background: $blue-primary;
 $category-header-color: $white;
-$category-header-active: var(--link-focus-color);
-$category-header-selected: var(--link-focus-background);
+$category-header-active: $white;
+$category-header-selected: $blue-25-shade;
 $category-font-family: $page-font-family;
 
 .category-header {
-    background-color: $category-header-background; // Blue background
-    color: $category-header-color; // White text
+    background-color: $category-header-background;
+    color: $category-header-color;
     font-family: $category-font-family;
 
     a {
-      color: inherit; // Inherit white color from parent
-      text-decoration: none; // No underline by default
+      color: inherit;
+      text-decoration: none;
+      padding: 0.1rem 0.2rem;
+      border-radius: 0.2rem;
 
-      // Hover effect
       &:hover {
-        text-decoration: underline; // Underline on hover
+        text-decoration: underline;
+        background-color: $category-header-selected;
       }
 
-      &:active, &.selected {
-        color: $category-header-active; // Text turns black
-        background-color: $category-header-selected; // Background behind text turns yellow
+      &:active,
+      &.selected {
+        color: $category-header-active;
+        background-color: $category-header-selected;
+      }
+    }
+
+    &.green {
+      background-color: $green-primary;
+
+      a:hover,
+      a:active,
+      a.selected {
+        background-color: $green-25-shade;
+      }
+    }
+
+    &.burgundy {
+      background-color: $burgundy-primary;
+
+      a:hover,
+      a:active,
+      a.selected {
+        background-color: $burgundy-25-shade;
+      }
+    }
+
+    &.purple {
+      background-color: $purple-primary;
+
+      a:hover,
+      a:active,
+      a.selected {
+        background-color: $purple-25-shade;
       }
     }
   }

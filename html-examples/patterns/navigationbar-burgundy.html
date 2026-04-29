@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navigation Bar Burgundy</title>
+  <link rel="stylesheet" href="../../compiled-css/main.css" />
+</head>
+<body>
+  <header class="container">
+    <div class="row">
+      <div class="col col-12-lg col-12-xxs header-content">
+        <img
+          src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
+          alt="University of St Andrews Logo"
+          class="logo"
+        />
+      </div>
+    </div>
+  </header>
+
+  <div class="category-header burgundy">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12-lg col-12-xxs">
+          <div class="my-lg text-serif text-lg"><a href="#">Category title</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Navigation -->
+<nav class="navigation-bar navigation-bar-burgundy" aria-label="Main menu" data-nav>
+  <div class="container">
+    <div class="row">
+      <div class="navigation-bar-inner">
+        <button
+          class="navigation-bar-toggle text-base"
+          type="button"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          Navigation
+        </button>
+
+        <ul
+          class="navigation-bar-nav burgundy-nav my-xs"
+          id="primary-nav"
+          data-collapsible="primary"
+        >
+          <li><a href="#">Undergraduate</a></li>
+          <li><a href="#">Postgraduate</a></li>
+          <li><a href="#">Non-degree courses</a></li>
+          <li><a href="#">Study abroad</a></li>
+          <li><a href="#">International</a></li>
+          <li><a href="#">Access and outreach</a></li>
+          <li><a href="#">Courses</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Secondary Navigation -->
+<nav class="navigation-bar navigation-bar-burgundy-secondary" data-nav>
+  <div class="container">
+    <div class="row">
+      <div class="navigation-bar-inner">
+        <button
+          class="navigation-bar-toggle text-base"
+          type="button"
+          aria-controls="secondary-nav"
+          aria-expanded="false"
+        >
+          Section navigation
+        </button>
+
+        <ul
+          class="navigation-bar-nav burgundy-secondary-nav my-xs"
+          id="secondary-nav"
+          data-collapsible="secondary"
+        >
+          <li><a href="#">Study options</a></li>
+          <li><a href="#">Why St Andrews?</a></li>
+          <li><a href="#">Fees and funding</a></li>
+          <li><a href="#">Accommodation</a></li>
+          <li><a href="#">Your future</a></li>
+          <li><a href="#">Meet us</a></li>
+          <li><a href="#">How to Apply</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-8-md col-12-xxs main-content">
+        <h1>This is a Heading</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="col col-4-md col-12-xxs main-content">
+        <h1>Another Heading</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col col-12-lg col-12-xxs">
+          <div class="footer-text">
+            © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
+          </div>
+          <div class="footer-links">
+            <a href="/cookie-preferences">Cookie preferences</a>
+            <a href="/accessibility-statement">Accessibility statement</a>
+            <a href="/terms-and-conditions">Terms and conditions</a>
+            <a href="/website-help">Website help</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    var LG_MIN = 992;
+
+    function isLgUp() {
+      return window.matchMedia("(min-width: " + LG_MIN + "px)").matches;
+    }
+
+    function getList(navEl) {
+      return navEl.querySelector(".navigation-bar-nav");
+    }
+
+    function setOpen(navEl, open) {
+      var btn = navEl.querySelector(".navigation-bar-toggle");
+      var list = getList(navEl);
+
+      if (open) navEl.classList.add("is-open");
+      else navEl.classList.remove("is-open");
+
+      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+
+      // Desktop: reset
+      if (!list) return;
+      if (isLgUp()) {
+        list.style.height = "";
+        return;
+      }
+
+      // Mobile: animate height
+      if (open) {
+        // set to explicit px height so it transitions
+        list.style.height = list.scrollHeight + "px";
+      } else {
+        list.style.height = "0px";
+      }
+    }
+
+    function sync(navEl) {
+      var btn = navEl.querySelector(".navigation-bar-toggle");
+      var list = getList(navEl);
+      if (!btn || !list) return;
+
+      if (isLgUp()) {
+        // on desktop everything is just visible & wraps naturally
+        navEl.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+        list.style.height = "";
+      } else {
+        // on mobile, if aria says expanded true, ensure height is correct
+        var expanded = btn.getAttribute("aria-expanded") === "true";
+        if (expanded) {
+          navEl.classList.add("is-open");
+          list.style.height = list.scrollHeight + "px";
+        } else {
+          navEl.classList.remove("is-open");
+          list.style.height = "0px";
+        }
+      }
+    }
+
+    // init
+    document.querySelectorAll("[data-nav]").forEach(function (navEl) {
+      var btn = navEl.querySelector(".navigation-bar-toggle");
+      if (!btn) return;
+
+      // Default collapsed on mobile (your HTML has aria-expanded="false")
+      // Ensure correct height on load
+      sync(navEl);
+
+      btn.addEventListener("click", function () {
+        if (isLgUp()) return;
+
+        var currentlyExpanded = btn.getAttribute("aria-expanded") === "true";
+        setOpen(navEl, !currentlyExpanded);
+      });
+    });
+
+    // Re-sync on resize / breakpoint change
+    var mq = window.matchMedia("(min-width: " + LG_MIN + "px)");
+    mq.addEventListener("change", function () {
+      document.querySelectorAll("[data-nav]").forEach(sync);
+    });
+
+    // Also recalc heights when resizing within mobile (wrap changes scrollHeight)
+    var resizeTimer = null;
+    window.addEventListener("resize", function () {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function () {
+        if (!isLgUp()) {
+          document.querySelectorAll("[data-nav]").forEach(function (navEl) {
+            var btn = navEl.querySelector(".navigation-bar-toggle");
+            var list = getList(navEl);
+            if (!btn || !list) return;
+
+            if (btn.getAttribute("aria-expanded") === "true") {
+              list.style.height = list.scrollHeight + "px";
+            }
+          });
+        }
+      }, 80);
+    });
+  })();
+</script>
+
+</body>
+</html>
