@@ -1,18 +1,12 @@
-/* ==========================================================================
-   Pattern: Featured Course Card
-   ========================================================================== */
-
 .course-card {
-  background-color: #ffffff;
-  border: 1px solid #dedede;
-  border-radius: 24px; /* Restored: Rounded corners for the entire card */
-  overflow: hidden; /* Crucial: Ensures the top image clips to the rounded corners */
+  border-radius: 24px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 2px 8px rgba(32, 32, 36, 0.08);
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform 0.25s cubic-bezier(0.2, 0, 0, 1),
+    box-shadow 0.25s cubic-bezier(0.2, 0, 0, 1);
   height: 100%;
 
   &:hover {
@@ -28,12 +22,16 @@
     text-decoration: none;
     position: relative;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 
   &__image-wrapper {
     width: 100%;
     aspect-ratio: 4 / 3;
-    background-color: #f0f0f0;
     overflow: hidden;
     position: relative;
 
@@ -42,31 +40,23 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      /* Removed the transition property entirely so the image is 100% static */
     }
   }
 
-  /* Delivery Tags */
-  &__tag {
+  /* Delivery Tags inside the image (Top Left) */
+  &__tag--delivery {
     position: absolute;
     top: 16px;
     left: 16px;
     z-index: 5;
-    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     padding: 6px 14px;
+    border-radius: 100px;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.2;
-    border-radius: 100px; /* Restored: Pill shape for the tags */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-
-    &--online {
-      background-color: #00853f;
-    }
-
-    &--inperson {
-      background-color: #7b439a;
-    }
+    display: inline-flex;
+    align-items: center;
   }
 
   &__content {
@@ -74,31 +64,94 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    gap: 16px;
   }
 
   &__school {
     font-size: 14px;
     font-weight: 700;
-    color: #6a6a6b;
-    margin-bottom: 8px;
+    line-height: 1.2;
+    align-self: flex-start;
+    margin-bottom: -8px;
   }
 
   &__title {
-    margin: 0 0 24px 0;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.3;
-    color: #202024;
   }
 
   &__footer {
     margin-top: auto;
 
+    /* Override DPL specific actions for the button */
     .btn.action {
-      display: inline-block;
-      width: auto;
-      margin-bottom: 0;
-      border-radius: 12px; /* Restored: Rounded corners for the action button */
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 12px;
+
+      /* Reset any jumping or offset properties from DPL */
+      top: 0 !important;
+      margin-bottom: 0 !important;
+      transform: none !important;
+      transition: none !important;
+
+      /* Typography Scale Up */
+      font-size: 1.25rem !important;
+      padding: 12px 24px !important;
+      text-decoration: none !important;
+
+      /* Base static button colors (overriding global .btn.action) */
+      background-color: #0071b3;
+      border-color: #0071b3;
+      border-bottom: 3px solid #005586;
+      color: #ffffff;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .card-footer-text {
+        text-decoration: none;
+      }
+
+      /* Hover States */
+      &:hover,
+      &:focus-visible {
+        background-color: #005586 !important;
+        border-color: #005586 !important;
+        border-bottom-color: #003e74 !important;
+        text-decoration: none !important;
+
+        .card-footer-text {
+          text-decoration: underline;
+        }
+      }
+
+      /* Active States */
+      &:active {
+        transform: translateY(2px) !important;
+        border-bottom-width: 1px !important;
+        margin-bottom: 2px !important;
+        text-decoration: none !important;
+
+        background-color: var(--link-focus-background, #ffb400) !important;
+        border-color: var(--link-focus-background, #ffb400) !important;
+        color: #202024 !important;
+
+        &::after {
+          color: #202024 !important;
+          text-decoration: none !important;
+        }
+      }
+
+      /* Chevron overrides */
+      &::after {
+        font-size: 2rem !important;
+        transition: none !important;
+        text-decoration: none !important;
+        display: inline-block;
+      }
     }
   }
 }
