@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons Example</title>
+    <link rel="stylesheet" href="../../compiled-css/main.css">
+    <link rel="stylesheet" href="../../compiled-css/button.css">
+</head>
+
+<body>
+    <!--Header-->
+    <header class="container">
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs header-content">
+                <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main>
+        <div class="container">
+            <div class="row">
+            <div class="col col-12-md col-12-lg">
+                <h1>Buttons</h1>
+                <!-- Navigation Links -->
+                <ul>
+                    <li><a href="#primary-buttons">Primary buttons</a></li>
+                    <li><a href="#primary-button-lg">Primary button large</a></li>
+                    <li><a href="#action-button">Action button</a></li>
+                    <li><a href="#action-button-lg">Action button large</a></li>
+                    <li><a href="#icon-buttons">Icon buttons</a></li>
+                    <li><a href="#dropdown-buttons">Dropdown buttons</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-md col-12-lg">
+                    <!-- Dropdown Buttons -->
+                    <h2>Hover Dropdown Buttons</h2>
+                    <div id="dropdown-buttons">
+                    <div class="hover-drop-list down">
+                        <button class="btn" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Dropdown trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Dropdown option 1</a></li>
+                            <li><a href="#">Dropdown option 2</a></li>
+                            <li><a href="#">Dropdown option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-drop-list down">
+                        <button class="btn red" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Dropdown trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Drop option 1</a></li>
+                            <li><a href="#">Drop option 2</a></li>
+                            <li><a href="#">Drop option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-drop-list down">
+                        <button class="btn green" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Drop trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Drop option 1</a></li>
+                            <li><a href="#">Drop option 2</a></li>
+                            <li><a href="#">Drop option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hover-drop-list down">
+                        <button class="btn grey" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Drop trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Drop option 1</a></li>
+                            <li><a href="#">Drop option 2</a></li>
+                            <li><a href="#">Drop option 3</a></li>
+                        </ul>
+                    </div>
+
+                    <h2>Hover Drop-Up Buttons</h2>
+
+                    <div class="hover-drop-list up">
+                        <button class="btn" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                            aria-expanded="false">Drop up trigger</button>
+                        <ul class="drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Drop option 1</a></li>
+                            <li><a href="#">Drop option 2</a></li>
+                            <li><a href="#">Drop option 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Primary Buttons -->
+                <div id="primary-buttons">
+                    <h2>Primary Buttons</h2>
+                    <button type="button" class="btn">Primary</button>
+                    <button type="button" class="btn red">Primary red</button>
+                    <button type="button" class="btn orange">Primary orange</button>
+                    <button type="button" class="btn green">Primary green</button>
+                    <button type="button" class="btn grey">Primary grey</button>
+                    <button type="button" class="btn burgundy">Primary burgundy</button>
+                    <button type="button" class="btn purple">Primary purple</button>
+                    <button type="button" class="btn white">Primary white</button>
+                </div>
+
+                <!-- Rounded Buttons -->
+                <div id="primary-buttons">
+                    <h2>Rounded Buttons</h2>
+                    <button type="button" class="btn rounded-border">Primary</button>
+                    <button type="button" class="btn red radius-xl">Primary red</button>
+                    <button type="button" class="btn orange radius-lg">Primary orange</button>
+                    <button type="button" class="btn green radius-md">Primary green</button>
+                    <button type="button" class="btn grey radius-sm">Primary grey</button>
+                    <button type="button" class="btn burgundy radius-xs">Primary burgundy</button>
+                    <button type="button" class="btn purple">Primary purple</button>
+                    <button type="button" class="btn white">Primary white</button>
+                </div>
+
+                <!-- Large Primary Buttons -->
+                <div id="primary-button-lg">
+                    <h2>Primary Button - Larger Size</h2>
+                    <button type="button" class="btn">Normal</button>
+                    <button type="button" class="btn lg">Larger</button>
+                    <button type="button" class="btn red lg">Primary red</button>
+                    <button type="button" class="btn orange lg">Primary orange</button>
+                    <button type="button" class="btn green lg">Primary green</button>
+                    <button type="button" class="btn grey lg">Primary grey</button>
+                    <button type="button" class="btn burgundy lg">Primary burgundy</button>
+                    <button type="button" class="btn purple lg">Primary purple</button>
+                    <button type="button" class="btn white lg">Primary white</button>
+                </div>
+
+                <!-- Action Buttons -->
+                <div id="action-button">
+                    <h2>Action Buttons</h2>
+                    <button type="button" class="btn green action">Primary green</button>
+                    <button type="button" class="btn grey action">Primary grey</button>
+                    <button type="button" class="btn burgundy action">Primary burgundy</button>
+                    <button type="button" class="btn purple action">Primary purple</button>
+                </div>
+
+                <!-- Large Action Buttons -->
+                <div id="action-button-lg">
+                    <h2>Action Button - Larger Size</h2>
+                    <button type="button" class="btn lg action">Primary</button>
+                    <button type="button" class="btn red lg action">Primary red</button>
+                    <button type="button" class="btn orange lg action">Primary orange</button>
+                    <button type="button" class="btn white action lg">Primary white</button>
+                </div>
+
+                <!-- Icon Buttons -->
+                <div id="icon-buttons">
+                    <h2>Icon Buttons</h2>
+                    <button type="button" class="btn icon-pdf">PDF document</button>
+                    <button type="button" class="btn icon-pdf lg">PDF document</button>
+                    <button type="button" class="btn red icon-zip">ZIP file</button>
+                    <button type="button" class="btn orange icon-word">Word document</button>
+                    <button type="button" class="btn white icon-word">Word document</button>
+                    <button type="button" class="btn orange icon-edit">Edit</button>
+                    <button type="button" class="btn red icon-folder">Folder</button>
+                    <button type="button" class="btn blue icon-person">Person</button>
+                    <button type="button" class="btn green icon-mail">Mail</button>
+                    <button type="button" class="btn grey icon-delete">Delete</button>
+                    <button type="button" class="btn burgundy icon-home">Home</button>
+                    <button type="button" class="btn orange icon-menu">Menu</button>
+                    <button type="button" class="btn purple icon-settings">Settings</button>
+                    <button type="button" class="btn orange icon-pin">Pin</button>
+                    <button type="button" class="btn blue icon-schedule">Schedule</button>
+                    <button type="button" class="btn grey icon-date">Date</button>
+                    <button type="button" class="btn purple icon-chevron_right">Chevron Right</button>
+                    <button type="button" class="btn green icon-chevron_left">Chevron Left</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+                <script>
+                    // DPL JavaScript of the use of drop list buttons 
+                    // Function to toggle dropdown visibility
+                    function toggleDropdown(button) {
+                        let child = button.parentElement.querySelector(".drop-content");
+                        let parent = button.closest(".hover-drop-list");
+                        if (parent.classList.contains("selected")) {
+                            parent.classList.remove("selected");
+                            child.classList.remove("show");
+                        } else {
+                            closeAllDropdowns(); // Close other dropdowns
+                            parent.classList.add("selected");
+                            child.classList.add("show");
+                        }
+                    }
+
+                    // Function to close all open dropdowns
+                    function closeAllDropdowns() {
+                        document.querySelectorAll('.hover-drop-list.selected').forEach(function (element) {
+                            element.classList.remove('selected');
+                            element.querySelector('.drop-content').classList.remove('show');
+                        });
+                    }
+
+                    // Event listener to close dropdowns when clicking outside of them
+                    document.addEventListener('click', function (event) {
+                        if (!event.target.closest('.hover-drop-list')) {
+                            closeAllDropdowns();
+                        }
+                    });
+
+                    // Function to toggle dropdown class based on scroll position
+                    function toggleClassOnScroll() {
+                        const elements = document.querySelectorAll('.hover-drop-list.up, .hover-drop-list.down');
+                        const initialClasses = new Map();
+
+                        // Store the initial classes
+                        elements.forEach(element => {
+                            initialClasses.set(element, element.className);
+                        });
+
+                        const scrollPosition = window.scrollY;
+                        const viewportHeight = window.innerHeight;
+                        const thresholdTop = 50; // Distance from the top to trigger the change
+                        const thresholdBottom = 80; // Distance from the bottom to trigger the change
+
+                        elements.forEach(element => {
+                            const elementRect = element.getBoundingClientRect();
+                            const elementTop = elementRect.top + scrollPosition;
+                            const elementBottom = elementTop + elementRect.height;
+
+                            if (elementTop <= scrollPosition + thresholdTop) {
+                                if (element.classList.contains('up')) {
+                                    element.classList.remove('up');
+                                    element.classList.add('down');
+                                }
+                            } else if (elementBottom >= scrollPosition + viewportHeight - thresholdBottom) {
+                                if (element.classList.contains('down')) {
+                                    element.classList.remove('down');
+                                    element.classList.add('up');
+                                }
+                            } else {
+                                const initialClass = initialClasses.get(element);
+                                element.className = initialClass;
+                            }
+                        });
+                    }
+
+                    // Attach the scroll event listener
+                    document.addEventListener('scroll', toggleClassOnScroll);
+
+                    // Initial call to check the position on page load
+                    document.addEventListener('DOMContentLoaded', toggleClassOnScroll);
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-lg col-12-xxs">
+                        <div class="footer-text">
+                            © 2026 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                        </div>
+                        <div class="footer-links">
+                            <a href="/cookie-preferences">Cookie preferences</a>
+                            <a href="/accessibility-statement">Accessibility statement</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/website-help">Website help</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
