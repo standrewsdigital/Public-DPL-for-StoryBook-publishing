@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPL HTML examples</title>
+
+  <style>
+    html {
+    --blue: #000036;
+    --yellow: #ffb400;
+    --subtle: rgba(255, 255, 255, 0.25);
+
+    background-color: #000036 !important;
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: white;
+    background: #000036 !important;
+  }
+    main {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      background-color: #000036;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro {
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      display: block;
+      padding: 1rem;
+      color: #005ea5;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .directory {
+      margin-top: 2rem;
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>DPL HTML examples</h1>
+    <p class="intro">Browse the available example pages and pattern folders.</p>
+
+    <div class="directory">
+      {%DIRECTORY%}
+    </div>
+  </main>
+</body>
+</html>
