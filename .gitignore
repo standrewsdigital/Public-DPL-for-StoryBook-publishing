@@ -7,3 +7,5 @@ node_modules/
 # Ignore GitHub and GitLab configuration folders
 .github/
 .gitlab/
+# Ignore IDE files
+.idea
