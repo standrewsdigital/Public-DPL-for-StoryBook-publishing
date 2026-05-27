@@ -1,0 +1,148 @@
+.video-transcript-section {
+  .video-transcript-panel {
+    align-items: flex-start;
+  }
+
+  .video-transcript-copy {
+    max-width: 57rem;
+  }
+
+  .video-transcript-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(11, 61, 116, 0.08);
+    border-radius: min(20px, 2vw);
+    box-shadow: 0 18px 50px rgba(20, 32, 55, 0.08);
+    overflow: hidden;
+  }
+
+  .video-transcript-card-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 0;
+  }
+
+  .video-transcript-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .video-transcript-toggle {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  .video-transcript-transcript {
+    display: none;
+  }
+
+  .video-transcript-transcript-heading {
+    margin-bottom: 1rem;
+  }
+
+  .video-transcript-transcript-heading h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .video-transcript-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .video-transcript-text p {
+    margin: 0 0 1rem;
+  }
+
+  .video-transcript-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .video-transcript-video {
+    padding: 0;
+    background: transparent;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: min(16px, 1.5vw);
+    background: #000;
+  }
+
+  .video-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  @media (min-width: 768px) {
+    .video-transcript-panel.is-expanded .video-transcript-card {
+      height: var(--video-transcript-card-height);
+      box-shadow: 0 26px 72px rgba(20, 32, 55, 0.14);
+    }
+
+    .video-transcript-panel.is-expanded .video-transcript-card-inner {
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
+      align-items: flex-start;
+      padding: 1rem 1rem 0;
+      overflow: hidden;
+    }
+
+    .video-transcript-panel.is-expanded .video-transcript-transcript {
+      display: block;
+      flex: 1 1 auto;
+      min-width: 0;
+      max-height: calc(var(--video-transcript-card-height) - 6.5rem);
+      overflow-y: auto;
+      padding: 0.25rem 0.75rem 0.25rem 0;
+    }
+
+    .video-transcript-panel.is-expanded .video-transcript-video {
+      flex: 0 0 var(--video-transcript-video-width);
+      width: var(--video-transcript-video-width);
+      max-width: var(--video-transcript-video-width);
+      min-width: 0;
+    }
+
+    .video-transcript-panel.is-expanded .video-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-transcript-panel.is-expanded .video-transcript-card-footer {
+      flex: 0 0 auto;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .video-transcript-card-inner {
+      gap: 1rem;
+    }
+
+    .video-transcript-panel.is-expanded .video-transcript-transcript {
+      display: block;
+      overflow: visible;
+      padding: 0;
+    }
+
+    .video-transcript-panel.is-expanded .video-transcript-video {
+      order: -1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .video-transcript-card {
+      transition: none !important;
+    }
+  }
+}
