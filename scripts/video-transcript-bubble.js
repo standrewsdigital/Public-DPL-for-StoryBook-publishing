@@ -12,43 +12,61 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var transcriptId = transcript.id || 'video-transcript-panel-' + (index + 1);
-
     transcript.id = transcriptId;
+
     button.setAttribute('aria-controls', transcriptId);
     button.setAttribute('aria-expanded', 'false');
     transcript.setAttribute('aria-hidden', 'true');
 
+    function openTranscript() {
+      var cardHeight = card.offsetHeight;
+      var videoWidth = video.getBoundingClientRect().width;
+
+      card.style.setProperty('--video-transcript-card-height', cardHeight + 'px');
+      card.style.setProperty('--video-transcript-video-width', videoWidth + 'px');
+
+      copyColumn.hidden = true;
+
+      cardColumn.classList.remove('col-5-lg');
+      cardColumn.classList.add('col-12-lg');
+
+      panel.classList.add('is-expanded');
+
+      button.setAttribute('aria-expanded', 'true');
+      transcript.setAttribute('aria-hidden', 'false');
+      button.textContent = 'Close transcript';
+    }
+
+    function closeTranscript() {
+      panel.classList.remove('is-expanded');
+
+      copyColumn.hidden = false;
+
+      cardColumn.classList.remove('col-12-lg');
+      cardColumn.classList.add('col-5-lg');
+
+      card.style.removeProperty('--video-transcript-card-height');
+      card.style.removeProperty('--video-transcript-video-width');
+
+      button.setAttribute('aria-expanded', 'false');
+      transcript.setAttribute('aria-hidden', 'true');
+      button.textContent = 'Show transcript';
+    }
+
     button.addEventListener('click', function () {
-      var expanded = !panel.classList.contains('is-expanded');
-
-      if (expanded) {
-        var cardHeight = card.offsetHeight;
-        var videoWidth = video.getBoundingClientRect().width;
-
-        card.style.setProperty('--video-transcript-card-height', cardHeight + 'px');
-        card.style.setProperty('--video-transcript-video-width', videoWidth + 'px');
-
-        copyColumn.hidden = true;
-
-        cardColumn.classList.remove('col-5-md');
-        cardColumn.classList.add('col-12-md');
-
-        panel.classList.add('is-expanded');
+      if (panel.classList.contains('is-expanded')) {
+        closeTranscript();
       } else {
-        panel.classList.remove('is-expanded');
+        openTranscript();
+      }
+    });
 
-        copyColumn.hidden = false;
-
-        cardColumn.classList.remove('col-12-md');
-        cardColumn.classList.add('col-5-md');
-
-        card.style.removeProperty('--video-transcript-card-height');
-        card.style.removeProperty('--video-transcript-video-width');
+    window.addEventListener('resize', function () {
+      if (!panel.classList.contains('is-expanded')) {
+        return;
       }
 
-      button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-      transcript.setAttribute('aria-hidden', expanded ? 'false' : 'true');
-      button.textContent = expanded ? 'Close transcript' : 'Show transcript';
+      closeTranscript();
     });
   });
 });
