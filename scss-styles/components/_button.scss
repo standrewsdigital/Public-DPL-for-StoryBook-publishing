@@ -1,9 +1,9 @@
 @import '../variables/supported-icons';
 
-/* 
-This SCSS file defines the styles for various button 
-components and dropdown menus. It includes 
-mixins for color options, size options, 
+/*
+This SCSS file defines the styles for various button
+components and dropdown menus. It includes
+mixins for color options, size options,
 and action buttons. The file also generates
 icon button classes based on a list of supported icons.
 */
@@ -18,7 +18,7 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     //  burgundy, green, grey, orange, purple, red, white
 
     // Generate color variations for buttons
-    @each $color, $shade in ( 
+    @each $color, $shade in (
         "burgundy": ($burgundy-primary, $burgundy-25-shade),
         "green": ($green-primary, $green-25-shade),
         "grey": ($mid-grey-1, $dark-grey-3),
@@ -184,7 +184,7 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     }
 
     &.up > .drop-content {
-        top: auto; 
+        top: auto;
         bottom: 100%;
     }
 
@@ -283,6 +283,7 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     text-underline-offset: 0.15em;
     background-color: $blue-primary;
     color: #fff;
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     cursor: pointer;
     font-weight: bold;
