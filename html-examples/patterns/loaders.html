@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loaders</title>
+    <link rel="stylesheet" href="../../compiled-css/main.css">
+    <link rel="stylesheet" href="../../compiled-css/loaders.css">
+    <script src="../../scripts/loader-simulation.js" defer></script>
+</head>
+<body>
+<main id="content-begin">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-sm col-12-lg">
+
+                <h1>Loaders</h1>
+                <h2>Bar loader</h2>
+                <div class="loader-wrapper">
+                    <div class="loader bar-loader">
+                        <div class="bar bg-blue-primary"></div>
+                        <div class="bar bg-red-st-andrews"></div>
+                        <div class="bar bg-yellow"></div>
+                    </div>
+                    <span class="icon icon-lg icon-crest"></span>
+                    <p class="mt-md mb-0">Loading</p>
+                </div>
+
+                <h2>Crest loader (fallback for prefers-reduced-motion)</h2>
+                <div class="loader-wrapper">
+                    <div class="loader">
+                        <span class="icon icon-lg icon-crest"></span>
+                    </div>
+                    <p class="mt-md mb-0">Loading</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-sm col-12-lg">
+
+                <h2>Loader simulations</h2>
+                <button id="simulation" class="btn">Simulate loading!</button>
+                <div class="loader-example" aria-live="polite"></div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
