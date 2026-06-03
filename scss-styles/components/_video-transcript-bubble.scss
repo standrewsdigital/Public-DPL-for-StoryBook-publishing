@@ -80,7 +80,7 @@
     border: 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 991px) {
     .video-transcript-panel.is-expanded .video-transcript-card {
       height: var(--video-transcript-card-height);
       box-shadow: 0 26px 72px rgba(20, 32, 55, 0.14);
@@ -124,7 +124,7 @@
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .video-transcript-card-inner {
       gap: 1rem;
     }
