@@ -46,3 +46,250 @@
     // }
   }
   
+  /* ==========================================================================
+   Redesigned news cards
+   Added alongside the existing news and updates styles.
+   ========================================================================== */
+
+.news-card,
+.news-card-small {
+	border-radius: 1.25rem;
+	border: 1px solid rgba(0, 0, 0, 0.03);
+	box-shadow:
+		0 4px 12px rgba(0, 0, 0, 0.04),
+		0 1px 3px rgba(0, 0, 0, 0.02);
+	display: flex;
+	overflow: hidden;
+	position: relative;
+	transition:
+		transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+		box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	background-color: #ffffff;
+	height: 100%;
+}
+
+.news-card {
+	flex-direction: column;
+}
+
+.news-card:hover,
+.news-card:focus-within,
+.news-card-small:hover,
+.news-card-small:focus-within {
+	box-shadow:
+		0 16px 32px rgba(0, 0, 0, 0.08),
+		0 4px 8px rgba(0, 0, 0, 0.04);
+	transform: translateY(-4px);
+}
+
+.news-card-image {
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	flex-shrink: 0;
+	background-color: #f0f0f0;
+}
+
+.news-image-link {
+	display: block;
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+}
+
+.news-image-link img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+}
+
+
+.news-card-body {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 1.5rem;
+}
+
+.news-kicker {
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
+
+.news-title {
+	line-height: 1.3;
+	margin: 0 0 0.75rem 0;
+}
+
+.news-title a {
+	position: relative;
+	z-index: 3;
+	color: #0071b3;
+	text-decoration: none;
+	transition:
+		color 0.2s ease,
+		background-color 0.2s ease,
+		outline 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.news-title a:hover {
+	color: #005586;
+	text-decoration: underline;
+}
+
+.news-title a:focus,
+.news-title a:active {
+	color: #202024 !important;
+	background-color: #ffb400 !important;
+	box-shadow: 0 3px #ffb400;
+	outline: 3px solid #ffb400;
+	text-decoration: underline;
+	border-radius: 2px;
+}
+
+.news-excerpt-wrapper {
+	margin: auto 0;
+	padding: 0.75rem 0;
+}
+
+.news-card-excerpt {
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	display: -webkit-box;
+	line-height: 1.5;
+	margin: 0;
+	overflow: hidden;
+}
+
+.news-meta {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	margin-top: auto;
+}
+
+.stretched-link::after {
+	content: "";
+	inset: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.relative-z-2 {
+	position: relative;
+	z-index: 2;
+}
+
+.news-tag {
+	border-radius: 0.4rem;
+	display: inline-block;
+	letter-spacing: 0.02em;
+	padding: 0.35rem 0.75rem;
+	text-decoration: none;
+	transition:
+		background-color 0.2s,
+		color 0.2s;
+}
+
+.news-tag:hover,
+.news-tag:focus {
+	background-color: #00539b;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.section-heading {
+	border-bottom: 2px solid #00539b;
+	display: inline-block;
+	padding-bottom: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Large news card */
+
+.news-card-large .news-title {
+	margin-bottom: 0;
+}
+
+@media (max-width: 436px) {
+	.news-card-large .news-excerpt-wrapper {
+		display: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	.news-card-large {
+		flex-direction: row;
+		min-height: 25rem;
+	}
+
+	.news-card-large .news-card-image {
+		aspect-ratio: auto;
+		width: 60%;
+		min-height: 100%;
+	}
+
+	.news-card-large .news-card-body {
+		justify-content: center;
+		padding: 3rem;
+		width: 40%;
+	}
+
+	.news-card-large .news-title {
+		font-size: 2rem;
+	}
+
+	.news-card-large .news-card-excerpt {
+		-webkit-line-clamp: 6;
+	}
+}
+
+/* Medium news card */
+
+.news-card-medium .news-card-body {
+	min-height: 12.5rem;
+}
+
+/* Small news cards */
+
+.news-card-small {
+	align-items: center;
+	flex-direction: row;
+	padding: 1rem;
+}
+
+.news-card-small .news-card-image {
+	aspect-ratio: 1 / 1;
+	border-radius: 0.75rem;
+	flex-shrink: 0;
+	height: 100px;
+	width: 100px;
+}
+
+.news-card-small .news-card-body {
+	justify-content: center;
+	padding: 0 0 0 1.5rem;
+}
+
+.news-card-small .news-title {
+	margin-bottom: 0.5rem;
+}
+
+.news-small-grid {
+	display: grid;
+	gap: 1.25rem;
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+	.news-small-grid {
+		gap: 1.5rem 2rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
