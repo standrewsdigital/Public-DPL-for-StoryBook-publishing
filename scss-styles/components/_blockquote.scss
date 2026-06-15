@@ -132,6 +132,7 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 		align-items: start;
 		border: 0;
 		box-shadow: 0 18px 38px rgba(32, 32, 36, 0.08);
+		padding: 2rem;
 		overflow: hidden;
 		min-height: 1px;
 
@@ -186,6 +187,7 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 			gap: 0.75rem;
 
 			strong {
+				color: $dark-grey-2;
 				font-size: 1rem;
 			}
 
@@ -267,6 +269,14 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 		.testimonial-image.testimonial-large-image {
 			max-width: 100%;
 			aspect-ratio: 4 / 3;
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.testimonial-section {
+		.testimonial-card {
+			@include apply-theme($theme-light);
 		}
 	}
 }

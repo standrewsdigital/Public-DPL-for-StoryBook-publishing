@@ -16,18 +16,25 @@
   @include apply-theme($theme-light);
 }
 
-// Check for user's preference. 
+// Check for user's preference.
 // switch to dark mode is set.
 @media (prefers-color-scheme: dark) {
   :root {
     // Dark theme settings
     @include apply-theme($theme-dark);
   }
+  // Default dark mode text (#f0f0f0) is not accessible with the light grey bg
+  .bg-light-grey-1 {
+    // May need to add more elements, doing a child wildcard might override text colour in components
+    h1, h2, h3, h4, h5, h6, p, li {
+      color: #000000;
+    }
+  }
 }
 
 // Can be used to apply dark mode styles
 // when in light mode.
-// TODO: this is not working with the grid. 
+// TODO: this is not working with the grid.
 .dark{
   @include apply-theme($theme-dark);
   background-color: var(--page-background-color);
