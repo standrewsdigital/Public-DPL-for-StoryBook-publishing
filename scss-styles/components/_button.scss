@@ -281,7 +281,7 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     padding: 0.5em 1em;
     text-decoration: none;
     text-underline-offset: 0.15em;
-    text-wrap: wrap;
+    text-wrap: balance;
     background-color: $blue-primary;
     color: #fff;
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
