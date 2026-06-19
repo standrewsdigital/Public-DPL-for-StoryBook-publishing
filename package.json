@@ -10,7 +10,7 @@
     "scss:build": "sass --style=compressed scss-styles/:compiled-css/",
     "dev": "npm run scss:watch",
     "build": "npm run scss:build && npm run build-vite",
-    "dev-vite": "vite",
+    "dev-vite": "vite --host",
     "build-vite": "vite build"
   },
   "author": "teo udrea",
