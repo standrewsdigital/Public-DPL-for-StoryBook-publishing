@@ -1,4 +1,3 @@
-
 .col figure {
     display: flex;
     flex-direction: column;
@@ -9,8 +8,8 @@
 /* Make image responsive */
 .col figure img {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Prevents extra spacing */
+    height: auto;
+    display: block;
 }
 
 /* Style the caption */
@@ -23,7 +22,9 @@
 
 .news-excerpt {
     flex: 1 1 auto;
-    h4,h5{
+
+    h4,
+    h5 {
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
@@ -35,7 +36,6 @@
     align-items: flex-start;
     gap: 1rem;
 
-  
     figure {
       flex: 0 0 auto;
       width: 150px; // adjust as needed
