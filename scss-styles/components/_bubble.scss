@@ -23,8 +23,7 @@
         }
     }
 
-    .bubble-icon {
-        width: 65px;
+    .icon {
         align-self: center;
     }
 
@@ -50,7 +49,7 @@
     &.text-left {
         text-align: left;
 
-        .bubble-icon {
+        .icon {
             align-self: start;
         }
     }
