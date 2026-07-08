@@ -1,9 +1,10 @@
 .bubble {
-    box-shadow: rgba(0, 0, 0, .1) 0 5px 10px 0, rgba(0, 0, 0, .16) 0 0 0 1px;
+    border: 1px solid #d8d8d8;
     border-radius: 10px;
     padding: 2em;
     margin: 0 auto;
     background: #fafafa;
+
     // stretch is Chromium only, everything else uses -webkit-fill-available
     // https://caniuse.com/mdn-css_properties_height_stretch
     height: stretch;
@@ -91,7 +92,6 @@
             }
         }
     }
-
 }
 
 @media screen and (max-width: map-get($breakpoints, 'md')) {
@@ -112,17 +112,6 @@
     }
 }
 
-@media (prefers-color-scheme: light) {
-    .bubble:not(:has(> .bubble-inline)) {
-        transition: box-shadow 1s ease;
-
-        &:hover {
-            box-shadow: rgba(0, 0, 0, .16) 0 4px 16px 0, rgba(0, 0, 0, .06) 0 0 0 1px;
-            transition: box-shadow 0.2s ease;
-        }
-    }
-}
-
 @media (prefers-color-scheme: dark) {
     .bubble {
         --page-text-color: #000000;
@@ -134,7 +123,5 @@
         --link-focus-outline: 3px solid #ffb400;
 
         color: var(--page-text-color);
-
-        box-shadow: none;
     }
 }
