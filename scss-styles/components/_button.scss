@@ -280,6 +280,7 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     padding: 0.5em 1em;
     text-decoration: none;
     text-underline-offset: 0.15em;
+    text-wrap: balance;
     background-color: $blue-primary;
     color: #fff;
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
@@ -290,7 +291,6 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     vertical-align: middle;
     touch-action: manipulation;
     line-height: 1.5;
-    white-space: nowrap;
     display: inline-block;
     @include options;
 }
