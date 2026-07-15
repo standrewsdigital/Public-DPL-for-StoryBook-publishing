@@ -1,73 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Transcript Bubble</title>
+
+    <title>Video transcript bubble</title>
+
     <link rel="stylesheet" href="../../compiled-css/main.css">
-    <link rel="stylesheet" href="../../compiled-css/video-transcript-bubble.css">
+    <link
+        rel="stylesheet"
+        href="../../compiled-css/video-transcript-bubble.css"
+    >
+
+    <script
+        src="../../scripts/video-transcript.js"
+        defer
+    ></script>
 </head>
 
 <body>
     <header class="container">
         <div class="row">
             <div class="col col-12-lg col-12-xxs header-content">
-                <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
-                    alt="University of St Andrews Logo" class="logo">
+                <img
+                    src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
+                    alt="University of St Andrews logo"
+                    class="logo"
+                >
             </div>
         </div>
     </header>
 
     <main>
+        <!-- ==========================================
+             VIDEO ON THE RIGHT
+             ========================================== -->
+
         <section class="video-transcript-section bg-light-grey-1 py-xl">
             <div class="container">
-                <div class="row video-transcript-panel" data-video-transcript>
-                    <div class="col col-7-lg col-12-xs  col-12-md video-transcript-copy-column">
+                <div
+                    class="row video-transcript-panel"
+                    data-video-transcript
+                    data-video-position="right"
+                >
+                    <div
+                        class="col col-7-lg col-12-xs col-12-md video-transcript-copy-column"
+                    >
                         <div class="video-transcript-copy">
-                            <p class="eyebrow text-mid-grey-1">Video transcript</p>
+                            <p class="eyebrow text-mid-grey-1">
+                                Video transcript
+                            </p>
+
                             <h1>Why St Andrews?</h1>
-                            <p>St Andrews is a unique place to study and live. Nestled on the east coast of Scotland,
-                                students may find themselves crossing golf-courses on their way to class, or jogging
-                                along the beach after dinner. Not only does the University have a world-class
-                                reputation, it also offers a diverse range of social activities, including over 140
-                                student societies and 50 sports clubs. Historic buildings are juxtaposed against the
-                                modern facilities, and the many student traditions truly make studying at St Andrews
-                                an unforgettable experience.</p>
+
+                            <p>
+                                St Andrews is a unique place to study and live.
+                                Nestled on the east coast of Scotland, students
+                                may find themselves crossing golf courses on
+                                their way to class, or jogging along the beach
+                                after dinner.
+                            </p>
+
+                            <p>
+                                Not only does the University have a world-class
+                                reputation, it also offers a diverse range of
+                                social activities, including over 140 student
+                                societies and 50 sports clubs.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="col col-5-lg col-12-xs col-12-md video-transcript-card-column">
-                        <div class="video-transcript-card" id="video-transcript-card-1">
+                    <div
+                        class="col col-5-lg col-12-xs col-12-md video-transcript-card-column"
+                    >
+                        <div class="video-transcript-card">
                             <div class="video-transcript-card-inner">
-                                <div class="video-transcript-transcript" id="video-transcript-panel-1" aria-hidden="true">
-                                    <div class="video-transcript-transcript-heading">
-                                        <h2>Transcript</h2>
-                                    </div>
-
-                                    <div class="video-transcript-text">
-                                        <p>St Andrews is a unique place to study and live.</p>
-
-                                        <p>Nestled on the east coast of Scotland, students may find themselves crossing
-                                            golf courses on their way to class. They may also enjoy jogging along the
-                                            beach after dinner.</p>
-
-                                        <p>Not only does the University have a world-class reputation, it also offers a
-                                            diverse range of social activities. These include over 140 student societies
-                                            and 50 sports clubs.</p>
-
-                                        <p>Historic buildings are juxtaposed against modern facilities. The many student
-                                            traditions truly make studying at St Andrews an unforgettable experience.</p>
-                                    </div>
-                                </div>
-
                                 <div class="video-transcript-video">
                                     <div class="video-wrapper">
                                         <iframe
-                                            title="St Andrews student experience video"
+                                            title="Postgraduate study at the University of St Andrews"
                                             src="https://www.youtube.com/embed/12dXL6Ej7r8"
-                                            allowfullscreen>
-                                        </iframe>
+                                            allowfullscreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="video-transcript-transcript"
+                                    id="video-transcript-right"
+                                    aria-hidden="true"
+                                    hidden
+                                >
+                                    <h2 class="video-transcript-heading">
+                                        Transcript
+                                    </h2>
+
+                                    <div class="video-transcript-text">
+                                        <p>
+                                            St Andrews is a unique place to
+                                            study and live.
+                                        </p>
+
+                                        <p>
+                                            Nestled on the east coast of
+                                            Scotland, students may find
+                                            themselves crossing golf courses on
+                                            their way to class. They may also
+                                            enjoy jogging along the beach after
+                                            dinner.
+                                        </p>
+
+                                        <p>
+                                            Not only does the University have a
+                                            world-class reputation, it also
+                                            offers a diverse range of social
+                                            activities. These include over 140
+                                            student societies and 50 sports
+                                            clubs.
+                                        </p>
+
+                                        <p>
+                                            Historic buildings are juxtaposed
+                                            against modern facilities. The many
+                                            student traditions truly make
+                                            studying at St Andrews an
+                                            unforgettable experience.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +135,225 @@
                                     type="button"
                                     class="btn action video-transcript-toggle"
                                     aria-expanded="false"
-                                    aria-controls="video-transcript-panel-1">
+                                    aria-controls="video-transcript-right"
+                                >
+                                    Show transcript
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VIDEO ON THE LEFT
+             ========================================== -->
+
+        <section class="video-transcript-section py-xl">
+            <div class="container">
+                <div
+                    class="row video-transcript-panel"
+                    data-video-transcript
+                    data-video-position="left"
+                >
+                    <div
+                        class="col col-5-lg col-12-xs col-12-md video-transcript-card-column"
+                    >
+                        <div class="video-transcript-card">
+                            <div class="video-transcript-card-inner">
+                                <div class="video-transcript-video">
+                                    <div class="video-wrapper">
+                                        <iframe
+                                            title="University of St Andrews in 15 seconds"
+                                            src="https://www.youtube.com/embed/JxHfSwpddCU"
+                                            allowfullscreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="video-transcript-transcript"
+                                    id="video-transcript-left"
+                                    aria-hidden="true"
+                                    hidden
+                                >
+                                    <h2 class="video-transcript-heading">
+                                        Transcript
+                                    </h2>
+
+                                    <div class="video-transcript-text">
+                                        <p>
+                                            St Andrews is a unique place to
+                                            study and live.
+                                        </p>
+
+                                        <p>
+                                            Nestled on the east coast of
+                                            Scotland, students may find
+                                            themselves crossing golf courses on
+                                            their way to class. They may also
+                                            enjoy jogging along the beach after
+                                            dinner.
+                                        </p>
+
+                                        <p>
+                                            Not only does the University have a
+                                            world-class reputation, it also
+                                            offers a diverse range of social
+                                            activities. These include over 140
+                                            student societies and 50 sports
+                                            clubs.
+                                        </p>
+
+                                        <p>
+                                            Historic buildings are juxtaposed
+                                            against modern facilities. The many
+                                            student traditions truly make
+                                            studying at St Andrews an
+                                            unforgettable experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video-transcript-card-footer">
+                                <button
+                                    type="button"
+                                    class="btn action video-transcript-toggle"
+                                    aria-expanded="false"
+                                    aria-controls="video-transcript-left"
+                                >
+                                    Show transcript
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col col-7-lg col-12-xs col-12-md video-transcript-copy-column"
+                    >
+                        <div class="video-transcript-copy">
+                            <p class="eyebrow text-mid-grey-1">
+                                Video transcript
+                            </p>
+
+                            <h2>Study at St Andrews</h2>
+
+                            <p>
+                                Discover the people, traditions and places that
+                                make St Andrews a unique place to study.
+                            </p>
+
+                            <p>
+                                Students become part of an international
+                                community while living and learning in a
+                                historic coastal town.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             CENTRED VIDEO
+
+             col-centered automatically selects the
+             stacked behaviour at every screen size.
+             ========================================== -->
+
+        <section class="video-transcript-section bg-light-grey-1 py-xl">
+            <div class="container">
+                <div
+                    class="row video-transcript-panel"
+                    data-video-transcript
+                    data-video-position="center"
+                >
+                    <div
+                        class="col-centered col-8-lg col-12-xs video-transcript-copy-column"
+                    >
+                        <div class="video-transcript-copy">
+                            <p class="eyebrow text-mid-grey-1">
+                                Video transcript
+                            </p>
+
+                            <h2>Life at St Andrews</h2>
+
+                            <p>
+                                Find out more about studying and living at the
+                                University of St Andrews.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-centered col-8-lg col-12-xs video-transcript-card-column"
+                    >
+                        <div class="video-transcript-card">
+                            <div class="video-transcript-card-inner">
+                                <div class="video-transcript-video">
+                                    <div class="video-wrapper">
+                                        <iframe
+                                            title="Life at the University of St Andrews"
+                                            src="https://www.youtube.com/embed/12dXL6Ej7r8"
+                                            allowfullscreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="video-transcript-transcript"
+                                    id="video-transcript-centered"
+                                    aria-hidden="true"
+                                    hidden
+                                >
+                                    <h2 class="video-transcript-heading">
+                                        Transcript
+                                    </h2>
+
+                                    <div class="video-transcript-text">
+                                        <p>
+                                            St Andrews is a unique place to
+                                            study and live.
+                                        </p>
+
+                                        <p>
+                                            Nestled on the east coast of
+                                            Scotland, students may find
+                                            themselves crossing golf courses on
+                                            their way to class. They may also
+                                            enjoy jogging along the beach after
+                                            dinner.
+                                        </p>
+
+                                        <p>
+                                            Not only does the University have a
+                                            world-class reputation, it also
+                                            offers a diverse range of social
+                                            activities. These include over 140
+                                            student societies and 50 sports
+                                            clubs.
+                                        </p>
+
+                                        <p>
+                                            Historic buildings are juxtaposed
+                                            against modern facilities. The many
+                                            student traditions truly make
+                                            studying at St Andrews an
+                                            unforgettable experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video-transcript-card-footer">
+                                <button
+                                    type="button"
+                                    class="btn action video-transcript-toggle"
+                                    aria-expanded="false"
+                                    aria-controls="video-transcript-centered"
+                                >
                                     Show transcript
                                 </button>
                             </div>
@@ -93,20 +369,30 @@
             <div class="row">
                 <div class="col col-12-lg col-12-xxs">
                     <div class="footer-text">
-                        © 2026 The University of St Andrews is a charity registered in Scotland, No: SC013552
+                        © 2026 The University of St Andrews is a charity
+                        registered in Scotland, No: SC013532
                     </div>
+
                     <div class="footer-links">
-                        <a href="/cookie-preferences">Cookie preferences</a>
-                        <a href="/accessibility-statement">Accessibility statement</a>
-                        <a href="/terms-and-conditions">Terms and conditions</a>
-                        <a href="/website-help">Website help</a>
+                        <a href="/cookie-preferences">
+                            Cookie preferences
+                        </a>
+
+                        <a href="/accessibility-statement">
+                            Accessibility statement
+                        </a>
+
+                        <a href="/terms-and-conditions">
+                            Terms and conditions
+                        </a>
+
+                        <a href="/website-help">
+                            Website help
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <script src="../../scripts/video-transcript-bubble.js" defer></script>
 </body>
-
 </html>
