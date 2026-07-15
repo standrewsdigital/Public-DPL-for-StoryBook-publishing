@@ -33,12 +33,12 @@
             ".video-transcript-transcript"
         );
 
-        const videoWrapper = panel.querySelector(
-            ".video-wrapper"
-        );
-
         const toggle = panel.querySelector(
             ".video-transcript-toggle"
+        );
+
+        const toggleLabel = panel.querySelector(
+            ".video-transcript-toggle-label"
         );
 
         if (
@@ -47,8 +47,8 @@
             !cardColumn ||
             !card ||
             !transcript ||
-            !videoWrapper ||
-            !toggle
+            !toggle ||
+            !toggleLabel
         ) {
             return;
         }
@@ -76,19 +76,17 @@
                 String(isOpen)
             );
 
-            toggle.textContent = isOpen
+            toggleLabel.textContent = isOpen
                 ? "Close transcript"
                 : "Show transcript";
         }
 
         function showTranscript() {
             transcript.removeAttribute("hidden");
-            transcript.setAttribute("aria-hidden", "false");
         }
 
         function hideTranscript() {
             transcript.setAttribute("hidden", "");
-            transcript.setAttribute("aria-hidden", "true");
         }
 
         function canUseNativePopover() {
@@ -106,9 +104,10 @@
         }
 
         /*
-         * The DPL .row uses display: contents, so it has no box
-         * that can be measured. Position the popover against the
-         * real content area of the nearest .container instead.
+         * .video-transcript-panel is also a .row. In the DPL grid,
+         * .row uses display: contents and therefore has no box to
+         * measure. The container does have a real box, so use its
+         * content edges inside its border and padding.
          */
         function getContainerContentBounds() {
             const rect = container.getBoundingClientRect();
@@ -175,18 +174,11 @@
 
             updateNativePlacement();
 
-            const videoHeight =
-                videoWrapper.getBoundingClientRect().height;
-
-            setCardProperty(
-                "--video-transcript-media-height",
-                toPixels(videoHeight)
-            );
-
             const cardHeight =
                 card.getBoundingClientRect().height;
 
-            cardColumn.style.minHeight = toPixels(cardHeight);
+            cardColumn.style.minHeight =
+                toPixels(cardHeight);
         }
 
         function scheduleNativeMeasurements() {
@@ -206,8 +198,7 @@
             [
                 "--video-transcript-popover-left",
                 "--video-transcript-popover-top",
-                "--video-transcript-popover-width",
-                "--video-transcript-media-height"
+                "--video-transcript-popover-width"
             ].forEach(function (property) {
                 card.style.removeProperty(property);
             });
@@ -230,15 +221,19 @@
             hideTranscript();
 
             card.removeAttribute("popover");
+
             clearPopoverProperties();
 
-            cardColumn.style.removeProperty("min-height");
+            cardColumn.style.removeProperty(
+                "min-height"
+            );
 
             panel.classList.remove(
                 "is-native-popover-open"
             );
 
             mode = "closed";
+
             updateButton(false);
         }
 
@@ -253,6 +248,10 @@
             cardColumn.style.minHeight =
                 toPixels(closedHeight);
 
+            /*
+             * Set the exact grid bounds before moving the card
+             * into the browser's top layer.
+             */
             updateNativePlacement();
 
             panel.classList.add(
@@ -273,6 +272,10 @@
                     source: toggle
                 });
 
+                /*
+                 * Wait for the browser to lay out the top-layer
+                 * element before measuring its expanded height.
+                 */
                 requestAnimationFrame(function () {
                     requestAnimationFrame(
                         scheduleNativeMeasurements
@@ -284,6 +287,7 @@
                 );
 
                 card.removeAttribute("popover");
+
                 clearPopoverProperties();
 
                 cardColumn.style.removeProperty(
@@ -295,6 +299,7 @@
                 );
 
                 mode = "closed";
+
                 openInlineTranscript();
             }
         }
@@ -331,6 +336,7 @@
             hideTranscript();
 
             mode = "closed";
+
             updateButton(false);
 
             if (options.returnFocus) {
@@ -363,8 +369,8 @@
         });
 
         /*
-         * Handles button closing, Escape and native
-         * light-dismiss behaviour.
+         * Handles closing with the button, Escape and native
+         * Popover API light-dismiss.
          */
         card.addEventListener("toggle", function (event) {
             if (event.newState === "open") {
@@ -421,7 +427,9 @@
         window.addEventListener(
             "scroll",
             scheduleNativeMeasurements,
-            { passive: true }
+            {
+                passive: true
+            }
         );
 
         if ("ResizeObserver" in window) {
@@ -429,7 +437,7 @@
                 scheduleNativeMeasurements
             );
 
-            resizeObserver.observe(videoWrapper);
+            resizeObserver.observe(card);
         }
 
         hideTranscript();
