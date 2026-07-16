@@ -25,6 +25,9 @@
     .video-transcript-card-inner {
         display: flex;
         flex-direction: column;
+    }
+
+    .video-transcript-media {
         padding: 1rem 1rem 0;
     }
 
@@ -39,17 +42,21 @@
         aspect-ratio: 16 / 9;
         background: #000;
         border-radius: min(16px, 1.5vw);
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     }
 
-    .video-wrapper iframe {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
+    .video-transcript-transcript{
+        padding: 1rem;
 
-    .video-transcript-transcript[hidden] {
-        display: none;
+        &[hidden] {
+            display: none;
+        }
     }
 
     .video-transcript-heading {
@@ -60,14 +67,14 @@
     .video-transcript-text {
         font-size: 1rem;
         line-height: 1.6;
-    }
 
-    .video-transcript-text p {
-        margin: 0 0 1rem;
-    }
+        p {
+            margin: 0 0 1rem;
 
-    .video-transcript-text p:last-child {
-        margin-bottom: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     .video-transcript-card-footer {
@@ -117,6 +124,7 @@
     .video-transcript-card.is-popover-expanded {
         .video-transcript-card-inner {
             display: grid;
+            grid-template-columns: repeat(12, 1fr);
             gap: 1.25rem;
             align-items: start;
             min-height: 0;
@@ -135,49 +143,28 @@
             );
             overflow-y: auto;
         }
-    }
 
-    /* Video on the right: transcript left, video right. */
-    .video-transcript-card.is-popover-expanded[
-        data-video-position="right"
-    ] {
-        .video-transcript-card-inner {
-            grid-template-columns:
-                minmax(0, 7fr)
-                minmax(18rem, 5fr);
+        /* Video on the right: transcript left, video right. */
+        &[data-video-position="right"] {
+            .video-transcript-transcript {
+                grid-column: 1 / 8;
+                grid-row: 1;
+            }
+
+            .video-transcript-media {
+                grid-column: 8 / -1;
+            }
         }
 
-        .video-transcript-transcript {
-            grid-column: 1;
-            grid-row: 1;
-            padding: 0.25rem 0.75rem 0.25rem 0;
-        }
+        /* Video on the left: video left, transcript right. */
+        &[data-video-position="left"] {
+            .video-transcript-media {
+                grid-column: 1 / 6;
+            }
 
-        .video-transcript-video {
-            grid-column: 2;
-            grid-row: 1;
-        }
-    }
-
-    /* Video on the left: video left, transcript right. */
-    .video-transcript-card.is-popover-expanded[
-        data-video-position="left"
-    ] {
-        .video-transcript-card-inner {
-            grid-template-columns:
-                minmax(18rem, 5fr)
-                minmax(0, 7fr);
-        }
-
-        .video-transcript-video {
-            grid-column: 1;
-            grid-row: 1;
-        }
-
-        .video-transcript-transcript {
-            grid-column: 2;
-            grid-row: 1;
-            padding: 0.25rem 0 0.25rem 0.75rem;
+            .video-transcript-transcript {
+                grid-column: 6 / -1;
+            }
         }
     }
 
@@ -186,15 +173,20 @@
      * the top layer. This prevents the following section jumping.
      */
     @media (min-width: 992px) {
+        .video-transcript-card[data-video-position="left"] {
+            .video-transcript-card-inner {
+                padding: 0;
+            }
+        }
+
         .video-transcript-panel.is-native-popover-open {
             > .video-transcript-copy-column {
-                display: none !important;
+                display: none;
             }
 
             > .video-transcript-card-column {
-                flex: 0 0 100% !important;
-                width: 100% !important;
-                max-width: 100% !important;
+                width: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -219,14 +211,12 @@
             order: 2;
             max-height: none;
             overflow: visible;
-            padding: 0;
+            padding: 1rem;
         }
     }
 
     @media (max-width: 991px) {
-        .video-transcript-panel[
-            data-video-position="left"
-        ] {
+        .video-transcript-panel[data-video-position="left"] {
             > .video-transcript-copy-column {
                 order: 1;
             }
@@ -252,6 +242,14 @@
     @media (prefers-reduced-motion: reduce) {
         .video-transcript-card {
             transition: none;
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .video-transcript-section {
+        .video-transcript-card {
+            color: #000000;
         }
     }
 }
