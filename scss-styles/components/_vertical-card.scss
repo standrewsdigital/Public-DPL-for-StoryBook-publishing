@@ -1,0 +1,168 @@
+.image-cards {
+  position: relative;
+
+  .cards-track {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .image-card {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: 268px;
+
+    aspect-ratio: 268 / 400;
+
+    overflow: hidden;
+
+    border-radius: 1rem;
+
+    text-decoration: none;
+
+    color: white;
+
+    justify-self: center;
+
+    background: #ddd;
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.5s ease;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        to bottom,
+        rgb(0 0 0 / 0.15),
+        rgb(0 0 0 / 0.4)
+      );
+
+      transition: background 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+
+      box-shadow: 0 12px 30px rgb(0 0 0 / 0.18);
+
+      img {
+        transform: scale(1.06);
+      }
+
+      &::before {
+        background: linear-gradient(
+          to bottom,
+          rgb(0 0 0 / 0.05),
+          rgb(0 0 0 / 0.55)
+        );
+      }
+
+      .cards-title {
+        text-decoration-color: white;
+      }
+    }
+  }
+
+  .cards-title {
+    position: absolute;
+
+    top: 25%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-shadow: 0 2px 8px rgb(0 0 0 / 0.45);
+
+    z-index: 2;
+
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.2em;
+
+    transition: text-decoration-color 0.25s ease;
+  }
+}
+
+/*Breakpoints*/
+
+@media (max-width: 1199px) {
+  .image-cards {
+    .cards-track {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .image-cards {
+    .cards-track {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+/*Mobile carousel*/
+@media (max-width: 767px) {
+  .image-cards {
+    .cards-track {
+      display: flex;
+
+      overflow-x: auto;
+
+      gap: 1rem;
+
+      scroll-snap-type: x mandatory;
+
+      scroll-behavior: smooth;
+
+      -webkit-overflow-scrolling: touch;
+
+      scrollbar-width: none;
+
+      padding-inline: 1rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .image-card {
+      flex: 0 0 min(85%, 320px);
+
+      max-width: none;
+
+      scroll-snap-align: center;
+    }
+  }
+}

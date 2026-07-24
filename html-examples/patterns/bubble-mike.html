@@ -6,6 +6,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bubble</title>
   <link rel="stylesheet" href="../../compiled-css/main.css">
+  <link rel="stylesheet" href="../../compiled-css/bubble.css">
+
+  <style>
+    /* ---------- Responsive Grid ---------- */
+
+    /* @media (max-width:1199px) {
+
+      .slider-cards {
+
+        .cards-track {
+
+          grid-template-columns: repeat(3, 1fr);
+
+        }
+
+      }
+
+    }
+
+    @media (max-width:991px) {
+
+      .slider-cards {
+
+        .cards-track {
+
+          grid-template-columns: repeat(2, 1fr);
+
+        }
+
+      }
+
+    } */
+
+    /* ---------- Mobile Carousel ---------- */
+
+    @media (max-width:767px) {
+
+      .slider-cards {
+
+        .cards-track {
+
+          display: flex;
+
+          gap: 1rem;
+
+          overflow-x: auto;
+
+          padding-inline: 1rem;
+
+          scroll-padding-inline: 1rem;
+
+          scroll-snap-type: x mandatory;
+
+          scroll-snap-stop: always;
+
+          scroll-behavior: smooth;
+
+          overscroll-behavior-x: contain;
+
+          -webkit-overflow-scrolling: touch;
+
+          cursor: grab;
+
+          scrollbar-width: none;
+
+          &::-webkit-scrollbar {
+
+            display: none;
+
+          }
+
+          &:active {
+
+            cursor: grabbing;
+
+          }
+
+        }
+
+        .slider-card {
+
+          flex: 0 0 80%;
+
+          max-width: none;
+
+          scroll-snap-align: center;
+
+        }
+
+      }
+
+    }
+    .bubble{float: left;}
+  </style>
 </head>
 
 <body>
@@ -23,9 +117,9 @@
       <div class="col col-12-sm col-12-lg">
         <h1>Bubble - inline</h1>-->
 
-        <div class="mt-2xl"></div>
+  <!-- <div class="mt-2xl"></div> -->
 
-  <section class="bubble-wrapper">
+  <!-- <section class="bubble-wrapper">
     <div class="container">
       <div class="row">
         <div class="col col-12-sm col-12-lg">
@@ -62,9 +156,9 @@
       </div>
     </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="bubble-wrapper">
+  <!-- <section class="bubble-wrapper">
     <div class="container">
       <div class="row">
         <div class="col col-12-sm col-12-lg">
@@ -132,9 +226,57 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+   <div class="container my-xl">
+      <div class="row">
+        <div class="col col-4-xxl col-6-xl col-6-lg">
 
-
+          <div class="bubble">
+            <span class="icon icon-sm icon-seagull"></span>
+            <h3>Elevate your career</h3>
+            <div class="bubble-content">
+              <p>Graduates from the Masters in Management programme have taken up roles in a wide variety of
+                organisations in the public and private sectors including:&nbsp;</p>
+              <ul>
+                <li>Credit Suisse Group&nbsp;</li>
+                <li>Google</li>
+                <li>IBM</li>
+                <li>KPMG</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col col-4-xxl col-6-xl col-6-lg ">
+          <div class="bubble">
+            <span class="icon icon-sm icon-car-green"></span>
+            <h3>Further your education</h3>
+            <div class="bubble-content">
+              <p>Management graduates can pursue PhDs at St&nbsp;Andrews or beyond. Funding includes <a
+                  href="http://www.socsciscotland.ac.uk/">ESRC awards</a> and <a
+                  href="https://www.st-andrews.ac.uk/management/prospective/pgr/">Business School
+                  studentships</a>, offering RCUK-level stipends and fee waivers for home and EU students.</p>
+              <p><a class="btn white action lg"
+                  href="https://www.st-andrews.ac.uk/management/prospective/pgr/">Postgraduate research</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col col-4-xxl col-6-xl col-6-lg ">
+          <div class="bubble">
+            <span class="icon icon-sm icon-rocket-burgundy"></span>
+            <h3>Accreditations</h3>
+            <div class="bubble-content">
+              <p>Graduates are eligible to apply to receive accreditation from the <a href="http://www.managers.org.uk/"
+                  target="_blank" rel="noopener">Chartered Management
+                  Institute</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  
+  
   <!-- Footer -->
   <footer>
     <div class="container">
