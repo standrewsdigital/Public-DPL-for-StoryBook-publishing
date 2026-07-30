@@ -1,5 +1,26 @@
 stages:
+  - compile
   - deploy
+
+compile:
+  stage: compile
+  tags:
+    - docker
+  image: node:26-alpine
+  before_script:
+    - npm config set proxy "http://${PROXY_HOST}:${PROXY_PORT}"
+    - npm config set https-proxy "http://${PROXY_HOST}:${PROXY_PORT}"
+    - npm install -g sass
+  script:
+    - RELEASE_VERSION="${CI_COMMIT_TAG#v}"
+    - mkdir $RELEASE_VERSION
+    - sass --style=compressed --embed-sources scss-styles/:$RELEASE_VERSION/
+  artifacts:
+    paths:
+      - ./$RELEASE_VERSION
+    expire_in: 10 mins
+  only:
+    - tags
 
 deploy:
   stage: deploy
@@ -14,8 +35,7 @@ deploy:
         set ssl:verify-certificate true;
         open $CDN_HOST:$CDN_PORT;
         user $CDN_USER $CDN_PASSWORD;
-        mkdir -p $CDN_DIRECTORY/$RELEASE_VERSION;
-        mirror -R compiled-css/ $CDN_DIRECTORY/$RELEASE_VERSION/;
+        mirror -R $RELEASE_VERSION $CDN_DIRECTORY/;
         bye
       "
   only:
