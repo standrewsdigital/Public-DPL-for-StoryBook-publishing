@@ -19,22 +19,36 @@ const lightboxImage = document.querySelector(".gallery__lightbox-image");
 
 const lightboxTitle = document.querySelector(".gallery__lightbox-title");
 
-const lightboxDescription = document.querySelector(
-  ".gallery__lightbox-description",
-);
+const lightboxDescription = document.querySelector( ".gallery__lightbox-description");
 
-galleryImages.forEach(function (image) {
-  image.addEventListener("click", function () {
-    lightboxImage.src = this.src;
+let currentIndex = 0;
 
-    lightboxImage.alt = this.alt;
+function showImage(index) {
 
-    lightboxTitle.textContent = this.dataset.title;
+    const image = galleryImages[index];
 
-    lightboxDescription.textContent = this.dataset.description;
+    lightboxImage.src = image.src;
 
-    lightbox.classList.add("is-active");
-  });
+    lightboxImage.alt = image.alt;
+
+    lightboxTitle.textContent = image.dataset.title;
+
+    lightboxDescription.textContent = image.dataset.description;
+
+    currentIndex = index;
+
+}
+
+galleryImages.forEach(function (image, index) {
+
+    image.addEventListener("click", function () {
+
+        showImage(index);
+
+        lightbox.classList.add("is-active");
+
+    });
+
 });
 
 /* Close button */
@@ -43,3 +57,25 @@ const closeButton = document.querySelector(".gallery__close");
 closeButton.addEventListener("click", function () {
   lightbox.classList.remove("is-active");
 });
+
+/* Next button*/
+const nextButton = document.querySelector(
+    ".gallery__next"
+);
+
+nextButton.addEventListener(
+    "click",
+    function () {
+
+        currentIndex++;
+
+        if (currentIndex >= galleryImages.length) {
+
+            currentIndex = 0;
+
+        }
+
+        showImage(currentIndex);
+
+    }
+);
