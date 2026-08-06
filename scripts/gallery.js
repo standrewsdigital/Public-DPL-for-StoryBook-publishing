@@ -19,36 +19,32 @@ const lightboxImage = document.querySelector(".gallery__lightbox-image");
 
 const lightboxTitle = document.querySelector(".gallery__lightbox-title");
 
-const lightboxDescription = document.querySelector( ".gallery__lightbox-description");
+const lightboxDescription = document.querySelector(
+  ".gallery__lightbox-description",
+);
 
 let currentIndex = 0;
 
 function showImage(index) {
+  const image = galleryImages[index];
 
-    const image = galleryImages[index];
+  lightboxImage.src = image.src;
 
-    lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
 
-    lightboxImage.alt = image.alt;
+  lightboxTitle.textContent = image.dataset.title;
 
-    lightboxTitle.textContent = image.dataset.title;
+  lightboxDescription.textContent = image.dataset.description;
 
-    lightboxDescription.textContent = image.dataset.description;
-
-    currentIndex = index;
-
+  currentIndex = index;
 }
 
 galleryImages.forEach(function (image, index) {
+  image.addEventListener("click", function () {
+    showImage(index);
 
-    image.addEventListener("click", function () {
-
-        showImage(index);
-
-        lightbox.classList.add("is-active");
-
-    });
-
+    lightbox.classList.add("is-active");
+  });
 });
 
 /* Close button */
@@ -59,23 +55,27 @@ closeButton.addEventListener("click", function () {
 });
 
 /* Next button*/
-const nextButton = document.querySelector(
-    ".gallery__next"
-);
+const nextButton = document.querySelector(".gallery__next");
 
-nextButton.addEventListener(
-    "click",
-    function () {
+nextButton.addEventListener("click", function () {
+  currentIndex++;
 
-        currentIndex++;
+  if (currentIndex >= galleryImages.length) {
+    currentIndex = 0;
+  }
 
-        if (currentIndex >= galleryImages.length) {
+  showImage(currentIndex);
+});
 
-            currentIndex = 0;
+/* Previous button */
+const previousButton = document.querySelector(".gallery__previous");
 
-        }
+previousButton.addEventListener("click", function () {
+  currentIndex--;
 
-        showImage(currentIndex);
+  if (currentIndex < 0) {
+    currentIndex = galleryImages.length - 1;
+  }
 
-    }
-);
+  showImage(currentIndex);
+});
