@@ -1,23 +1,19 @@
 /*
 ----------------------------------------
-Gallery Lightbox
+Gallery Component
+
+Version: 1.0
 
 Purpose:
 
-1. Open lightbox
-2. Display selected image
-3. Display title/description
-4. Close lightbox
+Open lightbox and display selected image.
 
 ----------------------------------------
 */
-console.log("Gallery JS loaded");
-const galleryImages = document.querySelectorAll(".gallery__image");
 
-console.log(galleryImages);
+const galleryImages = Array.from(document.querySelectorAll(".gallery__image"));
 
 const lightbox = document.querySelector(".gallery__lightbox");
-console.log(lightbox);
 
 const lightboxImage = document.querySelector(".gallery__lightbox-image");
 
@@ -29,8 +25,6 @@ const lightboxDescription = document.querySelector(
 
 galleryImages.forEach(function (image) {
   image.addEventListener("click", function () {
-
-    console.log("Image clicked");
     lightboxImage.src = this.src;
 
     lightboxImage.alt = this.alt;
@@ -43,25 +37,7 @@ galleryImages.forEach(function (image) {
   });
 });
 
-
-
-
-
-// galleryImages.forEach(function(image){
-
-//     image.addEventListener(
-//         "click",
-//         function(){
-
-//             console.log("Image clicked");
-
-//         }
-//     );
-
-// });
-
-/* close button */
-
+/* Close button */
 const closeButton = document.querySelector(".gallery__close");
 
 closeButton.addEventListener("click", function () {
