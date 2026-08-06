@@ -11,6 +11,8 @@ Open lightbox and display selected image.
 ----------------------------------------
 */
 
+/* Variables */
+
 const galleryImages = Array.from(document.querySelectorAll(".gallery__image"));
 
 const lightbox = document.querySelector(".gallery__lightbox");
@@ -22,6 +24,14 @@ const lightboxTitle = document.querySelector(".gallery__lightbox-title");
 const lightboxDescription = document.querySelector(
   ".gallery__lightbox-description",
 );
+
+const lightboxPanel = document.querySelector(".gallery__panel");
+
+/*----------------------------------------------------------------*/
+
+/**
+ * Functions
+ */
 
 let currentIndex = 0;
 
@@ -39,25 +49,17 @@ function showImage(index) {
   currentIndex = index;
 }
 
-galleryImages.forEach(function (image, index) {
-  image.addEventListener("click", function () {
-    showImage(index);
+function openLightbox(index) {
+  showImage(index);
 
-    lightbox.classList.add("is-active");
-  });
-});
+  lightbox.classList.add("is-active");
+}
 
-/* Close button */
-const closeButton = document.querySelector(".gallery__close");
-
-closeButton.addEventListener("click", function () {
+function closeLightbox() {
   lightbox.classList.remove("is-active");
-});
+}
 
-/* Next button*/
-const nextButton = document.querySelector(".gallery__next");
-
-nextButton.addEventListener("click", function () {
+function nextImage() {
   currentIndex++;
 
   if (currentIndex >= galleryImages.length) {
@@ -65,12 +67,9 @@ nextButton.addEventListener("click", function () {
   }
 
   showImage(currentIndex);
-});
+}
 
-/* Previous button */
-const previousButton = document.querySelector(".gallery__previous");
-
-previousButton.addEventListener("click", function () {
+function previousImage() {
   currentIndex--;
 
   if (currentIndex < 0) {
@@ -78,7 +77,28 @@ previousButton.addEventListener("click", function () {
   }
 
   showImage(currentIndex);
+}
+
+/**
+ * loop images */
+
+galleryImages.forEach(function (image, index) {
+  image.addEventListener("click", function () {
+    openLightbox(index);
+  });
 });
+
+/* Close button */
+const closeButton = document.querySelector(".gallery__close");
+closeButton.addEventListener("click", closeLightbox);
+
+/* Next button*/
+const nextButton = document.querySelector(".gallery__next");
+nextButton.addEventListener("click", nextImage);
+
+/* Previous button */
+const previousButton = document.querySelector(".gallery__previous");
+previousButton.addEventListener("click", previousImage);
 
 /* keyboard functionality */
 document.addEventListener("keydown", function (event) {
@@ -88,20 +108,24 @@ document.addEventListener("keydown", function (event) {
 
   switch (event.key) {
     case "Escape":
-      lightbox.classList.remove("is-active");
-
+      closeLightbox();
       break;
-
     case "ArrowRight":
       // acts like someone has clicked the button.
       nextButton.click();
-
       break;
-
     case "ArrowLeft":
       // acts like someone has clicked the button.
       previousButton.click();
-
       break;
+  }
+});
+
+/**
+ * Close-on-background-click
+ */
+lightbox.addEventListener("click", function (event) {
+  if (event.target === lightbox) {
+    closeLightbox();
   }
 });
