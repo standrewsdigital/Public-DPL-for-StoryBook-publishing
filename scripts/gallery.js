@@ -79,3 +79,29 @@ previousButton.addEventListener("click", function () {
 
   showImage(currentIndex);
 });
+
+/* keyboard functionality */
+document.addEventListener("keydown", function (event) {
+  if (!lightbox.classList.contains("is-active")) {
+    return;
+  }
+
+  switch (event.key) {
+    case "Escape":
+      lightbox.classList.remove("is-active");
+
+      break;
+
+    case "ArrowRight":
+      // acts like someone has clicked the button.
+      nextButton.click();
+
+      break;
+
+    case "ArrowLeft":
+      // acts like someone has clicked the button.
+      previousButton.click();
+
+      break;
+  }
+});
