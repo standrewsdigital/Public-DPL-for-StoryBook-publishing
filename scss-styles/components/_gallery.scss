@@ -14,10 +14,13 @@ with hover overlay.
 
 .gallery {
   .gallery__item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
     position: relative;
-
     overflow: hidden;
-
     cursor: pointer;
   }
 
@@ -193,4 +196,11 @@ with hover overlay.
   top: 50%;
 
   transform: translateY(-50%);
+}
+
+/*
+No scroll
+*/
+.no-scroll {
+  overflow: hidden;
 }
