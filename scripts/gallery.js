@@ -35,6 +35,8 @@ const lightboxPanel = document.querySelector(".gallery__panel");
 
 let currentIndex = 0;
 
+let previousFocusElement = null;
+
 function showImage(index) {
   const image = galleryImages[index];
 
@@ -50,6 +52,8 @@ function showImage(index) {
 }
 
 function openLightbox(index) {
+  previousFocusElement = galleryImages[index].closest(".gallery__item");
+
   showImage(index);
 
   lightbox.classList.add("is-active");
@@ -61,6 +65,10 @@ function closeLightbox() {
   lightbox.classList.remove("is-active");
 
   document.body.classList.remove("no-scroll");
+
+  if (previousFocusElement) {
+    previousFocusElement.focus();
+  }
 }
 
 function nextImage() {
@@ -87,7 +95,9 @@ function previousImage() {
  * loop images */
 
 galleryImages.forEach(function (image, index) {
-  image.addEventListener("click", function () {
+  const galleryItem = image.closest(".gallery__item");
+
+  galleryItem.addEventListener("click", function () {
     openLightbox(index);
   });
 });
