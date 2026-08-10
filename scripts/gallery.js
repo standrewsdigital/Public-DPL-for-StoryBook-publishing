@@ -53,10 +53,14 @@ function openLightbox(index) {
   showImage(index);
 
   lightbox.classList.add("is-active");
+
+  document.body.classList.add("no-scroll");
 }
 
 function closeLightbox() {
   lightbox.classList.remove("is-active");
+
+  document.body.classList.remove("no-scroll");
 }
 
 function nextImage() {
@@ -129,3 +133,7 @@ lightbox.addEventListener("click", function (event) {
     closeLightbox();
   }
 });
+
+/*
+  No scroll 
+*/
