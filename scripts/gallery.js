@@ -59,6 +59,8 @@ function openLightbox(index) {
   lightbox.classList.add("is-active");
 
   document.body.classList.add("no-scroll");
+
+  closeButton.focus();
 }
 
 function closeLightbox() {
