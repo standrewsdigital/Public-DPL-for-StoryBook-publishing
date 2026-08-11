@@ -116,10 +116,30 @@ nextButton.addEventListener("click", nextImage);
 const previousButton = document.querySelector(".gallery__previous");
 previousButton.addEventListener("click", previousImage);
 
+const focusableElements = [closeButton, previousButton, nextButton];
+
 /* keyboard functionality */
 document.addEventListener("keydown", function (event) {
   if (!lightbox.classList.contains("is-active")) {
     return;
+  }
+
+  if (event.key === "Tab") {
+    const firstElement = focusableElements[0];
+
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+
+      lastElement.focus();
+    }
+
+    if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+
+      firstElement.focus();
+    }
   }
 
   switch (event.key) {
