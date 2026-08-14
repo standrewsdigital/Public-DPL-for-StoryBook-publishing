@@ -145,6 +145,19 @@ with hover overlay.
   background: #181818;
 }
 
+.gallery__lightbox-caption,
+.gallery__lightbox-count {
+    color: #fff;
+}
+
+.gallery__lightbox-caption {
+    margin: 0 0 .5rem;
+}
+
+.gallery__lightbox-count {
+    margin: 0;
+}
+
 .gallery__lightbox-title {
   margin-bottom: 0.5rem;
 

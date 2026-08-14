@@ -19,13 +19,11 @@ const lightbox = document.querySelector(".gallery__lightbox");
 
 const lightboxImage = document.querySelector(".gallery__lightbox-image");
 
-const lightboxTitle = document.querySelector(".gallery__lightbox-title");
-
-const lightboxDescription = document.querySelector(
-  ".gallery__lightbox-description",
-);
+const lightboxCaption = document.querySelector(".gallery__lightbox-caption");
 
 const lightboxPanel = document.querySelector(".gallery__panel");
+
+const lightboxCount = document.querySelector(".gallery__lightbox-count");
 
 /*----------------------------------------------------------------*/
 
@@ -44,11 +42,11 @@ function showImage(index) {
 
   lightboxImage.alt = image.alt;
 
-  lightboxTitle.textContent = image.dataset.title;
-
-  lightboxDescription.textContent = image.dataset.description;
+  lightboxCaption.textContent = image.dataset.caption;
 
   currentIndex = index;
+
+  lightboxCount.textContent = `${index + 1} of ${galleryImages.length}`;
 }
 
 function openLightbox(index) {
