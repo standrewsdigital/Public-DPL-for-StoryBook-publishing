@@ -19,7 +19,6 @@
                 width: 100%;
                 min-height: 100%;
                 vertical-align: middle;
-
             }
 
             button.video-control-btn {
@@ -56,13 +55,8 @@
 
         .image {
             img {
-                //width: 100%;
-                //height: auto;
                 position: relative;
-
                 vertical-align: middle;
-
-                //object-fit: fill;
             }
         }
     }
@@ -70,12 +64,28 @@
     .hero-banner-content {
         .banner-box {
             width: 100%;
+            z-index: 0;
 
             .title-box {
-                opacity: 90%;
                 padding: 1rem;
                 color: white;
                 width: 100%;
+
+                &.bg-blue-primary {
+                    background-color: rgba($blue-primary, 0.9);
+                }
+
+                &.bg-burgundy-primary {
+                    background-color: rgba($burgundy-primary, 0.9);
+                }
+
+                &.bg-dark-orange {
+                    background-color: rgba($dark-orange, 0.9);
+                }
+
+                &.bg-purple-25-shade {
+                    background-color: rgba($purple-25-shade, 0.9);
+                }
 
                 h2 {
                     margin: 0;
@@ -93,8 +103,7 @@
             }
 
             .content-box {
-                background-color: $white;
-                opacity: 90%;
+                background-color: rgba($white, 0.9);
                 padding: 2rem 1rem 1rem 1rem;
                 color: $dark-grey-2;
 
