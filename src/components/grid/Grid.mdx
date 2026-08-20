@@ -1,0 +1,27 @@
+import { useEffect } from 'react';
+import gridExampleHtml from './grid.example.html?raw';
+import gridCss from './grid.css?raw';
+import { Meta, Source } from '@storybook/addon-docs/blocks'
+
+export const ScopedStyles = ({ css }) => {
+  useEffect(() => {
+    const styleTag = document.createElement('style');
+    styleTag.textContent = css;
+    document.head.appendChild(styleTag);
+    return () => {
+      document.head.removeChild(styleTag);
+    }
+  }, [css]);
+  return null;
+};
+
+<Meta title="Core/Grid"/>
+
+<ScopedStyles css={gridCss} />
+
+# Grid
+
+This is the grid system.
+
+<div className={"sb-unstyled"} dangerouslySetInnerHTML={{ __html: gridExampleHtml }}/>
+<Source code={gridExampleHtml} language={"html"}/>

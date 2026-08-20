@@ -1,5 +1,7 @@
 :root {
   --page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  --page-font-family-alternative: 'Noto Sans', Helvetica, Arial, sans-serif;
+  --serif-font-family-alternative: 'Noto Serif', Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -7,6 +9,14 @@ body {
   color: var(--page-text-color);
   font-family: $page-font-family;
   @include typography(font-size, ('xs': 100%, 'sm': 112.5%));
+}
+
+.noto-sans {
+  font-family: var(--page-font-family-alternative);
+}
+
+.noto-serif {
+  font-family: var(--serif-font-family-alternative);
 }
 
 h1 {
