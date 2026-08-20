@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="../../compiled-css/main.css">
     <link rel="stylesheet" href="../../compiled-css/featured-media.css">
     <link rel="stylesheet" href="../../compiled-css/accordion.css">
-
+    <script src="../../scripts/popover-transcript.js" defer></script>
 </head>
 
 <body>
-
     <!-- Header -->
     <header class="container">
         <div class="row">
@@ -36,7 +35,7 @@
                 </div>
             <div class="col col-6-lg col-12-xs">
                 <figure>
-                    <img src="../assets/750x500.png" alt="750 by 500px placeholder image" />
+                    <img src="../../assets/750x500.png" alt="750 by 500px placeholder image" />
                     <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque hendrerit
                         neque et tincidunt.</figcaption>
                 </figure>
@@ -49,7 +48,7 @@
         <div class="row">
             <div class="col col-6-lg col-12-xs">
                 <figure>
-                    <img src="../assets/750x500.png" alt="750 by 500px placeholder image" />
+                    <img src="../../assets/750x500.png" alt="750 by 500px placeholder image" />
                     <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque hendrerit
                         neque et tincidunt.</figcaption>
                 </figure>
@@ -65,6 +64,255 @@
      </div>
     </div>
     <hr/>
+
+        <!-- Video (right) with popover transcript -->
+        <div class="container">
+            <div class="row">
+                <div class="col col-6-lg col-12-xs featured-media-left-column">
+                    <h2>Featured media - Video with popout transcript</h2>
+                    <p>On desktop, the transcript will open in a popover when the 'Show transcript' button is clicked. If a browser doesn't support the popover API or the user is on mobile, it will fallback to using the accordion.</p>
+                    <p>Nulla viverra justo vitae erat lobortis, eu consectetur risus faucibus. Nulla non enim nec eros congue eleifend. Quisque vel aliquet sapien. Duis ultricies dictum justo, et convallis nulla lacinia eget. Etiam magna mauris, pellentesque ut ornare vel, commodo et lacus. Integer rutrum non nulla sed consequat.
+
+                        Etiam tincidunt vel quam id rhoncus. Suspendisse et justo at mauris tempor ornare. Ut pulvinar condimentum felis accumsan egestas. Nunc bibendum tincidunt magna, a mattis mi tincidunt nec. Ut nunc est, scelerisque in imperdiet at, maximus ut nulla. Mauris sollicitudin dui quis ante dapibus, vel tempus tellus tempor.</p>
+                    <a type="button" class="btn lg action" href="#">Call to action</a>
+
+                </div>
+                <div class="col col-6-lg col-12-xs featured-media-right-column">
+                    <figure>
+                        <!-- Keep video wrapper separate from figcaption -->
+                        <div class="video-wrapper">
+                            <iframe title="Heading goes in here (video)"
+                                    src="https://www.youtube.com/embed/JxHfSwpddCU"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <!-- Figcaption is now outside of the wrapper -->
+                        <figcaption>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque hendrerit neque et tincidunt.
+                        </figcaption>
+
+                        <div class="accordion-group">
+                            <details>
+                                <summary>Transcript</summary>
+                                <div class="accordion-content">
+                                    <p>St Andrews is a unique place to study and live.</p>
+
+                                    <p>Nestled on the east coast of Scotland, students may find themselves crossing
+                                        golf courses on their way to class. They may also enjoy jogging along the
+                                        beach after dinner.</p>
+
+                                    <p>Not only does the University have a world-class reputation, it also offers a
+                                        diverse range of social activities. These include over 140 student societies
+                                        and 50 sports clubs.</p>
+
+                                    <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                        traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                        dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                        eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                        consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                        tempore vel veritatis voluptates. Qui?</p>
+                                    <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                        traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                        dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                        eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                        consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                        tempore vel veritatis voluptates. Qui?</p>
+                                </div>
+
+                            </details>
+
+                        </div>
+                        <button
+                                type="button"
+                                class="btn video-transcript-toggle"
+                        >
+                            Show transcript
+                        </button>
+
+                        <div class="video-transcript" popover>
+                            <p>St Andrews is a unique place to study and live.</p>
+
+                            <p>Nestled on the east coast of Scotland, students may find themselves crossing
+                                golf courses on their way to class. They may also enjoy jogging along the
+                                beach after dinner.</p>
+
+                            <p>Not only does the University have a world-class reputation, it also offers a
+                                diverse range of social activities. These include over 140 student societies
+                                and 50 sports clubs.</p>
+
+                            <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                tempore vel veritatis voluptates. Qui?</p>
+                            <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                tempore vel veritatis voluptates. Qui?</p>
+                        </div>
+                    </figure>
+
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!-- Video (left) with popover transcript -->
+        <div class="container">
+            <div class="row">
+                <div class="col col-6-lg col-12-xs featured-media-left-column">
+                    <figure>
+                        <!-- Keep video wrapper separate from figcaption -->
+                        <div class="video-wrapper">
+                            <iframe title="Heading goes in here (video)"
+                                    src="https://www.youtube.com/embed/JxHfSwpddCU"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <!-- Figcaption is now outside of the wrapper -->
+                        <figcaption>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque hendrerit neque et tincidunt.
+                        </figcaption>
+
+                        <div class="accordion-group">
+                            <details>
+                                <summary>Transcript</summary>
+                                <div class="accordion-content">
+                                    <p>St Andrews is a unique place to study and live.</p>
+
+                                    <p>Nestled on the east coast of Scotland, students may find themselves crossing
+                                        golf courses on their way to class. They may also enjoy jogging along the
+                                        beach after dinner.</p>
+
+                                    <p>Not only does the University have a world-class reputation, it also offers a
+                                        diverse range of social activities. These include over 140 student societies
+                                        and 50 sports clubs.</p>
+
+                                    <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                        traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                        dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                        eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                        consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                        tempore vel veritatis voluptates. Qui?</p>
+                                    <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                        traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                        dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                        eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                        consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                        tempore vel veritatis voluptates. Qui?</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                        consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                        tempore vel veritatis voluptates. Qui?</p>
+                                    <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                        traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                        dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                        eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                        consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                        tempore vel veritatis voluptates. Qui?</p>
+                                </div>
+
+                            </details>
+
+                        </div>
+
+                        <button
+                                type="button"
+                                class="btn video-transcript-toggle"
+                        >
+                            Show transcript
+                        </button>
+
+                        <div class="video-transcript" popover>
+                            <p>St Andrews is a unique place to study and live.</p>
+
+                            <p>Nestled on the east coast of Scotland, students may find themselves crossing
+                                golf courses on their way to class. They may also enjoy jogging along the
+                                beach after dinner.</p>
+
+                            <p>Not only does the University have a world-class reputation, it also offers a
+                                diverse range of social activities. These include over 140 student societies
+                                and 50 sports clubs.</p>
+
+                            <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                tempore vel veritatis voluptates. Qui?</p>
+                            <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                tempore vel veritatis voluptates. Qui?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                tempore vel veritatis voluptates. Qui?</p>
+                            <p>Historic buildings are juxtaposed against modern facilities. The many student
+                                traditions truly make studying at St Andrews an unforgettable experience.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet assumenda consequuntur
+                                dicta maiores, numquam, odit quia quidem repellat rerum sapiente soluta. Alias consectetur
+                                eveniet exercitationem libero maxime nulla, recusandae!</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam at, atque
+                                consequuntur debitis doloribus earum eum facilis in inventore odio optio, perferendis sint
+                                tempore vel veritatis voluptates. Qui?</p>
+                        </div>
+                    </figure>
+
+                </div>
+                <div class="col col-6-lg col-12-xs featured-media-right-column">
+                    <h2>Featured media - Video with popout transcript</h2>
+                    <p>On desktop, the transcript will open in a popover when the 'Show transcript' button is clicked. If a browser doesn't support the popover API or the user is on mobile, it will fallback to using the accordion.</p>
+                    <p>Nulla viverra justo vitae erat lobortis, eu consectetur risus faucibus. Nulla non enim nec eros congue eleifend. Quisque vel aliquet sapien. Duis ultricies dictum justo, et convallis nulla lacinia eget. Etiam magna mauris, pellentesque ut ornare vel, commodo et lacus. Integer rutrum non nulla sed consequat.
+
+                        Etiam tincidunt vel quam id rhoncus. Suspendisse et justo at mauris tempor ornare. Ut pulvinar condimentum felis accumsan egestas. Nunc bibendum tincidunt magna, a mattis mi tincidunt nec. Ut nunc est, scelerisque in imperdiet at, maximus ut nulla. Mauris sollicitudin dui quis ante dapibus, vel tempus tellus tempor.</p>
+                    <a type="button" class="btn lg action" href="#">Call to action</a>
+
+                </div>
+
+            </div>
+        </div>
+        <hr/>
+
+
     <div class="container">
         <div class="row ">
             <div class=" col-8-lg col-12-xs col-centered">
@@ -75,7 +323,7 @@
                 </div>
             <div class=" col-8-lg col-12-xs col-centered">
                 <figure>
-                    <img src="../assets/750x500.png" alt="750 by 500px placeholder image" />
+                    <img src="../../assets/750x500.png" alt="750 by 500px placeholder image" />
                     <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque hendrerit
                         neque et tincidunt.</figcaption>
                 </figure>
@@ -99,8 +347,8 @@
                 <figure>
                     <!-- Keep video wrapper separate from figcaption -->
                     <div class="video-wrapper">
-                        <iframe title="Heading goes in here (video)" 
-                            src="https://www.youtube.com/embed/JxHfSwpddCU" 
+                        <iframe title="Heading goes in here (video)"
+                            src="https://www.youtube.com/embed/JxHfSwpddCU"
                             allowfullscreen></iframe>
                     </div>
                     <!-- Figcaption is now outside of the wrapper -->
@@ -113,7 +361,7 @@
                 <div class="accordion-group">
 
                     <details>
-                        <summary>Captions</summary>
+                        <summary>Transcript</summary>
                         <div class="accordion-content">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
@@ -147,8 +395,8 @@
                 <figure>
                     <!-- Keep video wrapper separate from figcaption -->
                     <div class="video-wrapper">
-                        <iframe title="Heading goes in here (video)" 
-                            src="https://www.youtube.com/embed/JxHfSwpddCU" 
+                        <iframe title="Heading goes in here (video)"
+                            src="https://www.youtube.com/embed/JxHfSwpddCU"
                             allowfullscreen></iframe>
                     </div>
                     <!-- Figcaption is now outside of the wrapper -->
@@ -161,7 +409,7 @@
                 <div class="accordion-group">
 
                     <details>
-                        <summary>Captions</summary>
+                        <summary>Transcript</summary>
                         <div class="accordion-content">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac rutrum tellus, quis porttitor urna. Donec ultricies libero erat, id efficitur risus blandit nec. Donec et ipsum in dui blandit rutrum. Praesent rhoncus lobortis ligula, viverra tincidunt ante lobortis at. Sed vehicula luctus quam sit amet lacinia. Sed eu nulla vel ex tempus accumsan in sit amet metus. Vestibulum a venenatis mi. Ut ac semper arcu.
