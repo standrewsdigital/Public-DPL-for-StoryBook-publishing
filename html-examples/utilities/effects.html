@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Effect utility classes</title>
+  <link rel="stylesheet" href="../../compiled-css/main.css">
+
+  <style>
+    /* Demo page styles only */
+    body {
+      margin: 0;
+      padding: 32px 0;
+      background: #f8f8f8;
+    }
+
+    .demo-section {
+      margin-bottom: 48px;
+    }
+
+    .demo-heading {
+      margin-bottom: 24px;
+    }
+
+    .demo-heading h1,
+    .demo-heading h2 {
+      margin-bottom: 8px;
+    }
+
+    .demo-heading p {
+      max-width: 70ch;
+      margin-top: 0;
+    }
+
+    .demo-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 160px;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #d8d8d8;
+      border-radius: 24px;
+    }
+
+    .demo-box h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .demo-box p {
+      margin-bottom: 0;
+    }
+
+    .demo-class-list {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 4px 8px;
+      background: #f1f1f1;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #000000;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="container demo-section">
+      <div class="row">
+        <div class="col col-12-lg">
+          <div class="demo-heading">
+            <h1>Effect utility classes</h1>
+            <p>
+              Use these utility classes to apply consistent shadows and hover treatments across cards,
+              boxes, panels and other reusable content containers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container demo-section" aria-labelledby="shadow-example">
+      <div class="row">
+        <div class="col col-12-lg">
+          <div class="demo-heading">
+            <h2 id="shadow-example">Drop shadow</h2>
+            <p>
+              Add <code>drop-shadow</code> to apply the standard DPL card shadow without adding hover behaviour.
+            </p>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow">
+            <h3>Standard shadow</h3>
+            <p>This box uses the reusable drop shadow utility.</p>
+            <span class="demo-class-list">drop-shadow</span>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow">
+            <h3>Reusable on any box</h3>
+            <p>The class can be added to cards, panels, tiles or other containers.</p>
+            <span class="demo-class-list">drop-shadow</span>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow">
+            <h3>No interaction</h3>
+            <p>This keeps the surface static while still giving it depth.</p>
+            <span class="demo-class-list">drop-shadow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container demo-section" aria-labelledby="primary-hover-example">
+      <div class="row">
+        <div class="col col-12-lg">
+          <div class="demo-heading">
+            <h2 id="primary-hover-example">Primary hover</h2>
+            <p>
+              Combine <code>drop-shadow</code> with <code>hover-primary</code> for the standard blue hover ring and lift effect.
+            </p>
+          </div>
+        </div>
+
+        <div class="col col-6-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-primary">
+            <h3>Primary hover effect</h3>
+            <p>This uses the standard DPL blue hover treatment.</p>
+            <span class="demo-class-list">drop-shadow hover-primary</span>
+          </div>
+        </div>
+
+        <div class="col col-6-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-primary">
+            <h3>For default interactive cards</h3>
+            <p>Use this when a card links to more information or acts as a featured item.</p>
+            <span class="demo-class-list">drop-shadow hover-primary</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container demo-section" aria-labelledby="colour-hover-example">
+      <div class="row">
+        <div class="col col-12-lg">
+          <div class="demo-heading">
+            <h2 id="colour-hover-example">Colour hover variants</h2>
+            <p>
+              Use colour-specific hover classes when a component needs to match a theme, subject area,
+              category or campaign colour.
+            </p>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-green">
+            <h3>Green hover</h3>
+            <p>Useful for cards with a green tag or theme.</p>
+            <span class="demo-class-list">drop-shadow hover-green</span>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-burgundy">
+            <h3>Burgundy hover</h3>
+            <p>Useful for cards with a burgundy tag or theme.</p>
+            <span class="demo-class-list">drop-shadow hover-burgundy</span>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-purple">
+            <h3>Purple hover</h3>
+            <p>Useful for cards with a purple tag or theme.</p>
+            <span class="demo-class-list">drop-shadow hover-purple</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container demo-section" aria-labelledby="grid-example">
+      <div class="row">
+        <div class="col col-12-lg">
+          <div class="demo-heading">
+            <h2 id="grid-example">Different grid widths</h2>
+            <p>
+              The effect utilities are independent from the grid. They can be used on full-width,
+              half-width or smaller columns.
+            </p>
+          </div>
+        </div>
+
+        <div class="col col-12-lg">
+          <div class="demo-box drop-shadow hover-primary">
+            <h3>12/12 column</h3>
+            <p>A full-width box using the standard effect utilities.</p>
+            <span class="demo-class-list">drop-shadow hover-primary</span>
+          </div>
+        </div>
+
+        <div class="col col-6-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-green">
+            <h3>6/12 column</h3>
+            <p>A half-width box with the green hover variant.</p>
+            <span class="demo-class-list">drop-shadow hover-green</span>
+          </div>
+        </div>
+
+        <div class="col col-6-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-burgundy">
+            <h3>6/12 column</h3>
+            <p>A half-width box with the burgundy hover variant.</p>
+            <span class="demo-class-list">drop-shadow hover-burgundy</span>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-primary">
+            <h3>4/12 column</h3>
+            <p>Primary hover on a smaller card.</p>
+            <span class="demo-class-list">drop-shadow hover-primary</span>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-green">
+            <h3>4/12 column</h3>
+            <p>Green hover on a smaller card.</p>
+            <span class="demo-class-list">drop-shadow hover-green</span>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <div class="demo-box drop-shadow hover-purple">
+            <h3>4/12 column</h3>
+            <p>Purple hover on a smaller card.</p>
+            <span class="demo-class-list">drop-shadow hover-purple</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container demo-section" aria-labelledby="content-example">
+      <div class="row">
+        <div class="col col-12-lg">
+          <div class="demo-heading">
+            <h2 id="content-example">Example with linked content</h2>
+            <p>
+              When the box contains a link, the hover effect can be triggered with <code>:focus-within</code>
+              as well as <code>:hover</code>, which helps keyboard users see the same card treatment.
+            </p>
+          </div>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <article class="demo-box drop-shadow hover-primary">
+            <h3>
+              <a href="#">Example linked card</a>
+            </h3>
+            <p>
+              This card contains a link and uses the primary hover treatment.
+            </p>
+            <span class="demo-class-list">drop-shadow hover-primary</span>
+          </article>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <article class="demo-box drop-shadow hover-green">
+            <h3>
+              <a href="#">Example linked card</a>
+            </h3>
+            <p>
+              This card contains a link and uses the green hover treatment.
+            </p>
+            <span class="demo-class-list">drop-shadow hover-green</span>
+          </article>
+        </div>
+
+        <div class="col col-4-lg col-12-sm">
+          <article class="demo-box drop-shadow hover-burgundy">
+            <h3>
+              <a href="#">Example linked card</a>
+            </h3>
+            <p>
+              This card contains a link and uses the burgundy hover treatment.
+            </p>
+            <span class="demo-class-list">drop-shadow hover-burgundy</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

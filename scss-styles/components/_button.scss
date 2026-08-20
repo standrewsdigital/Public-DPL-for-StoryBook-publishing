@@ -276,11 +276,11 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 // Styling for the default blue button with white text
 .btn {
     @extend.border-light;
-    z-index: 1;
     margin-bottom: 5px;
     padding: 0.5em 1em;
     text-decoration: none;
     text-underline-offset: 0.15em;
+    text-wrap: balance;
     background-color: $blue-primary;
     color: #fff;
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
@@ -291,7 +291,6 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     vertical-align: middle;
     touch-action: manipulation;
     line-height: 1.5;
-    white-space: nowrap;
     display: inline-block;
     @include options;
 }

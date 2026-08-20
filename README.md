@@ -511,27 +511,9 @@ npm version major
    npm info @stadigicomms/dpl
    ```
 
-### CDN Deployment via FTPS
+### CDN Deployment
 
-Publish compiled CSS to the CDN via FTPS:
-
-```bash
-node uploadToFtps.cjs
-```
-
-#### Prerequisites
-
-Create a `.env` file in the project root with FTPS credentials:
-
-```env
-FTP_HOST=your-ftp-host.com
-FTP_PORT=21
-FTP_USER=your-username
-FTP_PASSWORD=your-password
-FTP_SECURE=true
-```
-
-**⚠️ Security**: Never commit `.env` file to Git. It's already in `.gitignore`.
+Compiled CSS is deployed to the CDN via CI/CD when a tag is assigned to a commit. The tag must follow the format set out in [Version Management and npm](#version-management-and-npm) with a leading `v`, e.g. `v1.2.4`.
 
 #### Deployment Process
 
@@ -542,10 +524,7 @@ FTP_SECURE=true
 
 2. **Verify version** in `package.json` matches your intended release
 
-3. **Run upload script**:
-   ```bash
-   node uploadToFtps.cjs
-   ```
+3. Once the compiled CSS and the updated `package.json` file has been committed to the `main` branch, [create a tag](gitlab-its.st-andrews.ac.uk/digital-communications/standards/sta-dpl-npm/-/tags) from the `main` branch with the version name e.g. `v1.2.4`. Once created, the deployment will start and upload the compiled CSS to the CDN.
 
 4. **CDN path structure**: Files are uploaded to `/delta/cdn/dpl/new/{version}/`
    - Example: Version `1.4.5` → `/delta/cdn/dpl/new/1.4.5/main.css`
