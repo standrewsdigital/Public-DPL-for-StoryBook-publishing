@@ -5,7 +5,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem 0rem 1rem 0rem;
+    margin: 1rem 0;
+
+    .accordion-group {
+        display: block;
+        width: 100%;
+    }
 }
 
 /* Make image responsive */
@@ -28,7 +33,7 @@
     display: block;
     flex-direction: column;
     align-items: center;
-    margin: 1rem 0rem 1rem 0rem;
+    margin: 1rem 0;
 }
 
 /* Make image responsive */
@@ -63,3 +68,59 @@
     left: 0;
 }
 
+.video-transcript-toggle {
+    display: none;
+}
+
+@supports (not (position-area: center)) or (not (selector([popover]))){
+    .video-transcript {
+        display: none;
+    }
+}
+
+// Only show the popover transcript on desktop and if their browser is compatible
+@media screen and (min-width: 992px) {
+    @supports (position-area: center) and (selector([popover])){
+        .video-transcript-toggle {
+            display: block;
+        }
+        .col figure {
+            .accordion-group {
+                display: none;
+            }
+        }
+
+        // Video transcript
+        .featured-media-right-column:has(.video-transcript) {
+            .video-transcript-toggle {
+                align-self: end;
+            }
+
+            .video-transcript {
+                position-area: center left;
+            }
+        }
+
+        .featured-media-left-column:has(.video-transcript) {
+            .video-transcript-toggle {
+                align-self: start;
+            }
+
+            .video-transcript {
+                position-area: center right;
+            }
+        }
+
+        .video-transcript {
+            position: fixed;
+            background: white;
+            border: 2px solid $dark-grey-1;
+            margin: 2rem;
+            overflow: auto;
+            max-height: 100%;
+            max-width: 750px;
+            padding: 0 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+    }
+}

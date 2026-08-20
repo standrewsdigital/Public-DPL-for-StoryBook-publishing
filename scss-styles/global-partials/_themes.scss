@@ -16,18 +16,22 @@
   @include apply-theme($theme-light);
 }
 
-// Check for user's preference. 
+// Check for user's preference.
 // switch to dark mode is set.
 @media (prefers-color-scheme: dark) {
   :root {
     // Dark theme settings
     @include apply-theme($theme-dark);
   }
+
+  .bg-light-grey-1, .bg-white {
+    color: #000000;
+  }
 }
 
 // Can be used to apply dark mode styles
 // when in light mode.
-// TODO: this is not working with the grid. 
+// TODO: this is not working with the grid.
 .dark{
   @include apply-theme($theme-dark);
   background-color: var(--page-background-color);

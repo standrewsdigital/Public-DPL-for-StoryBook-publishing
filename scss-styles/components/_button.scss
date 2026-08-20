@@ -276,7 +276,6 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 // Styling for the default blue button with white text
 .btn {
     @extend.border-light;
-    z-index: 1;
     margin-bottom: 5px;
     padding: 0.5em 1em;
     text-decoration: none;
