@@ -24,6 +24,10 @@
         }
     }
 
+    .icon {
+        align-self: center;
+    }
+
     p, h2, h3, h4, h5, h6 {
         margin-top: 0;
         margin-bottom: 0.5em;
@@ -45,6 +49,10 @@
 
     &.text-left {
         text-align: left;
+
+        .icon {
+            align-self: start;
+        }
     }
 
     p, h2, h3, h4, h5, h6, dl {
