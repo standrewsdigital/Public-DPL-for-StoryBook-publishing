@@ -1,0 +1,39 @@
+.col {
+    min-height: 100px;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 100px;
+    /* margin-bottom: 15px; Space between rows for clarity */
+}
+
+/* Highlight the first and last columns for visual aid */
+.col:first-child {
+    background-color: lightblue;
+}
+
+.col:last-child {
+    background-color: lightcoral;
+}
+
+/* Container styling for better visibility */
+.container {
+    margin-bottom: 20px;
+    padding: 0; /* Override if needed based on your grid system CSS */
+}
+
+.col-centered {
+    min-height: 100px;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 100px;
+    /* margin-bottom: 15px; Space between rows for clarity */
+}
+
+/* Highlight the first and last columns for visual aid */
+.col-centered:first-child {
+    background-color: lightblue;
+}
+
+.col-centered:last-child {
+    background-color: lightcoral;
+}
