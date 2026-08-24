@@ -1,6 +1,33 @@
 stages:
+  - test
   - compile
   - deploy
+
+test-css:
+  stage: test
+  tags:
+    - docker
+  image: node:26-alpine
+  before_script:
+    - export http_proxy="http://${PROXY_HOST}:${PROXY_PORT}"
+    - export https_proxy="http://${PROXY_HOST}:${PROXY_PORT}"
+    - apk add --no-cache git
+    - npm config set proxy "http://${PROXY_HOST}:${PROXY_PORT}"
+    - npm config set https-proxy "http://${PROXY_HOST}:${PROXY_PORT}"
+    - npm install -g stylelint stylelint-config-standard-scss
+  script:
+    - |
+      CHANGED_FILES=$(git diff --name-only --diff-filter=ACMR "$CI_MERGE_REQUEST_DIFF_BASE_SHA"...HEAD -- '*.scss')
+      if [ -z "$CHANGED_FILES" ]; then
+        echo "No changed SCSS files, skipping lint."
+      else
+        echo "$CHANGED_FILES"
+        echo "$CHANGED_FILES" | xargs stylelint
+      fi
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - "**/*.scss"
 
 compile:
   stage: compile
@@ -14,7 +41,7 @@ compile:
   script:
     - RELEASE_VERSION="${CI_COMMIT_TAG#v}"
     - mkdir $RELEASE_VERSION
-    - sass --style=compressed --embed-sources scss-styles/:$RELEASE_VERSION/
+    - sass --style=compressed --no-source-map scss-styles/:$RELEASE_VERSION/
   artifacts:
     paths:
       - ./$RELEASE_VERSION
