@@ -13,6 +13,7 @@ export const createAlert = ({
   if (headingLevel && headingContent) {
     const heading = document.createElement(headingLevel);
     heading.innerHTML = headingContent;
+    heading.classList.add('alert-heading');
 
     alert.appendChild(heading);
   }
