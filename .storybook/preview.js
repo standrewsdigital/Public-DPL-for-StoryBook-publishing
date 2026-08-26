@@ -15,6 +15,21 @@ const preview = {
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
       test: "todo"
+    },
+
+    docs: {
+      codePanel: true,
+      source: {
+        transform: async (source) => {
+          const prettier = await import('prettier/standalone');
+          const prettierPluginHtml = await import('prettier/plugins/html');
+
+          return prettier.format(source, {
+            parser: 'html',
+            plugins: [prettierPluginHtml],
+          });
+        }
+      }
     }
   },
 };
