@@ -55,6 +55,7 @@ a, .link {
   text-decoration: underline;
   text-underline-offset: .15em;
   transition: color 0.3s ease;
+  outline-offset: 0;
 
     &:hover {
       color: var(--link-hover-color);
