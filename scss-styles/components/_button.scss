@@ -105,25 +105,25 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 }
 
 // --------- Icon Buttons -----------//
-@mixin generate-icon-classes($base-class, $icons) {
-  @each $icon in $icons {
-    .btn.#{$base-class}-#{$icon} {
-        padding: 0.5rem !important;
-    }
-    .#{$base-class}-#{$icon}::before {
+.btn[class*="icon-"] {
+    &::before {
         color: inherit;
         float: right;
         font-size: 1.3rem;
-        padding: 0;
-        padding-left: 8px;
-        padding-top: 5px;
+        padding: 5px 0 0 8px;
         line-height: 1rem;
-        content: get-icon-content($icon);
         font-family: 'Material Symbols Outlined';
         font-feature-settings: 'liga';
         -webkit-font-feature-settings: 'liga';
         -moz-font-feature-settings: 'liga';
-        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+}
+
+@mixin generate-icon-classes($base-class, $icons) {
+  @each $icon in $icons {
+    .#{$base-class}-#{$icon}::before {
+        content: get-icon-content($icon);
     }
   }
 }
