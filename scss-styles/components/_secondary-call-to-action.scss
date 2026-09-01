@@ -1,6 +1,7 @@
 .secondary-call {
 	padding: 2em 0;
 	background-color: $light-grey-1;
+	color: $dark-grey-2;
 
 	.call-heading {
 		margin: 0;
@@ -17,7 +18,7 @@
 			.btn.lg.action:not(.white) {
 				border-bottom: 3px solid $dark-orange-25-shade;
 				background-color: $dark-orange;
-				
+
 				&:hover, &:focus {
 					background-color: $dark-orange-25-shade;
 				}

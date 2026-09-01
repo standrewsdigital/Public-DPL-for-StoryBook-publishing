@@ -2,11 +2,14 @@ $link-spacing: 5px;
 $divider-color: $mid-grey-1;
 
 .horizontal-list {
-  background-color: white;
   list-style: none;
   display: flex;
+  align-items: center;
   padding: 0;
-  margin: 0;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+  gap: 1rem 0;
+  font-size: 1.25rem;
 
   li {
     color: $dark-grey-2;
@@ -22,6 +25,40 @@ $divider-color: $mid-grey-1;
     a {
       text-decoration: underline;
       color: inherit; // Ensures the link color is the same as the li element
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .hover-drop-list {
+    .drop-content {
+      li {
+        &:not(:last-child) {
+          margin: 0;
+
+          &::after {
+            content: '';
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg-blue-primary {
+  .horizontal-list {
+    $divider-color: $mid-grey-2;
+
+    li {
+      color: white;
+      &:not(:last-child) {
+        &:after {
+          color: $divider-color;
+        }
+      }
     }
   }
 }

@@ -21,7 +21,7 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     @each $color, $shade in (
         "burgundy": ($burgundy-primary, $burgundy-25-shade),
         "green": ($green-primary, $green-25-shade),
-        "grey": ($mid-grey-1, $dark-grey-3),
+        "grey": ($dark-grey-3, $grey),
         "orange": ($dark-orange, $dark-orange-25-shade),
         "purple": ($purple-primary, $purple-25-shade),
         "red": ($red-primary, $red-25-shade),
@@ -135,8 +135,23 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     display: inline-block;
 
     .btn {
-        margin: 0 !important;
-        padding-right: 3rem;
+        margin: 0;
+
+        &::after {
+            content: "expand_more";
+            display: inline-block;
+            font-family: 'Material Symbols Outlined';
+            font-feature-settings: 'liga';
+            font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+            pointer-events: none;
+            font-size: 1.25rem;
+            line-height: 1;
+            transition: transform 0.2s ease-in-out;
+            margin-left: 0.5rem;
+            vertical-align: center;
+
+        }
+
     }
 
     // Animation for opening and closing the dropdown
@@ -145,10 +160,6 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         to { max-height: 100%; }
     }
 
-    // On click show dropdown
-    .show {
-        display: block !important;
-    }
 
     // Styles for the dropdown content
     .drop-content {
@@ -156,35 +167,45 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         position: absolute;
         background-color: var(--page-background-color);
         min-width: 160px;
-        padding: 12px 16px;
         left: 0;
         z-index: 1000;
         display: none;
         float: left;
         max-width: 100%;
         padding: 0;
-        margin: 0px 0 0;
+        margin: 0;
         list-style: none;
         font-size: 1rem;
         text-align: left;
-        > li > a {
-            display: block;
-            padding: 6px 22px;
-            clear: both;
-            font-weight: normal;
-            line-height: 1.5;
-            color: var(--page-text-color);
 
-            &:hover {
-                background: var(--page-highlight-background-color);
+        li {
+            a {
+                display: block;
+                padding: 6px 22px;
+                clear: both;
+                font-weight: normal;
+                line-height: 1.5;
                 color: var(--page-text-color);
-                text-decoration: none;
+
+                &:hover {
+                    background: var(--page-highlight-background-color);
+                    color: var(--page-text-color);
+                    text-decoration: none;
+                }
+
+                &:active {
+                    background: var(--link-focus-background);
+                }
             }
+        }
+
+        // On click show dropdown
+        &.show {
+            display: block;
         }
     }
 
     &.up > .drop-content {
-        top: auto;
         bottom: 100%;
     }
 
@@ -192,30 +213,14 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         top: 100%;
     }
 
-    .btn:after {
-        content: "expand_more";
-        font-family: 'Material Symbols Outlined';
-        font-feature-settings: 'liga';
-        -webkit-font-feature-settings: 'liga';
-        -moz-font-feature-settings: 'liga';
-        font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
-        position: absolute;
-        pointer-events: none;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.25rem;
-        line-height: 1;
-        transition: transform 0.2s ease-in-out;
-    }
     &.up .btn:after {
-        transform: translateY(-50%) rotate(180deg);
+        rotate: 180deg;
     }
     &.selected .btn:after {
-        transform: translateY(-50%) rotate(180deg);
+        rotate: 180deg;
     }
     &.up.selected .btn:after {
-        transform: translateY(-50%) rotate(0deg);
+        rotate: 0deg;
     }
 }
 
@@ -241,29 +246,32 @@ $breakpoint-value: map-get($breakpoints, 'lg');
 
 // Dropdown open and close animations
 @media (min-width: 800px) {
-    .hover-drop-list:not(.selected):hover .btn:hover:after {
-        transform: translateY(-50%) rotate(180deg);
-        pointer-events: all;
-    }
+    .hover-drop-list {
+        &:not(.selected) {
+            &:hover {
+                .btn {
+                    &::after {
+                        rotate: 180deg;
+                    }
+                }
+            }
+        }
 
-    .hover-drop-list.up:not(.selected):hover .btn:hover:after {
-        top: 1rem;
-        transform: rotate(90deg);
-        pointer-events: all;
+        &.up {
+            &:not(.selected) {
+                &:hover {
+                    .btn {
+                        &::after {
+                            rotate: 0deg;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .hover-drop-list:not(.selected):hover .drop-content {
         display: block;
-        animation-name: out;
-        animation-duration: 0.2s;
-    }
-}
-
-@media (min-width: $breakpoint-value) {
-    .hover-drop-list:not(.selected):hover .btn:after {
-        top: 1rem;
-        transform: rotate(135deg);
-        pointer-events: all;
     }
 }
 
@@ -293,4 +301,18 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     line-height: 1.5;
     display: inline-block;
     @include options;
+}
+
+@media (prefers-color-scheme: dark) {
+    .hover-drop-list {
+        .drop-content {
+            li {
+                a {
+                    &:focus {
+                        color: $dark-grey-2;
+                    }
+                }
+            }
+        }
+    }
 }

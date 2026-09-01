@@ -7,6 +7,7 @@
     <title>Buttons Example</title>
     <link rel="stylesheet" href="../../compiled-css/main.css">
     <link rel="stylesheet" href="../../compiled-css/button.css">
+    <script src="../../scripts/main.js" defer></script>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
                     <h2>Hover Dropdown Buttons</h2>
                     <div id="dropdown-buttons">
                     <div class="hover-drop-list down">
-                        <button class="btn" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                        <button class="btn" data-toggle="drop" aria-haspopup="true"
                             aria-expanded="false">Dropdown trigger</button>
                         <ul class="drop-content" aria-labelledby="drop-primary">
                             <li><a href="#">Dropdown option 1</a></li>
@@ -55,7 +56,7 @@
                     </div>
 
                     <div class="hover-drop-list down">
-                        <button class="btn red" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                        <button class="btn red" data-toggle="drop" aria-haspopup="true"
                             aria-expanded="false">Dropdown trigger</button>
                         <ul class="drop-content" aria-labelledby="drop-primary">
                             <li><a href="#">Drop option 1</a></li>
@@ -65,7 +66,7 @@
                     </div>
 
                     <div class="hover-drop-list down">
-                        <button class="btn green" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                        <button class="btn green" data-toggle="drop" aria-haspopup="true"
                             aria-expanded="false">Drop trigger</button>
                         <ul class="drop-content" aria-labelledby="drop-primary">
                             <li><a href="#">Drop option 1</a></li>
@@ -75,7 +76,7 @@
                     </div>
 
                     <div class="hover-drop-list down">
-                        <button class="btn grey" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                        <button class="btn grey" data-toggle="drop" aria-haspopup="true"
                             aria-expanded="false">Drop trigger</button>
                         <ul class="drop-content" aria-labelledby="drop-primary">
                             <li><a href="#">Drop option 1</a></li>
@@ -87,7 +88,7 @@
                     <h2>Hover Drop-Up Buttons</h2>
 
                     <div class="hover-drop-list up">
-                        <button class="btn" onclick="toggleDropdown(this)" data-toggle="drop" aria-haspopup="true"
+                        <button class="btn" data-toggle="drop" aria-haspopup="true"
                             aria-expanded="false">Drop up trigger</button>
                         <ul class="drop-content" aria-labelledby="drop-primary">
                             <li><a href="#">Drop option 1</a></li>
@@ -180,82 +181,6 @@
                 </div>
             </div>
         </div>
-
-
-                <script>
-                    // DPL JavaScript of the use of drop list buttons 
-                    // Function to toggle dropdown visibility
-                    function toggleDropdown(button) {
-                        let child = button.parentElement.querySelector(".drop-content");
-                        let parent = button.closest(".hover-drop-list");
-                        if (parent.classList.contains("selected")) {
-                            parent.classList.remove("selected");
-                            child.classList.remove("show");
-                        } else {
-                            closeAllDropdowns(); // Close other dropdowns
-                            parent.classList.add("selected");
-                            child.classList.add("show");
-                        }
-                    }
-
-                    // Function to close all open dropdowns
-                    function closeAllDropdowns() {
-                        document.querySelectorAll('.hover-drop-list.selected').forEach(function (element) {
-                            element.classList.remove('selected');
-                            element.querySelector('.drop-content').classList.remove('show');
-                        });
-                    }
-
-                    // Event listener to close dropdowns when clicking outside of them
-                    document.addEventListener('click', function (event) {
-                        if (!event.target.closest('.hover-drop-list')) {
-                            closeAllDropdowns();
-                        }
-                    });
-
-                    // Function to toggle dropdown class based on scroll position
-                    function toggleClassOnScroll() {
-                        const elements = document.querySelectorAll('.hover-drop-list.up, .hover-drop-list.down');
-                        const initialClasses = new Map();
-
-                        // Store the initial classes
-                        elements.forEach(element => {
-                            initialClasses.set(element, element.className);
-                        });
-
-                        const scrollPosition = window.scrollY;
-                        const viewportHeight = window.innerHeight;
-                        const thresholdTop = 50; // Distance from the top to trigger the change
-                        const thresholdBottom = 80; // Distance from the bottom to trigger the change
-
-                        elements.forEach(element => {
-                            const elementRect = element.getBoundingClientRect();
-                            const elementTop = elementRect.top + scrollPosition;
-                            const elementBottom = elementTop + elementRect.height;
-
-                            if (elementTop <= scrollPosition + thresholdTop) {
-                                if (element.classList.contains('up')) {
-                                    element.classList.remove('up');
-                                    element.classList.add('down');
-                                }
-                            } else if (elementBottom >= scrollPosition + viewportHeight - thresholdBottom) {
-                                if (element.classList.contains('down')) {
-                                    element.classList.remove('down');
-                                    element.classList.add('up');
-                                }
-                            } else {
-                                const initialClass = initialClasses.get(element);
-                                element.className = initialClass;
-                            }
-                        });
-                    }
-
-                    // Attach the scroll event listener
-                    document.addEventListener('scroll', toggleClassOnScroll);
-
-                    // Initial call to check the position on page load
-                    document.addEventListener('DOMContentLoaded', toggleClassOnScroll);
-                </script>
             </div>
         </div>
     </main>

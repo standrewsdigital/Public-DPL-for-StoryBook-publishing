@@ -1,0 +1,594 @@
+import { Meta, ColorPalette, ColorItem, Subtitle } from '@storybook/addon-docs/blocks'
+
+<Meta title="Core/Colour system"/>
+
+# Colour system
+
+The DPL colour system provides comprehensive tint and shade ranges for all brand colours:
+
+- **Tints**: 5% increments toward white (5-95%), making colours progressively lighter
+- **Shades**: 5% increments toward black (5-95%), making colours progressively darker
+- **Primary Colours**: `blue`, `light-blue`, `green`, `purple`, `burgundy`
+
+Each primary colour has **40 variations**: 20 tints + 20 shades.
+
+## Blue
+
+<ColorPalette>
+  <ColorItem
+    title={"Primary"}
+    colors={{ "$blue-primary": '#00539b' }}
+  />
+  <ColorItem
+    title={"Tints (5-25)"}
+    colors={{
+      "$blue-5-tint": "#0d5ca0",
+      "$blue-10-tint": "#1a64a5",
+      "$blue-15-tint": "#266daa",
+      "$blue-20-tint": "#3375af",
+      "$blue-25-tint": "#407eb4",
+    }}
+  />
+  <ColorItem
+    title={"Tints (30-50)"}
+    colors={{
+      "$blue-30-tint": "#4d87b9",
+      "$blue-35-tint": "#5a8fbe",
+      "$blue-40-tint": "#6698c3",
+      "$blue-45-tint": "#73a0c8",
+      "$blue-50-tint": "#80a9cd",
+    }}
+  />
+  <ColorItem
+    title={"Tints (55-75)"}
+    colors={{
+      "$blue-55-tint": "#8db2d2",
+      "$blue-60-tint": "#99bad7",
+      "$blue-65-tint": "#a6c3dc",
+      "$blue-70-tint": "#b3cbe1",
+      "$blue-75-tint": "#c0d4e6",
+    }}
+  />
+  <ColorItem
+    title={"Tints (80-95)"}
+    colors={{
+      "$blue-80-tint": "#ccddeb",
+      "$blue-85-tint": "#d9e5f0",
+      "$blue-90-tint": "#e6eef5",
+      "$blue-95-tint": "#f2f6fa",
+    }}
+  />
+  <ColorItem
+    title={"Shades (5-25)"}
+    colors={{
+      "$blue-5-shade": "#004f93",
+      "$blue-10-shade": "#004a8c",
+      "$blue-15-shade": "#004684",
+      "$blue-20-shade": "#00427c",
+      "$blue-25-shade": "#003e74",
+    }}
+  />
+  <ColorItem
+    title={"Shades (30-50)"}
+    colors={{
+      "$blue-30-shade": "#003a6d",
+      "$blue-35-shade": "#003665",
+      "$blue-40-shade": "#00325d",
+      "$blue-45-shade": "#002e55",
+      "$blue-50-shade": "#002a4e",
+    }}
+  />
+  <ColorItem
+    title={"Shades (55-75)"}
+    colors={{
+      "$blue-55-shade": "#002546",
+      "$blue-60-shade": "#00213e",
+      "$blue-65-shade": "#001d36",
+      "$blue-70-shade": "#00192e",
+      "$blue-75-shade": "#001527",
+    }}
+  />
+  <ColorItem
+    title={"Shades (80-95)"}
+    colors={{
+      "$blue-80-shade": "#00111f",
+      "$blue-85-shade": "#000c17",
+      "$blue-90-shade": "#000810",
+      "$blue-95-shade": "#000408",
+    }}
+  />
+</ColorPalette>
+
+## Light blue
+
+<ColorPalette>
+  <ColorItem
+    title={"Primary"}
+    colors={{ "$light-blue-primary": "#0071b3" }}
+  />
+  <ColorItem
+    title={"Tints (5-25)"}
+    colors={{
+      "$light-blue-5-tint": "#1a7bbc",
+      "$light-blue-10-tint": "#3385c5",
+      "$light-blue-15-tint": "#4d8fce",
+      "$light-blue-20-tint": "#6699d7",
+      "$light-blue-25-tint": "#4095c6",
+    }}
+  />
+  <ColorItem
+    title={"Tints (30-50)"}
+    colors={{
+      "$light-blue-30-tint": "#99a3e0",
+      "$light-blue-35-tint": "#b3ade9",
+      "$light-blue-40-tint": "#ccb7f2",
+      "$light-blue-45-tint": "#e6c1fb",
+      "$light-blue-50-tint": "#80b8d9",
+    }}
+  />
+  <ColorItem
+    title={"Tints (55-75)"}
+    colors={{
+      "$light-blue-55-tint": "#99c2e2",
+      "$light-blue-60-tint": "#b3cceb",
+      "$light-blue-65-tint": "#ccd6f4",
+      "$light-blue-70-tint": "#e6e0fd",
+      "$light-blue-75-tint": "#f0eafd",
+    }}
+  />
+  <ColorItem
+    title={"Tints (80-95)"}
+    colors={{
+      "$light-blue-80-tint": "#f5f0fe",
+      "$light-blue-85-tint": "#faf5fe",
+      "$light-blue-90-tint": "#fcf9fe",
+      "$light-blue-95-tint": "#fdfdfe",
+    }}
+  />
+  <ColorItem
+    title={"Shades (5-25)"}
+    colors={{
+      "$light-blue-5-shade":  "#006baa",
+      "$light-blue-10-shade": "#0066a1",
+      "$light-blue-15-shade": "#006098",
+      "$light-blue-20-shade": "#005a8f",
+      "$light-blue-25-shade": "#005586",
+    }}
+  />
+  <ColorItem
+    title={"Shades (30-50)"}
+    colors={{
+      "$light-blue-30-shade": "#004f7d",
+      "$light-blue-35-shade": "#004a74",
+      "$light-blue-40-shade": "#00446b",
+      "$light-blue-45-shade": "#003e62",
+      "$light-blue-50-shade": "#003959",
+    }}
+  />
+  <ColorItem
+    title={"Shades (55-75)"}
+    colors={{
+      "$light-blue-75-shade": "#001c2e",
+      "$light-blue-80-shade": "#001625",
+      "$light-blue-85-shade": "#00101d",
+      "$light-blue-90-shade": "#000a14",
+      "$light-blue-95-shade": "#000509",
+    }}
+  />
+  <ColorItem
+    title={"Shades (80-95)"}
+    colors={{
+      "$light-blue-80-shade": "#001625",
+      "$light-blue-85-shade": "#00101d",
+      "$light-blue-90-shade": "#000a14",
+      "$light-blue-95-shade": "#000509",
+    }}
+  />
+</ColorPalette>
+
+
+## Red
+
+<ColorPalette>
+  <ColorItem
+    title={"Primary"}
+    colors={{ "$red-primary": "#ea1a13", }}
+  />
+  <ColorItem
+    title={"St Andrews"}
+    colors={{ "$red-st-andrews": "#ee312a", }}
+  />
+  <ColorItem
+    title={"Tints"}
+    colors={{
+      "$red-25-tint": "#ef534e",
+      "$red-50-tint": "#f58d89",
+    }}
+  />
+  <ColorItem
+    title={"Shades"}
+    colors={{
+      "$red-25-shade": "#b0140e",
+    }}
+  />
+</ColorPalette>
+
+## Grey
+
+<ColorPalette>
+  <ColorItem
+    title={"Primary"}
+    colors={{ "$grey": "#6a6a6b" }}
+  />
+  <ColorItem
+    title={"Light grey"}
+    colors={{
+      "$light-grey-1": "#f0f0f0",
+      "$light-grey-2": "#fafafa",
+      "$white": "#ffffff",
+    }}
+  />
+  <ColorItem
+    title={"Mid grey"}
+    colors={{
+      "$mid-grey-1": "#949494",
+      "$mid-grey-2": "#dedede",
+    }}
+  />
+  <ColorItem
+    title={"Dark grey"}
+    colors={{
+      "$dark-grey-1": "#202024",
+      "$dark-grey-2": "#0f0f11",
+      "$dark-grey-3": "#4f4f4f",
+    }}
+  />
+</ColorPalette>
+
+## Yellow and orange
+<ColorPalette>
+  <ColorItem
+    title={"Yellow"}
+    colors={{
+      "$yellow": "#ffdf00",
+    }}
+  />
+  <ColorItem
+    title={"Orange primary"}
+    colors={{ "$orange-primary": "#ffb400" }}
+  />
+  <ColorItem
+    title={"Dark orange"}
+    colors={{
+      "$dark-orange": "#bf5909",
+      "$dark-orange-25-shade": "#98490c",
+    }}
+  />
+</ColorPalette>
+
+## Green
+
+<ColorPalette>
+  <ColorItem
+    title={"Primary"}
+    colors={{
+      "$green-primary": "#00853f",
+    }}
+  />
+  <ColorItem
+    title={"Tints (5-25)"}
+    colors={{
+      "$green-5-tint": "#0d8b49",
+      "$green-10-tint": "#1a9152",
+      "$green-15-tint": "#26985c",
+      "$green-20-tint": "#339e65",
+      "$green-25-tint": "#40a46f",
+    }}
+  />
+  <ColorItem
+    title={"Tints (30-50)"}
+    colors={{
+      "$green-30-tint": "#4daa79",
+      "$green-35-tint": "#5ab082",
+      "$green-40-tint": "#66b68c",
+      "$green-45-tint": "#73bc95",
+      "$green-50-tint": "#80c29f",
+    }}
+  />
+  <ColorItem
+    title={"Tints (55-75)"}
+    colors={{
+      "$green-55-tint": "#8dc8a9",
+      "$green-60-tint": "#99ceb2",
+      "$green-65-tint": "#a6d4bc",
+      "$green-70-tint": "#b3dac5",
+      "$green-75-tint": "#c0e0cf",
+    }}
+  />
+  <ColorItem
+    title={"Tints (80-95)"}
+    colors={{
+      "$green-80-tint": "#cce7d9",
+      "$green-85-tint": "#d9ede2",
+      "$green-90-tint": "#e6f3ec",
+      "$green-95-tint": "#f2f9f5",
+    }}
+  />
+  <ColorItem
+    title={"Shades (5-25)"}
+    colors={{
+      "$green-5-shade": "#007e3c",
+      "$green-10-shade": "#007839",
+      "$green-15-shade": "#007135",
+      "$green-20-shade": "#006a32",
+      "$green-25-shade": "#00642f",
+    }}
+  />
+  <ColorItem
+    title={"Shades (30-50)"}
+    colors={{
+      "$green-30-shade": "#005d2c",
+      "$green-35-shade": "#005729",
+      "$green-40-shade": "#005026",
+      "$green-45-shade": "#004a23",
+      "$green-50-shade": "#004320",
+    }}
+  />
+  <ColorItem
+    title={"Shades (55-75)"}
+    colors={{
+      "$green-55-shade": "#003d1d",
+      "$green-60-shade": "#00361a",
+      "$green-65-shade": "#003017",
+      "$green-70-shade": "#002914",
+      "$green-75-shade": "#002311",
+    }}
+  />
+  <ColorItem
+    title={"Shades (80-95)"}
+    colors={{
+      "$green-80-shade": "#001c0e",
+      "$green-85-shade": "#00160b",
+      "$green-90-shade": "#000f08",
+      "$green-95-shade": "#000904",
+    }}
+  />
+</ColorPalette>
+
+## Purple
+
+<ColorPalette>
+  <ColorItem
+    title={"Primary"}
+    colors={{
+      "$purple-primary": "#7b439a",
+    }}
+  />
+  <ColorItem
+    title={"Tints (5-25)"}
+    colors={{
+      "$purple-5-tint": "#824c9f",
+      "$purple-10-tint": "#8856a4",
+      "$purple-15-tint": "#8f5fa9",
+      "$purple-20-tint": "#9569ae",
+      "$purple-25-tint": "#9c72b3",
+    }}
+  />
+  <ColorItem
+    title={"Tints (30-50)"}
+    colors={{
+      "$purple-30-tint": "#a37bb8",
+      "$purple-35-tint": "#a985bd",
+      "$purple-40-tint": "#b08ec3",
+      "$purple-45-tint": "#b698c8",
+      "$purple-50-tint": "#bda1cd",
+    }}
+  />
+  <ColorItem
+    title={"Tints (55-75)"}
+    colors={{
+      "$purple-55-tint": "#c4aad2",
+      "$purple-60-tint": "#cab4d7",
+      "$purple-65-tint": "#d1bddc",
+      "$purple-70-tint": "#d7c7e1",
+      "$purple-75-tint": "#ded0e6",
+    }}
+  />
+  <ColorItem
+    title={"Tints (80-95)"}
+    colors={{
+      "$purple-80-tint": "#e5d9eb",
+      "$purple-85-tint": "#ebe3f0",
+      "$purple-90-tint": "#f2ecf5",
+      "$purple-95-tint": "#f8f6fa",
+    }}
+  />
+  <ColorItem
+    title={"Shades (5-25)"}
+    colors={{
+      "$purple-5-shade": "#754092",
+      "$purple-10-shade": "#6f3c8b",
+      "$purple-15-shade": "#693983",
+      "$purple-20-shade": "#633680",
+      "$purple-25-shade": "#5c3274",
+    }}
+  />
+  <ColorItem
+    title={"Shades (25-50)"}
+    colors={{
+      "$purple-30-shade": "#562f6c",
+      "$purple-35-shade": "#502c64",
+      "$purple-40-shade": "#4a285c",
+      "$purple-45-shade": "#442555",
+      "$purple-50-shade": "#3e224d",
+    }}
+  />
+  <ColorItem
+    title={"Tints (55-75)"}
+    colors={{
+      "$purple-55-shade": "#371e45",
+      "$purple-60-shade": "#311b3e",
+      "$purple-65-shade": "#2b1836",
+      "$purple-70-shade": "#25142e",
+      "$purple-75-shade": "#1f1127",
+    }}
+  />
+  <ColorItem
+    title={"Tints (80-95)"}
+    colors={{
+      "$purple-80-shade": "#190d1f",
+      "$purple-85-shade": "#120a17",
+      "$purple-90-shade": "#0c070f",
+      "$purple-95-shade": "#060308",
+    }}
+  />
+</ColorPalette>
+
+## Burgundy
+
+<ColorPalette>
+  <ColorItem
+    title={"Primary"}
+    colors={{ "$burgundy-primary": "#c60c46", }}
+  />
+  <ColorItem
+    title={"Tints (5-25)"}
+    colors={{
+      "$burgundy-5-tint": "#c9184f",
+      "$burgundy-10-tint": "#cc2458",
+      "$burgundy-15-tint": "#ce3162",
+      "$burgundy-20-tint": "#d13d6b",
+      "$burgundy-25-tint": "#d44974",
+    }}
+  />
+  <ColorItem
+    title={"Tints (30-50)"}
+    colors={{
+      "$burgundy-30-tint": "#d7557d",
+      "$burgundy-35-tint": "#da6187",
+      "$burgundy-40-tint": "#dd6e90",
+      "$burgundy-45-tint": "#e07a9a",
+      "$burgundy-50-tint": "#e386a3",
+    }}
+  />
+  <ColorItem
+    title={"Tints (55-75)"}
+    colors={{
+      "$burgundy-55-tint": "#e692ac",
+      "$burgundy-60-tint": "#e99eb5",
+      "$burgundy-65-tint": "#ebaabf",
+      "$burgundy-70-tint": "#eeb6c8",
+      "$burgundy-75-tint": "#f1c2d1",
+    }}
+  />
+  <ColorItem
+    title={"Tints (80-95)"}
+    colors={{
+      "$burgundy-80-tint": "#f4cfda",
+      "$burgundy-85-tint": "#f7dbe3",
+      "$burgundy-90-tint": "#f9e7ed",
+      "$burgundy-95-tint": "#fcf3f6",
+    }}
+  />
+  <ColorItem
+    title={"Shades (5-25)"}
+    colors={{
+      "$burgundy-5-shade": "#bc0b43",
+      "$burgundy-10-shade": "#b20b3f",
+      "$burgundy-15-shade": "#a80a3c",
+      "$burgundy-20-shade": "#9e0a38",
+      "$burgundy-25-shade": "#950935",
+    }}
+  />
+  <ColorItem
+    title={"Shades (30-50)"}
+    colors={{
+      "$burgundy-30-shade": "#8b0831",
+      "$burgundy-35-shade": "#81082e",
+      "$burgundy-40-shade": "#77072a",
+      "$burgundy-45-shade": "#6d0727",
+      "$burgundy-50-shade": "#630623",
+    }}
+  />
+  <ColorItem
+    title={"Tints (55-75)"}
+    colors={{
+      "$burgundy-55-shade": "#59051f",
+      "$burgundy-60-shade": "#4f051c",
+      "$burgundy-65-shade": "#450418",
+      "$burgundy-70-shade": "#3b0415",
+      "$burgundy-75-shade": "#310311",
+    }}
+  />
+  <ColorItem
+    title={"Tints (80-95)"}
+    colors={{
+      "$burgundy-80-shade": "#27020e",
+      "$burgundy-85-shade": "#1d020a",
+      "$burgundy-90-shade": "#130107",
+      "$burgundy-95-shade": "#090004",
+    }}
+  />
+</ColorPalette>
+
+## Contextual colours
+
+<ColorPalette>
+  <ColorItem
+    title={"Success"}
+    colors={{ "$success": "#00853f" }}
+  />
+  <ColorItem
+    title={"Information"}
+    colors={{ "$information": "#00539b" }}
+  />
+  <ColorItem
+    title={"Warning"}
+    colors={{ "$warning": "#bf5909" }}
+  />
+  <ColorItem
+    title={"Danger"}
+    colors={{ "$danger": "#ea1a13" }}
+  />
+</ColorPalette>
+
+## Legacy background colours
+
+For backward compatibility with existing pages, legacy light background colours are available.
+
+These legacy colours are **only available for backgrounds** (`.bg-*` classes), not text colours.
+
+<ColorPalette>
+  <ColorItem
+    title={"Light blue background"}
+    subtitle={"Previously $light-blue-5-shade"}
+    colors={{ "$light-blue-light-bg": "#e0f2fd" }}
+  />
+  <ColorItem
+    title={"Green background"}
+    subtitle={"Previously $green-5-shade"}
+    colors={{ "$green-light-bg": "#d2f9e3" }}
+  />
+  <ColorItem
+    title={"Purple background"}
+    subtitle={"Previously $purple-5-shade"}
+    colors={{ "$purple-light-bg": "#f4e3ff" }}
+  />
+  <ColorItem
+    title={"Burgundy background"}
+    subtitle={"Previously $burgundy-5-shade"}
+    colors={{ "$burgundy-light-bg": "#ffd3e1" }}
+  />
+</ColorPalette>
+
+## Finding colours
+
+All colour variables are defined in [scss-styles/variables/_main-colors.scss](scss-styles/variables/_main-colors.scss). You can search for specific percentages:
+
+```bash
+# Find all 70-tint colors
+grep "70-tint" scss-styles/variables/_main-colors.scss
+
+# Find all burgundy variations
+grep "burgundy-" scss-styles/variables/_main-colors.scss
+```
