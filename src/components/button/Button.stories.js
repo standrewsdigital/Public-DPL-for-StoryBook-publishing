@@ -9,7 +9,7 @@ export default {
   argTypes: {
     type: {
       control: { type: 'select' },
-      options: ['Primary', 'Action', 'Dropdown']
+      options: ['Primary', 'Action']
     },
     size: {
       control: { type: 'select' },
