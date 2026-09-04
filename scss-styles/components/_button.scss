@@ -98,10 +98,17 @@ $breakpoint-value: map-get($breakpoints, 'lg');
             font-size: 1.4rem;
             line-height: 1;
             display: inline-block;
-            margin-left: 0.35rem;
-            vertical-align: middle;
+            margin-left: 0.5rem;
+            margin-right: -0.5rem;
+            vertical-align: center;
             color: #fff;
         }
+
+        &.lg {
+            &:after {
+                font-size: 1.7rem;
+            }
+         }
 
         &.white:after {
             color: $blue-primary;
