@@ -113,6 +113,15 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         &.white:after {
             color: $blue-primary;
         }
+
+        &:active {
+            border-color: var(--link-focus-background);
+            text-decoration: none;
+
+            &:after {
+                color: #000;
+            }
+        }
     }
 }
 
