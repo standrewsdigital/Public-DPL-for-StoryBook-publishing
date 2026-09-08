@@ -234,11 +234,13 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         list-style: none;
         font-size: 1rem;
         text-align: left;
+        border: 1px solid $dark-grey-2;
+        box-shadow: var(--dpl-shadow-default);
 
         li {
             a {
                 display: block;
-                padding: 6px 22px;
+                padding: 0.5rem 1rem;
                 clear: both;
                 font-weight: normal;
                 line-height: 1.5;
