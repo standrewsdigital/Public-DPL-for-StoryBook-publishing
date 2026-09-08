@@ -4,18 +4,15 @@ export const createButton = ({
   type = 'Primary',
   size = 'Regular',
   cornerShape = 'Square',
+  linkList
 }) => {
 
-  const button = document.createElement('button');
+  let button = document.createElement('button');
 
-  switch (type) {
-    case 'Action':
-      button.classList.add('action');
-      break;
-    case 'Primary':
-    default:
-      break;
-  }
+  button.type = 'button';
+  button.innerText = label;
+  button.classList.add('btn');
+  button.classList.add(colour.toLowerCase());
 
   switch (size) {
     case 'Large':
@@ -44,10 +41,45 @@ export const createButton = ({
       break;
   }
 
-  button.type = 'button';
-  button.innerText = label;
-  button.classList.add('btn');
-  button.classList.add(colour.toLowerCase());
+  switch (type) {
+    case 'Action':
+      button.classList.add('action');
+      break;
+    case 'Dropdown':
+      button = createDropdownButton( button, linkList );
+      break;
+    case 'Primary':
+    default:
+      break;
+  }
 
   return button;
 };
+
+function createDropdownButton( button, linkListArray ) {
+  const dropdown = document.createElement('div');
+  dropdown.classList.add('hover-drop-list', 'down');
+
+  button.dataset.toggle = 'drop';
+  button.setAttribute('aria-haspopup', "true");
+  button.setAttribute('aria-expanded', "false");
+  dropdown.appendChild(button);
+
+  if (linkListArray.length > 0) {
+    const linkList = document.createElement('ul');
+    linkList.classList.add('drop-content');
+
+    linkListArray.forEach(({ url, label }) => {
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = url;
+      link.innerText = label;
+      listItem.appendChild(link);
+      linkList.appendChild(listItem);
+    });
+
+    dropdown.appendChild(linkList);
+  }
+
+  return dropdown;
+}

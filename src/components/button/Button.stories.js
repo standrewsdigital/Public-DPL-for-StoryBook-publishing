@@ -3,13 +3,13 @@ import { createButton } from './Button';
 export default {
   title: 'Components/Button',
   tags: ['autodocs'],
-  render: ({ colour, label, size, type, cornerShape }) => {
-    return createButton({ colour, label, size, type, cornerShape });
+  render: ({ colour, label, size, type, cornerShape, linkList }) => {
+    return createButton({ colour, label, size, type, cornerShape, linkList });
   },
   argTypes: {
     type: {
       control: { type: 'select' },
-      options: ['Primary', 'Action']
+      options: ['Primary', 'Action', 'Dropdown']
     },
     size: {
       control: { type: 'select' },
@@ -24,15 +24,44 @@ export default {
       control: { type: 'select' },
       options: ['Square', 'Round - Small', 'Round - Medium', 'Round - Large', 'Round - Extra large']
     },
+    linkList: {
+      control: 'object',
+      if: { arg: 'type', eq: 'Dropdown' },
+    }
+  },
+  args: {
+    linkList: [
+      {
+        'label': 'Link 1',
+        'url': '#'
+      },
+       {
+        'label': 'Link 2',
+        'url': '#'
+      },
+       {
+        'label': 'Link 3',
+        'url': '#'
+      },
+    ]
   }
 }
 
 export const Primary = {
   args: {
-    type: 'primary',
+    type: 'Primary',
     size: 'Large',
     colour: 'Blue',
     label: 'Click me!',
     cornerShape: 'Square'
+  }
+}
+
+export const Dropdown = {
+  args: {
+    type: 'Dropdown',
+    size: 'Large',
+    cornerShape: 'Square',
+    label: 'Click me!'
   }
 }
