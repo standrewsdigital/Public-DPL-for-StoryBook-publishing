@@ -1,4 +1,5 @@
 import { createButton } from './Button';
+import '../../../scripts/dropdown-button.js';
 
 export default {
   title: 'Components/Button',
