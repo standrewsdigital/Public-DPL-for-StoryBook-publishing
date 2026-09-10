@@ -1,0 +1,76 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/addon-docs/blocks'
+
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+Buttons are used to help a user carry out an action, such as starting an application process, or changing the current page, such as submitting a form.
+
+## Rules for buttons
+
+- Buttons must be used only within main body of a page; they must not be used in asides.
+- Buttons must not be used mid-sentence. They must always appear on their own line separated from written content.
+- Buttons linking to downloadable content must use the icon button option.
+
+## Primary button
+
+The standard button style.
+
+<Canvas of={ButtonStories.Primary} />
+<Controls of={ButtonStories.Primary} />
+
+### Primary – Large
+
+The standard button style in a larger size using the `lg` class.
+
+<Canvas of={ButtonStories.PrimaryLarge} />
+<Controls of={ButtonStories.PrimaryLarge} />
+
+### Colors
+
+<Canvas of={ButtonStories.PrimaryColours} />
+
+## Action
+
+Action buttons are used to signify the most prominent call to action on a page.
+
+- There should only be one per page.
+
+<Canvas of={ButtonStories.Action} />
+<Controls of={ButtonStories.Action} />
+
+### Action – Large
+
+<Canvas of={ButtonStories.ActionLarge} />
+<Controls of={ButtonStories.ActionLarge} />
+
+### Action – Secondary
+
+Secondary action buttons are used to signify other prominent calls to action on a page that are in addition to the action button. Other colours may be used to help with accessibility depending on the background colour that the button is in.
+
+<Canvas of={ButtonStories.ActionSecondary} />
+<Controls of={ButtonStories.ActionSecondary} />
+
+### Colours
+
+<Canvas of={ButtonStories.ActionColours} />
+
+## Dropdown button
+
+Can be used to show multiple options in a single dropdown list. This example shows both the primary and the large style of buttons, with the dropdown menu adjusting to match its parent button font size and padding.
+
+The dropdown list appears when the button is hovered over and it stays open when clicked.
+
+<Canvas of={ButtonStories.Dropdown} />
+<Controls of={ButtonStories.Dropdown} />
+
+### Dropdown – Large
+
+<Canvas of={ButtonStories.DropdownLarge} />
+<Controls of={ButtonStories.DropdownLarge} />
+
+### Colours
+
+<Canvas of={ButtonStories.DropdownColours} />
