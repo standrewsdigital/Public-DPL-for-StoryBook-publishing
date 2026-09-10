@@ -8,6 +8,7 @@ export const createButton = ({
 }) => {
 
   let button = document.createElement('button');
+  let cornerShapeClass = "";
 
   button.type = 'button';
   button.innerText = label;
@@ -25,28 +26,30 @@ export const createButton = ({
 
   switch (cornerShape) {
     case "Round - Small":
-      button.classList.add('radius-sm');
+      cornerShapeClass = 'radius-sm';
       break;
     case "Round - Medium":
-      button.classList.add('radius-md');
+      cornerShapeClass = 'radius-md'
       break;
     case "Round - Large":
-      button.classList.add('radius-lg');
+      cornerShapeClass = 'radius-lg'
       break;
     case "Round - Extra large":
-      button.classList.add('radius-xl');
+      cornerShapeClass = 'radius-xl'
       break;
     case 'Square':
     default:
       break;
   }
 
+  if (cornerShapeClass !== "") button.classList.add(cornerShapeClass);
+
   switch (type) {
     case 'Action':
       button.classList.add('action');
       break;
     case 'Dropdown':
-      button = createDropdownButton( button, linkList );
+      button = createDropdownButton( button, linkList, cornerShapeClass );
       break;
     case 'Primary':
     default:
@@ -56,7 +59,7 @@ export const createButton = ({
   return button;
 };
 
-function createDropdownButton( button, linkListArray ) {
+function createDropdownButton( button, linkListArray, cornerShapeClass ) {
   const dropdown = document.createElement('div');
   dropdown.classList.add('hover-drop-list', 'down');
 
@@ -68,6 +71,8 @@ function createDropdownButton( button, linkListArray ) {
   if (linkListArray.length > 0) {
     const linkList = document.createElement('ul');
     linkList.classList.add('drop-content');
+
+    if (cornerShapeClass !== "") linkList.classList.add(cornerShapeClass);
 
     linkListArray.forEach(({ url, label }) => {
       const listItem = document.createElement('li');
