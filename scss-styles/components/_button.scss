@@ -193,6 +193,20 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     position: relative;
     display: inline-block;
 
+    &:not(.selected) {
+        &:hover {
+            .btn {
+                &::after {
+                    rotate: 180deg;
+                }
+            }
+
+            .drop-content {
+                display: block;
+            }
+        }
+    }
+
     .btn {
         margin: 0;
 
@@ -264,53 +278,26 @@ $breakpoint-value: map-get($breakpoints, 'lg');
         }
     }
 
-    &.up > .drop-content {
-        bottom: 100%;
-    }
-
     &.down > .drop-content {
         top: 100%;
     }
 
-    &.up .btn:after {
-        rotate: 180deg;
+    &.up {
+        .btn:after {
+            rotate: 180deg;
+        }
+
+        > .drop-content {
+            bottom: 100%;
+        }
+
+        &.selected .btn:after {
+            rotate: 0deg;
+        }
     }
+
     &.selected .btn:after {
         rotate: 180deg;
-    }
-    &.up.selected .btn:after {
-        rotate: 0deg;
-    }
-}
-
-// Dropdown open and close animations
-@media (min-width: 800px) {
-    .hover-drop-list {
-        &:not(.selected) {
-            &:hover {
-                .btn {
-                    &::after {
-                        rotate: 180deg;
-                    }
-                }
-            }
-        }
-
-        &.up {
-            &:not(.selected) {
-                &:hover {
-                    .btn {
-                        &::after {
-                            rotate: 0deg;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .hover-drop-list:not(.selected):hover .drop-content {
-        display: block;
     }
 }
 
@@ -319,8 +306,6 @@ $breakpoint-value: map-get($breakpoints, 'lg');
     transform: rotate(135deg);
     pointer-events: all;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
     .hover-drop-list {
