@@ -2,6 +2,7 @@ import { createButton } from './Button';
 import '../../../scripts/dropdown-button.js';
 
 const colours = ['Blue', 'Red', 'Orange', 'Green', 'Burgundy', 'Grey', 'Purple', 'White'];
+const cornerShapes = ['Square', 'Round - Small', 'Round - Medium', 'Round - Large', 'Round - Extra large'];
 
 function renderAllColours(args) {
   const wrapper = document.createElement('div');
@@ -11,6 +12,18 @@ function renderAllColours(args) {
 
   colours.forEach((colour) => {
     wrapper.appendChild(createButton({ ...args, colour, label: colour }));
+  })
+  return wrapper;
+}
+
+function renderAllCorners(args) {
+  const wrapper = document.createElement('div');
+  wrapper.style.display = 'flex';
+  wrapper.style.flexWrap = 'wrap';
+  wrapper.style.gap = '1rem';
+
+  cornerShapes.forEach((cornerShape) => {
+    wrapper.appendChild(createButton({ ...args, cornerShape, label: cornerShape }));
   })
   return wrapper;
 }
@@ -37,7 +50,7 @@ export default {
     label: { control: 'text' },
     cornerShape: {
       control: { type: 'select' },
-      options: ['Square', 'Round - Small', 'Round - Medium', 'Round - Large', 'Round - Extra large']
+      options: cornerShapes
     },
     linkList: {
       control: 'object',
@@ -87,6 +100,14 @@ export const PrimaryColours = {
   tags: ['!dev']
 }
 
+export const PrimaryRounded = {
+  render: renderAllCorners,
+  args: {
+    ...Primary.args
+  },
+  tags: ['!dev']
+}
+
 export const Action = {
   args: {
     ...Primary.args,
@@ -116,7 +137,25 @@ export const ActionColours = {
   tags: ['!dev']
 }
 
+
+export const ActionRounded = {
+  render: renderAllCorners,
+  args: {
+    ...Action.args
+  },
+  tags: ['!dev']
+}
+
 export const Dropdown = {
+  // Without this decorator, the top and left sides of the outline on hover get cut off from the hardcoded story.height value.
+  decorators: [
+    (Story) => {
+      const storyWrapper = document.createElement('div');
+      storyWrapper.style.padding = '1rem';
+      storyWrapper.appendChild(Story());
+      return storyWrapper;
+    }
+  ],
   args: {
     ...Primary.args,
     type: 'Dropdown',
@@ -124,13 +163,13 @@ export const Dropdown = {
   parameters: {
     docs: {
       story: {
-        inline: false,
-        iframeHeight: 200,
+        height: '200px',
       },
     },
   },
 }
 export const DropdownLarge = {
+  decorators: [...Dropdown.decorators],
   args: {
     ...Dropdown.args,
     size: 'Large',
@@ -142,6 +181,19 @@ export const DropdownLarge = {
 
 export const DropdownColours = {
   render: renderAllColours,
+  decorators: [...Dropdown.decorators],
+  args: {
+    ...Dropdown.args
+  },
+  tags: ['!dev'],
+  parameters: {
+    ...Dropdown.parameters
+  }
+}
+
+export const DropdownRounded = {
+  render: renderAllCorners,
+  decorators: [...Dropdown.decorators],
   args: {
     ...Dropdown.args
   },
