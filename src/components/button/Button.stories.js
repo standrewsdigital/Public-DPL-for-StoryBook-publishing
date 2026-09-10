@@ -165,6 +165,9 @@ export const Dropdown = {
       story: {
         height: '200px',
       },
+      source: {
+        excludeDecorators: true
+      }
     },
   },
 }
@@ -199,6 +202,7 @@ export const DropdownRounded = {
   },
   tags: ['!dev'],
   parameters: {
-    ...Dropdown.parameters
+    ...Dropdown.parameters,
+
   }
 }
