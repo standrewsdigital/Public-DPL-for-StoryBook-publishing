@@ -39,7 +39,7 @@ export const Success = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/hnuhF4nQEY4oK7HicfBzLD/Untitled?node-id=1-123&t=ubP9TOof6owVlVj0-4',
+      url: 'https://www.figma.com/design/SsXuOAom8U1uHD7m7andCL/DPL-Figma-library?node-id=56-7&t=b5bgtuKQQaJGAXPI-0',
     },
   },
 }
@@ -54,7 +54,7 @@ export const Info = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/hnuhF4nQEY4oK7HicfBzLD/Untitled?node-id=1-123&t=ubP9TOof6owVlVj0-4',
+      url: 'https://www.figma.com/design/SsXuOAom8U1uHD7m7andCL/DPL-Figma-library?node-id=56-9&t=b5bgtuKQQaJGAXPI-0',
     },
   },
 }
@@ -69,7 +69,7 @@ export const Warning = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/hnuhF4nQEY4oK7HicfBzLD/Untitled?node-id=1-123&t=ubP9TOof6owVlVj0-4',
+      url: 'https://www.figma.com/design/SsXuOAom8U1uHD7m7andCL/DPL-Figma-library?node-id=57-13&t=b5bgtuKQQaJGAXPI-0',
     },
   },
 }
@@ -84,26 +84,7 @@ export const Danger = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/hnuhF4nQEY4oK7HicfBzLD/Untitled?node-id=1-123&t=ubP9TOof6owVlVj0-4',
+      url: 'https://www.figma.com/design/SsXuOAom8U1uHD7m7andCL/DPL-Figma-library?node-id=57-17&t=b5bgtuKQQaJGAXPI-0',
     },
   },
 }
-
-export const FigmaEmbedDemo = {
-  name: 'Figma embed demo',
-
-  args: {
-    option: 'info',
-    headingLevel: 'h2',
-    headingContent: 'A short title is best',
-    content:
-      '<p>A description should be a short, complete sentence.</p>',
-  },
-
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/hnuhF4nQEY4oK7HicfBzLD/Untitled?node-id=1-123&t=ubP9TOof6owVlVj0-4',
-    },
-  },
-};
