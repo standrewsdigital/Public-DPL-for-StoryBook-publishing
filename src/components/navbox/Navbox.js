@@ -6,23 +6,19 @@ export const createNavbox = ({
   url,
   title,
   content,
-  columns
+  size
 }) => {
   let columnClass = '';
-  switch (columns) {
-    case 1:
-      columnClass = 'col-12-md';
-      break;
-    case 2:
+  switch (size) {
+    case 'Large':
       columnClass = 'col-6-md';
       break;
-    case 3:
+    case 'Regular':
       columnClass = 'col-4-md';
       break;
     default:
       break;
   }
-
 
   const wrapper = document.createElement('div');
   wrapper.classList.add('col', 'col-12-xs');
