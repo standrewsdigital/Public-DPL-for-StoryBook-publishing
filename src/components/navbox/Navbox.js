@@ -6,7 +6,9 @@ export const createNavbox = ({
   url,
   title,
   content,
-  size
+  size,
+  isRounded,
+  backgroundColour
 }) => {
   let columnClass = '';
   switch (size) {
@@ -22,15 +24,14 @@ export const createNavbox = ({
 
   const wrapper = document.createElement('div');
   wrapper.classList.add('col', 'col-12-xs');
-  if (columnClass) {
-    wrapper.classList.add(columnClass);
-  }
+  if (columnClass !== "") wrapper.classList.add(columnClass);
 
   const navbox = document.createElement('a');
-  navbox.classList.add('navbox', 'bg-white');
+  navbox.classList.add('navbox', 'bg-white', 'drop-shadow');
   navbox.setAttribute('href', url);
+  if (isRounded) navbox.classList.add('radius-md');
 
-  if (image) {
+  if (image && image !== "") {
     navbox.classList.add('navbox--has-image');
     const navboxImageWrapper = document.createElement('div');
     navboxImageWrapper.classList.add('navbox-image');
@@ -44,7 +45,23 @@ export const createNavbox = ({
   }
 
   const navboxTitle = document.createElement('div');
-  navboxTitle.classList.add('navbox-title', 'text-white', 'bg-blue-primary');
+  navboxTitle.classList.add('navbox-title', 'text-white');
+
+  switch (backgroundColour){
+    case 'Green':
+      navbox.classList.add('hover-green')
+      navboxTitle.classList.add('bg-green-primary');
+      break;
+    case 'Burgundy':
+      navbox.classList.add('hover-burgundy')
+      navboxTitle.classList.add('bg-burgundy-primary');
+      break;
+    case 'Blue':
+    default:
+      navbox.classList.add('hover-primary');
+      navboxTitle.classList.add('bg-blue-primary');
+      break;
+  }
 
   const titleText = document.createElement('span');
   titleText.classList.add('navbox-title-text');
