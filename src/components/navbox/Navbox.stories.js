@@ -1,7 +1,12 @@
 import Handlebars from 'handlebars';
 import navboxTemplate from './navbox.hbs?raw';
+import '../../../scss-styles/navbox.scss';
 
 const template = Handlebars.compile(navboxTemplate);
+
+
+const navboxColours = ['Blue', 'Green', 'Burgundy'];
+const roundedCorners = [false, true];
 
 export default {
   render: ({ contentArray, size, hasRoundedCorners, colour }) => {
@@ -67,7 +72,7 @@ export const Navbox = {
       {
         url: 'https://www.st-andrews.ac.uk/',
         title: 'Navbox title',
-        content: '<p>Loremdddd ipsum</p>',
+        content: '<p>Lorem ipsum</p>',
         image: './750x500.png',
         altText: '750x500 placeholder',
       }
