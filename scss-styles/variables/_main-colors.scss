@@ -1,7 +1,9 @@
 // Any variable that can be altered by a theme should be placed
-// in the theme variable file, not in here
+// in the theme variable file, not in here.
 
+// Blue
 $blue-primary: #00539b;
+
 $blue-5-tint: #0d5ca0;
 $blue-10-tint: #1a64a5;
 $blue-15-tint: #266daa;
@@ -21,6 +23,7 @@ $blue-80-tint: #ccddeb;
 $blue-85-tint: #d9e5f0;
 $blue-90-tint: #e6eef5;
 $blue-95-tint: #f2f6fa;
+
 $blue-5-shade: #004f93;
 $blue-10-shade: #004a8c;
 $blue-15-shade: #004684;
@@ -40,73 +43,93 @@ $blue-80-shade: #00111f;
 $blue-85-shade: #000c17;
 $blue-90-shade: #000810;
 $blue-95-shade: #000408;
+
+
+// Dark blue
 $dark-blue-primary: #000036;
 $dark-blue-25-tint: #404068;
-$dark-blue-50-tint: #80809B;
+$dark-blue-50-tint: #80809b;
 $dark-blue-25-shade: #000029;
+
+
+// Light blue
 $light-blue-primary: #0071b3;
 $light-blue-light-bg: #e0f2fd;
-$light-blue-5-tint: #1a7bbc;
-$light-blue-10-tint: #3385c5;
-$light-blue-15-tint: #4d8fce;
-$light-blue-20-tint: #6699d7;
+
+$light-blue-5-tint: #0d78b7;
+$light-blue-10-tint: #1a7fbb;
+$light-blue-15-tint: #2686be;
+$light-blue-20-tint: #338dc2;
 $light-blue-25-tint: #4095c6;
-$light-blue-30-tint: #99a3e0;
-$light-blue-35-tint: #b3ade9;
-$light-blue-40-tint: #ccb7f2;
-$light-blue-45-tint: #e6c1fb;
+$light-blue-30-tint: #4d9cca;
+$light-blue-35-tint: #59a3ce;
+$light-blue-40-tint: #66aad1;
+$light-blue-45-tint: #73b1d5;
 $light-blue-50-tint: #80b8d9;
-$light-blue-55-tint: #99c2e2;
-$light-blue-60-tint: #b3cceb;
-$light-blue-65-tint: #ccd6f4;
-$light-blue-70-tint: #e6e0fd;
-$light-blue-75-tint: #f0eafd;
-$light-blue-80-tint: #f5f0fe;
-$light-blue-85-tint: #faf5fe;
-$light-blue-90-tint: #fcf9fe;
-$light-blue-95-tint: #fdfdfe;
+$light-blue-55-tint: #8cbfdd;
+$light-blue-60-tint: #99c6e1;
+$light-blue-65-tint: #a6cde4;
+$light-blue-70-tint: #b3d4e8;
+$light-blue-75-tint: #bfdcec;
+$light-blue-80-tint: #cce3f0;
+$light-blue-85-tint: #d9eaf4;
+$light-blue-90-tint: #e6f1f7;
+$light-blue-95-tint: #f2f8fb;
+
 $light-blue-5-shade: #006baa;
 $light-blue-10-shade: #0066a1;
 $light-blue-15-shade: #006098;
 $light-blue-20-shade: #005a8f;
 $light-blue-25-shade: #005586;
 $light-blue-30-shade: #004f7d;
-$light-blue-35-shade: #004a74;
+$light-blue-35-shade: #004974;
 $light-blue-40-shade: #00446b;
 $light-blue-45-shade: #003e62;
-$light-blue-50-shade: #003959;
+$light-blue-50-shade: #00395a;
 $light-blue-55-shade: #003351;
 $light-blue-60-shade: #002d48;
 $light-blue-65-shade: #00283f;
 $light-blue-70-shade: #002236;
-$light-blue-75-shade: #001c2e;
-$light-blue-80-shade: #001625;
-$light-blue-85-shade: #00101d;
-$light-blue-90-shade: #000a14;
-$light-blue-95-shade: #000509;
+$light-blue-75-shade: #001c2d;
+$light-blue-80-shade: #001724;
+$light-blue-85-shade: #00111b;
+$light-blue-90-shade: #000b12;
+$light-blue-95-shade: #000609;
 
 
+// Red
 $red-primary: #ea1a13;
 $red-st-andrews: #ee312a;
 $red-25-tint: #ef534e;
 $red-50-tint: #f58d89;
 $red-25-shade: #b0140e;
+
+
+// Neutral
 $dark-grey-1: #202024;
 $dark-grey-2: #0f0f11;
+$dark-grey-3: #4f4f4f;
 $grey: #6a6a6b;
 $mid-grey-1: #949494;
 $mid-grey-2: #dedede;
 $light-grey-1: #f0f0f0;
 $light-grey-2: #fafafa;
-$dark-grey-3: #4f4f4f;
 $white: #ffffff;
+
+
+// Orange and yellow
 $orange-primary: #ffb400;
 $dark-orange: #bf5909;
 $dark-orange-25-shade: #98490c;
-$yellow:  #ffdf00;
-// Additional Colors
+$yellow: #ffdf00;
+
+
+// Additional colours
+
+// Green
 $green-primary: #00853f;
 $green-light-bg: #d2f9e3;
+
 $green-5-tint: #0d8b49;
 $green-10-tint: #1a9152;
 $green-15-tint: #26985c;
@@ -126,6 +149,7 @@ $green-80-tint: #cce7d9;
 $green-85-tint: #d9ede2;
 $green-90-tint: #e6f3ec;
 $green-95-tint: #f2f9f5;
+
 $green-5-shade: #007e3c;
 $green-10-shade: #007839;
 $green-15-shade: #007135;
@@ -145,12 +169,19 @@ $green-80-shade: #001c0e;
 $green-85-shade: #00160b;
 $green-90-shade: #000f08;
 $green-95-shade: #000904;
-$dark-green-primary: #01524C;
 
 
+// Dark green
+$dark-green-primary: #01524c;
+$dark-green-25-tint: #417d79;
+$dark-green-50-tint: #80a9a6;
+$dark-green-25-shade: #013e39;
 
+
+// Purple
 $purple-primary: #7b439a;
 $purple-light-bg: #f4e3ff;
+
 $purple-5-tint: #824c9f;
 $purple-10-tint: #8856a4;
 $purple-15-tint: #8f5fa9;
@@ -170,6 +201,7 @@ $purple-80-tint: #e5d9eb;
 $purple-85-tint: #ebe3f0;
 $purple-90-tint: #f2ecf5;
 $purple-95-tint: #f8f6fa;
+
 $purple-5-shade: #754092;
 $purple-10-shade: #6f3c8b;
 $purple-15-shade: #693983;
@@ -191,10 +223,10 @@ $purple-90-shade: #0c070f;
 $purple-95-shade: #060308;
 
 
-
-
+// Burgundy
 $burgundy-primary: #c60c46;
 $burgundy-light-bg: #ffd3e1;
+
 $burgundy-5-tint: #c9184f;
 $burgundy-10-tint: #cc2458;
 $burgundy-15-tint: #ce3162;
@@ -214,6 +246,7 @@ $burgundy-80-tint: #f4cfda;
 $burgundy-85-tint: #f7dbe3;
 $burgundy-90-tint: #f9e7ed;
 $burgundy-95-tint: #fcf3f6;
+
 $burgundy-5-shade: #bc0b43;
 $burgundy-10-shade: #b20b3f;
 $burgundy-15-shade: #a80a3c;
@@ -235,8 +268,7 @@ $burgundy-90-shade: #130107;
 $burgundy-95-shade: #090004;
 
 
-
-// Contextual Colors
+// Contextual colours
 $success: #00853f;
 $information: #00539b;
 $warning: #bf5909;
