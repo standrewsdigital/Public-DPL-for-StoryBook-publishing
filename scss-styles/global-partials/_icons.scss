@@ -156,13 +156,21 @@ $icons: (
   }
 }
 
-// themed coloured icons
-$icon-themes: ("burgundy", "green", "purple");
+// Themed coloured icons
+$icon-themes: (
+  "burgundy",
+  "green",
+  "purple",
+  "dark-blue",
+  "dark-green"
+);
 
 @each $name, $file in $icons {
   @each $theme in $icon-themes {
     .icon-#{$name}-#{$theme} {
-      background-image: url("#{$icon-path-colored}/#{$file}-#{$theme}.svg");
+      background-image: url(
+        "#{$icon-path-colored}/#{$file}-#{$theme}.svg"
+      );
     }
   }
 }
