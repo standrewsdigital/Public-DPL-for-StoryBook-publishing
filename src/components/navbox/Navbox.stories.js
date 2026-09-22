@@ -9,35 +9,41 @@ const template = Handlebars.compile(navboxTemplate);
 const navboxColours = ['Blue', 'Green', 'Burgundy'];
 const roundedCorners = [false, true];
 
+function getNavboxSizeClass(size) {
+  let columnClass = 'col-4-md';
+  switch (size) {
+    case 'Large':
+      columnClass = 'col-6-md';
+      break;
+    case 'Regular':
+    default:
+      break;
+  }
+
+  return columnClass;
+}
+
+function getHoverClass(colour) {
+  let hoverClass = 'hover-primary'
+  switch (colour){
+    case 'Green':
+      hoverClass = 'hover-green'
+      break;
+    case 'Burgundy':
+      hoverClass = 'hover-burgundy'
+      break;
+    case 'Blue':
+    default:
+      break;
+  }
+  return hoverClass;
+}
+
 export default {
   render: ({ contentArray, size, hasRoundedCorners = false, colour = 'Blue' }) => {
     let navboxHtml = '';
-    let columnClass = '';
-    let hoverClass = '';
-
-    switch (size) {
-      case 'Large':
-        columnClass = 'col-6-md';
-        break;
-      case 'Regular':
-        columnClass = 'col-4-md';
-        break;
-      default:
-        break;
-    }
-
-    switch (colour){
-      case 'Green':
-        hoverClass = 'hover-green'
-        break;
-      case 'Burgundy':
-        hoverClass = 'hover-burgundy'
-        break;
-      case 'Blue':
-      default:
-        hoverClass = 'hover-primary'
-        break;
-    }
+    const columnClass = getNavboxSizeClass(size);
+    const hoverClass = getHoverClass(colour);
 
     contentArray.forEach((contentObj) => {
       navboxHtml += template({contentObj, size: columnClass, hasRoundedCorners, colour: colour.toLowerCase(), hoverClass});
@@ -213,4 +219,23 @@ export const GridThreeTextAndImage = {
     ],
     size: 'Regular',
   }
+}
+
+export const GridThreeAllColours = {
+  // tags: ['!dev'],
+  render: ({ contentArray, size }) => {
+    let navboxHtml = '';
+    const columnClass = getNavboxSizeClass(size);
+
+    navboxColours.forEach((colour) => {
+      const hoverClass = getHoverClass(colour);
+
+      navboxHtml += template({contentObj: contentArray[0], size: columnClass, colour: colour.toLowerCase(), hoverClass});
+    });
+
+    return navboxHtml;
+  },
+  args: {
+    ...Navbox.args
+  },
 }
