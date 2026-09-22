@@ -1,0 +1,24 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/addon-docs/blocks'
+
+import * as NavboxStories from './Navbox.stories';
+
+<Meta of={NavboxStories} />
+
+# Navbox
+
+The navbox pattern is used to present featured links with an optional background image and paragraph.
+
+## Rules for the navbox
+
+- Must only be used within the main body of the page or within the aside.
+- Large navboxes must not have a title that exceeds 88 characters.
+- Regular navboxes must not have a title that exceeds 57 characters.
+- When using an image, the image must relate to the link destination.
+- Navboxes with accompanying paragraphs must not have more than 300 characters.
+
+## Navbox sizes
+
+Navboxes are available in two different sizes: regular and large. The regular size of navbox takes up a third of the available space of its container, while the large navbox is half the width of its containing element.
+
+<Canvas of={NavboxStories.Navbox} />
+<Controls of={NavboxStories.Navbox} />

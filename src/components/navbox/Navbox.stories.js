@@ -4,12 +4,11 @@ import '../../../scss-styles/navbox.scss';
 
 const template = Handlebars.compile(navboxTemplate);
 
-
 const navboxColours = ['Blue', 'Green', 'Burgundy'];
 const roundedCorners = [false, true];
 
 export default {
-  render: ({ contentArray, size, hasRoundedCorners, colour }) => {
+  render: ({ contentArray, size, hasRoundedCorners = false, colour = 'Blue' }) => {
     let columnClass = '';
     let hoverClass = '';
 
@@ -40,7 +39,7 @@ export default {
     return template({contentArray, size: columnClass, hasRoundedCorners, colour: colour.toLowerCase(), hoverClass});
   },
   title: 'Components/Navbox',
-  docs: ['autodocs'],
+  docs: ['!autodocs'],
   argTypes: {
     size: {
       control: 'select',
@@ -64,15 +63,34 @@ export const Navbox = {
     contentArray: [
       {
         url: 'https://www.st-andrews.ac.uk/',
-        title: 'Navbox title',
-        content: '<p>Lorem ipsum</p>',
-        image: './750x500.png',
-        altText: '750x500 placeholder',
-      },
+        title: 'Navbox title'
+      }
+    ],
+    size: 'Regular',
+    hasRoundedCorners: false,
+    colour: 'Blue',
+  }
+}
+
+export const NavboxTextOnly = {
+  name: 'Navbox - Text only',
+  args: {
+    contentArray: [
       {
-        url: 'https://www.st-andrews.ac.uk/',
-        title: 'Navbox title',
+        ...Navbox.args.contentArray[0],
         content: '<p>Lorem ipsum</p>',
+      }
+    ],
+    size: 'Regular',
+  }
+}
+
+export const NavboxATextAndImage = {
+  name: "Navbox - Text and image",
+  args: {
+    contentArray: [
+      {
+        ...NavboxTextOnly.args.contentArray[0],
         image: './750x500.png',
         altText: '750x500 placeholder',
       }

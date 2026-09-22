@@ -3,17 +3,21 @@
         {{#each contentArray}}
             <div class="col col-12-xs {{../size}}">
                 <a class="navbox navbox--has-image bg-white drop-shadow {{../hoverClass}}{{#if ../hasRoundedCorners}} radius-md{{/if}}" href="{{url}}">
-                    <div class="navbox-image">
-                        <img src="{{image}}" alt="{{altText}}">
-                    </div>
+                    {{#if image}}
+                        <div class="navbox-image">
+                            <img src="{{image}}" alt="{{altText}}">
+                        </div>
+                    {{/if}}
                     <div class="navbox-title text-white bg-{{../colour}}-primary">
                         <span class="navbox-title-text">{{title}}</span>
                         <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
                     </div>
                 </a>
-                <div class="navbox-content">
-                    {{{content}}}
-                </div>
+                {{#if content}}
+                    <div class="navbox-content">
+                        {{{content}}}
+                    </div>
+                {{/if}}
             </div>
 
         {{/each}}
