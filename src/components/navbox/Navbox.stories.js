@@ -230,12 +230,43 @@ export const GridThreeAllColours = {
     navboxColours.forEach((colour) => {
       const hoverClass = getHoverClass(colour);
 
-      navboxHtml += template({contentObj: contentArray[0], size: columnClass, colour: colour.toLowerCase(), hoverClass});
+      navboxHtml += template({
+        contentObj: contentArray[0],
+        size: columnClass,
+        colour: colour.toLowerCase(),
+        hoverClass
+      });
     });
 
     return navboxHtml;
   },
   args: {
     ...Navbox.args
+  },
+}
+
+export const GridThreeAllCorners = {
+  // tags: ['!dev'],
+  render: ({ contentArray, size, colour }) => {
+    let navboxHtml = '';
+    const columnClass = getNavboxSizeClass(size);
+
+    roundedCorners.forEach((cornerValue) => {
+      const hoverClass = getHoverClass(colour);
+
+      navboxHtml += template({
+        contentObj: contentArray[0],
+        size: columnClass,
+        colour: colour.toLowerCase(),
+        hoverClass,
+        hasRoundedCorners: cornerValue
+      });
+    });
+
+    return navboxHtml;
+  },
+  args: {
+    ...Navbox.args,
+    size: 'Large'
   },
 }
