@@ -46,7 +46,13 @@ export default {
     const hoverClass = getHoverClass(colour);
 
     contentArray.forEach((contentObj) => {
-      navboxHtml += template({contentObj, size: columnClass, hasRoundedCorners, colour: colour.toLowerCase(), hoverClass});
+      navboxHtml += template({
+        contentObj,
+        size: columnClass,
+        hasRoundedCorners,
+        colour: colour.toLowerCase(),
+        hoverClass
+      });
     });
 
     return navboxHtml;
@@ -195,7 +201,6 @@ export const GridThreeTextOnly = {
     size: 'Regular',
   }
 }
-
 
 export const GridThreeImageOnly = {
   name: 'Grid - Three navboxes, image only',
