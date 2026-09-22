@@ -67,8 +67,6 @@ export const Navbox = {
       }
     ],
     size: 'Regular',
-    hasRoundedCorners: false,
-    colour: 'Blue',
   }
 }
 
@@ -85,18 +83,29 @@ export const NavboxTextOnly = {
   }
 }
 
+export const NavboxImageOnly = {
+  name: 'Navbox - Image only',
+  args: {
+    contentArray: [
+      {
+        ...Navbox.args.contentArray[0],
+        image: './750x500.png',
+        altText: '750x500 placeholder',
+      }
+    ],
+    size: 'Regular',
+  }
+}
+
 export const NavboxATextAndImage = {
   name: "Navbox - Text and image",
   args: {
     contentArray: [
       {
         ...NavboxTextOnly.args.contentArray[0],
-        image: './750x500.png',
-        altText: '750x500 placeholder',
+        ...NavboxImageOnly.args.contentArray[0],
       }
     ],
     size: 'Regular',
-    hasRoundedCorners: false,
-    colour: 'Blue',
   }
 }
