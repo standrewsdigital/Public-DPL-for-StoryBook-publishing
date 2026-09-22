@@ -1,0 +1,22 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/addon-docs/blocks'
+
+import * as LoaderStories from './Loader.stories';
+
+<Meta of={LoaderStories} />
+
+# Loader
+
+A loader should be used when loading content on a page asynchronously, such as waiting for search results to load.
+
+## Bar loader
+
+If the user has enabled the 'Reduce motion' setting in their operating system, the [crest loader](#crest-loader) will show instead.
+
+<Canvas of={LoaderStories.BarLoader} />
+<Controls of={LoaderStories.BarLoader} />
+
+## Crest loader
+
+While this loader can be used on its own, it is also the loader that will be shown if the user has enabled the 'Reduce motion' setting in their operating system.
+
+<Canvas of={LoaderStories.CrestLoader} />
