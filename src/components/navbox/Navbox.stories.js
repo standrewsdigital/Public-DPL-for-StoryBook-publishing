@@ -11,6 +11,7 @@ const roundedCorners = [false, true];
 
 export default {
   render: ({ contentArray, size, hasRoundedCorners = false, colour = 'Blue' }) => {
+    let navboxHtml = '';
     let columnClass = '';
     let hoverClass = '';
 
@@ -38,7 +39,11 @@ export default {
         break;
     }
 
-    return template({contentArray, size: columnClass, hasRoundedCorners, colour: colour.toLowerCase(), hoverClass});
+    contentArray.forEach((contentObj) => {
+      navboxHtml += template({contentObj, size: columnClass, hasRoundedCorners, colour: colour.toLowerCase(), hoverClass});
+    });
+
+    return navboxHtml;
   },
   decorators: [
     (story) => {

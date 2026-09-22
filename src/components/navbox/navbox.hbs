@@ -1,22 +1,18 @@
-{{#each contentArray}}
-    <div class="col col-12-xs {{../size}}">
-        <a class="navbox navbox--has-image bg-white drop-shadow {{../hoverClass}}{{#if
-                ../hasRoundedCorners}} radius-md{{/if}}" href="{{url}}">
+    <div class="col col-12-xs {{size}}">
+        <a class="navbox navbox--has-image bg-white drop-shadow {{hoverClass}}{{#if hasRoundedCorners}} radius-md{{/if}}" href="{{contentObj.url}}">
             {{#if image}}
                 <div class="navbox-image">
-                    <img src="{{image}}" alt="{{altText}}">
+                    <img src="{{contentObj.image}}" alt="{{contentObj.altText}}">
                 </div>
             {{/if}}
-            <div class="navbox-title text-white bg-{{../colour}}-primary">
-                <span class="navbox-title-text">{{title}}</span>
+            <div class="navbox-title text-white bg-{{colour}}-primary">
+                <span class="navbox-title-text">{{contentObj.title}}</span>
                 <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
             </div>
         </a>
-        {{#if content}}
+        {{#if contentObj.content}}
             <div class="navbox-content">
-                {{{content}}}
+                {{{contentObj.content}}}
             </div>
         {{/if}}
     </div>
-
-{{/each}}
