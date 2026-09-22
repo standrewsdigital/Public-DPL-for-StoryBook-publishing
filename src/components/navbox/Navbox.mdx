@@ -22,3 +22,65 @@ Navboxes are available in two different sizes: regular and large. The regular si
 
 <Canvas of={NavboxStories.Navbox} />
 <Controls of={NavboxStories.Navbox} />
+
+## Colours
+
+<Canvas of={NavboxStories.AllColourVariants} sourceState={'none'} />
+
+## Rounded corners
+
+<Canvas of={NavboxStories.AllCornerVariants} sourceState={'none'} />
+
+## Grids
+
+We can also present a set of navboxes in various grid layouts.
+
+### Rules for the navbox grid
+
+- Must only be used within the main body of the page.
+- If a navbox with an image is used, all the navboxes in the grid must include images.
+- If a navbox without an image is used, all the navboxes in the grid must not include images.
+- Navbox grids that exceed six navboxes must not have images unless there is a proven user requirement.
+- If a navbox with a paragraph is used, all the navboxes in the grid must include paragraphs.
+- If a navbox without a paragraph is used, all the navboxes in the grid must not include paragraphs.
+- If the navbox grid exceeds three navboxes for regular size and two navboxes for large size, extra navboxes should be put into a new `<div class="row">` element inside the existing `<div class="container">` element.
+
+### Two navboxes
+
+<Canvas of={NavboxStories.GridTwo} />
+<Controls of={NavboxStories.GridTwo} />
+
+### Two navboxes with text
+
+<Canvas of={NavboxStories.GridTwoTextOnly} />
+<Controls of={NavboxStories.GridTwoTextOnly} />
+
+### Two navboxes with images
+
+<Canvas of={NavboxStories.GridTwoImageOnly} />
+<Controls of={NavboxStories.GridTwoImageOnly} />
+
+### Two navboxes with text and images
+
+<Canvas of={NavboxStories.GridTwoTextAndImage} />
+<Controls of={NavboxStories.GridTwoTextAndImage} />
+
+### Three navboxes
+
+<Canvas of={NavboxStories.GridThree} />
+<Controls of={NavboxStories.GridThree} />
+
+### Three navboxes with text
+
+<Canvas of={NavboxStories.GridThreeTextOnly} />
+<Controls of={NavboxStories.GridThreeTextOnly} />
+
+### Three navboxes with images
+
+<Canvas of={NavboxStories.GridThreeImageOnly} />
+<Controls of={NavboxStories.GridThreeImageOnly} />
+
+### Three navboxes with text and images
+
+<Canvas of={NavboxStories.GridThreeTextAndImage} />
+<Controls of={NavboxStories.GridThreeTextAndImage} />

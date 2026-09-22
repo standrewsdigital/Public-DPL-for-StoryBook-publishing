@@ -1,18 +1,19 @@
-    <div class="col col-12-xs {{size}}">
-        <a class="navbox navbox--has-image bg-white drop-shadow {{hoverClass}}{{#if hasRoundedCorners}} radius-md{{/if}}" href="{{contentObj.url}}">
-            {{#if image}}
-                <div class="navbox-image">
-                    <img src="{{contentObj.image}}" alt="{{contentObj.altText}}">
-                </div>
-            {{/if}}
-            <div class="navbox-title text-white bg-{{colour}}-primary">
-                <span class="navbox-title-text">{{contentObj.title}}</span>
-                <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
-            </div>
-        </a>
-        {{#if contentObj.content}}
-            <div class="navbox-content">
-                {{{contentObj.content}}}
-            </div>
-        {{/if}}
-    </div>
+<div class="col col-12-xs {{size}}">
+    <a class="navbox navbox--has-image bg-white drop-shadow {{hoverClass}}{{#if hasRoundedCorners}} radius-md{{/if}}"
+       href="{{contentObj.url}}">
+    {{#if contentObj.image}}
+        <div class="navbox-image">
+            <img src="{{contentObj.image}}" alt="{{contentObj.altText}}">
+        </div>
+    {{/if}}
+        <div class="navbox-title text-white bg-{{colour}}-primary">
+            <span class="navbox-title-text">{{contentObj.title}}</span>
+            <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
+        </div>
+    </a>
+    {{#if contentObj.content}}
+        <div class="navbox-content">
+            {{{contentObj.content}}}
+        </div>
+    {{/if}}
+</div>

@@ -226,8 +226,8 @@ export const GridThreeTextAndImage = {
   }
 }
 
-export const GridThreeAllColours = {
-  // tags: ['!dev'],
+export const AllColourVariants = {
+  tags: ['!dev'],
   render: ({ contentArray, size }) => {
     let navboxHtml = '';
     const columnClass = getNavboxSizeClass(size);
@@ -250,8 +250,8 @@ export const GridThreeAllColours = {
   },
 }
 
-export const GridThreeAllCorners = {
-  // tags: ['!dev'],
+export const AllCornerVariants = {
+  tags: ['!dev'],
   render: ({ contentArray, size, colour }) => {
     let navboxHtml = '';
     const columnClass = getNavboxSizeClass(size);
