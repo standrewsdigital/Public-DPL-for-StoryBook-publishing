@@ -1,11 +1,11 @@
 <div class="col col-12-xs {{size}}">
-    <a class="navbox navbox--has-image bg-white drop-shadow {{hoverClass}}{{#if hasRoundedCorners}} radius-md{{/if}}"
+    <a class="navbox{{#if contentObj.image}} navbox--has-image{{else}} navbox--no-image{{/if}} bg-white drop-shadow {{hoverClass}}{{#if hasRoundedCorners}} radius-md{{/if}}"
        href="{{contentObj.url}}">
-    {{#if contentObj.image}}
-        <div class="navbox-image">
-            <img src="{{contentObj.image}}" alt="{{contentObj.altText}}">
-        </div>
-    {{/if}}
+        {{#if contentObj.image}}
+            <div class="navbox-image">
+                <img src="{{contentObj.image}}" alt="{{contentObj.altText}}">
+            </div>
+        {{/if}}
         <div class="navbox-title text-white bg-{{colour}}-primary">
             <span class="navbox-title-text">{{contentObj.title}}</span>
             <span class="material-icons-outlined navbox-chevron" aria-hidden="true">chevron_right</span>
