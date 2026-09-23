@@ -6,15 +6,19 @@
 
   text-decoration: none; // remove underline
   color: inherit; // don't force link blue
-  background: #ffffff;
+  background: $white;
   border: 1px solid #d8d8d8;
 
   &:hover {
     text-decoration: none;
   }
 
+  &:focus {
+    text-decoration: none;
+  }
+
   &:focus-visible {
-    outline: 3px solid currentColor;
+    outline: 3px solid $orange-primary;
     outline-offset: 3px;
   }
 
