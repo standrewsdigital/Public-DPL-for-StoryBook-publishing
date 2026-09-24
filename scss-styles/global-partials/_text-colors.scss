@@ -42,6 +42,7 @@ $color-map: (
   "blue-85-shade": colors.$blue-85-shade,
   "blue-90-shade": colors.$blue-90-shade,
   "blue-95-shade": colors.$blue-95-shade,
+
   "light-blue-primary": colors.$light-blue-primary,
   "light-blue-5-tint": colors.$light-blue-5-tint,
   "light-blue-10-tint": colors.$light-blue-10-tint,
@@ -215,7 +216,17 @@ $color-map: (
   "success": colors.$success,
   "information": colors.$information,
   "warning": colors.$warning,
-  "danger": colors.$danger
+  "danger": colors.$danger,
+
+  "dark-blue-primary": colors.$dark-blue-primary,
+  "dark-blue-25-tint": colors.$dark-blue-25-tint,
+  "dark-blue-50-tint": colors.$dark-blue-50-tint,
+  "dark-blue-25-shade": colors.$dark-blue-25-shade,
+
+  "dark-green-primary": colors.$dark-green-primary,
+  "dark-green-25-tint": colors.$dark-green-25-tint,
+  "dark-green-50-tint": colors.$dark-green-50-tint,
+  "dark-green-25-shade": colors.$dark-green-25-shade,
 );
 
 // Generate text and background color classes
