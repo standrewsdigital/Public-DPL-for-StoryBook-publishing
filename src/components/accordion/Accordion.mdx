@@ -41,25 +41,34 @@ Consider if the content would be better visible at all times before using a sing
 
 <Canvas of={AccordionStories.Single} sourceState="none" />
 
-<details>
-  <summary>View code options</summary>
+<details className="docs-code-options">
+  <summary>
+    <h3>View code options</h3>
+  </summary>
 
-### Accordion HTML
+  <div className="docs-code-options-content">
+    <h4>Accordion HTML</h4>
 
-Use this when the surrounding page already contains the required layout structure.
+    <p>
+      Use this when the surrounding page already contains the required layout
+      structure.
+    </p>
 
-<Source
-  of={AccordionStories.Single}
-  language="html"
-  transform={componentOnlySource}
-/>
+    <Source
+      of={AccordionStories.Single}
+      language="html"
+      transform={componentOnlySource}
+    />
 
-### Accordion with DPL grid
+    <h4>Accordion with DPL grid</h4>
 
-Use this complete example when the container and grid structure are also required.
+    <p>
+      Use this complete example when the container and grid structure are also
+      required.
+    </p>
 
-<Source of={AccordionStories.Single} language="html" />
-
+    <Source of={AccordionStories.Single} language="html" />
+  </div>
 </details>
 
 <Controls of={AccordionStories.Single} />
@@ -70,25 +79,34 @@ When more than one accordion is grouped together, each accordion should have the
 
 <Canvas of={AccordionStories.Group} sourceState="none" />
 
-<details>
-  <summary>View code options</summary>
+<details className="docs-code-options">
+  <summary>
+    <h3>View code options</h3>
+  </summary>
 
-### Accordion group HTML
+  <div className="docs-code-options-content">
+    <h4>Accordion group HTML</h4>
 
-Use this when the surrounding page already contains the required layout structure.
+    <p>
+      Use this when the surrounding page already contains the required layout
+      structure.
+    </p>
 
-<Source
-  of={AccordionStories.Group}
-  language="html"
-  transform={componentOnlySource}
-/>
+    <Source
+      of={AccordionStories.Group}
+      language="html"
+      transform={componentOnlySource}
+    />
 
-### Accordion group with DPL grid
+    <h4>Accordion group with DPL grid</h4>
 
-Use this complete example when the container and grid structure are also required.
+    <p>
+      Use this complete example when the container and grid structure are also
+      required.
+    </p>
 
-<Source of={AccordionStories.Group} language="html" />
-
+    <Source of={AccordionStories.Group} language="html" />
+  </div>
 </details>
 
 <Controls of={AccordionStories.Group} />

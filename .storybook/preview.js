@@ -1,4 +1,5 @@
 import '../scss-styles/main.scss';
+import './docs.scss';
 
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {
