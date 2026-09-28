@@ -1560,7 +1560,529 @@
         <button type="button" class="btn orange lg action">Primary orange</button>
         <button type="button" class="btn white action lg">Primary white</button>
 
+        <h2>Code</h2>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script>
+          hljs.highlightAll();
+        </script>
+
+        <h3>HTML</h3>
+        <pre><code class="pattern-source html"><xmp><div class="container">
+    <div class="row">
+        <div class="col col-8-md col-8-xxs">
+            <div class="code">
+                <div class="toggle-navigation primary-toggle"><a class="navigation-button">Navigation <i class="chevron left"></i></a></div>
+                    <ul class="navigation-bar-nav primary-nav">
+                        <li><a href="/study/">Study at St&nbsp;Andrews</a></li>
+                        <li><a href="/research/">Research</a></li>
+                        <li><a href="/alumni/">Alumni and donors</a></li>
+                        <li><a href="/community/">Community facilities</a></li>
+                        <li><a href="/business-services/">Business services</a></li>
+                        <li><a href="/about/">About</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    </div></xmp></code>
+            </pre>
+
+        <pre>
+            <code>
+                <xmp><pre><code class="pattern-source html">[...]</code></pre></xmp>
+            </code>
+        </pre>
+
+
+        <h3 class="code-title">CSS</h3>
+        <pre><code class="pattern-source css">pre, pre code.pattern-source {
+  background-color: #23241f;
+}
+pre {
+  max-height: 15em;
+  overflow: auto;
+}
+</code></pre>
+
+        <pre><code><xmp><pre><code class="pattern-source css">[...]</code></pre></xmp></code></pre>
+
+        <h3>JavaScript</h3>
+        <pre><code class="pattern-source javascript">function $initHighlight(block, cls) {
+try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+    return process(block, true, 0x0F) +
+            ` class="${cls}"`;
+    } catch (e) {
+    /* handle exception */
+    }
+    for (var i = 0 / 2; i &lt; classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+        console.log('undefined');
+    }
+}
+
+export  $initHighlight;
+</code></pre>
+
+        <pre><code><xmp><pre><code class="pattern-source javascript">[...]</code></pre></xmp></code></pre>
+
+        <h2>Comments</h2>
       </div>
+
+      <ul class="col col-6-md comment-list">
+        <li class="comment">
+          <div class="meta">
+            <a class="image" href="" tabindex="-1"><img class="image" src="../../assets/male-004-small.jpg"
+                                                        alt="Professor Timothy Mooney"></a>
+            <div class="meta-group">
+              <div class="meta-author"><a href="#">Professor Timothy Mooney</a></div>
+              <div class="meta-date">31 September 2018</div>
+            </div>
+          </div>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cium.</p>
+          </div>
+          <a href="#" class="btn">Reply</a>
+        </li>
+        <ul class="replies">
+          <li class="comment reply">
+            <div class="meta">
+              <a class="image" href="" tabindex="-1"><img src="../../assets/female-001-small.jpg"
+                                                          class="image" alt="Sophia Adams"></a>
+              <div class="meta-group">
+                <div class="meta-author"><a href="#">Sophia Adams</a></div>
+                <div class="meta-date">31 September 2018</div>
+              </div>
+            </div>
+            <div class="content">
+              <p>Fusce sollicitudin consectetur cursus. Curabitur non ultricies libero. In dapibus metus quis
+                justo ornare ullamcorper. Sed aliquet, tellus vitae imperdiet maximus, diam neque maximus
+                lacus, et venenatis elit tortor id tortor. In molestie sapien sed dolor lacinia consectetur.
+                Maecenas laoreet finibus tellus, in viverra felis.</p>
+              <p>Donec ornare ipsum arcu, ac placerat nulla ullamcorper id. Sed sit amet hendrerit libero.
+                Fusce sed consectetur felis, sit amet ullamcorper nulla. Pellentesque mauris tortor,
+                eleifend ut sodales id, vestibulum sed nulla. In aliquet erat at arcu malesuada vehicula
+                quis in felis. Pellentesque porta felis eu magna pharetra, at sagittis turpis porta. Donec
+                euismod, felis at blandit feugiat, est turpis luctus felis, id feugiat nisl purus vel dolor.
+                Cras fermentum tincidunt purus.</p>
+            </div>
+          </li>
+          <li class="comment reply">
+            <div class="meta">
+              <a class="image" href="" tabindex="-1"><img src="../../assets/male-004-small.jpg" class="image"
+                                                          alt="Professor Timothy Mooney"></a>
+              <div class="meta-group">
+                <div class="meta-author"><a href="#">Professor Timothy Mooney</a></div>
+                <div class="meta-date">1 October 2018</div>
+              </div>
+            </div>
+            <div class="content">
+              <p>Proin vitae dolor tempus, tincidunt nulla ac, porttitor libero.</p>
+            </div>
+          </li>
+        </ul>
+        <li class="comment">
+          <div class="meta">
+            <div class="image"><img src="../../assets/profile-small.jpg" class="image" alt="Trevor Main"></div>
+            <div class="meta-group">
+              <div class="meta-author"><a href="#">Trevor main</a></div>
+              <div class="meta-date">3 October 2018</div>
+            </div>
+          </div>
+          <div class="content">
+            <p>Etiam mollis ipsum est, ac lobortis tellus consectetur ut. Integer at convallis purus. Donec et
+              urna eu est mollis fringilla at id urna. Maecenas erat nulla, scelerisque at ornare imperdiet,
+              varius a mauris.</p>
+          </div>
+          <a href="#" class="btn">Reply</a>
+        </li>
+        <li class="comment">
+          <div class="meta">
+            <a class="image" href="" tabindex="-1"><img src="../../assets/profile-small.jpg" class="image"
+                                                        alt="Mia Sikorski"></a>
+            <div class="meta-group">
+              <div class="meta-author"><a href="#">Mia Sikorski</a></div>
+              <div class="meta-date">4 October 2018</div>
+            </div>
+          </div>
+          <div class="content">
+            <p>Integer ut enim vel metus maximus molestie. In felis magna, porttitor quis placerat vel, pharetra
+              sit amet nulla. Cras sed sodales lectus. Fusce luctus condimentum neque et commodo. Suspendisse
+              congue dui quis congue aliquet. Cras finibus, odio vitae finibus rutrum, tellus urna ullamcorper
+              diam, at interdum augue lacus sit amet nunc.</p>
+          </div>
+          <a href="#" class="btn">Reply</a>
+        </li>
+        <ul class="replies">
+          <li class="comment reply">
+            <div class="meta">
+              <a class="image" href="" tabindex="-1"><img src="../../assets/female-001-small.jpg"
+                                                          class="image" alt="Sophia Adams"></a>
+              <div class="meta-group">
+                <div class="meta-author"><a href="#">Sophia Adams</a></div>
+                <div class="meta-date">11 October 2018</div>
+              </div>
+            </div>
+            <div class="content">
+              <p>Mauris eget leo quis dui condimentum consectetur eget in lorem. Quisque rutrum ultrices
+                ligula, vitae tincidunt justo faucibus nec. Donec in odio tristique, rhoncus ipsum eu,
+                imperdiet dui. Mauris a risus nec arcu lacinia auctor a sed nisi. Cras sed risus a ligula
+                viverra auctor quis eget tellus. Vestibulum ut lacinia velit, ultrices finibus felis. Mauris
+                iaculis nisl velit, eget gravida nisi varius nec. Donec vel lorem libero. Fusce at
+                scelerisque sapien.</p>
+            </div>
+          </li>
+        </ul>
+      </ul>
+
+      <div class="col col-12-lg col-12-xxs">
+        <h2>Contact card</h2>
+        <h3>Full width</h3>
+
+        <div class="contact-card">
+          <div class="contact-card-avatar">
+            <img src="../../assets/blank-avatar.jpg" alt="Example avatar">
+          </div>
+
+          <div class="contact-card-information">
+            <h2 class="contact-card-name">Mr Homer Simpson</h2>
+            <p class="contact-card-subtitle">Unit name, Team name</p>
+            <p class="contact-card-subtitle">Job title</p>
+            <p class="contact-card-summary">
+              This is a short paragraph of text that can be used to provide supporting information about a contact that may aid in the identification of the correct person to contact.
+            </p>
+          </div>
+
+          <div class="contact-card-contact">
+            <div class="contact-card-contact-phone">
+              <a href="tel:#" class="contact-card-link">+44 (0)1334 46 xxxx</a>
+            </div>
+            <div class="contact-card-contact-email">
+              <a href="mailto:#" class="contact-card-link">example@st-andrews.ac.uk</a>
+            </div>
+          </div>
+
+          <ul class="contact-card-tags">
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Art History</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Biology</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Business School</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Chemistry</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Classics</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Computer Science</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Divinity</a></li>
+          </ul>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-avatar">
+            <img src="../../assets/blank-avatar.jpg" alt="Example avatar">
+          </div>
+
+          <div class="contact-card-information">
+            <h2 class="contact-card-name">Mrs Marge Simpson</h2>
+            <p class="contact-card-subtitle">Unit name, Team name</p>
+            <p class="contact-card-subtitle">Job title</p>
+            <p class="contact-card-summary">
+              This is a short paragraph of text that can be used to provide supporting information about a contact that may aid in the identification of the correct person to contact.
+            </p>
+          </div>
+
+          <div class="contact-card-contact">
+            <div class="contact-card-contact-phone">
+              <a href="tel:#" class="contact-card-link">+44 (0)1334 46 xxxx</a>
+            </div>
+            <div class="contact-card-contact-email">
+              <a href="mailto:#" class="contact-card-link">example@st-andrews.ac.uk</a>
+            </div>
+          </div>
+
+          <ul class="contact-card-tags">
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Art History</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Biology</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Business School</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Chemistry</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Classics</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Computer Science</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Divinity</a></li>
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-avatar">
+            <img src="../../assets/blank-avatar.jpg" alt="Example avatar">
+          </div>
+
+          <div class="contact-card-information">
+            <h2 class="contact-card-name">Mr Bart Simpson</h2>
+            <p class="contact-card-subtitle">Unit name, Team name</p>
+            <p class="contact-card-subtitle">Job title</p>
+            <p class="contact-card-summary">
+              This is a short paragraph of text that can be used to provide supporting information about a contact that may aid in the identification of the correct person to contact.
+            </p>
+          </div>
+
+          <div class="contact-card-contact">
+            <div class="contact-card-contact-phone">
+              <a href="tel:#" class="contact-card-link">+44 (0)1334 46 xxxx</a>
+            </div>
+            <div class="contact-card-contact-email">
+              <a href="mailto:#" class="contact-card-link">example@st-andrews.ac.uk</a>
+            </div>
+          </div>
+
+          <ul class="contact-card-tags">
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Art History</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Biology</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Business School</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Chemistry</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Classics</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Computer Science</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Divinity</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col col-8-lg col-12-xxs">
+        <h3>Content thirds</h3>
+          <div class="contact-card">
+            <div class="contact-card-avatar">
+              <img src="../../assets/blank-avatar.jpg" alt="Example avatar">
+            </div>
+
+            <div class="contact-card-information">
+              <h2 class="contact-card-name">Mr Homer Simpson</h2>
+              <p class="contact-card-subtitle">Unit name, Team name</p>
+              <p class="contact-card-subtitle">Job title</p>
+              <p class="contact-card-summary">
+                This is a short paragraph of text that can be used to provide supporting information about a contact that may aid in the identification of the correct person to contact.
+              </p>
+            </div>
+
+            <div class="contact-card-contact">
+              <div class="contact-card-contact-phone">
+                <a href="tel:#" class="contact-card-link">+44 (0)1334 46 xxxx</a>
+              </div>
+              <div class="contact-card-contact-email">
+                <a href="mailto:#" class="contact-card-link">example@st-andrews.ac.uk</a>
+              </div>
+            </div>
+
+            <ul class="contact-card-tags">
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Art History</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Biology</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Business School</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Chemistry</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Classics</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Computer Science</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Divinity</a></li>
+            </ul>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-avatar">
+              <img src="../../assets/blank-avatar.jpg" alt="Example avatar">
+            </div>
+
+            <div class="contact-card-information">
+              <h2 class="contact-card-name">Mrs Marge Simpson</h2>
+              <p class="contact-card-subtitle">Unit name, Team name</p>
+              <p class="contact-card-subtitle">Job title</p>
+              <p class="contact-card-summary">
+                This is a short paragraph of text that can be used to provide supporting information about a contact that may aid in the identification of the correct person to contact.
+              </p>
+            </div>
+
+            <div class="contact-card-contact">
+              <div class="contact-card-contact-phone">
+                <a href="tel:#" class="contact-card-link">+44 (0)1334 46 xxxx</a>
+              </div>
+              <div class="contact-card-contact-email">
+                <a href="mailto:#" class="contact-card-link">example@st-andrews.ac.uk</a>
+              </div>
+            </div>
+
+            <ul class="contact-card-tags">
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Art History</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Biology</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Business School</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Chemistry</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Classics</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Computer Science</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Divinity</a></li>
+            </ul>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-avatar">
+              <img src="../../assets/blank-avatar.jpg" alt="Example avatar">
+            </div>
+
+            <div class="contact-card-information">
+              <h2 class="contact-card-name">Mr Bart Simpson</h2>
+              <p class="contact-card-subtitle">Unit name, Team name</p>
+              <p class="contact-card-subtitle">Job title</p>
+              <p class="contact-card-summary">
+                This is a short paragraph of text that can be used to provide supporting information about a contact that may aid in the identification of the correct person to contact.
+              </p>
+            </div>
+
+            <div class="contact-card-contact">
+              <div class="contact-card-contact-phone">
+                <a href="tel:#" class="contact-card-link">+44 (0)1334 46 xxxx</a>
+              </div>
+              <div class="contact-card-contact-email">
+                <a href="mailto:#" class="contact-card-link">example@st-andrews.ac.uk</a>
+              </div>
+            </div>
+
+            <ul class="contact-card-tags">
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Art History</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Biology</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Business School</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Chemistry</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Classics</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Computer Science</a></li>
+              <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Divinity</a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="col col-4-lg col-12-xxs">
+        <div class="contact-card">
+          <div class="contact-card-avatar">
+            <img src="../../assets/blank-avatar.jpg" alt="Example avatar">
+          </div>
+
+          <div class="contact-card-information">
+            <h2 class="contact-card-name">Mr Homer Simpson</h2>
+            <p class="contact-card-subtitle">Unit name, Team name</p>
+            <p class="contact-card-subtitle">Job title</p>
+            <p class="contact-card-summary">
+              This is a short paragraph of text that can be used to provide supporting information about a contact that may aid in the identification of the correct person to contact.
+            </p>
+          </div>
+
+          <div class="contact-card-contact">
+            <div class="contact-card-contact-phone">
+              <a href="tel:#" class="contact-card-link">+44 (0)1334 46 xxxx</a>
+            </div>
+            <div class="contact-card-contact-email">
+              <a href="mailto:#" class="contact-card-link">example@st-andrews.ac.uk</a>
+            </div>
+          </div>
+
+          <ul class="contact-card-tags">
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Art History</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Biology</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Business School</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Chemistry</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Classics</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Computer Science</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Divinity</a></li>
+          </ul>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-avatar">
+            <img src="../../assets/blank-avatar.jpg" alt="Example avatar">
+          </div>
+
+          <div class="contact-card-information">
+            <h2 class="contact-card-name">Mrs Marge Simpson</h2>
+            <p class="contact-card-subtitle">Unit name, Team name</p>
+            <p class="contact-card-subtitle">Job title</p>
+            <p class="contact-card-summary">
+              This is a short paragraph of text that can be used to provide supporting information about a contact that may aid in the identification of the correct person to contact.
+            </p>
+          </div>
+
+          <div class="contact-card-contact">
+            <div class="contact-card-contact-phone">
+              <a href="tel:#" class="contact-card-link">+44 (0)1334 46 xxxx</a>
+            </div>
+            <div class="contact-card-contact-email">
+              <a href="mailto:#" class="contact-card-link">example@st-andrews.ac.uk</a>
+            </div>
+          </div>
+
+          <ul class="contact-card-tags">
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Art History</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Biology</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Business School</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Chemistry</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Classics</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Computer Science</a></li>
+            <li class="contact-card-tag"><a class="contact-card-link contact-card-link-small" href="#">Divinity</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section>
+    <div class="container bg-white">
+      <div class="row">
+        <!-- First Half -->
+        <div class="col col-6-lg col-6-xxs main-content">
+          <h2>Content halves</h2>
+          <p>Lorem ipsum dolor sit amet. Ut unde iste eos dolorem velit hic aliquid deserunt et veritatis
+            sequi. Et quisquam voluptatem ut quia doloremque At fuga adipisci ad officia eius ea eaque rerum
+            At reprehenderit voluptas et voluptatibus sequi. Sit distinctio architecto in placeat vitae eos
+            iusto praesentium.</p>
+        </div>
+
+        <!-- Second Half -->
+        <div class="col col-6-lg col-6-xxs main-content">
+          <h2>Content halves</h2>
+          <p>Et inventore delectus nam quia sapiente et consequuntur delectus sit voluptatem culpa eum
+            adipisci ratione ut quasi vero est voluptate consequatur. Vel laboriosam aliquid ut quis
+            temporibus ex dolores voluptas et recusandae voluptates ut dolor sunt id cupiditate ipsum sit
+            dolor nihil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-2lg mb-2lg bg-light-grey-2">
+    <div class="container">
+      <div class="row">
+        <!-- First Half -->
+        <div class="col col-6-lg col-6-xxs main-content">
+          <h2>Content halves - grey background</h2>
+          <p>Lorem ipsum dolor sit amet. Ut unde iste eos dolorem velit hic aliquid deserunt et veritatis
+            sequi. Et quisquam voluptatem ut quia doloremque At fuga adipisci ad officia eius ea eaque rerum
+            At reprehenderit voluptas et voluptatibus sequi. Sit distinctio architecto in placeat vitae eos
+            iusto praesentium.</p>
+        </div>
+
+        <!-- Second Half -->
+        <div class="col col-6-lg col-6-xxs main-content">
+          <h2>Content halves - grey background</h2>
+          <p>Et inventore delectus nam quia sapiente et consequuntur delectus sit voluptatem culpa eum
+            adipisci ratione ut quasi vero est voluptate consequatur. Vel laboriosam aliquid ut quis
+            temporibus ex dolores voluptas et recusandae voluptates ut dolor sunt id cupiditate ipsum sit
+            dolor nihil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- First Half -->
+    <div class="col col-8-lg col-12-xxs main-content">
+      <h2>Content thirds - 2/3</h2>
+      <p>Lorem ipsum dolor sit amet. Ut unde iste eos dolorem velit hic aliquid deserunt et veritatis sequi. Et quisquam voluptatem ut quia doloremque At fuga adipisci ad officia eius ea eaque rerum At reprehenderit voluptas et voluptatibus sequi. Sit distinctio architecto in placeat vitae eos iusto praesentium.</p>
+    </div>
+
+    <!-- Second Half -->
+    <div class="col col-4-lg col-12-xxs main-content">
+      <h2>Content thirds - 1/3</h2>
+      <p>Et inventore delectus nam quia sapiente et consequuntur delectus sit voluptatem culpa eum adipisci ratione ut quasi vero est voluptate consequatur. Vel laboriosam aliquid ut quis temporibus ex dolores voluptas et recusandae voluptates ut dolor sunt id cupiditate ipsum sit dolor nihil.</p>
+    </div>
+
+    <div class="col col-12-lg col-12-xxs main-content">
+      <h2>Content whole</h2>
+      <p>Lorem ipsum dolor sit amet. Ut unde iste eos dolorem velit hic aliquid deserunt et veritatis sequi. Et quisquam voluptatem ut quia doloremque At fuga adipisci ad officia eius ea eaque rerum At reprehenderit voluptas et voluptatibus sequi. Sit distinctio architecto in placeat vitae eos iusto praesentium. In aspernatur quia est ratione animi id magni mollitia eos modi quam. </p><p>Et inventore delectus nam quia sapiente et consequuntur delectus sit voluptatem culpa eum adipisci ratione ut quasi vero est voluptate consequatur. Vel laboriosam aliquid ut quis temporibus ex dolores voluptas et recusandae voluptates ut dolor sunt id cupiditate ipsum sit dolor nihil. Aut sunt molestias et soluta repellendus qui aspernatur distinctio in dolorum molestiae et neque velit eum quisquam tempora. </p>
     </div>
   </div>
 
