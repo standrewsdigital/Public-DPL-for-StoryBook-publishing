@@ -1,23 +1,10 @@
 import { Canvas, Controls, Meta, Source } from '@storybook/addon-docs/blocks';
+import { extractComponentSource } from '../../../.storybook/source-transforms';
 
 import * as AccordionStories from './Accordion.stories';
 
-export const componentOnlySource = async (source) => {
-  const parsedSource = new DOMParser().parseFromString(source, 'text/html');
-  const accordion = parsedSource.querySelector('.accordion-group');
-
-  if (!accordion) {
-    return source;
-  }
-
-  const prettier = await import('prettier/standalone');
-  const prettierPluginHtml = await import('prettier/plugins/html');
-
-  return prettier.format(accordion.outerHTML, {
-    parser: 'html',
-    plugins: [prettierPluginHtml],
-  });
-};
+export const componentOnlySource =
+  extractComponentSource('.accordion-group');
 
 <Meta of={AccordionStories} />
 
