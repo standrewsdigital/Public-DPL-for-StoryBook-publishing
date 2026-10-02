@@ -2,6 +2,16 @@
     width: 100%;
     margin: 0 auto;
 
+    &.indented-description {
+        .person-image {
+            grid-row: 1 / -1;
+        }
+
+        .description {
+            grid-column: 2 / -1;
+        }
+    }
+
     .featured-people-title {
         margin-top: 0;
     }
@@ -11,16 +21,6 @@
         grid-template-columns: 7rem 1fr;
         grid-template-rows: min-content min-content;
         gap: 0.5rem 1rem;
-
-        &.indented-description {
-            .person-image {
-                grid-row: 1 / -1;
-            }
-
-            .description {
-                grid-column: 2 / -1;
-            }
-        }
 
         .person-image {
             grid-column: 1 / 1;
