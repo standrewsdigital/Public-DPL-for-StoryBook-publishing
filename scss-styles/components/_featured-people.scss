@@ -2,16 +2,6 @@
     width: 100%;
     margin: 0 auto;
 
-    &.indented-description {
-        .person-image {
-            grid-row: 1 / -1;
-        }
-
-        .description {
-            grid-column: 2 / -1;
-        }
-    }
-
     .featured-people-title {
         margin-top: 0;
     }
@@ -33,18 +23,6 @@
                 border-radius: 50%;
                 width: 100%;
                 height: auto;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .person {
-                grid-template-columns: 4rem;
-            }
-        }
-
-        @media (max-width: 350px) {
-            .person {
-                grid-template-columns: 2rem;
             }
         }
 
@@ -70,6 +48,53 @@
 
         p {
             margin-top: 0;
+        }
+    }
+}
+
+// Fixes the indented description layout for a 2 profile grid between these breakpoints
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .featured-people {
+        &.indented-description {
+            .col-6-md {
+                .person-image {
+                    grid-row: 1 / 1;
+                }
+
+                .description {
+                    grid-column: 1 / -1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 577px) {
+    .featured-people {
+        &.indented-description {
+            .person-image {
+                grid-row: 1 / -1;
+            }
+
+            .description {
+                grid-column: 2 / -1;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-people {
+        .person {
+            grid-template-columns: 5rem 1fr;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .featured-people {
+        .person {
+            grid-template-columns: 4rem 1fr;
         }
     }
 }
