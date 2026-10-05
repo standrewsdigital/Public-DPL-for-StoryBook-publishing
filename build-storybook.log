@@ -1,0 +1,481 @@
+
+> @stadigicomms/dpl@1.4.2 build-storybook
+> storybook build --output-dir=C:\Users\tvu1\AppData\Local\Temp\chromatic--24732-vt36E3Yamqce
+
+
+[90m┌[39m  Building storybook v10.4.6
+[90m│[39m
+[32m◇[39m  Cleaning outputDir:
+[90m│[39m  [36m../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce[39m
+[90m│[39m
+[32m◇[39m  Loading presets
+[90m│[39m
+[32m◇[39m  Building manager..
+[90m│[39m
+[34m●[39m  Building preview..
+[90m│[39m  [43mVite[49m [36mvite v8.1.3 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...[90m│[39m
+[34m●[39m  Copying static files: [36massets[39m at
+[90m│[39m  [36m..\..\..\Users\tvu1\AppData\Local\Temp\chromatic--24732-vt36E3Yamqce[39m
+✓ 189 modules transformed.
+rendering chunks...
+computing gzip size...
+[90m│[39m  [43mVite[49m
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/waves-DSqTFc_6.svg
+[90m│[39m  4.15 kB │ gzip:   1.63 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/waves-burgundy-BPKs4TFV.svg
+[90m│[39m  4.15 kB │ gzip:   1.63 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/waves-green-DN34SERJ.svg
+[90m│[39m  4.15 kB │ gzip:   1.63 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/waves-purple-BPvjTG-F.svg
+[90m│[39m  4.15 kB │ gzip:   1.63 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/cliffs-M6CTmak7.svg
+[90m│[39m  4.30 kB │ gzip:   1.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/cliffs-burgundy-DYALceSe.svg
+[90m│[39m  4.30 kB │ gzip:   1.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/cliffs-green-B3As2KwX.svg
+[90m│[39m  4.30 kB │ gzip:   1.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/cliffs-purple-DOMZL_3T.svg
+[90m│[39m  4.30 kB │ gzip:   1.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/cooking-CLuN4lIY.svg
+[90m│[39m  4.45 kB │ gzip:   2.09 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/cooking-burgundy-CBPUTCSJ.svg
+[90m│[39m  4.45 kB │ gzip:   2.09 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/cooking-green-CMgH3Scg.svg
+[90m│[39m  4.45 kB │ gzip:   2.08 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/cooking-purple-BWQ6Tv4E.svg
+[90m│[39m  4.45 kB │ gzip:   2.08 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/nightclub-CiCqBEpT.svg
+[90m│[39m  4.47 kB │ gzip:   1.72 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/nightclub-burgundy-yi2tKatA.svg
+[90m│[39m  4.47 kB │ gzip:   1.71 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/nightclub-green-D6GFLLpd.svg
+[90m│[39m  4.47 kB │ gzip:   1.71 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/nightclub-purple-ChrWdbBO.svg
+[90m│[39m  4.47 kB │ gzip:   1.71 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/dragon-head-ChdwIQtQ.svg
+[90m│[39m  5.19 kB │ gzip:   2.38 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/dragon-head-burgundy-Dn0lK8yC.svg
+[90m│[39m  5.19 kB │ gzip:   2.38 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/dragon-head-green-4Qye-aRQ.svg
+[90m│[39m  5.19 kB │ gzip:   2.38 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/dragon-head-purple-CsMryKat.svg
+[90m│[39m  5.19 kB │ gzip:   2.38 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/pier-BlCoqJ9H.svg
+[90m│[39m  5.38 kB │ gzip:   2.53 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/pier-burgundy-DOayGOhf.svg
+[90m│[39m  5.38 kB │ gzip:   2.53 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/pier-green-DOccQ0L-.svg
+[90m│[39m  5.38 kB │ gzip:   2.53 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/pier-purple-DOjSdQVs.svg
+[90m│[39m  5.38 kB │ gzip:   2.53 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/globe-_R-xJh-J.svg
+[90m│[39m  5.39 kB │ gzip:   2.49 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/globe-burgundy-D4QYgN54.svg
+[90m│[39m  5.39 kB │ gzip:   2.49 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/globe-green-wm3_81te.svg
+[90m│[39m  5.39 kB │ gzip:   2.49 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/globe-purple-B33ZgUOR.svg
+[90m│[39m  5.39 kB │ gzip:   2.48 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/shortbread-Cz-FggUr.svg
+[90m│[39m  5.63 kB │ gzip:   1.71 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/shortbread-burgundy-CpDw4se6.svg
+[90m│[39m  5.63 kB │ gzip:   1.71 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/shortbread-green-DwObDLjC.svg
+[90m│[39m  5.63 kB │ gzip:   1.71 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/shortbread-purple-DfhMbUX7.svg
+[90m│[39m  5.63 kB │ gzip:   1.71 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/art-palette-Dp9veh4I.svg
+[90m│[39m  5.65 kB │ gzip:   2.35 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/art-palette-burgundy-DoF1qRj2.svg
+[90m│[39m  5.65 kB │ gzip:   2.35 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/art-palette-green-ZKwS84T5.svg
+[90m│[39m  5.65 kB │ gzip:   2.35 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/art-palette-purple-yZdGD2jj.svg
+[90m│[39m  5.65 kB │ gzip:   2.35 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/99-bus-burgundy-Y46IpKxX.svg
+[90m│[39m  5.73 kB │ gzip:   1.87 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/99-bus-green-dOtwm94j.svg
+[90m│[39m  5.73 kB │ gzip:   1.87 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/99-bus-purple-DAG_i87I.svg
+[90m│[39m  5.73 kB │ gzip:   1.87 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/99-bus-y96jYzfm.svg
+[90m│[39m  5.73 kB │ gzip:   1.87 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sunset-GvGBlhNm.svg
+[90m│[39m  6.09 kB │ gzip:   2.78 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sunset-burgundy-CHBmFx6A.svg
+[90m│[39m  6.09 kB │ gzip:   2.78 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sunset-green-wj8ZMyY9.svg
+[90m│[39m  6.09 kB │ gzip:   2.78 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sunset-purple-NgjfX4O0.svg
+[90m│[39m  6.09 kB │ gzip:   2.78 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/context-C0qIqeS4.png
+[90m│[39m  6.11 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/links-B6nKbC8_.svg
+[90m│[39m  6.16 kB │ gzip:   2.89 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/links-burgundy-BEtmiHj7.svg
+[90m│[39m  6.16 kB │ gzip:   2.89 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/links-green-Dpdv1LLY.svg
+[90m│[39m  6.16 kB │ gzip:   2.89 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/links-purple-l9bbILKb.svg
+[90m│[39m  6.16 kB │ gzip:   2.89 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/calculator-CRf46A5p.svg
+[90m│[39m  6.66 kB │ gzip:   2.49 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/calculator-burgundy-Ci1dJGyi.svg
+[90m│[39m  6.66 kB │ gzip:   2.48 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/calculator-green-eHjvviyu.svg
+[90m│[39m  6.66 kB │ gzip:   2.48 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/calculator-purple-kizM8-Fo.svg
+[90m│[39m  6.66 kB │ gzip:   2.48 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sport-B-1HzAiz.svg
+[90m│[39m  6.69 kB │ gzip:   2.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sport-burgundy-DfDILWhx.svg
+[90m│[39m  6.69 kB │ gzip:   2.65 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sport-green-Do0yDzyo.svg
+[90m│[39m  6.69 kB │ gzip:   2.65 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sport-purple-BnUTC38A.svg
+[90m│[39m  6.69 kB │ gzip:   2.65 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/science-Bc-IgF3j.svg
+[90m│[39m  6.73 kB │ gzip:   2.03 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/science-burgundy-DhmmIBdE.svg
+[90m│[39m  6.73 kB │ gzip:   2.03 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/science-green-Cs3PJYVl.svg
+[90m│[39m  6.73 kB │ gzip:   2.03 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/science-purple-LVmqj8yw.svg
+[90m│[39m  6.73 kB │ gzip:   2.03 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/old-course-bridge-CbTjw6hE.svg
+[90m│[39m  6.92 kB │ gzip:   3.09 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/old-course-bridge-burgundy--f7t-rdh.svg
+[90m│[39m  6.92 kB │ gzip:   3.09 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/old-course-bridge-green-Do8lnxYw.svg
+[90m│[39m  6.92 kB │ gzip:   3.09 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/old-course-bridge-purple--13JT9N0.svg
+[90m│[39m  6.92 kB │ gzip:   3.09 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/gown-D7uhs7R2.svg
+[90m│[39m  7.13 kB │ gzip:   3.27 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/gown-burgundy--AL7YQq6.svg
+[90m│[39m  7.13 kB │ gzip:   3.27 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/gown-green-nDOlMs6z.svg
+[90m│[39m  7.13 kB │ gzip:   3.28 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/gown-purple-DnlIg9Ne.svg
+[90m│[39m  7.13 kB │ gzip:   3.27 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/styling-Bk6zjRzU.png
+[90m│[39m  7.23 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/mace-burgundy-ChfqFuFi.svg
+[90m│[39m  7.26 kB │ gzip:   2.97 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/mace-green-BqFtcnwG.svg
+[90m│[39m  7.26 kB │ gzip:   2.97 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/mace-hAvZgRKL.svg
+[90m│[39m  7.26 kB │ gzip:   2.98 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/mace-purple-CePhH0Ys.svg
+[90m│[39m  7.26 kB │ gzip:   2.97 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/st-andrews-castle-RFYv-ojM.svg
+[90m│[39m  7.26 kB │ gzip:   3.33 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/st-andrews-castle-burgundy-CHM-HKvR.svg
+[90m│[39m  7.26 kB │ gzip:   3.33 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/st-andrews-castle-green-D4BkgyMo.svg
+[90m│[39m  7.26 kB │ gzip:   3.33 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/st-andrews-castle-purple-CxAPEUTZ.svg
+[90m│[39m  7.26 kB │ gzip:   3.33 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sunrise-B5j4pV-m.svg
+[90m│[39m  7.78 kB │ gzip:   3.08 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sunrise-burgundy-C-IKjxSd.svg
+[90m│[39m  7.78 kB │ gzip:   3.08 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sunrise-green-KJJj8UvY.svg
+[90m│[39m  7.78 kB │ gzip:   3.08 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/sunrise-purple-D9Z0aVC8.svg
+[90m│[39m  7.78 kB │ gzip:   3.08 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/coins-DPayg85c.svg
+[90m│[39m  8.77 kB │ gzip:   2.27 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/coins-burgundy-CNTBLW3P.svg
+[90m│[39m  8.77 kB │ gzip:   2.27 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/coins-green-D5uCx_Hr.svg
+[90m│[39m  8.77 kB │ gzip:   2.27 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/coins-purple-CJ8rOP4O.svg
+[90m│[39m  8.77 kB │ gzip:   2.27 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/hello-languages-CNKVYFgc.svg
+[90m│[39m  9.02 kB │ gzip:   3.97 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/hello-languages-burgundy-hHwsPVQM.svg
+[90m│[39m  9.02 kB │ gzip:   3.97 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/hello-languages-green-CxOiHHP3.svg
+[90m│[39m  9.02 kB │ gzip:   3.97 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/hello-languages-purple-PkX_RcAW.svg
+[90m│[39m  9.02 kB │ gzip:   3.97 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/highland-cow-BAa_DnMH.svg
+[90m│[39m  9.09 kB │ gzip:   4.19 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/highland-cow-burgundy-DDrpWH2p.svg
+[90m│[39m  9.09 kB │ gzip:   4.19 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/highland-cow-green-BzJO1ybP.svg
+[90m│[39m  9.09 kB │ gzip:   4.19 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/highland-cow-purple-CeIlmTx0.svg
+[90m│[39m  9.09 kB │ gzip:   4.19 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/beach-walk-B4jU1Hzt.svg
+[90m│[39m  9.84 kB │ gzip:   3.16 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/beach-walk-burgundy-CcbLsG7I.svg
+[90m│[39m  9.84 kB │ gzip:   3.16 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/beach-walk-green-STBPQknc.svg
+[90m│[39m  9.84 kB │ gzip:   3.16 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/beach-walk-purple-WEbF1Dbr.svg
+[90m│[39m  9.84 kB │ gzip:   3.16 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5aLdu3mhPy1Fig-o4brND5H.woff2
+[90m│[39m  10.83 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/handshake-BUOMdg2W.svg
+[90m│[39m  11.40 kB │ gzip:   4.91 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/handshake-burgundy-oHtOZXX_.svg
+[90m│[39m  11.40 kB │ gzip:   4.91 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/handshake-green-5y8mfRe4.svg
+[90m│[39m  11.40 kB │ gzip:   4.91 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/handshake-purple-C6Zx8lgc.svg
+[90m│[39m  11.40 kB │ gzip:   4.91 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf2D33WsNFHuQk-Bn_jtYt5.woff2
+[90m│[39m  12.65 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevttXOmHS91ixg0-mSicjT5-.woff2
+[90m│[39m  12.85 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/scotland-BZCEwpkt.svg
+[90m│[39m  12.91 kB │ gzip:   4.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/scotland-burgundy-FwIvW9Ec.svg
+[90m│[39m  12.91 kB │ gzip:   4.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/scotland-green-B2gJu6q3.svg
+[90m│[39m  12.91 kB │ gzip:   4.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/scotland-purple-BcTp12ov.svg
+[90m│[39m  12.91 kB │ gzip:   4.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3Pct_NFiQhhYQ-V2HBMUsl.woff2
+[90m│[39m  14.18 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5aHdu3mhPy1Fig-BNxRNrp3.woff2
+[90m│[39m  14.50 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf1D33WsNFHuQk-BnHj1SWq.woff2
+[90m│[39m  14.72 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/crest-D8ZsUtgg.svg
+[90m│[39m  15.04 kB │ gzip:   6.21 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/crest-burgundy-C-W2EC__.svg
+[90m│[39m  15.04 kB │ gzip:   6.21 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/crest-green-CLgfcgyM.svg
+[90m│[39m  15.04 kB │ gzip:   6.21 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/crest-purple-DEX_FclU.svg
+[90m│[39m  15.04 kB │ gzip:   6.21 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/saints-sport-burgundy-D0tRd1fL.svg
+[90m│[39m  15.76 kB │ gzip:   6.49 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/saints-sport-green-BX11c24P.svg
+[90m│[39m  15.76 kB │ gzip:   6.49 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/saints-sport-ih8hA2XM.svg
+[90m│[39m  15.76 kB │ gzip:   6.49 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/saints-sport-purple-DBu-SUQ5.svg
+[90m│[39m  15.76 kB │ gzip:   6.49 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevttnOmHS91ixg0-B5PcgFDr.woff2
+[90m│[39m  16.48 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/your-union-B7cExGNZ.svg
+[90m│[39m  17.61 kB │ gzip:   7.60 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/your-union-burgundy-BY3O0Gzy.svg
+[90m│[39m  17.61 kB │ gzip:   7.61 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/your-union-green-COq1kBo2.svg
+[90m│[39m  17.61 kB │ gzip:   7.61 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/your-union-purple-DX0qxc1A.svg
+[90m│[39m  17.61 kB │ gzip:   7.60 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3Dct_NFiQhhYQ-zjAL_zPw.woff2
+[90m│[39m  18.24 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/iframe.html
+[90m│[39m  19.09 kB │ gzip:   5.33 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5ardu3mhPy1Fig-DgOZupFD.woff2
+[90m│[39m  20.02 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/quad-CfHCCfcJ.svg
+[90m│[39m  20.55 kB │ gzip:   6.69 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/quad-burgundy-BbAmDkMv.svg
+[90m│[39m  20.55 kB │ gzip:   6.69 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/quad-green-gze0CF-n.svg
+[90m│[39m  20.55 kB │ gzip:   6.69 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/quad-purple-D4s5asmE.svg
+[90m│[39m  20.55 kB │ gzip:   6.69 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a3du3mhPy1Fig-BJIBI7Jg.woff2
+[90m│[39m  21.81 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevtunOmHS91ixg0-CiLqMdAZ.woff2
+[90m│[39m  24.37 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf-D33WsNFHuQk-BDRGQg9n.woff2
+[90m│[39m  24.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/bagpipes-C7sqcOR8.svg
+[90m│[39m  24.73 kB │ gzip:   9.38 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/bagpipes-burgundy-CQHdFQSX.svg
+[90m│[39m  24.73 kB │ gzip:   9.37 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/bagpipes-green-Ljej6ivv.svg
+[90m│[39m  24.73 kB │ gzip:   9.37 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/bagpipes-purple-BNWj7UrF.svg
+[90m│[39m  24.73 kB │ gzip:   9.37 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevtvXOmHS91ixg0-0oYzYOrL.woff2
+[90m│[39m  24.96 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/PTS55F-webfont-Csz2XSxY.woff
+[90m│[39m  27.09 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/PTS56F-webfont-CTbo9euF.woff
+[90m│[39m  27.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/PTS75F-webfont-C5Xm76GQ.woff
+[90m│[39m  27.47 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf5D33WsNFHuQk-Cyoy8WxH.woff2
+[90m│[39m  27.80 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/docs---vsFbMi.png
+[90m│[39m  27.87 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/PTS76F-webfont-CbqGyuQd.woff
+[90m│[39m  28.33 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/PTF55F-webfont-B5g4lQyM.woff
+[90m│[39m  28.36 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/PTF75F-webfont-C7AVwBPH.woff
+[90m│[39m  28.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/PTF56F-webfont-6q75GWpk.woff
+[90m│[39m  29.29 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/PTF76F-webfont-D6GBYFIm.woff
+[90m│[39m  29.65 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3vct_NFiQhhYQ-p6GSHMk_.woff2
+[90m│[39m  31.94 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3zct_NFiQhhYQ-CzOaZ-4-.woff2
+[90m│[39m  32.00 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a7du3mhPy0-avyUD5lZ.woff2
+[90m│[39m  35.85 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf6D33WsNFH-DStRPlTg.woff2
+[90m│[39m  36.69 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevtuXOmHS91iw-eGoF9YZz.woff2
+[90m│[39m  39.60 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/west-sands-BawtDcip.svg
+[90m│[39m  39.64 kB │ gzip:  15.27 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/west-sands-burgundy-BJv7Ccw1.svg
+[90m│[39m  39.64 kB │ gzip:  15.26 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/west-sands-green-Ckfuo8Pq.svg
+[90m│[39m  39.64 kB │ gzip:  15.26 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/west-sands-purple-BGcXb4fb.svg
+[90m│[39m  39.64 kB │ gzip:  15.26 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/share-DGA-UcQf.png
+[90m│[39m  40.76 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/accessibility-W_h2acOZ.png
+[90m│[39m  42.33 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/figma-plugin-CH2hELiO.png
+[90m│[39m  44.24 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/theming-D6WJLNoW.png
+[90m│[39m  44.37 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3_ct_NFiQg-B1_2TPiP.woff2
+[90m│[39m  47.94 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/testing-cbzR9l9r.png
+[90m│[39m  49.31 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYeGD33WsNFHuQk-Ctder_EM.woff2
+[90m│[39m  65.11 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5aPdu3mhPy1Fig-Caa4yx57.woff2
+[90m│[39m  70.64 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_PwPct_NFiQhhYQ-CGTCnaI5.woff2
+[90m│[39m  79.05 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevttHOmHS91ixg0-jhkWofos.woff2
+[90m│[39m  81.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf3D33WsNFHuQk-DutWDVtt.woff2
+[90m│[39m  89.01 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a_du3mhPy1Fig-DtFfPIYk.woff2
+[90m│[39m  99.25 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevtuHOmHS91ixg0-wuBA0oXe.woff2
+[90m│[39m  99.57 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3Lct_NFiQhhYQ-CadG8UEH.woff2
+[90m│[39m  114.06 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5aDdu3mhPy1Fig-Yer4Bbkz.woff2
+[90m│[39m  168.14 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf0D33WsNFHuQk-CmtoAz0t.woff2
+[90m│[39m  186.62 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevtt3OmHS91ixg0-C5rzJbkZ.woff2
+[90m│[39m  189.12 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3Hct_NFiQhhYQ-DQ3zyBPP.woff2
+[90m│[39m  236.97 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/addon-library-BWUCAmyN.png
+[90m│[39m  467.36 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Header-CzZBVs_w.css
+[90m│[39m  0.50 kB │ gzip:   0.29 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Button-C9QAnAgh.css
+[90m│[39m  0.51 kB │ gzip:   0.28 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Alert-Dq7Oqpjs.css
+[90m│[39m  0.56 kB │ gzip:   0.23 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Page-R7v0XIE6.css
+[90m│[39m  0.91 kB │ gzip:   0.39 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Navbox-DTvYlDfu.css
+[90m│[39m  0.92 kB │ gzip:   0.43 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/iframe-R1ux064R.css
+[90m│[39m  677.38 kB │ gzip: 114.39 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/mdx-react-shim-CrlNiEDr.js
+[90m│[39m  0.12 kB │ gzip:   0.12 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/formatter-L2YTDE3Q-CoCliUYR.js
+[90m│[39m  0.27 kB │ gzip:   0.22 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Alert-DRFhsys_.js
+[90m│[39m  0.36 kB │ gzip:   0.26 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Footer.stories-DICvMbfP.js
+[90m│[39m  0.39 kB │ gzip:   0.26 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Header.stories-DsRmuMH2.js
+[90m│[39m  0.39 kB │ gzip:   0.26 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Button-DH4-TZNV.js
+[90m│[39m  0.45 kB │ gzip:   0.30 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Test
+[90m│[39m  page.stories-BEEwgAEP.js
+[90m│[39m  0.68 kB │ gzip:   0.42 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Header-C4vIujf7.js
+[90m│[39m  0.69 kB │ gzip:   0.34 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Header.stories-BT98tRd5.js
+[90m│[39m  0.75 kB │ gzip:   0.42 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Button.stories-DyIXAwbk.js
+[90m│[39m  0.79 kB │ gzip:   0.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Footer-BgrpDKsg.js
+[90m│[39m  0.92 kB │ gzip:   0.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Header-gX9Ifuwn.js
+[90m│[39m  1.23 kB │ gzip:   0.69 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Button.stories-COXqYHCS.js
+[90m│[39m  1.42 kB │ gzip:   0.58 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Icon.stories-BsdD7PRC.js
+[90m│[39m  1.61 kB │ gzip:   0.91 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Typography-CHRGjRix.js
+[90m│[39m  2.41 kB │ gzip:   0.79 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/preload-helper-CT_b8DTk.js
+[90m│[39m  2.46 kB │ gzip:   1.29 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Alert.stories-DDxo9SZn.js
+[90m│[39m  3.00 kB │ gzip:   0.84 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Navbox.stories-BIXpIGJW.js
+[90m│[39m  3.38 kB │ gzip:   1.00 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Page.stories-DqE-VePo.js
+[90m│[39m  3.68 kB │ gzip:   1.64 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/chunk-242VQQM5-C_ZsP9xM.js
+[90m│[39m  3.76 kB │ gzip:   1.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/chunk-3LY4VQVK-d2XDse6o.js
+[90m│[39m  4.03 kB │ gzip:   1.71 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Grid-Cn7j_hOV.js
+[90m│[39m  4.31 kB │ gzip:   1.18 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/react-B7Te67-h.js
+[90m│[39m  7.53 kB │ gzip:   2.88 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Colour
+[90m│[39m  system-BbT8KZWQ.js                                               12.68
+[90m│[39m  kB │ gzip:   3.16 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/chunk-LITCR56V-B65es_i_.js
+[90m│[39m  22.38 kB │ gzip:   7.50 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Configure-DdMWnljX.js
+[90m│[39m  26.88 kB │ gzip:  11.32 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/vite-inject-mocker-entry.js
+[90m│[39m  27.81 kB │ gzip:   9.63 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/matchers-JIUQ3HVY-C_4Q16mQ.js
+[90m│[39m  28.76 kB │ gzip:   9.66 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/Color-KMSTOMOX-BX_vnF2S.js
+[90m│[39m  30.92 kB │ gzip:  11.61 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/WithTooltip-7X4HQR7L-sjIy2ccT.js
+[90m│[39m  32.75 kB │ gzip:  11.47 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/theming-BmUIxIG5.js
+[90m│[39m  55.35 kB │ gzip:  21.39 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/syntaxhighlighter-RTCFPKCB-BkEKjGfR.js
+[90m│[39m  76.55 kB │ gzip:  27.56 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/DocsRenderer-JROSPFPF-gzXCsGRN.js
+[90m│[39m  180.36 kB │ gzip:  57.31 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/axe-BWhf8Izq.js
+[90m│[39m  579.49 kB │ gzip: 158.46 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/blocks-DWUfkw93.js
+[90m│[39m  733.39 kB │ gzip: 232.82 kB
+[90m│[39m  ../../../Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce/assets/iframe-6o8m7edB.js
+[90m│[39m  822.47 kB │ gzip: 228.73 kB
+
+[90m│[39m  [43mVite[49m [32m✓ built in 2.80s[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[plugin builtin:vite-reporter]
+[90m│[39m  (!) Some chunks are larger than 500 kB after minification. Consider:
+[90m│[39m  - Using dynamic import() to code-split the application
+[90m│[39m  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+[90m│[39m  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+[90m│[39m  - Adjust chunk size limit for this warning via
+[90m│[39m  build.chunkSizeWarningLimit.[39m
+[90m│[39m
+[32m◇[39m  Output directory:
+[90m│[39m  C:/Users/tvu1/AppData/Local/Temp/chromatic--24732-vt36E3Yamqce
+[90m│[39m
+[90m└[39m  Storybook build completed successfully
+
