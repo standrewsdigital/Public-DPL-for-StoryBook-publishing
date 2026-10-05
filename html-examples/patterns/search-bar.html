@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,956 +7,504 @@
     <title>Search bar with section</title>
     <link rel="stylesheet" href="../../compiled-css/main.css">
     <link rel="stylesheet" href="../../compiled-css/search-bar.css">
+    <script src="../../scripts/main.js" defer></script>
+    <script src="../../scripts/search-bar.js" defer></script>
+    <script src="../../scripts/search-bar-results.js" defer></script>
 </head>
 
 <body>
-    <!--Header-->
-    <header class="container">
-        <div class="row">
-            <div class="col-12 header-content">
-                <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
-                    alt="University of St Andrews Logo" class="logo">
-            </div>
-        </div>
-    </header>
-
-    <div class="pattern-wrapper">
-        <!-- Page heading -->
-        <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm col-12-xxs">
-                    <h1>Search bar</h1>
-                </div>
-            </div>
+<!--Header-->
+<header class="container">
+    <div class="row">
+        <div class="col-12 header-content">
+            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg"
+                 alt="University of St Andrews Logo" class="logo">
         </div>
     </div>
-        <!-- Page heading -->
-        <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm">
-                    <h2>Search bar minimum</h2>
-                </div>
-            </div>
-        </div>
-    
-    
-    
-        <!-- Begin pattern: search-bar //-->
-        <section class="pattern-wrapper no-links">
-            <div class="container banner-content">
-                <div class="row">
-                    <div class="col col-12-xxl col-12-xl col-12-md col-12-sm col-12-xs col-12-xxs">
-                        <form class="wrapper" action="https://www.st-andrews.ac.uk/search" method="get" role="search">
-                            <input class="search filter-input" id="default-search" required type="text"
-                                aria-label="Search the University website" maxlength="256" name="query"
-                                placeholder="Search the University website" autocomplete="off" autofocus>
-                            <!-- <span class="clear-icon material-icons-outlined aria-hidden=" true">close</span> -->
-                            <!-- <span class="mic-icon material-symbols-outlined" aria-hidden="true">search</span> -->
-                            <button><span class="search-icon material-icons-outlined aria-hidden="
-                                    true">search</span></button>
-                        </form>
-                        <p class="info"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End pattern: search-bar //-->
-        <!-- Page heading -->
-        <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm">
-                    <h2>Search bar with autocomplete</h2>
-                </div>
-            </div>
-        </div>
-    
-    
-    
-        <!-- Begin pattern: search-bar //-->
-        <section class="pattern-wrapper no-links">
-            <div class="container banner-content">
-                <div class="row">
-                    <div class="col col-12-xxl col-12-xl col-12-md col-12-sm col-12-xs col-12-xxs">
-                        <form class="wrapper" action="" role="search">
-                            <input class="search filter-input" id="default-search" required type="text"
-                                aria-label="Search the University website" maxlength="256" name="search"
-                                placeholder="Search the University website">
-                            <!-- <span class="clear-icon  material-icons-outlined aria-hidden=" true">close</span> -->
-                            <button><span class="search-icon  material-icons-outlined aria-hidden="
-                                    true">search</span></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End pattern: search-bar //-->
-       <!-- Page heading -->
-       <div class="container">
-        <div class="row">
-            <div class="col col-8-md col-12-sm">
-                <h2>Search banner</h2>
-            </div>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm col-12-xxs">
+            <h1>Search bar</h1>
+            <h2>Search bar minimum</h2>
         </div>
     </div>
-
-    <section class="bg-light-grey-2 text-dark-grey-2 pattern-wrapper no-links">
-        <div class="banner-content container">
-            <div class="row">
-                <div class="col col-6-md col-12-sm col-12-xs col-12-xxs">
-                    <h2>News search</h2>
-                    <p>Search through our entire news archive</p>
-                    <form class="wrapper" action="" role="search">
-                        <input class="search filter-input" id="default-search" required type="text"
-                            aria-label="Search the University website" maxlength="256" name="search"
-                            placeholder="Search the University website">
-                        <!-- <span class="clear-icon  material-icons-outlined aria-hidden=" true">close</span> -->
-                        <button><span class="search-icon  material-icons-outlined aria-hidden="
-                                true">search</span></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-        <!-- Page heading -->
-        <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm">
-                    <h2>Search banner (blue)</h2>
-                </div>
-            </div>
-        </div>
-    
-        <section class="text-white bg-blue-primary pattern-wrapper no-links">
-            <div class="banner-content container">
-                <div class="row">
-                    <div class="col col-12-md col-12-sm col-12-xs col-12-xxs">
-                        <h2>News search</h2>
-                        <p>Search through our entire news archive</p>
-                        <form class="wrapper" action="" role="search">
-                            <input class="search filter-input" id="default-search" required type="text"
-                                aria-label="Search the University website" maxlength="256" name="search"
-                                placeholder="Search the University website blue">
-                            <!-- <span class="clear-icon material-icons-outlined aria-hidden=" true>close</span> -->
-                            <button><span class="search-icon  material-icons-outlined aria-hidden="
-                                    true">search</span></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-       <!-- Page heading -->
-       <div class="container">
-        <div class="row">
-            <div class="col col-8-md col-12-sm">
-                <h2>Search banner (constrained width)</h2>
-            </div>
-        </div>
-    </div>
-
-    <!-- Search box with section for banner - constrained -->
-    <div class="section-wrapper">
-        <section class="text-white bg-blue-primary section__constrained pattern-wrapper no-links col-8-md">
-            <div class="banner-content container">
-                <div class="row">
-                    <div class="col col-6-md col-12-sm col-12-xs">
-                        <h2>News search</h2>
-                        <p>Search through our entire news archive</p>
-                        <form class="wrapper" action="" role="search">
-                            <input class="search filter-input" id="default-search" required type="text"
-                                aria-label="Search the University website" maxlength="256" name="search"
-                                placeholder="Search the University website">
-                            <!-- <span class="clear-icon material-icons-outlined aria-hidden=" true">close</span> -->
-                            <button><span class="search-icon material-icons-outlined aria-hidden="
-                                    true">search</span></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-        <!-- Page heading -->
-        <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm col-12-xs">
-                    <h2>Search banner with additional links</h2>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Search banner with section  -->
-        <section class="bg-light-grey-2 text-dark-grey-2 pattern-wrapper">
-            <div class="banner-content container">
-                <div class="row">
-                    <div class="col col-12-md col-12-sm col-12-xs">
-                        <h2>News search</h2>
-                        <p>Search through our entire news archive</p>
-                        <form class="wrapper" action="" role="search">
-                            <input class="search filter-input" id="default-search" required type="text"
-                                aria-label="Search the University website" maxlength="256" name="search"
-                                placeholder="Search the University website">
-                            <!-- <span class="clear-icon material-icons-outlined aria-hidden=" true>close</span> -->
-                            <button><span class="search-icon material-icons-outlined aria-hidden="
-                                    true>search</span></button>
-                        </form>
-                        <!-- Begin pattern: horizontal-list //-->
-                        <div class="links">
-                            <ul>
-                                <li><a href="#">Advanced search</a></li>
-                            </ul>
-                        </div>
-                        <!-- End pattern: horizontal-list //-->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Page heading -->
-        <div class="container">
-            <div class="row">
-                <div class="col col-8-md col-12-sm col-12-xs">
-                    <h2>Search banner with additional grouped links</h2>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Search banner with section plus long options list  -->
-        <section class="bg-light-grey-1 text-dark-grey-2 pattern-wrapper">
-            <div class="banner-content container">
-                <div class="row">
-                    <div class="col col-12-md col-12-sm col-12-xs col-12-xxs">
-                        <h2>News search</h2>
-                        <p>Search through our entire news archive</p>
-                        <form class="wrapper" action="" role="search">
-                            <input class="search filter-input" id="default-search" required type="text"
-                                aria-label="Search the University website" maxlength="256" name="search"
-                                placeholder="Search the University website">
-                            <!-- <span class="clear-icon material-icons-outlined aria-hidden=" true">close</span> -->
-                            <button><span class="search-icon material-icons-outlined aria-hidden="
-                                    true">search</span></button>
-                        </form>
-                        <!-- Begin pattern: horizontal-list //-->
-                        <h4 class="toggle">
-                            <button class="toggle-list" aria-expanded="false">Popular searches</button>
-                        </h4>
-    
-                        <div class="links">
-    
-                            <ul class="list" id="list">
-                                <li><a href="#">Upcoming events</a></li>
-                                <li><a href="#">Today</a></li>
-                                <li><a href="#">This week</a></li>
-                                <li><a href="#">This month</a></li>
-                                <li><a href="#">All events</a></li>
-                                <li class="dropdown-wrapper">
-                                    <button class="toggle-subList"><a href="#" class="open-list" role="button"
-                                            aria-controls="more-options">More
-                                            options</a>
-                                        <span class="chevron material-icons-outlined aria-hidden="
-                                            true">chevron_right</span></button>
-    
-                                    <ul class="subList" id="subList" style="display: none;">
-                                        <li><a href="#">Events open to the public</a></li>
-                                        <li><a href="#">Events for staff and students</a></li>
-                                        <li><a href="#">Lectures</a></li>
-                                        <li><a href="#">Seminars</a></li>
-                                        <li><a href="#">Workshops</a></li>
-                                        <li><a href="#">Chaplaincy events</a></li>
-                                        <li><a href="#">Music events</a></li>
-                                        <li><a href="#">Museum events</a></li>
-                                        <li><a href="#">Theatre events</a></li>
-                                    </ul>
-    
-                                </li>
-                            </ul>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    <!-- Page heading -->
-    <div class="container">
-        <div class="row">
-            <div class="col col-8-md col-12-sm col-12-xxs">
-                <h2>Course search</h2>
-                <p>Search foe all the courses we offer</p>
-            </div>
-        </div>
-    </div>
-
-<!--Drop-down HTML-->
-    <section class="bg-light-grey-2 text-dark-grey-2 pattern-wrapper no-links">
-        <div class="banner-content container">
-            <div class="row">
-                <div class="col col-12-md col-12-sm col-12-xs">
-                    <h2>News search as listing</h2>
-                    <p>Search through our entire news archive</p>
-                   
-                   
-                    <form class="wrapper" role="search" action="https://google.com/search">
-                        <input class="search filter-input filter-list" name="q" id="search-list" required type="text"
-                            aria-label="Search courses (List)" maxlength="256" placeholder="Search courses (List)">
-                        <button class="toggle-list" type="button">
-                            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
-                           
-                        </button>
-                    </form>
-    
-                    <!-- Results Container for LIST format -->
-                    <div id="results-container-list" class="results-container" style="display: none;">
-                        <div class="columns">
-                            <div class="column col col-6-sm col-12-xs">
-                                <h2 id="undergrad-title-list" style="display: none;">Undergraduate Courses (List)</h2>
-                                <ul id="undergraduate-courses-list" class="course-list"></ul>
-                            </div>
-                            <div class="column col col-6-sm col-12-xs">
-                                <h2 id="postgrad-title-list" style="display: none;">Postgraduate Courses (List)</h2>
-                                <ul id="postgraduate-courses-list" class="course-list"></ul>
-                            </div>
-                        </div>
-                    </div>
+</div>
 
 
-                </div>
+<!-- Begin pattern: search-bar //-->
 
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col col-12-xxl col-12-xl col-12-md col-12-sm col-12-xs col-12-xxs">
+            <form class="form-group" action="https://www.st-andrews.ac.uk/search" method="get" role="search">
+                <div class="input-group search-bar">
+                    <input
+                        class="search-box"
+                        id="default-search"
+                        required
+                        type="text"
+                        aria-label="Search the University website"
+                        maxlength="256"
+                        name="query"
+                        placeholder="Search the University website"
+                        autocomplete="off"
+                        autofocus
+                    >
+                    <button class="btn clear-icon" aria-label="Clear input">
+                        <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                    </button>
 
-        </div>
-    </section>
-
-    <!-- Page heading -->
-    <div class="container">
-        <div class="row">
-            <div class="col col-8-md col-12-sm">
-                <h2>Search banner with tag buttons</h2>
-            </div>
-        </div>
-    </div>
-
-<!--HTML Buttons-->
-    <section class="bg-light-grey-2 text-dark-grey-2 pattern-wrapper no-links">
-        <div class="banner-content container">
-            <div class="row">
-                <div class="col col-12-md col-12-sm col-12-xs col-12-xxs">
-                    <h2>News search bar with buttons</h2>
-                    <p>Search through our entire news archive</p>
-
-                      <!-- Search Bar 2 (Filters Buttons) -->
-                <form class="wrapper" role="search" action="https://google.com/search">
-                    <input class="search filter-input filter-buttons" id="search-buttons" required type="text"
-                        aria-label="Search courses (Buttons)" name="q" maxlength="256" placeholder="Search courses (Buttons)">
-                    <button class="toggle-list" type="button">
+                    <button class="btn" aria-label="Search">
                         <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
                     </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- End pattern: search-bar //-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm">
+            <h2>Search bar with autocomplete</h2>
+        </div>
+    </div>
+</div>
+
+
+<!-- Begin pattern: search-bar //-->
+<div class="container">
+    <div class="row">
+        <div class="col col-12-xxl col-12-xl col-12-md col-12-sm col-12-xs col-12-xxs">
+            <form class="form-group" action="" role="search">
+                <div class="input-group search-bar">
+                    <input
+                        class="search-box"
+                        id="default-search"
+                        required
+                        type="text"
+                        aria-label="Search the University website"
+                        maxlength="256"
+                        name="search"
+                        placeholder="Search the University website"
+                    >
+                    <button class="btn clear-icon" aria-label="Clear input">
+                        <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                    </button>
+                    <button class="btn" aria-label="Search">
+                        <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End pattern: search-bar //-->
+<!-- Page heading -->
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm">
+            <h2>Search banner</h2>
+        </div>
+    </div>
+</div>
+
+<section class="search-bar-banner bg-light-grey-1">
+    <div class="container">
+        <div class="row">
+            <div class="col col-8-md col-12-sm col-12-xs col-12-xxs">
+                <h2>News search</h2>
+                <p>Search through our entire news archive</p>
+                <form class="form-group" action="" role="search">
+                    <div class="input-group search-bar">
+                        <input
+                            class="search-box"
+                            id="default-search"
+                            required
+                            type="text"
+                            aria-label="Search the University website"
+                            maxlength="256"
+                            name="search"
+                            placeholder="Search the University website"
+                        >
+                        <button class="btn clear-icon" aria-label="Clear input">
+                            <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                        </button>
+                        <button class="btn" aria-label="Search">
+                            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Page heading -->
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm">
+            <h2>Search banner (blue)</h2>
+        </div>
+    </div>
+</div>
+
+<section class="search-bar-banner bg-blue-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-md col-12-sm col-12-xs col-12-xxs">
+                <h2>News search</h2>
+                <p>Search through our entire news archive</p>
+                <form class="form-group" action="" role="search">
+                    <div class="input-group search-bar">
+                        <input
+                            class="search-box"
+                            id="default-search"
+                            required
+                            type="text"
+                            aria-label="Search the University website"
+                            maxlength="256"
+                            name="search"
+                            placeholder="Search the University website"
+                        >
+                        <button class="btn clear-icon" aria-label="Clear input">
+                            <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                        </button>
+                        <button class="btn" aria-label="Search">
+                            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm">
+            <h2>Search banner (constrained width)</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Search box with section for banner - constrained -->
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm col-12-xs search-bar-banner bg-blue-primary">
+            <h2>News search</h2>
+            <p>Search through our entire news archive</p>
+            <form class="form-group" action="" role="search">
+                <div class="input-group search-bar">
+                    <input
+                        class="search-box"
+                        id="default-search"
+                        required
+                        type="text"
+                        aria-label="Search the University website"
+                        maxlength="256"
+                        name="search"
+                        placeholder="Search the University website"
+                    >
+                    <button class="btn clear-icon" aria-label="Clear input">
+                        <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                    </button>
+                    <button class="btn" aria-label="Search">
+                        <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm col-12-xs">
+            <h2>Search banner with additional links</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Search banner with additional links -->
+<section class="search-bar-banner bg-light-grey-2">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-md col-12-sm col-12-xs">
+                <h2>News search</h2>
+                <p>Search through our entire news archive</p>
+                <form class="form-group" action="" role="search">
+                    <div class="input-group search-bar">
+                        <input
+                            class="search-box filter-input"
+                            id="default-search"
+                            required
+                            type="text"
+                            aria-label="Search the University website"
+                            maxlength="256"
+                            name="search"
+                            placeholder="Search the University website"
+                        >
+                        <button class="btn clear-icon" aria-label="Clear input">
+                            <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                        </button>
+                        <button class="btn" aria-label="Search">
+                            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                        </button>
+                    </div>
+                </form>
+                <ul class="horizontal-list">
+                    <li><a href="#">Advanced search</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search banner with additional links - blue background  -->
+<section class="search-bar-banner bg-blue-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-md col-12-sm col-12-xs">
+                <h2>News search</h2>
+                <p>Search through our entire news archive</p>
+                <form class="form-group" action="" role="search">
+                    <div class="input-group search-bar">
+                        <input
+                            class="search-box filter-input"
+                            id="default-search"
+                            required
+                            type="text"
+                            aria-label="Search the University website"
+                            maxlength="256"
+                            name="search"
+                            placeholder="Search the University website"
+                        >
+                        <button class="btn clear-icon" aria-label="Clear input">
+                            <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                        </button>
+                        <button class="btn" aria-label="Search">
+                            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                        </button>
+                    </div>
+                </form>
+                <ul class="horizontal-list">
+                    <li><a href="#">Advanced search</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm col-12-xs">
+            <h2>Search banner with additional grouped links</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Search banner with additional grouped links -->
+<section class="search-bar-banner bg-light-grey-1">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-md col-12-sm col-12-xs col-12-xxs">
+                <h2>News search</h2>
+                <p>Search through our entire news archive</p>
+                <form class="form-group" action="" role="search">
+                    <div class="input-group search-bar">
+                        <input
+                            class="search-box filter-input"
+                            id="default-search"
+                            required
+                            type="text"
+                            aria-label="Search the University website"
+                            maxlength="256"
+                            name="search"
+                            placeholder="Search the University website"
+                        >
+                        <button class="btn clear-icon" aria-label="Clear input">
+                            <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                        </button>
+                        <button class="btn" aria-label="Search">
+                            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                        </button>
+                    </div>
+                </form>
+                <!-- Begin pattern: horizontal-list //-->
+
+                <ul class="horizontal-list">
+                    <li><a href="#">Upcoming events</a></li>
+                    <li><a href="#">Today</a></li>
+                    <li><a href="#">This week</a></li>
+                    <li><a href="#">This month</a></li>
+                    <li><a href="#">All events</a></li>
+
+                    <li class="dropdown-wrapper hover-drop-list down">
+                        <button class="btn grey toggle-sublist" aria-controls="more-options" data-toggle="drop" aria-haspopup="true" aria-expanded="true">
+                            More options</button>
+
+                        <ul class="sublist drop-content" aria-labelledby="drop-primary">
+                            <li><a href="#">Events open to the public</a></li>
+                            <li><a href="#">Events for staff and students</a></li>
+                            <li><a href="#">Lectures</a></li>
+                            <li><a href="#">Seminars</a></li>
+                            <li><a href="#">Workshops</a></li>
+                            <li><a href="#">Chaplaincy events</a></li>
+                            <li><a href="#">Music events</a></li>
+                            <li><a href="#">Museum events</a></li>
+                            <li><a href="#">Theatre events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Page heading -->
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm col-12-xxs">
+            <h2>Course search</h2>
+            <p>Search for all the courses we offer</p>
+        </div>
+    </div>
+</div>
+
+<!--Drop-down HTML-->
+<section class="search-bar-banner bg-light-grey-1">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-md col-12-sm col-12-xs col-12-xxs">
+                <h2>Course search as listing</h2>
+                <p>Search through our entire course catalog</p>
+                <form class="form-group" role="search" action="">
+                    <div class="input-group search-bar">
+                        <input
+                            class="search-box filter-input filter-list"
+                            name="q"
+                            id="search-list"
+                            required
+                            type="text"
+                            aria-label="Search courses (List)"
+                            maxlength="256"
+                            placeholder="Search courses (List)"
+                        >
+                        <button class="btn clear-icon" aria-label="Clear input">
+                            <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                        </button>
+                        <button class="btn" aria-label="Search">
+                            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Results Container for LIST format -->
+                <div id="results-container-list" class="results-container mt-2xl" aria-live="polite">
+                    <div class="columns">
+                        <div class="column col col-6-sm col-12-xs">
+                            <h2 id="undergrad-title-list" style="display: none;">Undergraduate Courses (List)</h2>
+                            <ul id="undergraduate-courses-list" class="course-list"></ul>
+                        </div>
+                        <div class="column col col-6-sm col-12-xs">
+                            <h2 id="postgrad-title-list" style="display: none;">Postgraduate Courses (List)</h2>
+                            <ul id="postgraduate-courses-list" class="course-list"></ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Page heading -->
+<div class="container">
+    <div class="row">
+        <div class="col col-8-md col-12-sm">
+            <h2>Search banner with tag buttons</h2>
+        </div>
+    </div>
+</div>
+
+<!--HTML Buttons-->
+<section class="search-bar-banner bg-light-grey-1">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-md col-12-sm col-12-xs col-12-xxs">
+                <h2>Course search bar with buttons</h2>
+                <p>Search through our entire course catalog</p>
+
+                <!-- Search Bar 2 (Filters Buttons) -->
+                <form class="form-group" role="search" action="">
+                    <div class="input-group search-bar">
+                        <input
+                            class="search-box filter-input filter-buttons"
+                            id="search-buttons"
+                            required
+                            type="text"
+                            aria-label="Search courses (Buttons)"
+                            name="q"
+                            maxlength="256"
+                            placeholder="Search courses (Buttons)"
+                        >
+                        <button class="btn clear-icon" aria-label="Clear input">
+                            <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                        </button>
+                        <button class="btn" aria-label="Search">
+                            <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                        </button>
+                    </div>
                 </form>
 
                 <!-- Results Container for BUTTON format -->
-                <div id="results-container-buttons" class="results-container" style="display: none;">
+                <div id="results-container-buttons" class="results-container mt-2xl" aria-live="polite">
                     <div class="columns">
                         <div class="column">
                             <h2 id="undergrad-title-buttons" style="display: none;">Undergraduate Courses (Buttons)</h2>
-                            <div id="undergraduate-courses-buttons"></div>
+                            <div id="undergraduate-courses-buttons" class="course-button-wrapper"></div>
                         </div>
                         <div class="column">
                             <h2 id="postgrad-title-buttons" style="display: none;">Postgraduate Courses (Buttons)</h2>
-                            <div id="postgraduate-courses-buttons"></div>
+                            <div id="postgraduate-courses-buttons" class="course-button-wrapper"></div>
                         </div>
                     </div>
                 </div>
-
-
-
-                </div>
-
-
-
             </div>
 
         </div>
-        <!-- </div> -->
-    </section>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col col-12-lg col-12-xxs">
-                    <div class="footer-text">
-                        © 2026 The University of St Andrews is a charity registered in Scotland, No: SC013532
-                    </div>
-                    <div class="footer-links">
-                        <a href="/cookie-preferences">Cookie preferences</a>
-                        <a href="/accessibility-statement">Accessibility statement</a>
-                        <a href="/terms-and-conditions">Terms and conditions</a>
-                        <a href="/website-help">Website help</a>
-                    </div>
+    </div>
+    <!-- </div> -->
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <div class="footer-text">
+                    © 2026 The University of St Andrews is a charity registered in Scotland, No: SC013532
+                </div>
+                <div class="footer-links">
+                    <a href="/cookie-preferences">Cookie preferences</a>
+                    <a href="/accessibility-statement">Accessibility statement</a>
+                    <a href="/terms-and-conditions">Terms and conditions</a>
+                    <a href="/website-help">Website help</a>
                 </div>
             </div>
         </div>
-    </footer>
-<!--List and Buttons search code-->    
-<script>
-let courses = []; // Store courses
-
-// Fetch courses from JSON
-async function loadCourses() {
-    try {
-        const response = await fetch("./courses.json");
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        courses = await response.json();
-        console.log("Courses loaded:", courses);
-    } catch (error) {
-        console.error("Error loading JSON:", error);
-    }
-}
-
-// Shared function to filter courses
-function filterCourses(searchId, format) {
-    const query = document.getElementById(searchId).value.toLowerCase().trim();
-    const isListFormat = format === "list";
-
-    // Select appropriate elements based on format
-    const elements = isListFormat ? {
-        undergradContainer: document.getElementById("undergraduate-courses-list"),
-        postgradContainer: document.getElementById("postgraduate-courses-list"),
-        resultsContainer: document.getElementById("results-container-list"),
-        undergradTitle: document.getElementById("undergrad-title-list"),
-        postgradTitle: document.getElementById("postgrad-title-list"),
-    } : {
-        undergradContainer: document.getElementById("undergraduate-courses-buttons"),
-        postgradContainer: document.getElementById("postgraduate-courses-buttons"),
-        resultsContainer: document.getElementById("results-container-buttons"),
-        undergradTitle: document.getElementById("undergrad-title-buttons"),
-        postgradTitle: document.getElementById("postgrad-title-buttons"),
-    };
-
-    if (query === "" || courses.length === 0) {
-        elements.resultsContainer.style.display = "none";
-        return;
-    }
-
-    // Filter courses based on query
-    const filteredCourses = courses.filter(course => course.subject_name.toLowerCase().includes(query));
-
-    // Separate UG & PG courses
-    const undergradCourses = filteredCourses.filter(course => course.study_level.toLowerCase() === "undergraduate");
-    const postgradCourses = filteredCourses.filter(course => course.study_level.toLowerCase().includes("postgraduate"));
-
-    // Render based on format
-    const undergradIsEmpty = isListFormat
-        ? renderCourseList(undergradCourses, elements.undergradContainer)
-        : renderCourseButtons(undergradCourses, elements.undergradContainer);
-
-    const postgradIsEmpty = isListFormat
-        ? renderCourseList(postgradCourses, elements.postgradContainer)
-        : renderCourseButtons(postgradCourses, elements.postgradContainer);
-
-    // Show/hide titles & results
-    elements.undergradTitle.style.display = undergradIsEmpty ? "none" : "block";
-    elements.postgradTitle.style.display = postgradIsEmpty ? "none" : "block";
-    elements.resultsContainer.style.display = undergradIsEmpty && postgradIsEmpty ? "none" : "block";
-}
-
-// Create course list items
-function renderCourseList(courses, container) {
-    if (courses.length === 0) {
-        container.innerHTML = `<li class="no-courses">No courses available.</li>`;
-        return true;
-    }
-
-    container.innerHTML = courses.map(course =>
-        `<li><a href="${course.path}" class="course-link">${course.subject_name} (${course.suffix || "N/A"})</a></li>`
-    ).join("");
-
-    return false;
-}
-
-// Create course buttons
-function renderCourseButtons(courses, container) {
-    if (courses.length === 0) {
-        container.innerHTML = `<p class="no-courses">No courses available.</p>`;
-        return true;
-    }
-
-    container.innerHTML = courses.map(course =>
-        `<button class="course-button" onclick="window.location.href='${course.path}'">
-            ${course.subject_name} (${course.suffix || "N/A"})
-        </button>`
-    ).join("");
-
-    return false;
-}
-
-// Initialize after loading courses
-document.addEventListener("DOMContentLoaded", async function () {
-    await loadCourses();
-    document.getElementById("search-list").addEventListener("input", () => filterCourses("search-list", "list"));
-    document.getElementById("search-buttons").addEventListener("input", () => filterCourses("search-buttons", "buttons"));
-});
-</script>
-<!-- Speech Recognition -->
-<script>
-    
-    document.addEventListener("DOMContentLoaded", () => {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-    if (!SpeechRecognition) {
-        console.log("Your browser does not support speech recognition");
-        return;
-    }
-
-    console.log("Your Browser supports speech recognition");
-
-    const searchForms = document.querySelectorAll("form.wrapper");
-    console.log(searchForms);
-
-    searchForms.forEach((form) => {
-        // Add Mic Button & Clear Button if not already present
-        if (!form.querySelector(".mic-button")) {
-            form.insertAdjacentHTML(
-                "beforeend",
-                `<button class="mic-button" type="button">
-                    <span class="mic-icon-on material-icons-outlined">mic</span>
-                </button>`
-            );
-        }
-
-        if (!form.querySelector(".clear-icon")) {
-            form.insertAdjacentHTML(
-                "beforeend",
-                `<span class="clear-icon material-icons-outlined" style="visibility: hidden;">close</span>`
-            );
-        }
-
-        // Select Elements
-        const searchInput = form.querySelector(".search");
-        const micBtn = form.querySelector(".mic-button");
-        const micIcon = micBtn.querySelector("span");
-        const clearIcon = form.querySelector(".clear-icon");
-
-        const recognition = new SpeechRecognition();
-        recognition.continuous = true;
-
-        // Ensure mic button stays visible when search input is focused
-        searchInput.addEventListener("focus", () => {
-            micBtn.style.display = "inline-flex"; // Keep mic button visible
-            if (searchInput.value.trim() !== "") {
-                clearIcon.style.visibility = "visible"; // Show clear button if input has text
-            }
-        });
-
-        // Prevent mic button from hiding when clicked
-        micBtn.addEventListener("mousedown", (event) => {
-            event.preventDefault(); // Prevent losing focus
-        });
-
-        // Ensure the clear button is visible when typing
-        searchInput.addEventListener("input", () => {
-            clearIcon.style.visibility = searchInput.value.trim() !== "" ? "visible" : "hidden";
-        });
-
-        // Handle mic button click - toggle speech recognition
-        micBtn.addEventListener("click", () => {
-            if (micIcon.innerText === "mic") {
-                recognition.start();
-            } else {
-                recognition.stop();
-            }
-        });
-
-        recognition.addEventListener("start", () => {
-            micIcon.innerText = "mic_off"; // Change icon text
-            micIcon.classList.replace("mic-icon-on", "mic-icon-off");
-            searchInput.focus(); // Keep input focused when recording starts
-            console.log("Speech recognition Active");
-        });
-
-        recognition.addEventListener("end", () => {
-            micIcon.innerText = "mic"; // Revert icon text
-            micIcon.classList.replace("mic-icon-off", "mic-icon-on");
-            console.log("Speech recognition Stopped");
-        });
-
-        recognition.addEventListener("result", (event) => {
-            const transcript = event.results[event.resultIndex][0].transcript;
-            searchInput.value = transcript;
-            clearIcon.style.visibility = "visible"; // Show clear button
-
-            if (transcript.toLowerCase().trim() === "stop recording") {
-                recognition.stop();
-            } else if (transcript.toLowerCase().trim() === "go") {
-                form.submit();
-            } else if (transcript.toLowerCase().trim() === "reset input") {
-                searchInput.value = "";
-                clearIcon.style.visibility = "hidden";
-            }
-
-            setTimeout(() => {
-                form.submit();
-            }, 1000);
-        });
-
-        // Clear input when clicking the clear button
-        clearIcon.addEventListener("click", () => {
-            searchInput.value = "";
-            clearIcon.style.visibility = "hidden";
-        });
-    });
-});
-
-</script>
-<!-- Placeholder text update -->
-<script>
-    function updatePlaceholders() {
-    const searchInputs = document.querySelectorAll(".filter-input");
-
-    searchInputs.forEach(input => {
-        input.placeholder = window.innerWidth <= 700 ? "Search.." : "Search the University website";
-    });
-}
-
-// Run on page load
-updatePlaceholders();
-
-// Listen for window resize
-window.addEventListener("resize", updatePlaceholders);
-
-</script>
-<!-- Search bar with additional groups -->
-<script> 
-    let clearIconAll = document.querySelectorAll(".clear-icon");
-    let searchBarAll = document.querySelectorAll(".search");
-
-    for (let i = 0; i < searchBarAll.length; i++) {
-        for (let j = 0; j < clearIconAll.length; j++) {
-            if (i == j) {
-
-                searchBarAll[i].addEventListener("keyup", () => {
-                    if (searchBarAll[i].value && clearIconAll[j].style.visibility != "visible") {
-                        clearIconAll[j].style.visibility = "visible";
-                    } else if (!searchBarAll[i].value) {
-                        clearIconAll[j].style.visibility = "hidden";
-                    }
-                });
-                clearIconAll[j].addEventListener("click", () => {
-                    searchBarAll[i].value = "";
-                    clearIconAll[j].style.visibility = "hidden";
-                })
-            }
-        }
-    }
-
-    /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-
-    var dropdown = document.querySelector(".toggle-list");
-    dropdown.addEventListener('click', toggleList);
-    function toggleList(e) {
-        e.preventDefault();
-        // console.log('Mike');
-        let listId = document.querySelector("#list");
-        if (listId.style.display === "none") {
-            listId.style.display = "block";
-            document.querySelector('.chevron').style.rotate = '270deg';
-        } else {
-            listId.style.display = "none";
-            document.querySelector('.chevron').style.rotate = '90deg';
-        }
-    }
-
-    //This gets the button or link that will trigger the open. More options in our case. 'Open-list'
-
-    var dropdown = document.querySelector(".toggle-subList");
-    dropdown.addEventListener('click', toggleSubList);
-    function toggleSubList(e) {
-        e.preventDefault();
-        let subListId = document.querySelector("#subList");
-        if (subListId.style.display === "none") {
-            subListId.style.display = "block";
-            document.querySelector('.chevron').style.rotate = '270deg';
-        } else {
-            subListId.style.display = "none";
-            document.querySelector('.chevron').style.rotate = '90deg';
-        }
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    // window.onclick = function (event) {
-    //     // if (!event.target.matches('.dropbtn')) {
-    //     if (!event.target.matches('button .open-list')) {
-    //         var dropdowns = document.getElementsByClassName("subList");
-    //         var i;
-    //         for (i = 0; i < dropdowns.length; i++) {
-    //             var openDropdown = dropdowns[i];
-    //             if (openDropdown.style.display="none") {
-    //                 openDropdown.style.remove();
-    //                 openDropdown.style.display="block";
-    //                 document.querySelector('.chevron').style.rotate='90deg';
-    //            }
-    //         }
-    //     }
-    // }
-
-
-    // Change placeholder text at below 575px screen width.
-    if (screen.width < '575') {
-        let placeholders = document.querySelectorAll(".search");
-        placeholders.forEach(element => {
-            element.placeholder = 'Search..';
-        });
-    }
-
-
-
-    // Speech Recognition
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (SpeechRecognition) {
-        console.log("Your Browser supports speech Recognition");
-
-        const searchForm = document.querySelector("form.wrapper");
-        const searchFormInput = document.querySelector(".search");
-        searchForm.insertAdjacentHTML("beforeend", '<button class="mic-button" type="button"><span class="mic-icon-on material-icons-outlined">mic</span></button>');
-        const micBtn = searchForm.querySelector("button.mic-button");
-        const micIcon = micBtn.querySelector("span");
-
-        const recognition = new SpeechRecognition();
-        recognition.continuous = true;
-
-        micBtn.addEventListener("click", micBtnClick);
-
-        function micBtnClick() {
-            if (micIcon.textContent == "mic") {
-                // Start speech recognition.   
-                recognition.start();
-            } else {
-                // Stop speech recognition.    
-                recognition.stop();
-            }
-        }
-
-        recognition.addEventListener("start", startSpeechRecognition);
-
-        function startSpeechRecognition() {
-            micIcon.textContent = "mic_off";
-            searchFormInput.focus();
-            console.log("Speech recognition Active");
-        }
-
-        recognition.addEventListener("end", endSpeechRecognition);
-
-        function endSpeechRecognition() {
-            micIcon.textContent = "mic";
-            searchFormInput.focus();
-            console.log("Speech recognition Disconnected");
-        }
-
-        recognition.addEventListener("result", resultOfSpeechRecognition);
-
-        function resultOfSpeechRecognition(event) {
-            // console.log(event);
-            const currentResultIndex = event.resultIndex;
-            const transcript = event.results[currentResultIndex][0].transcript;
-            searchFormInput.value = transcript;
-            let clearTranscript = document.querySelector(".clear-icon");
-            clearTranscript.style.visibility = "visible";
-
-            if (transcript.toLowerCase().trim() === "stop recording") {
-                recognition.stop();
-            }
-            else if (!searchFormInput.value) {
-                searchFormInput.value = transcript;
-            }
-            else {
-                if (transcript.toLowerCase().trim() === "go") {
-                    console.log(transcript.toLowerCase().trim());
-                    searchForm.submit();
-                }
-                else if (transcript.toLowerCase().trim() === "reset input") {
-                    searchFormInput.value = "";
-                    clearTranscript.style.visibility = "hidden";
-                }
-                else {
-                    searchFormInput.value = transcript;
-                }
-            }
-
-            setTimeout(() => {
-                searchForm.submit();
-            }, 750);
-
-        }
-        // info.innerHTML = 'Voice Commands: "stop recording". "reset input", "go"';
-    }
-    // else {
-    //     console.log("Your browser does not support speech recognition");
-    // }
-    // end speech recognition.
-
-    // This is the JS for search filter.
-    // console.log('Mary is here');
-    const list = [
-        {
-            title: "Ancient History MA (Honours)",
-            subject_list: "ancient history",
-            study_level: "Undergraduate",
-            subject_name: "Ancient History",
-            parent_name: " Ancient history",
-            name_override: "",
-            suffix_override: "",
-            path: "/subjects/ancient-history/ancient-history-ma/",
-            suffix: "MA",
-            type: "UG"
-        },
-        {
-            title: "Ancient History and Archaeology MA (Honours)",
-            subject_list: "archaeology, history",
-            study_level: "Undergraduate",
-            subject_name: "Ancient History and Archaeology",
-            parent_name: " Archaeology",
-            name_override: "",
-            suffix_override: "",
-            path: "/subjects/archaeology/ancient-history-archaeology-ma/",
-            suffix: "MA",
-            type: "UG"
-        },
-        {
-            title: "Medieval History and Archaeology MA (Honours)",
-            subject_list: "archaeology, history",
-            study_level: "Undergraduate",
-            subject_name: "Medieval History and Archaeology",
-            parent_name: " Archaeology",
-            name_override: "",
-            suffix_override: "",
-            path: "/subjects/archaeology/medieval-history-archaeology-ma/",
-            suffix: "MA",
-            type: "UG"
-        },
-        {
-            title: "Art History MA (Honours)",
-            subject_list: "art history",
-            study_level: "Undergraduate",
-            subject_name: "Art history",
-            parent_name: " Art history",
-            name_override: "",
-            suffix_override: "",
-            path: "/subjects/art-history/art-history-ma/",
-            suffix: "MA",
-            type: "UG"
-        },
-        {
-            title: "Sustainable Aquaculture - online",
-            subject_list: "biology, marine biology",
-            study_level: "Postgraduate",
-            subject_name: "Sustainable Aquaculture - PG",
-            parent_name: " Marine biology",
-            name_override: "Sustainable Aquaculture",
-            suffix_override: "PGCert/PGDip/MSc/Modular",
-            path: "/subjects/marine-biology/sustainable-aquaculture/",
-            suffix: "online",
-            type: "UG"
-        },
-        {
-            title: "Mathematical Biology (MSc)",
-            subject_list: "biology, mathematics",
-            study_level: "Postgraduate",
-            subject_name: "Mathematical Biology",
-            parent_name: " Mathematics",
-            name_override: "",
-            suffix_override: "",
-            path: "/subjects/mathematics/mathematical-biology-msc/",
-            suffix: "MSc",
-            type: "UG"
-        },
-    ];
-
-    const output = document.querySelector('.output');
-    console.log('mike');
-    const search = document.querySelector('.filter-input');
-    console.log(search);
-    // const searchList = document.querySelector('.filter-list');
-
-    window.addEventListener("DOMContentLoaded", load);
-    search.addEventListener("input", filter)
-
-
-    function load() {
-        let temp = `<ul class="list-items">`;
-        list.forEach((item) => {
-            temp += `<li class="list-item">${item['subject_name']}</li>`;
-
-        });
-        temp += `</ul>`;
-        console.log(temp);
-        // temp2 += `<a href="https://www.st-andrews.ac.uk/${item['path']}"><button>${item['subject_name']}</button></a>`;
-        output.innerHTML = temp + 'by Mike';
-    }
-
-    function filter(e) {
-        console.log(e);
-        console.log(e.target.value.toLowerCase());
-        let temp = '';
-
-        const result = list.filter(item => item['subject_name'].toLowerCase().includes(e.target.value.toLowerCase()));
-        // if (list.filter(item['study_level']) == 'Undergraduate') {
-        if (result.length > 0) {
-            // if (item['study_level'].includes('Undergraduate')) {
-            // temp = `<h2>Undergraduate</h2>`;
-            temp = `<ul class="list-items">`;
-
-            result.forEach((item) => {
-                temp += `<h2>${item['study_level']}</h2>`;
-                temp += `<li class="list-item"><a href="https://www.st-andrews.ac.uk/${item['path']}">${item['subject_name']}</a></li>`;
-            });
-            temp += `</ul>`;
-            //   }
-        } else {
-            temp = `<div class="no-item">No item found</div>`;
-        }
-        output.innerHTML = temp;
-    }//}
-
-
-</script>
-<!-- Styles for List and buttons -->
-<!-- <style>
-.course-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.course-list li {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-.course-list li:last-child {
-    border-bottom: none;
-}
-
-.course-link {
-    text-decoration: none;
-    color: #111;
-    font-weight: bold;
-}
-
-.course-link:hover {
-    text-decoration: underline;
-}
-
-.course-button {
-    display: inline-block;
-    margin: 5px;
-    padding: 8px 12px;
-    background-color: #eee;
-    color: #333;
-    border: none;
-    cursor: pointer;
-}
-
-.course-button:hover {
-    background-color: #333;
-    color:#eee
-}
-</style> -->
+    </div>
+</footer>
 
 </body>
 </html>

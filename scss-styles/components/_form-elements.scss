@@ -60,7 +60,7 @@
 	}
 
 }
-	
+
 
 .form-group {
 	margin-bottom: 1.5em;
@@ -219,8 +219,13 @@
 				border-right: 0;
 			}
 		}
-	}
 
+		&:has(.search-box + .clear-icon) {
+			.search-box {
+				padding-right: calc(12px + 40px);
+			}
+		}
+	}
 }
 
 /* Error state: make the border red (and keep it red on focus) */

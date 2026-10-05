@@ -1,395 +1,395 @@
-// This is the search bar style
-section.no-links {
-  padding-bottom: 3rem;
-}
-
-// Basic form/search-bar
-.wrapper {
-  position: relative;
-  align-items: center;
-  width: 100%;
-  min-width: 100px;
-  height: 3rem;
-  font-size: 2rem;
-
-  .search {
-    position: absolute;
-    border: 2px solid $dark-grey-2;
-    height: 3rem;
-    width: 95%;
-    padding: 2px 23px 2px 25px;
-    outline: 0;
-    background-color: white;
-    border-top-left-radius: none;
-    border-bottom-left-radius: none;
-  }
-
-  .search-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: $light-blue-primary;
-    padding: 0.75rem 1rem;
-    min-width: 5%;
-    color: white;
-    font-weight: 900;
-    border-top-right-radius: none;
-    border-bottom-right-radius: none;
-  }
-
-  button:focus-within .search-icon {
-    outline: 3px solid $orange-primary;
-    z-index: 1;
-  }
-
-  .search-icon:hover {
-    background-color: $blue-primary;
-    outline: 3px solid $orange-primary;
-  }
-
-  .clear-icon {
-    position: absolute;
-    top: 10px;
-    right: 120px;
-    width: 20px;
-    font-weight: 900;
-    cursor: pointer;    
-  }
-
-  .mic-icon-on,
-  .mic-icon-off {
-    position: absolute;
-    top: 10px;
-    right: 90px;
-    width: 20px;
-    font-weight: 900;
-    cursor: pointer;
-    visibility: visible;
-  }
-
-  .mic-icon-on:hover,
-  .mic-icon-on:focus,
-  .mic-icon-off:hover,
-  .mic-icon-off:focus {
-    position: absolute;
-    top: 10px;
-    right: 90px;
-    width: 20px;
-    font-weight: 900;
-    cursor: pointer;
-    visibility: visible;
-    z-index: 100;
-  }
-
-  ::placeholder {
-    position: absolute;
-    top: 20%;
-    font-size: x-large;
-  }
-
-  input.search:hover,
-  input.search:focus {
-    background-color: #fff;  
-    border: 3px solid $orange-primary;   
-  }
-}
-
-// .toggle {
-//   display: none;
-// }
-
-// End the search bar style
-
-/** Links for large screen list**/
-
-.links {
-  .list {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    margin-top: 10px;
-    padding: 0;
-
-    li {
-      font-size: medium;
-
-      a {
-        color: $dark-grey-2;
-      }
-    }
-
-    li:after {
-      content: "|";
-      padding: 0 0.5rem;
-      color: $mid-grey-1;
-    }
-
-    li:last-child:after {
-      content: "";
-    }
-  }
-
-  // Possibly switch this off.
-  // This is the style for the drop down on large screens.
-  //subList-smScreen subList-lgScreen
-  // class open-list can be used in place of
-  .chevron {
-    rotate: 90deg;
-  }
-
-  .dropdown-wrapper {
-    position: relative;
-
-    button {
-      border: none;
-    }
-
-    .subList {
-      position: absolute;
-      padding: 0.2rem;
-      z-index: 2;
-      list-style: none;
-      width: max-content;
-      background-color: #fff;
-      border-radius: none;
-      border: 2px solid $dark-grey-2;
-      -webkit-border-radius: none;
-      -moz-border-radius: none;
-      -ms-border-radius: none;
-      -o-border-radius: none;
-    }
-
-    .subList li {
-      padding: 5px 15px;
-      cursor: pointer;
-    }
-
-    .subList li a {
-      text-decoration: none;
-    }
-
-    .subList li:hover {
-      background-color: $mid-grey-2;
-    }
-
-    .subList li:after {
-      content: "";
-      color: $mid-grey-1;
-    }
-
-    summary {
-      text-decoration: underline;
-      list-style: none;
-    }
-  }
-}
-
-
-/**Small screens**/
-
-
-
-@media (max-width: 768px) {
-  .toggle {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: -15px;
-
-    .toggle-list {
-      width: 100%;
-      color: $blue-primary;
-      border: 2px solid black;
-      font-size: 20px;
-      background-color: #fff;
-      padding: 10px 0 10px 5px;
-      text-decoration: underline;
-      text-align: left;
-    }
-  }
-
-  .links {
-    .list {
-      background-color: #fff;
-      line-height: 3;
-      display: flow;
-      border: 2px solid black;
-
-      li {
-        height: 40px;
-        padding-left: 10px;
-        width: 100%;
-        border-bottom: 1px solid black;
-      }
-
-      li a {
-        text-decoration: none;
-      }
-
-      li:after {
-        content: "";
-
-        margin-left: 30px;
-        text-decoration: none;
-      }
-
-      ::before {
-        display: block;
-        padding: 0 1rem;
-        width: 100%;
-        color: $blue-primary;
-        line-height: 2;
-        border-bottom: 1px solid $dark-grey-2;
-      }
-
-      .dropdown-wrapper {
-        width: 100%;
-        padding: 5px;
-        position: relative;
-      }
-
-      .toggle-subList {
-        position: absolute;
-        width: 100%;
-        background: none;
-        top: 0;
-        left: 0;
-        height: 40px;
-      }
-
-      .toggle-subList a {
-        font-size: larger;
-        float: left;
-      }
-
-      .toggle-subList .chevron {
-        font-size: larger;
-        float: right;
-        font-size: x-large;
-        font-weight: bold;
-      }
-
-      .toggle-subList:hover,
-      .toggle-subList:focus {
-        border: 3px solid $orange-primary;
-      }
-
-      #subList {
-        position: absolute;
-        width: 100%;
-        top: 42px;
-        left: 0;
-        border-radius: none;
-        z-index: 2;
-        -webkit-border-radius: none;
-        -moz-border-radius: none;
-        -ms-border-radius: none;
-        -o-border-radius: none;
-      }
-
-      #subList li a {
-        text-decoration: none;
-      }
-    }
-  }
-
-  // .mic-icon-on {
-  //     color:red;
-  //     // padding-left:10px;
-  // }
-  // .clear-icon {
-  //     position:relative;
-  //     right: 20px;
-  // }
-  .clear-icon {
-      position: absolute;
-    //   color: rgb(255, 0, 200);
-      top: 40px;
-      right: 80px !important;
-      width: 20px;
-      font-weight: 900;
-      // border: 1px solid black;
-      margin-right: 5px;
-      cursor: pointer;
-      /*visibility: hidden;*/
-  }
-
-  .mic-icon-on,
-  .mic-icon-off {
-    position: absolute;
-    top: 10px !important;
-    right: 60px !important;
-    width: 20px;
-    font-weight: 900;
-    cursor: pointer;
-    visibility: visible;
-  }
-
-  .mic-icon-on:hover,
-  .mic-icon-on:focus,
-  .mic-icon-off:hover,
-  .mic-icon-off:focus {
-    position: absolute;
-    top: 20px;
-    right: 90px;
-    width: 20px;
-    font-weight: 900;
-    cursor: pointer;
-    visibility: visible;
-    z-index: 100;
-  }
-//   .clear-icon {
-//     position: absolute;
-//     top: 0px !important;
-//     right: 80px !important;
-//     width: 20px;
-//     font-weight: 900;
-//     cursor: pointer;
-//     visibility: visible;
-//   }
-
-  //     .mic-icon-on:hover,
-  //     .mic-icon-on:focus,
-  //     .mic-icon-off:hover,
-  //     .mic-icon-off:focus {
-  //         position: absolute;
-  //         top: 20px;
-  //         right: 90px;
-  //         width: 20px;
-  //         font-weight: 900;
-  //         cursor: pointer;
-  //         visibility: visible;
-  //         z-index: 100;
-  //     }
-}
-
-// @media (max-width: 575px) {
-//     .wrapper {
-//         .search {
-//             width: 85%;
-//         }
-
-//         .search-icon {
-//             width: 15%;
-//         }
-
-//         ::placeholder {
-//             content: "Search.." !important;
-//         }
-
-//         // .mic-on {
-//         //     margin-right:5%;
-//         // }
-//     }
-// }
-
-// @media (max-width: 480px) {
-//     .wrapper {
-//         .search {
-//             width: 80%;
-//         }
-
-//         .search-icon {
-//             width: 20%;
-//         }
-//     }
-// }
+//// This is the search bar style
+//section.no-links {
+//  padding-bottom: 3rem;
+//}
+//
+//// Basic form/search-bar
+//.wrapper {
+//  position: relative;
+//  align-items: center;
+//  width: 100%;
+//  min-width: 100px;
+//  height: 3rem;
+//  font-size: 2rem;
+//
+//  .search {
+//    position: absolute;
+//    border: 2px solid $dark-grey-2;
+//    height: 3rem;
+//    width: 95%;
+//    padding: 2px 23px 2px 25px;
+//    outline: 0;
+//    background-color: white;
+//    border-top-left-radius: none;
+//    border-bottom-left-radius: none;
+//  }
+//
+//  .search-icon {
+//    position: absolute;
+//    top: 0;
+//    right: 0;
+//    background-color: $light-blue-primary;
+//    padding: 0.75rem 1rem;
+//    min-width: 5%;
+//    color: white;
+//    font-weight: 900;
+//    border-top-right-radius: none;
+//    border-bottom-right-radius: none;
+//  }
+//
+//  button:focus-within .search-icon {
+//    outline: 3px solid $orange-primary;
+//    z-index: 1;
+//  }
+//
+//  .search-icon:hover {
+//    background-color: $blue-primary;
+//    outline: 3px solid $orange-primary;
+//  }
+//
+//  .clear-icon {
+//    position: absolute;
+//    top: 10px;
+//    right: 120px;
+//    width: 20px;
+//    font-weight: 900;
+//    cursor: pointer;
+//  }
+//
+//  .mic-icon-on,
+//  .mic-icon-off {
+//    position: absolute;
+//    top: 10px;
+//    right: 90px;
+//    width: 20px;
+//    font-weight: 900;
+//    cursor: pointer;
+//    visibility: visible;
+//  }
+//
+//  .mic-icon-on:hover,
+//  .mic-icon-on:focus,
+//  .mic-icon-off:hover,
+//  .mic-icon-off:focus {
+//    position: absolute;
+//    top: 10px;
+//    right: 90px;
+//    width: 20px;
+//    font-weight: 900;
+//    cursor: pointer;
+//    visibility: visible;
+//    z-index: 100;
+//  }
+//
+//  ::placeholder {
+//    position: absolute;
+//    top: 20%;
+//    font-size: x-large;
+//  }
+//
+//  input.search:hover,
+//  input.search:focus {
+//    background-color: #fff;
+//    border: 3px solid $orange-primary;
+//  }
+//}
+//
+//// .toggle {
+////   display: none;
+//// }
+//
+//// End the search bar style
+//
+///** Links for large screen list**/
+//
+//.links {
+//  .list {
+//    display: flex;
+//    list-style-type: none;
+//    margin: 0;
+//    margin-top: 10px;
+//    padding: 0;
+//
+//    li {
+//      font-size: medium;
+//
+//      a {
+//        color: $dark-grey-2;
+//      }
+//    }
+//
+//    li:after {
+//      content: "|";
+//      padding: 0 0.5rem;
+//      color: $mid-grey-1;
+//    }
+//
+//    li:last-child:after {
+//      content: "";
+//    }
+//  }
+//
+//  // Possibly switch this off.
+//  // This is the style for the drop down on large screens.
+//  //subList-smScreen subList-lgScreen
+//  // class open-list can be used in place of
+//  .chevron {
+//    rotate: 90deg;
+//  }
+//
+//  .dropdown-wrapper {
+//    position: relative;
+//
+//    button {
+//      border: none;
+//    }
+//
+//    .subList {
+//      position: absolute;
+//      padding: 0.2rem;
+//      z-index: 2;
+//      list-style: none;
+//      width: max-content;
+//      background-color: #fff;
+//      border-radius: none;
+//      border: 2px solid $dark-grey-2;
+//      -webkit-border-radius: none;
+//      -moz-border-radius: none;
+//      -ms-border-radius: none;
+//      -o-border-radius: none;
+//    }
+//
+//    .subList li {
+//      padding: 5px 15px;
+//      cursor: pointer;
+//    }
+//
+//    .subList li a {
+//      text-decoration: none;
+//    }
+//
+//    .subList li:hover {
+//      background-color: $mid-grey-2;
+//    }
+//
+//    .subList li:after {
+//      content: "";
+//      color: $mid-grey-1;
+//    }
+//
+//    summary {
+//      text-decoration: underline;
+//      list-style: none;
+//    }
+//  }
+//}
+//
+//
+///**Small screens**/
+//
+//
+//
+//@media (max-width: 768px) {
+//  .toggle {
+//    display: block;
+//    margin-top: 10px;
+//    margin-bottom: -15px;
+//
+//    .toggle-list {
+//      width: 100%;
+//      color: $blue-primary;
+//      border: 2px solid black;
+//      font-size: 20px;
+//      background-color: #fff;
+//      padding: 10px 0 10px 5px;
+//      text-decoration: underline;
+//      text-align: left;
+//    }
+//  }
+//
+//  .links {
+//    .list {
+//      background-color: #fff;
+//      line-height: 3;
+//      display: flow;
+//      border: 2px solid black;
+//
+//      li {
+//        height: 40px;
+//        padding-left: 10px;
+//        width: 100%;
+//        border-bottom: 1px solid black;
+//      }
+//
+//      li a {
+//        text-decoration: none;
+//      }
+//
+//      li:after {
+//        content: "";
+//
+//        margin-left: 30px;
+//        text-decoration: none;
+//      }
+//
+//      ::before {
+//        display: block;
+//        padding: 0 1rem;
+//        width: 100%;
+//        color: $blue-primary;
+//        line-height: 2;
+//        border-bottom: 1px solid $dark-grey-2;
+//      }
+//
+//      .dropdown-wrapper {
+//        width: 100%;
+//        padding: 5px;
+//        position: relative;
+//      }
+//
+//      .toggle-subList {
+//        position: absolute;
+//        width: 100%;
+//        background: none;
+//        top: 0;
+//        left: 0;
+//        height: 40px;
+//      }
+//
+//      .toggle-subList a {
+//        font-size: larger;
+//        float: left;
+//      }
+//
+//      .toggle-subList .chevron {
+//        font-size: larger;
+//        float: right;
+//        font-size: x-large;
+//        font-weight: bold;
+//      }
+//
+//      .toggle-subList:hover,
+//      .toggle-subList:focus {
+//        border: 3px solid $orange-primary;
+//      }
+//
+//      #subList {
+//        position: absolute;
+//        width: 100%;
+//        top: 42px;
+//        left: 0;
+//        border-radius: none;
+//        z-index: 2;
+//        -webkit-border-radius: none;
+//        -moz-border-radius: none;
+//        -ms-border-radius: none;
+//        -o-border-radius: none;
+//      }
+//
+//      #subList li a {
+//        text-decoration: none;
+//      }
+//    }
+//  }
+//
+//  // .mic-icon-on {
+//  //     color:red;
+//  //     // padding-left:10px;
+//  // }
+//  // .clear-icon {
+//  //     position:relative;
+//  //     right: 20px;
+//  // }
+//  .clear-icon {
+//      position: absolute;
+//    //   color: rgb(255, 0, 200);
+//      top: 40px;
+//      right: 80px !important;
+//      width: 20px;
+//      font-weight: 900;
+//      // border: 1px solid black;
+//      margin-right: 5px;
+//      cursor: pointer;
+//      /*visibility: hidden;*/
+//  }
+//
+//  .mic-icon-on,
+//  .mic-icon-off {
+//    position: absolute;
+//    top: 10px !important;
+//    right: 60px !important;
+//    width: 20px;
+//    font-weight: 900;
+//    cursor: pointer;
+//    visibility: visible;
+//  }
+//
+//  .mic-icon-on:hover,
+//  .mic-icon-on:focus,
+//  .mic-icon-off:hover,
+//  .mic-icon-off:focus {
+//    position: absolute;
+//    top: 20px;
+//    right: 90px;
+//    width: 20px;
+//    font-weight: 900;
+//    cursor: pointer;
+//    visibility: visible;
+//    z-index: 100;
+//  }
+////   .clear-icon {
+////     position: absolute;
+////     top: 0px !important;
+////     right: 80px !important;
+////     width: 20px;
+////     font-weight: 900;
+////     cursor: pointer;
+////     visibility: visible;
+////   }
+//
+//  //     .mic-icon-on:hover,
+//  //     .mic-icon-on:focus,
+//  //     .mic-icon-off:hover,
+//  //     .mic-icon-off:focus {
+//  //         position: absolute;
+//  //         top: 20px;
+//  //         right: 90px;
+//  //         width: 20px;
+//  //         font-weight: 900;
+//  //         cursor: pointer;
+//  //         visibility: visible;
+//  //         z-index: 100;
+//  //     }
+//}
+//
+//// @media (max-width: 575px) {
+////     .wrapper {
+////         .search {
+////             width: 85%;
+////         }
+//
+////         .search-icon {
+////             width: 15%;
+////         }
+//
+////         ::placeholder {
+////             content: "Search.." !important;
+////         }
+//
+////         // .mic-on {
+////         //     margin-right:5%;
+////         // }
+////     }
+//// }
+//
+//// @media (max-width: 480px) {
+////     .wrapper {
+////         .search {
+////             width: 80%;
+////         }
+//
+////         .search-icon {
+////             width: 20%;
+////         }
+////     }
+//// }
