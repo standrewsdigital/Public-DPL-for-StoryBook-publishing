@@ -1,7 +1,9 @@
+@use "../variables/main-colors" as colors;
+
 $color_1: black;
 $color_2: inherit;
 $background-color_1: white;
-$background-color_2: $light-grey-2;
+$background-color_2: colors.$light-grey-2;
 
 .facet-list {
 	.list-group {
