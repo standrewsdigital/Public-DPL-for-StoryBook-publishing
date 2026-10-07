@@ -1,4 +1,6 @@
-@import "../variables/main-colors";
+@use "../variables/main-colors";
+@use "../global-partials/variables";
+
 
 /* Make figure fill the column */
 .col figure {
@@ -114,7 +116,7 @@
         .video-transcript {
             position: fixed;
             background: white;
-            border: 2px solid $dark-grey-1;
+            border: 2px solid variables.$dark-grey-1;
             margin: 2rem;
             overflow: auto;
             max-height: 100%;

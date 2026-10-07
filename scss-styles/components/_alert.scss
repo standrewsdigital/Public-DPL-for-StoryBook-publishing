@@ -1,18 +1,20 @@
+@use "../global-partials/variables";
+
 @mixin options() {
     padding: 20px;
     margin-bottom: 20px;
 
     &.success {
-        border-color: $green-primary;
+        border-color: variables.$green-primary;
     }
     &.info {
-        border-color: $blue-primary;
+        border-color: variables.$blue-primary;
     }
     &.warning {
-        border-color: $dark-orange;
+        border-color: variables.$dark-orange;
     }
     &.danger {
-        border-color: $red-primary;
+        border-color: variables.$red-primary;
     }
 
     .alert-heading, .callout-heading {
@@ -27,7 +29,7 @@
 }
 
 .alert {
-    border: 5px solid $grey;
+    border: 5px solid variables.$grey;
     @include options;
 }
 
@@ -40,7 +42,7 @@
 }
 
 .callout {
-    border-left: 5px solid $grey;
+    border-left: 5px solid variables.$grey;
     @include options;
 
     & .callout-icon {

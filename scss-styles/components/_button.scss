@@ -49,36 +49,22 @@
   ) {
     &.#{$color} {
       background-color: list.nth($shade, 1);
-      color: if(
-        $color == "white",
-        colors.$blue-primary,
-        null
-      );
-      border: if(
-        $color == "white",
-        1px solid colors.$blue-25-shade,
-        null
-      );
-      border-bottom: if(
-        $color == "white",
-        3px solid #0071b3,
-        null
-      );
-      padding-bottom: if(
-        $color == "white",
-        6px,
-        null
-      );
+
+      @if $color == "white" {
+        color: colors.$blue-primary;
+        border: 1px solid colors.$blue-25-shade;
+        border-bottom: 3px solid #0071b3;
+        padding-bottom: 6px;
+      }
     }
 
     &.#{$color}:focus,
     &.#{$color}:hover {
       background-color: list.nth($shade, 2);
-      text-decoration: if(
-        $color == "white",
-        underline,
-        null
-      );
+
+      @if $color == "white" {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -115,31 +101,14 @@
     ) {
       &.#{$color} {
         border-bottom: 3px solid $shade;
-        background-color: if(
-          $color == "white",
-          #fff,
-          null
-        );
-        color: if(
-          $color == "white",
-          colors.$blue-primary,
-          null
-        );
-        border: if(
-          $color == "white",
-          1px solid colors.$blue-25-shade,
-          null
-        );
-        border-bottom: if(
-          $color == "white",
-          3px solid #0071b3,
-          null
-        );
-        padding-bottom: if(
-          $color == "white",
-          6px,
-          null
-        );
+
+        @if $color == "white" {
+          background-color: #fff;
+          color: colors.$blue-primary;
+          border: 1px solid colors.$blue-25-shade;
+          border-bottom: 3px solid #0071b3;
+          padding-bottom: 6px;
+        }
       }
     }
 
@@ -279,7 +248,6 @@
       }
     }
 
-    // Show dropdown when opened.
     &.show {
       display: block;
     }

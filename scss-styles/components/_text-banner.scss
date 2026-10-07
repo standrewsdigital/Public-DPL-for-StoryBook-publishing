@@ -1,3 +1,5 @@
+@use "../global-partials/variables";
+
 .text-banner-content {
 	text-align: center;
 
@@ -10,11 +12,11 @@
 	}
 
 	a {
-		color: $light-grey-2;
+		color: variables.$light-grey-2;
 		text-decoration: underline;
 	  
 		  &:hover {
-			color: $light-grey-1;
+			color: variables.$light-grey-1;
 			text-decoration: none;
 		  }
 	  

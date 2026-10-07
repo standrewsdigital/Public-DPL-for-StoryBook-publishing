@@ -1,3 +1,4 @@
+@use "sass:map";
 // list of supported icons
 $icons-list: word, expand_more, pdf, zip, edit, folder,
 person, mail, delete, home, menu, settings, pin,
@@ -5,7 +6,7 @@ schedule, date, chevron_right, chevron_left;
 
 @function get-icon-content($icon-name) {
   // Map the extracted name to an actual icon content
-  @return map-get(
+  @return map.get(
     (
       'expand_more': 'expand_more',
       'expand_less': 'expand_less',

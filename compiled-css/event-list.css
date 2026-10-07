@@ -1,1 +1,24 @@
-.event-list{margin-bottom:1rem}.event-list .event{border:1px solid #949494;padding:1.25rem;margin-bottom:0;position:relative;background-color:#fff;border-radius:1px;transition:background-color .3s ease}.event-list .event:not(:last-child){border-bottom:none}.event-list .event:hover{background-color:#f0f0f0}.event-list .event.clickable{cursor:pointer}.event-list .event.clickable h3 a{color:#00539b;text-decoration:none}.event-list .event.clickable h3 a:hover{text-decoration:underline}.event-list .event .event-tag{background-color:#fff;color:#ea1a13;padding:.5rem;font-size:.75rem;border-width:1px;border-radius:2px;border-color:#ea1a13;border-style:solid;display:inline-block;margin-bottom:1rem}.event-list .event h3{margin-top:0;margin-bottom:1rem;clear:both}.event-list .event b{display:block;margin-bottom:.75rem}.event-list .event .event-details{margin-top:.75rem}.event-list .event .event-details .event-item{display:flex;align-items:center;margin-bottom:.75rem}.event-list .event .event-details .event-item dt{font-weight:bold;margin-right:4px;position:relative;display:flex;align-items:center}.event-list .event .event-details .event-item dt::before{content:attr(data-icon);font-family:"Material Symbols Outlined";font-feature-settings:"liga";-webkit-font-feature-settings:"liga";-moz-font-feature-settings:"liga";font-size:1.25rem;margin-right:4px;vertical-align:middle;display:inline-block}.event-list .event .event-details .event-item dd{margin-left:1rem;display:flex;align-items:center}/*# sourceMappingURL=event-list.css.map */
+/* Error: Module loop: this module is already being loaded.
+ *   ,--> scss-styles\global-partials\_variables.scss
+ * 3 | @forward "../variables/main-colors";
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ new load
+ *   '
+ *   ,--> scss-styles\components\_event-list.scss
+ * 1 | @use "../variables/main-colors";
+ *   | =============================== original load
+ *   '
+ *   scss-styles\global-partials\_variables.scss 3:1  @use
+ *   scss-styles\variables\_main-colors.scss 1:1      @use
+ *   scss-styles\components\_event-list.scss 1:1      @import
+ *   scss-styles\event-list.scss 1:9                  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Module loop: this module is already being loaded.\a   \250c \2500 \2500 > scss-styles\\global-partials\\_variables.scss\a 3 \2502  @forward "../variables/main-colors";\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > scss-styles\\components\\_event-list.scss\a 1 \2502  @use "../variables/main-colors";\d\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   scss-styles\\global-partials\\_variables.scss 3:1  @use\a   scss-styles\\variables\\_main-colors.scss 1:1      @use\a   scss-styles\\components\\_event-list.scss 1:1      @import\a   scss-styles\\event-list.scss 1:9                  root stylesheet';
+}

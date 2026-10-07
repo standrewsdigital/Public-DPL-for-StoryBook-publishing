@@ -1,8 +1,10 @@
+@use "bg-colors";
+
 // styles.scss
 @use '../variables/main-colors' as colors; // Importing the color variables
 
 // Creating a map of color variables
-$color-map: (
+bg-colors.$color-map: (
   "blue-primary": colors.$blue-primary,
   "blue-5-tint": colors.$blue-5-tint,
   "blue-10-tint": colors.$blue-10-tint,
@@ -230,7 +232,7 @@ $color-map: (
 );
 
 // Generate text and background color classes
-@each $name, $color in $color-map {
+@each $name, $color in bg-colors.$color-map {
   .text-#{$name} {
     color: $color;
   }

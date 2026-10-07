@@ -1,11 +1,13 @@
 // Import only what's needed
-@import "../variables/main-colors";
+@use "../variables/main-colors";
+@use "variables";
+
 
 // Local variable needed
 $page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 
-$category-header-background: $light-blue-primary;
-$category-header-color: $white;
+$category-header-background: variables.$light-blue-primary;
+$category-header-color: variables.$white;
 $category-header-active: var(--link-focus-color);
 $category-header-selected: var(--link-focus-background);
 $category-font-family: $page-font-family;

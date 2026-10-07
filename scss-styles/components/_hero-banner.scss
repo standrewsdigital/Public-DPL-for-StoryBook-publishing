@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../global-partials/variables";
+
 .hero-banner {
     width: 100%;
 
@@ -26,9 +29,9 @@
                 top: 2rem;
                 right: 2rem;
                 z-index: 1;
-                background-color: color-mix(in srgb, $dark-grey-1 40%, transparent);
-                color: $white;
-                border: 2px solid $white;
+                background-color: color-mix(in srgb, variables.$dark-grey-1 40%, transparent);
+                color: variables.$white;
+                border: 2px solid variables.$white;
                 border-radius: 50%;
                 width: 60px;
                 height: 60px;
@@ -43,12 +46,12 @@
                 }
 
                 &:hover {
-                    background-color: $blue-primary;
+                    background-color: variables.$blue-primary;
                 }
 
                 &:focus {
-                    outline: 3px solid $orange-primary;
-                    background-color: $blue-25-shade;
+                    outline: 3px solid variables.$orange-primary;
+                    background-color: variables.$blue-25-shade;
                 }
             }
         }
@@ -72,19 +75,19 @@
                 width: 100%;
 
                 &.bg-blue-primary {
-                    background-color: rgba($blue-primary, 0.9);
+                    background-color: rgba(variables.$blue-primary, 0.9);
                 }
 
                 &.bg-burgundy-primary {
-                    background-color: rgba($burgundy-primary, 0.9);
+                    background-color: rgba(variables.$burgundy-primary, 0.9);
                 }
 
                 &.bg-dark-orange {
-                    background-color: rgba($dark-orange, 0.9);
+                    background-color: rgba(variables.$dark-orange, 0.9);
                 }
 
                 &.bg-purple-25-shade {
-                    background-color: rgba($purple-25-shade, 0.9);
+                    background-color: rgba(variables.$purple-25-shade, 0.9);
                 }
 
                 h2 {
@@ -103,9 +106,9 @@
             }
 
             .content-box {
-                background-color: rgba($white, 0.9);
+                background-color: rgba(variables.$white, 0.9);
                 padding: 2rem 1rem 1rem 1rem;
-                color: $dark-grey-2;
+                color: variables.$dark-grey-2;
 
                 p {
                     margin: 0;
@@ -123,7 +126,7 @@
     }
 }
 
-@media screen and (max-width: map-get($breakpoints, 'sm')) {
+@media screen and (max-width: map.get(variables.$breakpoints, 'sm')) {
     .hero-banner {
         .media {
             .video {
@@ -136,7 +139,7 @@
     }
 }
 
-@media screen and (max-width: map-get($breakpoints, 'lg')) {
+@media screen and (max-width: map.get(variables.$breakpoints, 'lg')) {
     .hero-banner {
         .media {
             .image {
@@ -153,7 +156,7 @@
     }
 }
 
-@media screen and (min-width: map-get($breakpoints, 'lg')) {
+@media screen and (min-width: map.get(variables.$breakpoints, 'lg')) {
     .hero-banner {
         height: 580px;
         position: relative;

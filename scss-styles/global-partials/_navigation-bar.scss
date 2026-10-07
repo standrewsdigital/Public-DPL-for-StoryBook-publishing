@@ -1,3 +1,5 @@
+@use "variables";
+
 .navigation-bar {
   width: 100%;
   margin: 0;
@@ -7,8 +9,8 @@
     padding: 0;
   }
 
-  &-primary { background-color: $blue-primary; }
-  &-secondary { background-color: $light-blue-primary; }
+  &-primary { background-color: variables.$blue-primary; }
+  &-secondary { background-color: variables.$light-blue-primary; }
 
   .row > .navigation-bar-inner {
     width: 100%;
@@ -45,8 +47,8 @@
     &:focus {
       outline: none;
       text-decoration: underline;
-      background-color: $blue-25-shade;
-      box-shadow: inset 0 0 0 1px $orange-primary;
+      background-color: variables.$blue-25-shade;
+      box-shadow: inset 0 0 0 1px variables.$orange-primary;
     }
 
     &::after {
@@ -71,8 +73,8 @@
     margin: 0;
     list-style: none;
 
-    &.primary-nav { background-color: $blue-primary; }
-    &.secondary-nav { background-color: $light-blue-primary; }
+    &.primary-nav { background-color: variables.$blue-primary; }
+    &.secondary-nav { background-color: variables.$light-blue-primary; }
 
     li {
       text-align: center;
@@ -84,14 +86,14 @@
 
         &:hover {
           text-decoration: underline;
-          background-color: $blue-25-shade;
+          background-color: variables.$blue-25-shade;
         }
 
         &:active,
         &:focus,
         &.selected {
           outline: none;
-          box-shadow: inset 0 0 0 1px $orange-primary;
+          box-shadow: inset 0 0 0 1px variables.$orange-primary;
         }
       }
     }

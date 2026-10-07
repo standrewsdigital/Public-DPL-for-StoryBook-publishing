@@ -1,7 +1,9 @@
+@use "../global-partials/category-header";
+
 @use "../global-partials/mixins";
 @use "../variables/main-colors" as colours;
 
-$page-font-family: "PT Sans", Helvetica, Arial, sans-serif;
+category-header.$page-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 
 .accordion-group {
   margin-bottom: 1.2em;
@@ -151,7 +153,7 @@ $page-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 
 .accordion-group-open {
-  font-family: $page-font-family;
+  font-family: category-header.$page-font-family;
   color: colours.$light-blue-primary;
   border: none;
   background: none;

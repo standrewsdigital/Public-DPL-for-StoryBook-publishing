@@ -1,5 +1,7 @@
+@use "../global-partials/variables";
+
 $link-spacing: 5px;
-$divider-color: $mid-grey-1;
+$divider-color: variables.$mid-grey-1;
 
 .horizontal-list {
   list-style: none;
@@ -12,7 +14,7 @@ $divider-color: $mid-grey-1;
   font-size: 1.25rem;
 
   li {
-    color: $dark-grey-2;
+    color: variables.$dark-grey-2;
     &:not(:last-child) {
       margin-right: $link-spacing;
       &:after {
@@ -50,7 +52,7 @@ $divider-color: $mid-grey-1;
 
 .bg-blue-primary {
   .horizontal-list {
-    $divider-color: $mid-grey-2;
+    $divider-color: variables.$mid-grey-2;
 
     li {
       color: white;

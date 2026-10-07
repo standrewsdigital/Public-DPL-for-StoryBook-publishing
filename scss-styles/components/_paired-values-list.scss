@@ -1,3 +1,5 @@
+@use "../global-partials/variables";
+
 .paired-values-list {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -15,7 +17,7 @@
   &.paired-values-list-divided {
     dt:not(:first-child),
     dd:not(:nth-child(2)) {
-      border-top: 1px solid $mid-grey-2;
+      border-top: 1px solid variables.$mid-grey-2;
     }
 
     dd,
