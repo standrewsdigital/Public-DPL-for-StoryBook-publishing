@@ -1,5 +1,5 @@
-// Global variables with values that apply to all themes
-@import '../variables/breakpoints';
-@import '../variables/main-colors';
+// Global variables with values that apply to all themes.
+@forward "../variables/breakpoints";
+@forward "../variables/main-colors";
 
-$page-font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+$page-font-family: "Noto Sans", Arial, Helvetica, sans-serif;

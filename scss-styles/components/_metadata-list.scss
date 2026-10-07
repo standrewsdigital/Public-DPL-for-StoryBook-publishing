@@ -1,27 +1,29 @@
+@use "../global-partials/mixins";
+@use "../variables/main-colors" as colors;
 .metadata-list {
-	color: $grey;
+	color: colors.$grey;
 
 	dt {
 		margin-right: 5px;
 
 		&.metadata-date::before {
-			@include icon('calendar_month', '', $grey);
+			@include mixins.icon('calendar_month', '', colors.$grey);
 			font-variation-settings: 'wght' 700;
 		}
 
 		&.metadata-time::before {
-			@include icon('schedule', '', $grey);
+			@include mixins.icon('schedule', '', colors.$grey);
 			font-variation-settings: 'wght' 700;
 		}
 
 		&.metadata-location::before {
-			@include icon('location_on', '', $grey);
+			@include mixins.icon('location_on', '', colors.$grey);
 			font-variation-settings: 'OPSZ' 20, 'wght' 700, 'FILL' 1;
 		}
 
 		&:not([class^="metadata-"]) {
 			font-weight: 700;
-			color: $dark-grey-2;
+			color: colors.$dark-grey-2;
 		}
 	}
 
@@ -29,13 +31,13 @@
 		margin: 0 20px 5px 0;
 
 		a {
-			color: $grey;
+			color: colors.$grey;
 
 			&:hover {
-				color: $dark-grey-1;
+				color: colors.$dark-grey-1;
 			}
 			&:focus {
-				color: $dark-grey-1;
+				color: colors.$dark-grey-1;
 			}
 		}
 	}
