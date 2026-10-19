@@ -1,0 +1,14 @@
+<div class="col col-12-sm col-12-lg">
+    <div class="loader-wrapper">
+        <div class="loader{{#if (eq loaderType 'Bar')}} bar-loader{{/if}}">
+            {{#if (eq loaderType 'Bar')}}
+                <div class="bar bg-blue-primary"></div>
+                <div class="bar bg-red-st-andrews"></div>
+                <div class="bar bg-yellow"></div>
+            {{else}}
+                <span class="icon icon-lg icon-crest"></span>
+            {{/if}}
+        </div>
+        <p class="mt-md mb-0">Loading</p>
+    </div>
+</div>

@@ -21,6 +21,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
 
+    "handlebars": "^4.7.9",
     "sass": "^1.75.0",
     "vite-plugin-list-directory-contents": "^1.4.5"
   },
