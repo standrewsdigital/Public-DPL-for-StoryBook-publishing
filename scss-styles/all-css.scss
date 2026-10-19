@@ -8,7 +8,6 @@
 
 @import "global-partials/mixins";
 @import "global-partials/align";
-@import "global-partials/bg-colors";
 @import "global-partials/border";
 @import "global-partials/bottom-navigation";
 @import "global-partials/breadcrumbs";
@@ -72,3 +71,5 @@
 @import "components/tabs";
 @import "components/text-banner";
 @import "components/tile";
+
+@import "global-partials/bg-colors";
