@@ -4,6 +4,10 @@ $color_1: #202024;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    ul.replies {
+        list-style: none;
+    }
 }
 
 h2+.comment-list {
@@ -22,10 +26,8 @@ h3+.comment-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
-        >* {
-            margin-bottom: 1rem;
-        }
+        gap: 1rem;
+        margin-bottom: 1rem;
     }
 
     .replies {
@@ -41,7 +43,6 @@ h3+.comment-list {
         &:not(:last-child) {
             margin-bottom: calc(1.5vw + 1rem);
         }
-
     }
 
     .meta-group {
@@ -54,16 +55,6 @@ h3+.comment-list {
         height: 50px;
         width: 50px;
         overflow: hidden;
-        position: relative;
-        margin-right: 1rem;
-
-        img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
     }
 
     a.image {
@@ -84,6 +75,11 @@ h3+.comment-list {
         }
     }
 
+    .btn-tag {
+        border: 1px solid #6a6a6b;
+        color: $color_1;
+    }
+
     .meta-author {
         font-size: 1rem;
         margin-right: 1rem;
@@ -95,23 +91,6 @@ h3+.comment-list {
     }
 }
 
-.btn {
-    display: inline-block;
-    margin-bottom: 0;
-    font-weight: bold;
-    padding: 6px 12px;
-    text-decoration: none;
-}
-
-.btn-tag {
-    border: 1px solid #6a6a6b;
-    color: $color_1;
-}
-
-
-ul.replies {
-    list-style: none;
-}
 
 @media (min-width: 768px) {
     .comment.replies {
