@@ -221,7 +221,20 @@ $color-map: (
   "success": colors.$success,
   "information": colors.$information,
   "warning": colors.$warning,
-  "danger": colors.$danger
+  "danger": colors.$danger,
+
+  "dark-blue-primary": colors.$dark-blue-primary,
+  "dark-blue-25-tint": colors.$dark-blue-25-tint,
+  "dark-blue-50-tint": colors.$dark-blue-50-tint,
+  "dark-blue-25-shade": colors.$dark-blue-25-shade,
+
+  "dark-green-primary": colors.$dark-green-primary,
+  "dark-green-25-tint": colors.$dark-green-25-tint,
+  "dark-green-50-tint": colors.$dark-green-50-tint,
+  "dark-green-25-shade": colors.$dark-green-25-shade,
+
+  "dark-blue-light-bg": colors.$dark-blue-light-bg,
+  "dark-green-light-bg": colors.$dark-green-light-bg,
 );
 
 // Generate text and background color classes

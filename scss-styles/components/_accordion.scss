@@ -20,7 +20,6 @@
 
       &:focus {
         outline: 3px solid $orange-primary;
-        // text-decoration: underline;
       }
 
       &::before {
@@ -38,6 +37,7 @@
       h4 {
         margin-top: 0;
         margin-bottom: 0;
+        font-size: unset;
       }
 
       span:hover {
