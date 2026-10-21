@@ -31,12 +31,9 @@
     @include options;
 }
 
-.callout-row > .col {
-    display: flex;
-}
-
 .callout-row > .col > .callout {
-    height: 100%;
+    height: -webkit-fill-available;
+    margin-bottom: 0;
 }
 
 .callout {
