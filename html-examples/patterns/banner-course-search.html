@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../compiled-css/main.css">
+    <link rel="stylesheet" href="../../compiled-css/banner-course-search.css">
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-sm col-12-lg">
+                    <h2>Course banner</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Begin pattern: hero-banner //-->
+
+
+
+
+
+
+    <section class="hero-section banner-course-search">
+        <!-- Full-width banner image -->
+        <div class="hero-section__image-mask">
+            <picture class="hero-section__image">
+                <source srcset="../../assets/st-salvators-hall-autumn-1920x600.jpg" media="(min-width: 768px)">
+                <img src="../../assets/st-salvators-hall-autumn-750x500.jpg"
+                    alt="Students sitting on the pier during golden hour at the Gaudie pier walk in St Andrews.">
+            </picture>
+        </div>
+
+        <!-- DPL grid container -->
+        <div class="container banner-course-search__container">
+            <div class="row">
+                <div class="col col-12-sm col-12-lg">
+
+                    <div class="hero-section__content">
+                        <h2 class="hero-section__heading">Course search</h2>
+
+                        <div class="hero-section__content-group">
+                            <form class="dpl-form" action="https://www.st-andrews.ac.uk/subjects/course-search"
+                                method="get" role="search">
+
+                                <p class="hero-section__intro">
+                                    Search through all the courses we offer.
+                                </p>
+
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <input id="txt-search-course"
+                                                class="form-input course-autocomplete search-box tt-input" type="text"
+                                                name="query" aria-label="Search for a course" maxlength="256"
+                                                placeholder="Search by keyword or phrase" autocomplete="off"
+                                                spellcheck="false">
+
+                                            <input type="hidden" name="collection"
+                                                value="standrews~sp-web-course--search">
+                                            <input type="hidden" name="profile" value="_default">
+                                            <input type="hidden" name="form" value="master_js_loader">
+
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-primary" type="submit" aria-label="Search">
+                                                    <span class="material-icons-outlined"
+                                                        aria-hidden="true">search</span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                            <!-- Desktop and tablet links -->
+                            <nav class="course-search-links" aria-label="Additional course search options">
+                                <ul>
+                                    <li><a
+                                            href="https://www.st-andrews.ac.uk/subjects/course-search/?mod=false&form=master_js_loader&num.ranks=10&profile=_default&query=!null&collection=standrews~sp-web-course--search&sort=metatitle&f.tabs%7Ctype=Undergraduate">Undergraduate</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.st-andrews.ac.uk/subjects/course-search/?mod=false&form=master_js_loader&num.ranks=10&profile=_default&query=!null&collection=standrews~sp-web-course--search&sort=metatitle&f.tabs%7Ctype=Postgraduate">Postgraduate</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.st-andrews.ac.uk/subjects/course-search/?mod=false&form=master_js_loader&num.ranks=10&f.teaching-mode%7Cteachingmode=Online&profile=_default&query=!null&f.Year%7Cayrs=2023%2F4&collection=standrews~sp-web-course--search&sort=metamodulecode">Online
+                                            courses</a></li>
+                                    <li><a
+                                            href="https://www.st-andrews.ac.uk/subjects/course-search/?mod=false&form=master_js_loader&num.ranks=10&profile=_default&query=!null&collection=standrews~sp-web-course--search&sort=metamodulecode&f.tabs%7Ctype=Short%20course">Short
+                                            courses</a></li>
+                                </ul>
+                            </nav>
+
+                            <!-- Mobile dropdown -->
+                            <details class="course-search-options">
+                                <summary>Additional options<span class="material-icons-outlined"
+                                        aria-hidden="true">keyboard_arrow_down</span><span
+                                        class="material-icons-outlined" aria-hidden="true">keyboard_arrow_up</span>
+                                </summary>
+                                <ul>
+                                    <li><a
+                                            href="https://www.st-andrews.ac.uk/subjects/course-search/?mod=false&form=master_js_loader&num.ranks=10&profile=_default&query=!null&collection=standrews~sp-web-course--search&sort=metatitle&f.tabs%7Ctype=Undergraduate">Undergraduate</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.st-andrews.ac.uk/subjects/course-search/?mod=false&form=master_js_loader&num.ranks=10&profile=_default&query=!null&collection=standrews~sp-web-course--search&sort=metatitle&f.tabs%7Ctype=Postgraduate">Postgraduate</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.st-andrews.ac.uk/subjects/course-search/?mod=false&form=master_js_loader&num.ranks=10&f.teaching-mode%7Cteachingmode=Online&profile=_default&query=!null&f.Year%7Cayrs=2023%2F4&collection=standrews~sp-web-course--search&sort=metamodulecode">Online
+                                            courses</a></li>
+                                    <li><a
+                                            href="https://www.st-andrews.ac.uk/subjects/course-search/?mod=false&form=master_js_loader&num.ranks=10&profile=_default&query=!null&collection=standrews~sp-web-course--search&sort=metamodulecode&f.tabs%7Ctype=Short%20course">Short
+                                            courses</a></li>
+                                </ul>
+                            </details>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End pattern: hero-banner //-->
+
+</html>
+
+</body>
+
+</html>
