@@ -16,6 +16,7 @@ deploy:
         user $CDN_USER $CDN_PASSWORD;
         mkdir -p $CDN_DIRECTORY/$RELEASE_VERSION;
         mirror -R compiled-css/ $CDN_DIRECTORY/$RELEASE_VERSION/;
+        mirror -R ./scripts $CDN_DIRECTORY/$RELEASE_VERSION/;
         bye
       "
   only:
