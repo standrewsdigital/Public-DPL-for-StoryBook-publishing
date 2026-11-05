@@ -237,9 +237,35 @@ $color-map: (
   "dark-green-light-bg": colors.$dark-green-light-bg,
 );
 
+.bg-burgundy-primary {
+  color: colors.$white;
+
+  a:not(.btn) {
+    color: colors.$white;
+
+    &:hover {
+      color: colors.$white;
+    }
+  }
+}
+
 // Generate text and background color classes
 @each $name, $color in $color-map {
   .bg-#{$name} {
     background-color: $color;
+    /*
+        contrast-color is baseline since April 2026.
+        Individual styles above will be used if contrast-color isn't supported in the user's browser
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color
+     */
+    color: contrast-color($color);
+
+    a:not(.btn) {
+      color: contrast-color($color);
+
+      &:hover {
+        color: contrast-color($color);
+      }
+    }
   }
 }
