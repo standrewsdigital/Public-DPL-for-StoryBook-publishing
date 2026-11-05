@@ -7,16 +7,102 @@
     <link rel="stylesheet" href="../../compiled-css/main.css">
 </head>
 <body>
-    <!--Header-->
+    <!--Header without search-->
     <header>
         <div class="container">
             <div class="row">
-            <div class="col col-12-lg col-12-xxs">
-                <div class="header-content">
-                    <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+                <div class="col col-12-lg col-12-xxs">
+                    <div class="header-content">
+                        <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+                    </div>
                 </div>
             </div>
         </div>
+    </header>
+
+    <hr>
+
+    <!--Header with search-->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col start-col-4-md start-col-12-xxs">
+                    <div class="header-content">
+                        <a href="https://www.st-andrews.ac.uk">
+                            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col end-col-5-md end-col-12-xxs header-search">
+                    <form class="form-group" action="" role="search">
+                        <div class="input-group search-bar">
+                            <input
+                                    class="search-box filter-input"
+                                    id="default-search"
+                                    required
+                                    type="text"
+                                    aria-label="Search the University website"
+                                    maxlength="256"
+                                    name="search"
+                                    placeholder="Search the University website"
+                            >
+                            <button class="btn clear-icon" aria-label="Clear input">
+                                <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                            </button>
+                            <button class="btn" aria-label="Search">
+                                <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <hr>
+
+
+    <!-- Header from t4dev with fixed search bar -->
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+
+                <!-- Columns 1–4 from the md breakpoint -->
+                <div class="col start-col-4-md start-col-12-xxs header-logo">
+                    <a href="https://www.st-andrews.ac.uk/" aria-label="University of St Andrews homepage">
+                        <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews" class="logo">
+                    </a>
+                </div>
+
+                <!-- Columns 8–12 from the md breakpoint -->
+                <div class="col end-col-5-md end-col-12-xxs header-search">
+
+                    <form class="form-group" action="" role="search">
+                        <div class="input-group search-bar">
+                            <input
+                                    class="search-box filter-input"
+                                    id="default-search"
+                                    required
+                                    type="text"
+                                    aria-label="Search the University website"
+                                    maxlength="256"
+                                    name="search"
+                                    placeholder="Search the University website"
+                            >
+                            <button class="btn clear-icon" aria-label="Clear input">
+                                <span class="material-icons-outlined" aria-hidden="true">clear</span>
+                            </button>
+                            <button class="btn" aria-label="Search">
+                                <span class="search-icon material-icons-outlined" aria-hidden="true">search</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
         </div>
     </header>
 
