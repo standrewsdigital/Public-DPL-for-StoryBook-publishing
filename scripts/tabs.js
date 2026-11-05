@@ -1,62 +1,72 @@
 (() => {
-  const root = document.querySelector('[data-tabs]');
-  if (!root) return;
+  const tabContainers = document.querySelectorAll('[data-tabs]');
 
-  const tablist = root.querySelector('[role="tablist"]');
-  const tabs = Array.from(root.querySelectorAll('[role="tab"]'));
-  const panels = Array.from(root.querySelectorAll('[role="tabpanel"]'));
+  if (tabContainers) {
+    tabContainers.forEach(container => {
+      const tablist = container.querySelector('[role="tablist"]');
+      const tabs = Array.from(container.querySelectorAll('[role="tab"]'));
+      const panels = Array.from(container.querySelectorAll('[role="tabpanel"]'));
 
-  function activate(tab, { setFocus = true, pushHash = true } = {}) {
-    const targetId = tab.dataset.target;
+      tablist.addEventListener('keydown', e => {
+        const index = tabs.findIndex(t => t === document.activeElement);
+        if (index < 0) return;
+        let next = null;
 
-    tabs.forEach(t => {
-      const selected = t === tab;
-      t.setAttribute('aria-selected', selected);
-      t.tabIndex = selected ? 0 : -1;
+        switch (e.key) {
+          case 'ArrowRight': next = (index + 1) % tabs.length; break;
+          case 'ArrowLeft': next = (index - 1 + tabs.length) % tabs.length; break;
+          case 'Home': next = 0; break;
+          case 'End': next = tabs.length - 1; break;
+          default: return;
+        }
+
+        e.preventDefault();
+        activate(tabs[next]);
+      });
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => activate(tab));
+      });
     });
 
-    panels.forEach(p => {
-      p.hidden = p.id !== targetId;
-    });
+    function activate(tab, { setFocus = true, pushHash = true } = {}) {
 
-    if (setFocus) tab.focus();
+      const tabs = [...tab.parentNode.childNodes].filter((node) => node.role === 'tab');
+      const panels = tab.parentNode.parentNode.querySelectorAll('[role="tabpanel"]');
 
-    if (pushHash && targetId) {
-      history.replaceState(null, "", `#${targetId}`);
+      const targetId = tab.dataset.target;
+
+      tabs.forEach(t => {
+        const selected = t === tab;
+        t.setAttribute('aria-selected', selected);
+        t.tabIndex = selected ? 0 : -1;
+      });
+
+      panels.forEach(p => {
+        p.hidden = p.id !== targetId;
+      });
+
+      if (setFocus) tab.focus();
+
+      if (pushHash && targetId) {
+        history.replaceState(null, "", `#${targetId}`);
+      }
     }
+
+    function initFromHash() {
+      const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+      const hash = location.hash.replace('#', '');
+      const match = tabs.find(t => t.dataset.target === hash);
+      if (match) {
+        activate(match, { setFocus: false, pushHash: false });
+        match.scrollIntoView({ behavior: 'smooth', block: 'start'});
+      } else {
+        activate(tabs[0], { setFocus: false, pushHash: false });
+        tabs[0].scrollIntoView({ behavior: 'smooth', block: 'start'});
+      }
+    }
+
+    window.addEventListener('hashchange', initFromHash);
+    initFromHash();
   }
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => activate(tab));
-  });
-
-  tablist.addEventListener('keydown', e => {
-    const index = tabs.findIndex(t => t === document.activeElement);
-    if (index < 0) return;
-    let next = null;
-
-    switch (e.key) {
-      case 'ArrowRight': next = (index + 1) % tabs.length; break;
-      case 'ArrowLeft': next = (index - 1 + tabs.length) % tabs.length; break;
-      case 'Home': next = 0; break;
-      case 'End': next = tabs.length - 1; break;
-      default: return;
-    }
-
-    e.preventDefault();
-    activate(tabs[next]);
-  });
-
-  function initFromHash() {
-    const hash = location.hash.replace('#', '');
-    const match = tabs.find(t => t.dataset.target === hash);
-    if (match) {
-      activate(match, { setFocus: false, pushHash: false });
-    } else {
-      activate(tabs[0], { setFocus: false, pushHash: false });
-    }
-  }
-
-  window.addEventListener('hashchange', initFromHash);
-  initFromHash();
 })();
