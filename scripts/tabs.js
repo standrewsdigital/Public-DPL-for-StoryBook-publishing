@@ -56,13 +56,14 @@
     function initFromHash() {
       const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
       const hash = location.hash.replace('#', '');
-      const match = tabs.find(t => t.dataset.target === hash);
-      if (match) {
-        activate(match, { setFocus: false, pushHash: false });
-        match.scrollIntoView({ behavior: 'smooth', block: 'start'});
-      } else {
-        activate(tabs[0], { setFocus: false, pushHash: false });
-        tabs[0].scrollIntoView({ behavior: 'smooth', block: 'start'});
+
+      if (hash.length > 0) {
+        const match = tabs.find(t => t.dataset.target === hash);
+
+        if (match) {
+          activate(match, { setFocus: false, pushHash: false });
+          match.scrollIntoView({ behavior: 'smooth', block: 'start'});
+        }
       }
     }
 
