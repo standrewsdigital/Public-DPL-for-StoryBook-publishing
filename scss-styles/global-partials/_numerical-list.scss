@@ -2,16 +2,11 @@
 	counter-reset: my-sec-counter;
 	margin-bottom: 30px;
 
-	&.no-counter {
-		.list-group-item {
-			&::before {
-				content: none;
-			}
-		}
-	}
-
 	.list-group-item {
-		display: block;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
 		padding: 20px 15px;
 		margin-bottom: -1px;
 		text-decoration: none;
@@ -25,8 +20,7 @@
 			color: $blue-primary;
 			counter-increment: my-sec-counter;
 			content: counter(my-sec-counter);
-			float: right;
-			margin-left: 1.44em;
+			margin-left: 1rem;
 			font-size: 1.44em;
 			line-height: 1;
 		}
@@ -43,4 +37,37 @@
 			background-color: $light-grey-1;
 		}
 	}
+
+	&.no-counter {
+		.list-group-item {
+			flex-direction: row;
+
+
+			&::before {
+				content: none;
+			}
+
+			.item-badge {
+				display: inline;
+				background-color: $light-grey-1;
+				padding: 0.25rem 0.5rem;
+				font-size: 0.9rem;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, 'xs')) {
+
+	.numerical-list {
+		&.no-counter {
+			.list-group-item {
+				flex-direction: column;
+				justify-content: start;
+				align-items: start;
+			}
+		}
+	}
+
 }
