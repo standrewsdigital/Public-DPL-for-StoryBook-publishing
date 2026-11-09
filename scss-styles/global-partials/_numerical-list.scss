@@ -2,6 +2,14 @@
 	counter-reset: my-sec-counter;
 	margin-bottom: 30px;
 
+	&.no-counter {
+		.list-group-item {
+			&::before {
+				content: none;
+			}
+		}
+	}
+
 	.list-group-item {
 		display: block;
 		padding: 20px 15px;
