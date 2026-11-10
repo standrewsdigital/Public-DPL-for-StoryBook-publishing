@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup modal</title>
+
+    <link rel="stylesheet" href="../../compiled-css/main.css">
+    <link rel="stylesheet" href="../../compiled-css/popup-modal.css">
+
+    <script src="../../scripts/modal.js" defer></script>
+</head>
+    <body>
+
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12-lg col-12-xxs">
+                        <div class="header-content">
+                            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12-xs">
+                        <h1>Popup modal</h1>
+
+
+
+
+                        <p>
+                            To set up a modal the href and the dialog's data-link attribute must be the same. The href <strong>must</strong> start with <code>#open-modal</code> e.g. <code>#open-modal</code>, <code>#open-modal-register-interest-form</code>. The modal can be closed via:
+                        </p>
+
+                        <ul>
+                            <li>The 'Close' button</li>
+                            <li>Pressing 'Escape'</li>
+                            <li>Clicking outside the modal</li>
+                        </ul>
+
+                        <p>
+                            <a class="btn blue lg action" href="#open-modal">Register your interest</a>
+                            <a class="btn blue lg action" href="#open-modal-2">Open another modal</a>
+                        </p>
+
+
+                        <dialog class="content-modal" data-link="#open-modal" role="dialog" closedby="any">
+                            <button class="btn btn-lg btn-primary close-dialog">Close <i class="fa fa-close"></i></button>
+                            <p>Content</p>
+                        </dialog>
+
+                        <dialog class="content-modal" data-link="#open-modal-2" role="dialog" closedby="any">
+                            <button class="btn btn-lg btn-primary close-dialog">Close <i class="fa fa-close"></i></button>
+                            <p>Content for the other modal</p>
+                        </dialog>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </main>
+
+    </body>
+</html>
