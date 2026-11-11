@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article header</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="../../compiled-css/main.css">
     <link rel="stylesheet" href="../../compiled-css/gallery.css">
 
     <script src="../../scripts/gallery.js" defer></script>
 </head>
+<body>
 
 <header class="container">
     <div class="row">
@@ -29,45 +30,115 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="pattern-wrapper">
-        <!-- begin gallery row -->
-        <div class="container">
-            <div class="row">
-                <div class="col col-12-md main-content gallery-heading">
-                    <h2>Title of gallery</h2>
-                    <p>description</p>
-                </div>
+<div class="pattern-wrapper">
+    <!-- begin gallery row -->
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-md main-content gallery-heading">
+                <h2>Title of gallery</h2>
+                <p>Single row gallery</p>
             </div>
         </div>
+    </div>
 
-        <div class="gallery single-gallery">
+    <div class="gallery single-gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col col-4-md col-12-sm media main-content gallery-image-sm">
+                    <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
+                </div>
+                <div class="col col-4-md col-12-sm media main-content gallery-image-sm">
+                    <img class="image" src="../../assets/1280x853-8.jpg" alt=""/>
+                </div>
+                <div class="col col-4-md col-12-sm media main-content gallery-image-sm">
+                    <img class="image" src="../../assets/1280x853-9.jpg" alt=""/>
+                </div>
+
+                <dialog class="popup-image" closedby="any">
+                    <div class="gallery-bg">
+                        <img src="../../assets/1280x853-7.jpg" class="current-image">
+                        <button class="prev-button">
+                            <span class="material-icons-outlined left">
+                                chevron_left
+                            </span>
+                        </button>
+                        <button class="next-button">
+                            <span class="material-icons-outlined right next-button">
+                                chevron_right
+                            </span>
+                        </button>
+                    </div>
+
+                </dialog>
+            </div>
+        </div>
+    </div>
+    <!-- End gallery row -->
+</div>
+
+<div class="pattern-wrapper">
+    <!-- begin gallery row -->
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-md main-content gallery-heading">
+                <h2>Title of gallery</h2>
+                <p>Multi-row gallery</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pattern-wrapper">
+        <div class="gallery">
             <div class="container">
                 <div class="row">
-                    <div class="col col-4-md col-12-sm media main-content gallery-image-sm">
-                        <img class="image" id="image" src="../../assets/1280x853-7.jpg" alt="" />
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
                     </div>
-                    <div class="col col-4-md col-12-sm media main-content gallery-image-sm">
-                        <img class="image" src="../../assets/1280x853-8.jpg" alt="" />
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-8.jpg" alt=""/>
                     </div>
-                    <div class="col col-4-md col-12-sm media main-content gallery-image-sm">
-                        <img class="image" src="../../assets/1280x853-9.jpg" alt="" />
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-9.jpg" alt=""/>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-8.jpg" alt=""/>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-9.jpg" alt=""/>
                     </div>
 
-                    <div class="popup-image">
-                        <div id="gallery-bg">
-                            <img src="../../assets/1280x853-7.jpg" id="current-image">
-                            <span class="material-icons-outlined left" id="prev-button">
-                            chevron_left
-                        </span> </a>
-                            <span class="material-icons-outlined right" id="next-button">
-                            chevron_right
-                        </span> </a>
+                    <dialog class="popup-image" closedby="any">
+                        <div class="gallery-bg">
+                            <img src="../../assets/1280x853-7.jpg" class="current-image">
+
+                            <button class="prev-button">
+                                    <span class="material-icons-outlined left">
+                                        chevron_left
+                                    </span>
+                            </button>
+                            <button class="next-button">
+                                    <span class="material-icons-outlined right next-button">
+                                        chevron_right
+                                    </span>
+                            </button>
                         </div>
 
-                    </div>
+                    </dialog>
                 </div>
             </div>
+
+
         </div>
         <!-- End gallery row -->
     </div>
@@ -78,184 +149,133 @@
             <div class="row">
                 <div class="col col-12-md main-content gallery-heading">
                     <h2>Title of gallery</h2>
-                    <p>description</p>
+                    <p>With Download buttons</p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="pattern-wrapper">
-            <div class="gallery">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                            <img class="image" id="image" src="../../assets/1280x853-7.jpg" alt="" />
-                        </div>
-                        <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                            <img class="image" src="../../assets/1280x853-8.jpg" alt="" />
-                        </div>
-                        <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                            <img class="image" src="../../assets/1280x853-7.jpg" alt="" />
-                        </div>
-                        <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                            <img class="image" src="../../assets/1280x853-9.jpg" alt="" />
-                        </div>
-                        <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                            <img class="image" id="image" src="../../assets/1280x853-7.jpg" alt="" />
-                        </div>
-                        <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                            <img class="image" src="../../assets/1280x853-8.jpg" alt="" />
-                        </div>
-                        <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                            <img class="image" src="../../assets/1280x853-7.jpg" alt="" />
-                        </div>
-                        <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                            <img class="image" src="../../assets/1280x853-9.jpg" alt="" />
-                        </div>
-                        <div class="popup-image col-12-sm media main-content">
-
-                            <div id="gallery-bg">
-                                <img src="../../assets/1280x853-7.jpg" id="current-image">
-                                <span class="material-icons-outlined left" id="prev-button">
-                        chevron_left
-                    </span> </a>
-                                <span class="material-icons-outlined right" id="next-button">
-                        chevron_right
-                    </span> </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- End gallery row -->
-        </div>
-
-        <div class="pattern-wrapper">
-            <!-- begin gallery row -->
+    <div class="pattern-wrapper">
+        <div class="gallery">
             <div class="container">
                 <div class="row">
-                    <div class="col col-12-md main-content gallery-heading">
-                        <h2>Title of gallery</h2>
-                        <p>description</p>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
+                        <button>Download</button>
                     </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-8.jpg" alt=""/>
+                        <button>Download</button>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
+                        <button>Download</button>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-9.jpg" alt=""/>
+                        <button>Download</button>
+                    </div>
+
+                    <dialog class="popup-image" closedby="any">
+                        <div class="gallery-bg">
+                            <img src="../../assets/1280x853-7.jpg" class="current-image">
+                            <button class="prev-button">
+                                        <span class="material-icons-outlined left">
+                                            chevron_left
+                                        </span>
+                            </button>
+                            <button class="next-button">
+                                        <span class="material-icons-outlined right next-button">
+                                            chevron_right
+                                        </span>
+                            </button>
+                        </div>
+
+                    </dialog>
                 </div>
             </div>
 
-            <div class="pattern-wrapper">
-                <div class="gallery">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                                <img class="image" id="image" src="../../assets/1280x853-7.jpg" alt="" />
-                                <button>Download</button>
-                            </div>
-                            <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                                <img class="image" src="../../assets/1280x853-8.jpg" alt="" />
-                                <button>Download</button>
-                            </div>
-                            <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                                <img class="image" src="../../assets/1280x853-7.jpg" alt="" />
-                                <button>Download</button>
-                            </div>
-                            <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                                <img class="image" src="../../assets/1280x853-9.jpg" alt="" />
-                                <button>Download</button>
-                            </div>
 
-                            <div class="popup-image col-12-sm media main-content">
+        </div>
+        <!-- End gallery row -->
+    </div>
 
-                                <div id="gallery-bg">
-                                    <img src="../../assets/1280x853-7.jpg" id="current-image">
-                                    <span class="material-icons-outlined left" id="prev-button">
-                        chevron_left
-                    </span> </a>
-                                    <span class="material-icons-outlined right" id="next-button">
-                        chevron_right
-                    </span> </a>
-                                </div>
+    <div class="pattern-wrapper">
+        <!-- begin gallery row -->
+        <div class="container">
+            <div class="row">
+                <div class="col col-12-md main-content gallery-heading">
+                    <h2>Title of gallery</h2>
+                    <p>With links</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                            </div>
-                        </div>
+    <div class="pattern-wrapper">
+        <div class="gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
+                        <p><a href="https://www.youtube.com/watch?v=5RCsv3732v4">Video 1</a><br>12 June 2018</p>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-8.jpg" alt=""/>
+                        <p><a href="https://www.youtube.com/watch?v=5RCsv3732v4">Video 2</a><br>19 May 2018</p>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-7.jpg" alt=""/>
+                        <p><a href="https://www.youtube.com/watch?v=5RCsv3732v4">Video 3</a><br>25 March 2018</p>
+                    </div>
+                    <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
+                        <img class="image" src="../../assets/1280x853-9.jpg" alt=""/>
+                        <p><a href="https://www.youtube.com/watch?v=5RCsv3732v4">Video 4</a><br>5 January 2018</p>
                     </div>
 
+                    <dialog class="popup-image" closedby="any">
+                        <div class="gallery-bg">
+                            <img src="../../assets/1280x853-7.jpg" class="current-image">
+                            <button class="prev-button">
+                                    <span class="material-icons-outlined left">
+                                        chevron_left
+                                    </span>
+                            </button>
+                            <button class="next-button">
+                                    <span class="material-icons-outlined right next-button">
+                                        chevron_right
+                                    </span>
+                            </button>
+                        </div>
 
+                    </dialog>
                 </div>
-                <!-- End gallery row -->
             </div>
 
-            <div class="pattern-wrapper">
-                <!-- begin gallery row -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-12-md main-content gallery-heading">
-                            <h2>Title of gallery</h2>
-                            <p>description</p>
-                        </div>
-                    </div>
+
+        </div>
+        <!-- End gallery row -->
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12-lg col-12-xxs">
+                <div class="footer-text">
+                    © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
                 </div>
-
-                <div class="pattern-wrapper">
-                    <div class="gallery">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                                    <img class="image" id="image" src="../../assets/1280x853-7.jpg" alt="" />
-                                    <p><a href="https://www.youtube.com/watch?v=5RCsv3732v4">Video 1</a><br>12 June 2018</p>
-                                </div>
-                                <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                                    <img class="image" src="../../assets/1280x853-8.jpg" alt="" />
-                                    <p><a href="https://www.youtube.com/watch?v=5RCsv3732v4">Video 2</a><br>19 May 2018</p>
-                                </div>
-                                <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                                    <img class="image" src="../../assets/1280x853-7.jpg" alt="" />
-                                    <p><a href="https://www.youtube.com/watch?v=5RCsv3732v4">Video 3</a><br>25 March 2018</p>
-                                </div>
-                                <div class="col col-3-md col-12-sm media main-content gallery-image-sm">
-                                    <img class="image" src="../../assets/1280x853-9.jpg" alt="" />
-                                    <p><a href="https://www.youtube.com/watch?v=5RCsv3732v4">Video 4</a><br>5 January 2018</p>
-                                </div>
-
-                                <div class="popup-image col-12-sm media main-content">
-
-                                    <div id="gallery-bg">
-                                        <img src="../../assets/1280x853-7.jpg" id="current-image">
-                                        <span class="material-icons-outlined left" id="prev-button">
-                                chevron_left
-                            </span> </a>
-                                        <span class="material-icons-outlined right" id="next-button">
-                                chevron_right
-                            </span> </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <!-- End gallery row -->
+                <div class="footer-links">
+                    <a href="/cookie-preferences">Cookie preferences</a>
+                    <a href="/accessibility-statement">Accessibility statement</a>
+                    <a href="/terms-and-conditions">Terms and conditions</a>
+                    <a href="/website-help">Website help</a>
                 </div>
-
-                <!-- Footer -->
-                <footer>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col col-12-lg col-12-xxs">
-                                <div class="footer-text">
-                                    © 2024 The University of St Andrews is a charity registered in Scotland, No: SC013532
-                                </div>
-                                <div class="footer-links">
-                                    <a href="/cookie-preferences">Cookie preferences</a>
-                                    <a href="/accessibility-statement">Accessibility statement</a>
-                                    <a href="/terms-and-conditions">Terms and conditions</a>
-                                    <a href="/website-help">Website help</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                </body>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
 
 </html>
