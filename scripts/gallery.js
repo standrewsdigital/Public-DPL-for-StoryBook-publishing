@@ -7,47 +7,44 @@ function Gallery(gallery) {
     throw new Error('No gallery found');
   }
 
-  console.log(gallery);
-
-  const images = gallery.querySelectorAll('.gallery-image-sm img');
+  const images = Array.from(gallery.querySelectorAll('.gallery-image-sm img'));
   const galleryModal = gallery.querySelector('.popup-image')
   const prevButton = gallery.querySelector('.prev-button')
   const nextButton = gallery.querySelector('.next-button')
-  let currentIndex = 0
+  const galleryLength = images.length;
+  let currentIndex;
 
   images.forEach(image => {
     image.onclick = () => {
-      const popupImage = document.querySelector('.popup-image img');
-
-      document.querySelector('.gallery-image-sm img').classList.add('active')
+      updateImage(image);
       galleryModal.showModal();
-      // document.querySelector('.popup-image').style.display = 'block'
-      popupImage.src = image.getAttribute('src')
-      popupImage.alt = image.getAttribute('alt');
     }
   })
 
   prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1 + images.length) % images.length
-    updateImage()
+    showPreviousImage()
   })
 
   nextButton.addEventListener('click', function () {
-    currentIndex = (currentIndex + 1) % images.length
-    console.log(currentIndex)
-    updateImage()
+    showNextImage()
   })
 
-  function updateImage () {
-    const img = gallery.querySelector('.current-image')
-    img.classList.add('fade-out')
-    img.classList.add('active')
-    if (img.classList.contains('active')) {
-      setTimeout(() => {
-        img.src = images[currentIndex].src
-        img.alt = images[currentIndex].alt
-        img.classList.remove('fade-out')
-      }, 50)
+  function showPreviousImage() {
+    updateImage(currentIndex - 1 >= 0 ? images[currentIndex - 1] : images[galleryLength - 1])
+  }
+
+  function showNextImage() {
+    updateImage(currentIndex + 1 <= galleryLength - 1 ? images[currentIndex + 1] : images[0])
+  }
+
+  function updateImage(imageElement) {
+    if (!imageElement) {
+      console.info("No image to show");
+      return;
     }
+
+    galleryModal.querySelector('img').src = imageElement.src;
+    galleryModal.querySelector('img').alt = imageElement.alt;
+    currentIndex = images.findIndex((element) => element === imageElement);
   }
 }
