@@ -1,45 +1,50 @@
-document.querySelectorAll('.gallery-image-sm img').forEach(image => {
-  image.onclick = () => {
-    document.querySelector('.gallery-image-sm img').classList.add('active')
-    document.querySelector('.popup-image').style.display = 'block'
-    document.querySelector('.popup-image img').src = image.getAttribute('src')
+document.querySelectorAll('.gallery').forEach((gallery) => {
+  Gallery(gallery);
+})
+
+function Gallery(gallery) {
+  if (!gallery) {
+    throw new Error('No gallery found');
   }
-})
 
-document.querySelector('.popup-image').onclick = (event) => {
-  if (event.target === document.querySelector('.popup-image')) {
-    document.querySelector('.popup-image').style.display = 'none'
-  }
-}
+  console.log(gallery);
 
-const galleryLength = document.querySelectorAll('.col-4-md')
-const images = document.querySelectorAll('.gallery-image-sm img')
-const gallery = document.querySelector('#gallery-bg')
-const prevButton = document.getElementById('prev-button')
-const nextButton = document.getElementById('next-button')
+  const images = gallery.querySelectorAll('.gallery-image-sm img');
+  const galleryModal = gallery.querySelector('.popup-image')
+  const prevButton = gallery.querySelector('.prev-button')
+  const nextButton = gallery.querySelector('.next-button')
+  let currentIndex = 0
 
-let currentIndex = 0
-console.log(currentIndex)
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1 + images.length) % images.length
-  updateImage()
-})
+  images.forEach(image => {
+    image.onclick = () => {
+      document.querySelector('.gallery-image-sm img').classList.add('active')
+      // galleryModal.showModal();
+      document.querySelector('.popup-image').style.display = 'block'
+      document.querySelector('.popup-image img').src = image.getAttribute('src')
+    }
+  })
 
-nextButton.addEventListener('click', function () {
-  currentIndex = (currentIndex + 1) % images.length
-  console.log(currentIndex)
-  updateImage()
-})
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1 + images.length) % images.length
+    updateImage()
+  })
 
-function updateImage () {
-  const img = gallery.querySelector('#current-image')
-  img.classList.add('fade-out')
-  img.classList.add('active')
-  if (img.classList.contains('active')) {
-    setTimeout(() => {
-      img.src = images[currentIndex].src
-      img.alt = images[currentIndex].alt
-      img.classList.remove('fade-out')
-    }, 50)
+  nextButton.addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % images.length
+    console.log(currentIndex)
+    updateImage()
+  })
+
+  function updateImage () {
+    const img = gallery.querySelector('.current-image')
+    img.classList.add('fade-out')
+    img.classList.add('active')
+    if (img.classList.contains('active')) {
+      setTimeout(() => {
+        img.src = images[currentIndex].src
+        img.alt = images[currentIndex].alt
+        img.classList.remove('fade-out')
+      }, 50)
+    }
   }
 }
