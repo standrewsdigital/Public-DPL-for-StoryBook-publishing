@@ -17,10 +17,13 @@ function Gallery(gallery) {
 
   images.forEach(image => {
     image.onclick = () => {
+      const popupImage = document.querySelector('.popup-image img');
+
       document.querySelector('.gallery-image-sm img').classList.add('active')
-      // galleryModal.showModal();
-      document.querySelector('.popup-image').style.display = 'block'
-      document.querySelector('.popup-image img').src = image.getAttribute('src')
+      galleryModal.showModal();
+      // document.querySelector('.popup-image').style.display = 'block'
+      popupImage.src = image.getAttribute('src')
+      popupImage.alt = image.getAttribute('alt');
     }
   })
 
