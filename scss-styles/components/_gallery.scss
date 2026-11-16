@@ -6,6 +6,9 @@
             cursor: pointer; // Change cursor to hand on hover
         }
     }
+    figure {
+        margin: 0;
+    }
 }
 
 .popup-image {
@@ -58,12 +61,18 @@
         }
     }
 
+    figure {
+        figcaption {
+            margin: 0.5rem;
+        }
+    }
+
     img {
         display: block;
         width: auto;
         height: auto;
         max-width: calc(100vw - 3rem - 10px); // viewport minus margin and 5px borders
-        max-height: calc(100vh - 3rem - 10px);
+        max-height: calc(100vh - 3rem - 50px);
         object-fit: contain;
     }
 }
