@@ -33,28 +33,28 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 3%;
-    }
 
-    button {
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 1rem;
-        border: 2px solid colors.$white;
-        border-radius: 50%;
-        cursor: pointer;
+        button {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem;
+            border: 2px solid colors.$white;
+            border-radius: 50%;
+            cursor: pointer;
 
-        &:hover {
-            background-color: colors.$blue-primary;
-        }
+            &:hover {
+                background-color: colors.$blue-primary;
+            }
 
-        &:focus {
-            outline: 3px solid colors.$orange-primary;
-            background-color: colors.$blue-25-shade;
-        }
+            &:focus {
+                outline: 3px solid colors.$orange-primary;
+                background-color: colors.$blue-25-shade;
+            }
 
-        .material-icons-outlined {
-            font-size: 3rem;
-            font-weight: bolder;
+            .material-icons-outlined {
+                font-size: 2rem;
+                font-weight: bolder;
+            }
         }
     }
 
@@ -66,5 +66,4 @@
         max-height: calc(100vh - 3rem - 10px);
         object-fit: contain;
     }
-
 }
