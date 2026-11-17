@@ -12,6 +12,7 @@ function Gallery(gallery) {
   const prevButton = gallery.querySelector('.prev-button')
   const nextButton = gallery.querySelector('.next-button')
   const galleryLength = images.length;
+  const closeButton = gallery.querySelector('.close-dialog');
   let currentIndex;
 
   images.forEach(image => {
@@ -28,6 +29,10 @@ function Gallery(gallery) {
   nextButton.addEventListener('click', function () {
     showNextImage()
   })
+
+  closeButton.addEventListener('click', function () {
+    galleryModal.close();
+  });
 
   function showPreviousImage() {
     updateImage(currentIndex - 1 >= 0 ? images[currentIndex - 1] : images[galleryLength - 1])

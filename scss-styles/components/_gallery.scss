@@ -40,6 +40,14 @@
         max-height: calc(100vh - 3rem);
     }
 
+    .close-dialog {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1;
+        border-radius: 10px;
+    }
+
     .buttons {
         position: absolute;
         inset: 0;
