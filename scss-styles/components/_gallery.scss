@@ -8,6 +8,17 @@
     }
     figure {
         margin: 0;
+
+        // If videos aren't big enough to be full width on smaller screens
+        &:has(video) {
+            display: flex;
+            justify-content: center;
+        }
+
+        video {
+            max-width: 100%;
+
+        }
     }
 }
 
