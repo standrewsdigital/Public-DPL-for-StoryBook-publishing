@@ -73,33 +73,33 @@ export const Success = {
     option: 'success',
     headingLevel: 'h2',
     headingContent: 'Thank you!',
-    content: `<p>Thank you for submitting your details. If you have any questions please email <a href="mailto:#">example@st-andrews.ac.uk</a>.</p>`,
-  },
-};
+    content: `<p>Thank you for submitting your details. If you have any questions please email <a href="mailto:#">example@st-andrews.ac.uk</a>.</p>`
+  }
+}
 
 export const Info = {
   args: {
     option: 'info',
     headingLevel: 'h2',
     headingContent: 'Did you know?',
-    content: `<p>University of St Andrews was founded over 600 years ago. Find out more about the <a href="#">history of St Andrews</a>.</p>`,
-  },
-};
+    content: `<p>University of St Andrews was founded over 600 years ago. Find out more about the <a href='#'>history of St Andrews</a>.</p>`
+  }
+}
 
 export const Warning = {
   args: {
     option: 'warning',
     headingLevel: 'h2',
     headingContent: 'Warning!',
-    content: `<p>The deadline for submissions is the end of Semester 2. If you need help, please email <a href="mailto:#">example@st-andrews.ac.uk</a>.</p>`,
-  },
-};
+    content: `<p>The deadline for submissions is the end of Semester 2. If you need help, please email <a href='mailto:#'>example@st-andrews.ac.uk</a>.</p>`
+  }
+}
 
 export const Danger = {
   args: {
     option: 'danger',
     headingLevel: 'h2',
     headingContent: 'Submissions have ended',
-    content: `<p>The deadline for submissions has passed. If you need help please email <a href="mailto:#">example@st-andrews.ac.uk</a>.</p>`,
-  },
-};
+    content: `<p>The deadline for submissions has passed. If you need help please email <a href='mailto:#'>example@st-andrews.ac.uk</a>.</p>`
+  }
+}

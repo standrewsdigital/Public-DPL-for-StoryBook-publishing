@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../global-partials/variables";
+
 .bubble {
     border: 1px solid #d8d8d8;
     border-radius: 10px;
@@ -70,7 +73,7 @@
     }
 }
 
-@media screen and (max-width: map-get($breakpoints, 'lg')) {
+@media screen and (max-width: map.get(variables.$breakpoints, 'lg')) {
     .bubble {
         &:has(>.bubble-inline) {
             grid-template-columns: 1fr 1fr;
@@ -94,11 +97,11 @@
     }
 }
 
-@media screen and (max-width: map-get($breakpoints, 'md')) {
+@media screen and (max-width: map.get(variables.$breakpoints, 'md')) {
 
 }
 
-@media screen and (max-width: map-get($breakpoints, 'sm')) {
+@media screen and (max-width: map.get(variables.$breakpoints, 'sm')) {
     .bubble {
         &:has(>.bubble-inline) {
             grid-template-columns: 1fr;

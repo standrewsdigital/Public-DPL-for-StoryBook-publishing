@@ -1,6 +1,7 @@
 // Import only what's needed
-@import "./variables/breakpoints";
-@import "./variables/main-colors";
+@use "sass:meta";
+@use "variables/breakpoints";
+@use "variables/main-colors";
 
 // Import only responsive-font-size mixin
 @mixin responsive-font-size($size, $vw-adjustment, $min-vw, $max-vw) {
@@ -13,4 +14,4 @@
 	}
 }
 
-@import "./components/_featured-news";
+@include meta.load-css("components/_featured-news");

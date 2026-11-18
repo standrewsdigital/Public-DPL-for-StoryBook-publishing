@@ -1,6 +1,7 @@
 // Import only what's needed
-@import "./variables/breakpoints";
-@import "./variables/main-colors";
+@use "sass:meta";
+@use "variables/breakpoints";
+@use "variables/main-colors";
 
 // Import font family variable
 $page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
@@ -16,4 +17,4 @@ $page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 	}
 }
 
-@import "./components/_accordion";
+@include meta.load-css("components/_accordion");
