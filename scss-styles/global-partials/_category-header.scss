@@ -4,7 +4,7 @@
 
 
 // Local variable needed
-$page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+$page-font-family: 'Noto Serif', Helvetica, Arial, sans-serif;
 
 $category-header-background: variables.$light-blue-primary;
 $category-header-color: variables.$white;
@@ -24,6 +24,7 @@ $category-font-family: $page-font-family;
       // Hover effect
       &:hover {
         text-decoration: underline; // Underline on hover
+        color: inherit;
       }
 
       &:active, &.selected {
