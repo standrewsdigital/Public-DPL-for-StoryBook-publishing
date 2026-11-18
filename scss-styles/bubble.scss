@@ -1,4 +1,4 @@
-@import "./variables/main-colors";
-@import "./variables/breakpoints";
-@import "./global-partials/_bg-colors";
-@import "./components/_bubble";
+@use "variables/main-colors";
+@use "variables/breakpoints";
+@use "global-partials/_bg-colors";
+@use "components/_bubble";
