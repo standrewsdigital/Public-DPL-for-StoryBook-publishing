@@ -1,3 +1,5 @@
+@use "../global-partials/variables";
+
 // Tabs
 .tabs {
   margin-block: 1rem;
@@ -6,7 +8,7 @@
     display: flex;
     gap: 1rem;
     align-items: flex-end;
-    border-bottom: 1px solid $mid-grey-2;
+    border-bottom: 1px solid variables.$mid-grey-2;
     padding-bottom: 0.25rem;
   }
 
@@ -18,7 +20,7 @@
     padding: 0.4rem 0.25rem;
     margin: 0;
     font: inherit;
-    color: $light-blue-25-shade;
+    color: variables.$light-blue-25-shade;
     cursor: pointer;
     position: relative;
     text-decoration: none;
@@ -41,7 +43,7 @@
 
     /* accessible focus */
     &:focus-visible {
-      outline: 2px solid $orange-primary;
+      outline: 2px solid variables.$orange-primary;
       outline-offset: 2px;
       text-decoration: none;
     }
@@ -49,20 +51,20 @@
     /* active tab look */
     &[aria-selected="true"] {
       font-weight: 700;
-      color: $dark-grey-2;
+      color: variables.$dark-grey-2;
       text-decoration: none;
 
       &::after {
-        background: $orange-primary;
+        background: variables.$orange-primary;
       }
     }
   }
 
   .tabs-panel {
     padding: 1rem;
-    border: 1px solid $mid-grey-2;
+    border: 1px solid variables.$mid-grey-2;
     border-top: 0;
-    background: $white;
+    background: variables.$white;
     line-height: 1.55;
 
     p { margin: 0 0 .75rem; }

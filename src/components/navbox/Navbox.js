@@ -1,0 +1,90 @@
+import '../../../scss-styles/navbox.scss';
+
+export const createNavbox = ({
+  image,
+  altText,
+  url,
+  title,
+  content,
+  size,
+  isRounded,
+  backgroundColour
+}) => {
+  let columnClass = '';
+  switch (size) {
+    case 'Large':
+      columnClass = 'col-6-md';
+      break;
+    case 'Regular':
+      columnClass = 'col-4-md';
+      break;
+    default:
+      break;
+  }
+
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('col', 'col-12-xs');
+  if (columnClass !== "") wrapper.classList.add(columnClass);
+
+  const navbox = document.createElement('a');
+  navbox.classList.add('navbox', 'bg-white', 'drop-shadow');
+  navbox.setAttribute('href', url);
+  if (isRounded) navbox.classList.add('radius-md');
+
+  if (image && image !== "") {
+    navbox.classList.add('navbox--has-image');
+    const navboxImageWrapper = document.createElement('div');
+    navboxImageWrapper.classList.add('navbox-image');
+
+    const navboxImage = document.createElement('img');
+    navboxImage.src = image;
+    navboxImage.alt = altText;
+
+    navboxImageWrapper.appendChild(navboxImage);
+    navbox.appendChild(navboxImageWrapper);
+  }
+
+  const navboxTitle = document.createElement('div');
+  navboxTitle.classList.add('navbox-title', 'text-white');
+
+  switch (backgroundColour){
+    case 'Green':
+      navbox.classList.add('hover-green')
+      navboxTitle.classList.add('bg-green-primary');
+      break;
+    case 'Burgundy':
+      navbox.classList.add('hover-burgundy')
+      navboxTitle.classList.add('bg-burgundy-primary');
+      break;
+    case 'Blue':
+    default:
+      navbox.classList.add('hover-primary');
+      navboxTitle.classList.add('bg-blue-primary');
+      break;
+  }
+
+  const titleText = document.createElement('span');
+  titleText.classList.add('navbox-title-text');
+  titleText.innerText = title;
+  navboxTitle.appendChild(titleText);
+
+  const titleIcon = document.createElement('span');
+  titleIcon.classList.add('material-icons-outlined', 'navbox-chevron');
+  titleIcon.setAttribute('aria-hidden', 'true');
+  titleIcon.innerText = 'chevron_right';
+  navboxTitle.appendChild(titleIcon);
+
+  navbox.appendChild(navboxTitle);
+  wrapper.appendChild(navbox);
+
+  if (content) {
+    const navboxContent = document.createElement('div');
+    navboxContent.classList.add('navbox-content');
+    navboxContent.innerHTML = content;
+    wrapper.appendChild(navboxContent);
+  }
+
+  // row.appendChild(wrapper);
+
+  return wrapper;
+};

@@ -1,1 +1,4 @@
-@import 'components/search-bar'
+@use "variables/main-colors";
+@use "components/form-elements";
+@use "components/horizontal-list";
+@use 'components/search-bar';

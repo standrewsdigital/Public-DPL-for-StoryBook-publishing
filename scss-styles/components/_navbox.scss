@@ -6,16 +6,15 @@
 
   text-decoration: none; // remove underline
   color: inherit; // don't force link blue
-
-  // Optional: if you want it to feel clickable
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
 
   &:hover {
     text-decoration: none;
   }
 
   &:focus-visible {
-    outline: 3px solid currentColor; // or your token if you have one
+    outline: 3px solid currentColor;
     outline-offset: 3px;
   }
 
@@ -49,9 +48,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 0.75rem;
-    .material-icons-outlined{
+
+    .material-icons-outlined {
       font-size: 2rem;
-	    font-weight: 1000;
+      font-weight: 1000;
     }
   }
 
@@ -67,11 +67,13 @@
 
   // BODY CONTENT
   &-content {
-    padding: 0rem;
+    padding: 0;
     margin-bottom: 1rem;
     color: #333;
 
-    p { margin: 0; }
+    p {
+      margin: 0;
+    }
   }
 
   // Only pull the title up when there is an image

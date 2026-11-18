@@ -88,21 +88,17 @@ By following these steps, you should have a working setup of the `sta-dpl-npm` p
 ```
 sta-dpl-npm/
 ├── scss-styles/          # Source SCSS files (edit these)
-│   ├── main.scss         # Central import orchestrator
-│   ├── _variables.scss   # Global variables and color definitions
-│   ├── _themes.scss      # Theme management (light/dark mode)
-│   ├── _global.scss      # Base typography and responsive font sizing
-│   ├── _mixins.scss      # Reusable utility mixins
-│   ├── _bg-colors.scss   # Background color utility classes
-│   ├── _text-colors.scss # Text color utility classes
-│   └── variables/        # Variable definitions (colors, breakpoints, etc.)
-│       ├── _main-colors.scss      # Primary color palette with tints/shades
-│       ├── _light-theme.scss      # Light mode theme variables
-│       ├── _dark-theme.scss       # Dark theme variables
-│       └── _breakpoints.scss      # Responsive breakpoints
+│   ├── main.scss         # Main stylesheet entry point for global styles and patterns
+│   ├── all-css.scss      # Aggregate entry point for global styles and components
+│   ├── components/       # Component Sass partials, e.g. _navbox.scss
+│   ├── global-partials/  # Shared utilities, layout styles, themes, and mixins
+│   ├── variables/        # Color, theme, breakpoint, and icon definitions
+│   └── *.scss            # Standalone entry points, e.g. navbox.scss
 │
 ├── compiled-css/         # Generated CSS output (don't edit directly)
-│   └── main.css          # Main compiled CSS bundle (~105KB minified)
+│   ├── main.css
+│   ├── all-css.css
+│   └── *.css             # CSS generated from top-level Sass entry points
 │
 ├── html-examples/        # Component demonstration files
 │   ├── form-elements.html
@@ -121,17 +117,15 @@ sta-dpl-npm/
 └── scripts/              # JavaScript utilities (form-elements.js, etc.)
 ```
 
-### Import Order
+### Sass Entry Points and Dependencies
 
-In `main.scss`, imports follow strict dependency order:
-1. Themes and variables (foundation)
-2. Typography and mixins
-3. Global styles
-4. Layout patterns (grid, header, footer)
-5. UI components
-6. Utility classes (margins, padding, alignment, colors)
+The Sass CLI compiles top-level `.scss` files in `scss-styles/` into matching files in `compiled-css/`. Underscore-prefixed files in `components/`, `global-partials/`, and `variables/` are shared partials, not standalone outputs.
 
-**⚠️ Important**: Changing import order can break the build or cause unexpected styling conflicts.
+- `main.scss` assembles global styles, utilities, and selected layout patterns.
+- `all-css.scss` assembles a broader stylesheet that includes global styles and component partials.
+- Individual top-level files such as `navbox.scss` provide standalone component entry points.
+
+The entry points have different dependency lists and ordering. Follow the actual entry point being changed and preserve its dependency order. For new first-party Sass dependencies, use namespaced `@use`; existing sources still contain `@import`, so migrate those only as part of a bounded change.
 
 ---
 
@@ -255,15 +249,14 @@ Apply text colors using `.text-{color}-{level}-{type}` pattern:
 
 ### Verifying Utility Classes
 
-Check if specific color classes exist in compiled CSS:
+Color utility classes are generated from maps in `scss-styles/global-partials/_bg-colors.scss` and `scss-styles/global-partials/_text-colors.scss`. Check the compiled stylesheet that includes the utility:
 
 ```bash
 # PowerShell: Search for specific color class
 Select-String "\.bg-blue-50-tint" compiled-css/main.css
-
-# PowerShell: Count all background color classes
-(Select-String "\.bg-.*-tint," compiled-css/main.css).Count
 ```
+
+Other utility maps and generators are in `global-partials/`: spacing in `_margins.scss` and `_padding.scss`, alignment in `_align.scss`, borders and radii in `_border.scss`, and responsive columns in `_grid.scss`.
 
 ---
 
@@ -396,18 +389,20 @@ Compiled output is written to `compiled-css/`.
 DPL uses CSS custom properties for theme support:
 
 ```scss
-// Define theme variables in _light-theme.scss and _dark-theme.scss
-$light-theme: (
-  'background': #ffffff,
-  'text': #333333,
-  // ... more variables
+// scss-styles/variables/_light-theme.scss
+$theme-light: (
+  page-background-color: #ffffff,
+  page-highlight-background-color: #f0f0f0da,
+  page-text-color: #000000,
+  link-color: #0071b3,
+  // ... more theme values
 );
 
-// Applied via mixin in _themes.scss
-@include apply-theme($light-theme);  // Generates --background: #ffffff, etc.
+// scss-styles/global-partials/_themes.scss
+@include apply-theme($theme-light); // Generates --page-background-color, etc.
 ```
 
-**Dark Mode**: Automatically applied via `prefers-color-scheme: dark` media query. Also supported via `.dark` class for manual control.
+The theme maps are defined in `scss-styles/variables/_light-theme.scss` and `scss-styles/variables/_dark-theme.scss`, then applied in `scss-styles/global-partials/_themes.scss`. Dark mode follows `prefers-color-scheme: dark`; the `.dark` class is also available for manual control.
 
 ### File Size Tracking
 
@@ -511,27 +506,9 @@ npm version major
    npm info @stadigicomms/dpl
    ```
 
-### CDN Deployment via FTPS
+### CDN Deployment
 
-Publish compiled CSS to the CDN via FTPS:
-
-```bash
-node uploadToFtps.cjs
-```
-
-#### Prerequisites
-
-Create a `.env` file in the project root with FTPS credentials:
-
-```env
-FTP_HOST=your-ftp-host.com
-FTP_PORT=21
-FTP_USER=your-username
-FTP_PASSWORD=your-password
-FTP_SECURE=true
-```
-
-**⚠️ Security**: Never commit `.env` file to Git. It's already in `.gitignore`.
+Compiled CSS is deployed to the CDN via CI/CD when a tag is assigned to a commit. The tag must follow the format set out in [Version Management and npm](#version-management-and-npm) with a leading `v`, e.g. `v1.2.4`.
 
 #### Deployment Process
 
@@ -542,10 +519,7 @@ FTP_SECURE=true
 
 2. **Verify version** in `package.json` matches your intended release
 
-3. **Run upload script**:
-   ```bash
-   node uploadToFtps.cjs
-   ```
+3. Once the compiled CSS and the updated `package.json` file has been committed to the `main` branch, [create a tag](gitlab-its.st-andrews.ac.uk/digital-communications/standards/sta-dpl-npm/-/tags) from the `main` branch with the version name e.g. `v1.2.4`. Once created, the deployment will start and upload the compiled CSS to the CDN.
 
 4. **CDN path structure**: Files are uploaded to `/delta/cdn/dpl/new/{version}/`
    - Example: Version `1.4.5` → `/delta/cdn/dpl/new/1.4.5/main.css`
@@ -571,7 +545,7 @@ Update T4 page layout templates to reference the new CDN version:
 
 **Solutions**:
 - Check syntax errors in SCSS files
-- Ensure all `@import` paths are correct
+- Check Sass dependency paths (`@use` and existing `@import`)
 - Verify `sass` package is installed: `npm ls sass`
 - Clear `node_modules` and reinstall: `npm ci`
 
@@ -581,7 +555,7 @@ Update T4 page layout templates to reference the new CDN version:
 
 **Solutions**:
 1. Check if color exists in [scss-styles/variables/_main-colors.scss](scss-styles/variables/_main-colors.scss)
-2. Verify color is included in `$bg-colors` map in [scss-styles/_bg-colors.scss](scss-styles/_bg-colors.scss)
+2. Verify color is included in the `$color-map` in [scss-styles/global-partials/_bg-colors.scss](scss-styles/global-partials/_bg-colors.scss)
 3. Rebuild CSS: `npm run scss:build`
 4. Search compiled CSS: `Select-String "\.bg-blue-50-tint" compiled-css/main.css`
 
@@ -621,8 +595,8 @@ Update T4 page layout templates to reference the new CDN version:
 **Problem**: `main.css` exceeds expected size (~105-110 KB)
 
 **Solutions**:
-- Check for duplicate imports in `main.scss`
-- Remove unused components from import list
+- Check the affected Sass entry point for duplicate imports
+- Remove unused components from the relevant entry point
 - Verify compression is enabled: `--style=compressed` in build script
 - Compare size history: `Get-ChildItem compiled-css/main.css`
 
@@ -636,7 +610,9 @@ Update T4 page layout templates to reference the new CDN version:
 # Development
 npm install                    # Install dependencies
 npm run dev                    # Watch mode (SCSS → CSS)
+npm run scss:build             # Compile Sass entry points
 npm run build                  # Full build (SCSS + Vite)
+npm run build-storybook        # Build Storybook examples
 
 # Python scripts
 python assets/icons/icons-scripts/color-svgs.py      # Generate colored icons
@@ -652,6 +628,8 @@ Get-ChildItem compiled-css/main.css | Select-Object Name, Length  # Check file s
 Select-String "\.bg-blue-50-tint" compiled-css/main.css           # Find specific class
 npm info @stadigicomms/dpl                                         # Check published version
 ```
+
+There is no configured lint script. The `test` script in `package.json` is a placeholder that exits with an error; Storybook story tests are configured in `vitest.config.js`.
 
 ### Color Naming Pattern
 
@@ -670,8 +648,14 @@ Examples:
 | What | Location |
 |------|----------|
 | **Edit colors** | `scss-styles/variables/_main-colors.scss` |
-| **Background classes** | `scss-styles/_bg-colors.scss` |
-| **Text classes** | `scss-styles/_text-colors.scss` |
+| **Background classes** | `scss-styles/global-partials/_bg-colors.scss` |
+| **Text classes** | `scss-styles/global-partials/_text-colors.scss` |
+| **Spacing utilities** | `scss-styles/global-partials/_margins.scss`, `_padding.scss` |
+| **Alignment utilities** | `scss-styles/global-partials/_align.scss` |
+| **Border and radius utilities** | `scss-styles/global-partials/_border.scss` |
+| **Theme and breakpoint values** | `scss-styles/variables/` |
+| **Shared mixins** | `scss-styles/global-partials/_mixins.scss` |
+| **Component Sass** | `scss-styles/components/` |
 | **Compiled CSS** | `compiled-css/main.css` |
 | **Icon colors** | `assets/icons/icons-scripts/color-svgs.py` |
 | **HTML examples** | `html-examples/*.html` |
@@ -778,7 +762,11 @@ node uploadToFtps.cjs
 
 ### Code Style
 - Use 2-space indentation in SCSS files
-- Follow BEM naming convention for component classes
+- Use lowercase kebab-case for component class names. A component root is the component name, such as `.navbox`.
+- Name child elements by appending a hyphen and the child name, such as `.navbox-title` or `.navbox-title-text`. DPL does not use BEM and does not use `__` in class names.
+- Name component variants with a double hyphen, such as `.navbox--has-image`.
+- Name state classes with the `is-` prefix, such as `.video-transcript-panel.is-inline-expanded`. Prefer native state selectors such as `[open]` or `:focus-visible` when they express the state.
+- Preserve existing public classes and hooks when extending a component.
 - Use mixins for reusable patterns
 - Comment complex calculations or non-obvious logic
 - Keep selectors specific but not overly nested (max 3 levels)
@@ -804,13 +792,13 @@ When adding new colors to the system:
 
 2. **Add to utility classes**:
    ```scss
-   // scss-styles/_bg-colors.scss
-   'new-color-primary': $new-color-primary,
-   'new-color-5-tint': $new-color-5-tint,
+   // scss-styles/global-partials/_bg-colors.scss
+   "new-color-primary": colors.$new-color-primary,
+   "new-color-5-tint": colors.$new-color-5-tint,
    // ... all tints and shades ...
    
-   // scss-styles/_text-colors.scss  
-   // (same as above)
+   // scss-styles/global-partials/_text-colors.scss
+   // Add the corresponding entries to its $color-map as well.
    ```
 
 3. **Update icon generation** (if applicable):

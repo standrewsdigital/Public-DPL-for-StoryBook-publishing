@@ -1,55 +1,80 @@
+@use "sass:list";
+@use "sass:map";
+
+@use "../variables/breakpoints" as breakpoint-vars;
+@use "../variables/main-colors" as colours;
+
+// Apply content at and above a named breakpoint.
 @mixin respond-to($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-      @media (min-width: map-get($breakpoints, $breakpoint)) {
-        @content;
+  @if map.has-key(breakpoint-vars.$breakpoints, $breakpoint) {
+    @media (min-width: map.get(breakpoint-vars.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}.";
+  }
+}
+
+// Apply different property values at named breakpoints.
+@mixin typography($property, $values) {
+  @each $breakpoint, $value in $values {
+    @if $breakpoint == "xs" {
+      #{$property}: $value;
+    } @else if map.has-key(breakpoint-vars.$breakpoints, $breakpoint) {
+      $breakpoint-value: map.get(
+        breakpoint-vars.$breakpoints,
+        $breakpoint
+      );
+
+      @media (min-width: $breakpoint-value) {
+        #{$property}: $value;
       }
     } @else {
       @warn "Unknown breakpoint: #{$breakpoint}.";
     }
   }
-//Typography
-// Mixin for applying styles based on breakpoints
-@mixin typography($property, $values) {
-    @each $breakpoint, $value in $values {
-      @if $breakpoint == 'xs' {
-        #{$property}: $value;
-      } @else {
-        $breakpoint-value: map-get($breakpoints, $breakpoint);
-        @media (min-width: $breakpoint-value) {
-          #{$property}: $value;
-        }
-      }
-    }
+}
+
+// Scale font size between two viewport widths.
+@mixin responsive-font-size(
+  $size,
+  $vw-adjustment,
+  $min-vw,
+  $max-vw
+) {
+  font-size: $size;
+
+  @media (min-width: $min-vw) and (max-width: $max-vw) {
+    font-size: calc(
+      #{$size} +
+      #{$vw-adjustment} *
+      (100vw - #{$min-vw}) /
+      (#{$max-vw} - #{$min-vw})
+    );
   }
 
-  // Mixin for responsive typography based on viewport width
-  @mixin responsive-font-size($size, $vw-adjustment, $min-vw, $max-vw) {
-    font-size: $size;
-
-    @media (min-width: $min-vw) and (max-width: $max-vw) {
-      font-size: calc(#{$size} + #{$vw-adjustment} * (100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}));
-    }
-
-    @media (min-width: $max-vw) {
-      font-size: calc(#{$size} + #{$vw-adjustment});
-    }
+  @media (min-width: $max-vw) {
+    font-size: calc(#{$size} + #{$vw-adjustment});
   }
+}
 
-// Mixin for icon CSS
-@mixin icon($content, $altText, $colour: $dark-grey-2) {
-  content: $content / $altText;
-  font-family: 'Material Symbols Outlined';
-  font-feature-settings: 'liga';
-  -webkit-font-feature-settings: 'liga';
-  -moz-font-feature-settings: 'liga';
+// Add a Material Symbols icon with alternative text.
+@mixin icon($content, $alt-text, $colour: colours.$dark-grey-2) {
+  content: list.slash($content, $alt-text);
+  font-family: "Material Symbols Outlined";
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
   color: $colour;
 }
 
+// Apply content at and above a named breakpoint.
 @mixin mq-up($key) {
-  @if map-has-key($breakpoints, $key) {
-    @media (min-width: map-get($breakpoints, $key)) {
+  @if map.has-key(breakpoint-vars.$breakpoints, $key) {
+    @media (min-width: map.get(breakpoint-vars.$breakpoints, $key)) {
       @content;
     }
+  } @else {
+    @warn "Unknown breakpoint: #{$key}.";
   }
 }
-
