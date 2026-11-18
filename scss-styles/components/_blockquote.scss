@@ -1,24 +1,24 @@
+@use "../global-partials/mixins" as mixins;
+@use "../variables/main-colors" as colors;
+
 $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 
 .container {
 	font-family: $article-font-family;
-	//font-size: 0.9em;
-
 
 	blockquote {
 		border: 0;
-		border-left: 5px solid #dedede;
 		font-size: inherit;
+	}
+
+	blockquote,
+	.blockquote {
+		border-left: 5px solid colors.$mid-grey-2;
 		margin: 0 0 1.5625rem 0;
 		padding: 1em 1.2em;
 	}
 
-
 	.blockquote {
-		border-left: 5px solid #dedede;
-		margin: 0 0 1.5625rem 0;
-		padding: 1em 1.2em;
-
 		&::after {
 			clear: both;
 			content: "";
@@ -61,13 +61,9 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 		.pull {
 			background: none;
 			border-left: 0;
-			font-size: 1.2em;
 			margin: 0 auto;
-			// max-width: 70ch; //Removed max-width so the quote doesn't go off the screen on smaller devices
 			padding-left: 10%;
-			// padding: 0;
-
-
+			@include mixins.responsive-font-size(1.2em, 0.05em, 36em, 75em);
 		}
 
 		@media (min-width: 576px) {
@@ -81,34 +77,9 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 			}
 		}
 
-		@media (min-width: 36em) and (max-width: 75em) {
-			.pull {
-				font-size: calc(1.2em + .05 * ((100vw - 36em) / 39));
-			}
-		}
-
-		@media (min-width: 75em) {
-			.pull {
-				font-size: 1.25em;
-			}
-		}
-
-
 		.font-scale-2 {
-			font-size: 1.44em !important;
-			line-height: inherit !important
-		}
-
-		@media (min-width: 36em) and (max-width: 75em) {
-			.font-scale-2 {
-				font-size: calc(1.44em + .1225 * ((100vw - 36em) / 39)) !important
-			}
-		}
-
-		@media (min-width: 75em) {
-			.font-scale-2 {
-				font-size: 1.5625em !important
-			}
+			line-height: inherit;
+			@include mixins.responsive-font-size(1.44em, 0.1225em, 36em, 75em);
 		}
 
 	}
@@ -116,7 +87,6 @@ $article-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 	.blockquote.pull {
 		border-left: none;
 		margin: 0 0 0 10%;
-		// width: 70ch;
 
 		blockquote p {
 			font-size: 1.25em;
