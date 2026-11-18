@@ -1,4 +1,6 @@
+@use "category-header";
+
 
 .main-content {
-    font-family: $page-font-family;
+    font-family: category-header.$page-font-family;
 }

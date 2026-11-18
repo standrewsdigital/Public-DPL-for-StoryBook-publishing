@@ -1,0 +1,50 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/addon-docs/blocks';
+import { extractComponentSource } from '../../../.storybook/source-transforms';
+
+import * as AlertStories from './Alert.stories';
+
+export const componentOnlySource = extractComponentSource('.alert');
+
+<Meta of={AlertStories} />
+
+# Alert
+
+Alerts display important information that requires the user’s attention.
+
+## Success alert
+
+Use a success alert to confirm that an action has been completed successfully.
+
+<Canvas of={AlertStories.Success} sourceState="none" />
+
+<details className="docs-code-options">
+  <summary>
+    <h3>View code options</h3>
+  </summary>
+
+  <div className="docs-code-options-content">
+    <h4>Alert HTML</h4>
+
+    <p>
+      Use this when the surrounding page already contains the required layout
+      structure.
+    </p>
+
+    <Source
+      of={AlertStories.Success}
+      language="html"
+      transform={componentOnlySource}
+    />
+
+    <h4>Alert with DPL grid</h4>
+
+    <p>
+      Use this complete example when the container and grid structure are also
+      required.
+    </p>
+
+    <Source of={AlertStories.Success} language="html" />
+  </div>
+</details>
+
+<Controls of={AlertStories.Success} />

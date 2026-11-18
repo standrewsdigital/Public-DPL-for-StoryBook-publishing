@@ -1,4 +1,4 @@
-@use '../variables/main-colors' as colors;
+@use "../variables/main-colors" as colors;
 
 /* ---------- RADIUS + BORDER UTILITIES ---------- */
 
@@ -10,7 +10,6 @@ $radius-map: (
   "xl": min(14px, 4vw)
 );
 
-/* Define a border color map*/
 $border-color-map: (
   "light": colors.$light-grey-2,
   "mid": colors.$mid-grey-2,
@@ -19,7 +18,7 @@ $border-color-map: (
   "orange": colors.$orange-primary
 );
 
-/* Generate .radius-[name] utility classes */
+/* Generate radius utility classes. */
 @each $name, $radius in $radius-map {
   .radius-#{$name} {
     border-radius: $radius;
@@ -36,17 +35,17 @@ $border-color-map: (
   }
 }
 
-/* Generate .border-[color-name] classes */
+/* Generate border colour utility classes. */
 @each $name, $color in $border-color-map {
   .border-#{$name} {
-    @extend.border-light;
     border: 1px solid $color;
   }
 }
 
-/* Rounded-border utility */
+/* Rounded-border utility. */
 .rounded-border {
-  @extend.border-light;
+  @extend .border-light;
+
   border-radius: 980px;
   -webkit-border-radius: 980px;
   -moz-border-radius: 980px;

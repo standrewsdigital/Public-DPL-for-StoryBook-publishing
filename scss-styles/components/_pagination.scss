@@ -1,3 +1,6 @@
+@use "../global-partials/category-header";
+@use "../global-partials/variables";
+
 .pagination {
   display: flex;
   list-style: none;
@@ -7,16 +10,16 @@
     display: block;
     padding: 8px 16px;
     margin-bottom: 20px;
-    border: 1px solid $dark-grey-1;
+    border: 1px solid variables.$dark-grey-1;
     background-color: white;
-    color: $blue-primary;
+    color: variables.$blue-primary;
     text-decoration: none;
     font-weight: bold;
-    font-family: $page-font-family;
+    font-family: category-header.$page-font-family;
     transition: background-color 0.3s, color 0.3s;
 
     &:hover {
-      background-color: $blue-primary;
+      background-color: variables.$blue-primary;
       color: white;
     }
   }

@@ -1,6 +1,9 @@
-$website-footer-background: $dark-grey-1;
-$website-footer-text-color: $light-grey-1;
-$website-footer-link-color: $light-grey-1;
+@use "mixins";
+@use "variables";
+
+$website-footer-background: variables.$dark-grey-1;
+$website-footer-text-color: variables.$light-grey-1;
+$website-footer-link-color: variables.$light-grey-1;
 
 // Set the body and html to 100% height
 html, body {
@@ -36,6 +39,6 @@ html, body {
 }
 
 // Responsive typography
-@include respond-to(sm) {
+@include mixins.respond-to(sm) {
   //  font-size: 16px;
 }
