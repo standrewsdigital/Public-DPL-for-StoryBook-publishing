@@ -1,0 +1,65 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/addon-docs/blocks'
+
+import * as FeaturedPeopleStories from './FeaturedPeople.stories';
+
+<Meta of={FeaturedPeopleStories} />
+
+# Featured people
+
+The featured people pattern allows University academics, staff, and students to be prominently included on a webpage. This is used to link to work or research profiles of notable people affiliated with the University of St Andrews.
+
+## Rules for the featured people
+- This pattern should only appear once on a web page.
+- The background colour must be white or light grey, using the class `bg-light-grey-1`.
+- The heading for the section is optional.
+- Section title must not exceed 50 characters.
+- Featured images must be 180 by 180 pixels.
+- Featured images must be a high-quality portraiture headshot of the named person.
+- It is recommended that featured people's names must not exceed 50 characters in length.
+- It is recommended that featured people's title must not exceed 70 characters in length.
+- Description character count must not exceed 300 characters.
+- Descriptions can be indented by adding the `indented-description` class to the `<section>` tag.
+  - This class must only be used when a person has a description.
+  - If used then all persons in the current block must also have indented descriptions.
+  - Must not be used when more than two Featured People are on a single row.
+
+
+<Canvas of={FeaturedPeopleStories.FeaturedPerson} />
+<Controls of={FeaturedPeopleStories.FeaturedPerson} />
+
+## Featured person
+
+<Canvas of={FeaturedPeopleStories.FeaturedPerson} />
+
+### With indented description
+
+<Canvas of={FeaturedPeopleStories.FeaturedPersonIndented} />
+
+## Two profiles
+
+<Canvas of={FeaturedPeopleStories.GridTwo} />
+<Controls of={FeaturedPeopleStories.GridTwo} />
+
+### With indented description
+
+<Canvas of={FeaturedPeopleStories.GridTwoIndented} />
+
+### With no description
+
+<Canvas of={FeaturedPeopleStories.GridTwoNoText} />
+
+## Three profiles
+
+<Canvas of={FeaturedPeopleStories.GridThree} />
+<Controls of={FeaturedPeopleStories.GridThree} />
+
+### With no description
+
+<Canvas of={FeaturedPeopleStories.GridThreeNoText} />
+
+## Grid of profiles
+
+<Canvas of={FeaturedPeopleStories.GridFour} />
+
+<Canvas of={FeaturedPeopleStories.GridSix} />
+<Controls of={FeaturedPeopleStories.GridSix} />
