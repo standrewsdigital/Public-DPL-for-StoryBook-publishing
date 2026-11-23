@@ -54,7 +54,8 @@
         color: colors.$blue-primary;
         border: 1px solid colors.$blue-25-shade;
         border-bottom: 3px solid #0071b3;
-        padding-bottom: 6px;
+        padding-bottom: calc(0.5em - 3px);
+        padding-top: calc(0.5em - 1px);
       }
     }
 
@@ -63,8 +64,15 @@
       background-color: list.nth($shade, 2);
 
       @if $color == "white" {
+        color: colors.$blue-primary;
         text-decoration: underline;
       }
+    }
+
+    &.#{$color}:active {
+      color: #000;
+      background-color: var(--link-focus-background);
+      border-color: colors.$orange-primary;
     }
   }
 
@@ -80,14 +88,12 @@
 
   // Action buttons.
   &.action {
-    top: 0.1rem;
     font-weight: bold;
-    color: white;
+    //color: white;
     position: relative;
     text-align: left;
-    padding-top: 0.3rem;
-    padding-left: 1rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: calc(0.5em - 2px);
+    border-bottom: 3px solid colors.$blue-25-shade;
 
     // Colour options for the action button’s bottom border.
     @each $color, $shade in (
@@ -100,14 +106,16 @@
       "white": colors.$blue-25-shade
     ) {
       &.#{$color} {
+        border: 1px solid $shade;
         border-bottom: 3px solid $shade;
 
         @if $color == "white" {
-          background-color: #fff;
-          color: colors.$blue-primary;
-          border: 1px solid colors.$blue-25-shade;
-          border-bottom: 3px solid #0071b3;
-          padding-bottom: 6px;
+          //background-color: #fff;
+          //color: colors.$blue-primary;
+          border: 1px solid $shade;
+          border-bottom: 3px solid $shade;
+          padding-top: 0.5em;
+          padding-bottom: calc(0.5em - 2px);
         }
       }
     }
@@ -127,215 +135,37 @@
       font-size: 1.4rem;
       line-height: 1;
       display: inline-block;
-      margin-left: 0.35rem;
-      vertical-align: middle;
+      margin-left: 0.5rem;
+      margin-right: -0.5rem;
+      vertical-align: center;
       color: #fff;
+    }
+
+    &.lg {
+      &::after {
+        font-size: 1.7rem;
+      }
     }
 
     &.white::after {
       color: colors.$blue-primary;
     }
-  }
-}
 
-// Generate icon button classes.
-@mixin generate-icon-classes($base-class, $icons) {
-  @each $icon in $icons {
-    .btn.#{$base-class}-#{$icon} {
-      padding: 0.5rem !important;
-    }
+    &:active {
+      border-color: var(--link-focus-background);
+      text-decoration: none;
 
-    .#{$base-class}-#{$icon}::before {
-      color: inherit;
-      float: right;
-      font-size: 1.3rem;
-      padding: 0;
-      padding-left: 8px;
-      padding-top: 5px;
-      line-height: 1rem;
-      content: icons.get-icon-content($icon);
-      font-family: "Material Symbols Outlined";
-      font-feature-settings: "liga";
-      -webkit-font-feature-settings: "liga";
-      -moz-font-feature-settings: "liga";
-      font-variation-settings:
-        "FILL" 0,
-        "wght" 300,
-        "GRAD" 0,
-        "opsz" 24;
-    }
-  }
-}
-
-@include generate-icon-classes(
-  "icon",
-  icons.$icons-list
-);
-
-// Dropdown list styles.
-.hover-drop-list {
-  position: relative;
-  display: inline-block;
-
-  .btn {
-    margin: 0;
-
-    &::after {
-      content: "expand_more";
-      display: inline-block;
-      font-family: "Material Symbols Outlined";
-      font-feature-settings: "liga";
-      font-variation-settings:
-        "FILL" 0,
-        "wght" 500,
-        "GRAD" 0,
-        "opsz" 24;
-      pointer-events: none;
-      font-size: 1.25rem;
-      line-height: 1;
-      transition: transform 0.2s ease-in-out;
-      margin-left: 0.5rem;
-      vertical-align: center;
-    }
-  }
-
-  // Animation for opening and closing the dropdown.
-  @keyframes out {
-    from {
-      max-height: 0%;
-    }
-
-    to {
-      max-height: 100%;
-    }
-  }
-
-  // Dropdown content.
-  .drop-content {
-    overflow: hidden;
-    position: absolute;
-    background-color: var(--page-background-color);
-    min-width: 160px;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: 1rem;
-    text-align: left;
-
-    li {
-      a {
-        display: block;
-        padding: 6px 22px;
-        clear: both;
-        font-weight: normal;
-        line-height: 1.5;
-        color: var(--page-text-color);
-
-        &:hover {
-          background: var(--page-highlight-background-color);
-          color: var(--page-text-color);
-          text-decoration: none;
-        }
-
-        &:active {
-          background: var(--link-focus-background);
-        }
-      }
-    }
-
-    &.show {
-      display: block;
-    }
-  }
-
-  &.up > .drop-content {
-    bottom: 100%;
-  }
-
-  &.down > .drop-content {
-    top: 100%;
-  }
-
-  &.up .btn::after {
-    rotate: 180deg;
-  }
-
-  &.selected .btn::after {
-    rotate: 180deg;
-  }
-
-  &.up.selected .btn::after {
-    rotate: 0deg;
-  }
-}
-
-// Button focus and active states.
-.btn:focus,
-.btn:active {
-  outline: 3px solid #ffb400;
-}
-
-.btn:focus {
-  color: #fff;
-  background-color: colors.$blue-25-shade;
-}
-
-.btn:hover {
-  color: #fff;
-  background-color: colors.$blue-25-shade;
-}
-
-.btn:active {
-  color: #202024;
-  background-color: var(--link-focus-background);
-}
-
-// Dropdown open and close behaviour.
-@media (min-width: 800px) {
-  .hover-drop-list {
-    &:not(.selected) {
-      &:hover {
-        .btn {
-          &::after {
-            rotate: 180deg;
-          }
-        }
-      }
-    }
-
-    &.up {
-      &:not(.selected) {
-        &:hover {
-          .btn {
-            &::after {
-              rotate: 0deg;
-            }
-          }
-        }
+      &:after {
+        color: #000;
       }
     }
   }
-
-  .hover-drop-list:not(.selected):hover .drop-content {
-    display: block;
-  }
-}
-
-.selected::after {
-  top: 0.6rem;
-  transform: rotate(135deg);
-  pointer-events: all;
 }
 
 // Default blue button with white text.
 .btn {
-  @extend .border-light;
-
+  @include options;
+  border: none;
   margin-bottom: 5px;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -353,7 +183,181 @@
   line-height: 1.5;
   display: inline-block;
 
-  @include options;
+  &:hover {
+    color: #fff;
+    background-color: colors.$blue-25-shade;
+  }
+
+  &:focus {
+    color: #fff;
+    background-color: colors.$blue-25-shade;
+    outline: 3px solid #FFB400;
+  }
+
+  &:active {
+    color: #000;
+    background-color: var(--link-focus-background);
+  }
+}
+
+// --------- Icon Buttons -----------//
+.btn[class*="icon-"] {
+  &::before {
+    color: inherit;
+    float: right;
+    font-size: 1.3rem;
+    padding: 5px 0 0 8px;
+    line-height: 1rem;
+    font-family: 'Material Symbols Outlined';
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -moz-font-feature-settings: 'liga';
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+// Generate icon button classes.
+@mixin generate-icon-classes($base-class, $icons) {
+  @each $icon in $icons {
+    .btn.#{$base-class}-#{$icon} {
+      padding: 0.5rem;
+    }
+
+    .#{$base-class}-#{$icon}::before {
+      content: icons.get-icon-content($icon);
+    }
+  }
+}
+
+@include generate-icon-classes(
+  "icon",
+  icons.$icons-list
+);
+
+// Dropdown list styles.
+.hover-drop-list {
+  position: relative;
+  display: inline-block;
+
+  &:not(.selected) {
+    &:hover {
+      .btn {
+        &::after {
+          rotate: 180deg;
+        }
+      }
+
+      .drop-content {
+        display: block;
+      }
+    }
+  }
+
+  .btn {
+    margin: 0;
+
+    &::after {
+      content: "expand_more";
+      display: inline-block;
+      font-family: 'Material Symbols Outlined';
+      font-feature-settings: 'liga';
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      pointer-events: none;
+      font-size: 1.25rem;
+      line-height: 1;
+      transition: transform 0.2s ease-in-out;
+      margin-left: 0.5rem;
+      vertical-align: center;
+    }
+  }
+
+  // Animation for opening and closing the dropdown
+  @keyframes out {
+    from { max-height: 0%; }
+    to { max-height: 100%; }
+  }
+
+
+  // Styles for the dropdown content
+  .drop-content {
+    overflow: hidden;
+    position: absolute;
+    background-color: var(--page-background-color);
+    min-width: 160px;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 1rem;
+    text-align: left;
+    border: 1px solid colors.$dark-grey-2;
+    box-shadow: var(--dpl-shadow-default);
+
+    li {
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        clear: both;
+        font-weight: normal;
+        line-height: 1.5;
+        color: var(--page-text-color);
+
+        &:hover {
+          background: var(--page-highlight-background-color);
+          color: var(--page-text-color);
+          text-decoration: none;
+        }
+
+        &:active {
+          background: var(--link-focus-background);
+        }
+      }
+    }
+
+    // On click show dropdown
+    &.show {
+      display: block;
+    }
+  }
+
+  &.down > .drop-content {
+    top: 100%;
+  }
+
+  &.up {
+    .btn:after {
+      rotate: 180deg;
+    }
+
+    > .drop-content {
+      bottom: 100%;
+    }
+
+    &.selected .btn:after {
+      rotate: 0deg;
+    }
+  }
+
+  &.selected .btn:after {
+    rotate: 180deg;
+  }
+}
+
+.selected:after {
+  top: 0.6rem;
+  transform: rotate(135deg);
+  pointer-events: all;
+}
+
+
+.selected::after {
+  top: 0.6rem;
+  transform: rotate(135deg);
+  pointer-events: all;
 }
 
 @media (prefers-color-scheme: dark) {
