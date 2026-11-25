@@ -22,7 +22,7 @@ test-css:
         echo "No changed SCSS files, skipping lint."
       else
         echo "$CHANGED_FILES"
-        echo "$CHANGED_FILES" | xargs stylelint
+        echo "$CHANGED_FILES" | xargs stylelint --config-basedir "$(npm root -g)"
       fi
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
