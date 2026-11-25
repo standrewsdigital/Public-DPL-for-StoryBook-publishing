@@ -1,0 +1,39 @@
+<section class="featured-people py-xl{{#if indentDescription}} indented-description{{/if}}{{#if backgroundClass}} {{ backgroundClass }}{{/if}}">
+    <div class="container">
+        <div class="row">
+        {{#if heading}}
+            <div class="col col-12-lg">
+                <{{headingLevel}} class="featured-people-title">{{heading}}</{{headingLevel}}>
+            </div>
+        {{/if}}
+            {{#each peopleArray}}
+                <div class="col col-12-xs {{../columnClass}}">
+                    <div class="person">
+                        <div class="person-image">
+                            <img src="{{ this.image }}" alt="{{ this.name }}">
+                        </div>
+
+                        <div class="person-info">
+                            <{{../nameHeadingLevel}} class="name">
+                            {{#if this.url }}
+                                <a href="{{ this.url }}">
+                                {{/if}}
+                                    {{ this.name }}
+                                {{#if this.url }}
+                                </a>
+                                {{/if}}
+                            </{{../nameHeadingLevel}}>
+                            <p class="title">{{ this.title }}</p>
+                        </div>
+
+                    {{#if this.content}}
+                        <div class="description">
+                            {{{this.content}}}
+                        </div>
+                    {{/if}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

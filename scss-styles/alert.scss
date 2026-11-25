@@ -1,3 +1,3 @@
-@import "./variables/main-colors";
-@import "./global-partials/_mixins";
-@import "./components/_alert";
+@use "variables/main-colors";
+@use "global-partials/_mixins";
+@use "components/_alert";
