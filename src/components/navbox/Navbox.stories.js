@@ -1,75 +1,277 @@
-import { createNavbox } from './Navbox';
+import Handlebars from 'handlebars';
+import containerTemplate from '../../decorators/container-row.hbs?raw';
+import navboxTemplate from './navbox.hbs?raw';
+import '../../../scss-styles/navbox.scss';
+
+const decoratorTemplate = Handlebars.compile(containerTemplate);
+const template = Handlebars.compile(navboxTemplate);
+
+const navboxColours = ['Blue', 'Green', 'Burgundy'];
+const roundedCorners = [false, true];
+
+function getNavboxSizeClass(size) {
+  let columnClass = 'col-4-md';
+  switch (size) {
+    case 'Large':
+      columnClass = 'col-6-md';
+      break;
+    case 'Regular':
+    default:
+      break;
+  }
+
+  return columnClass;
+}
+
+function getHoverClass(colour) {
+  let hoverClass = 'hover-primary'
+  switch (colour){
+    case 'Green':
+      hoverClass = 'hover-green'
+      break;
+    case 'Burgundy':
+      hoverClass = 'hover-burgundy'
+      break;
+    case 'Blue':
+    default:
+      break;
+  }
+  return hoverClass;
+}
 
 export default {
-  title: 'Components/Navbox',
-  tags: ['autodocs'],
-  render: ({ image, altText, url, title, content, columns }) => {
+  render: ({ contentArray, size, hasRoundedCorners = false, colour = 'Blue' }) => {
+    let navboxHtml = '';
+    const columnClass = getNavboxSizeClass(size);
+    const hoverClass = getHoverClass(colour);
 
-    const container = document.createElement('div');
-    container.classList.add('container');
+    contentArray.forEach((contentObj) => {
+      navboxHtml += template({
+        contentObj,
+        size: columnClass,
+        hasRoundedCorners,
+        colour: colour.toLowerCase(),
+        hoverClass
+      });
+    });
 
-    const row = document.createElement('div');
-    row.classList.add('row');
-    container.appendChild(row);
-
-    for (let i = 1; i <= columns; i++) {
-      row.appendChild(
-        createNavbox({ image, altText, url, title, content, columns })
-      );
-    }
-
-    return container;
+    return navboxHtml;
   },
+  decorators: [
+    (story) => {
+      return decoratorTemplate({ content: story() });
+    }
+  ],
+  title: 'Components/Navbox',
+  docs: ['!autodocs'],
   argTypes: {
-    image: { control: 'text' },
-    altText: { control: 'text' },
-    url: { control: 'text' },
-    title: { control: 'text' },
-    content: { control: 'text' },
-    columns: {
-      control: {
-        type: 'number',
-        min: 1,
-        max: 3,
-        step: 1,
-      }
+    size: {
+      control: 'select',
+      options: ['Regular', 'Large']
+    },
+    contentArray: { control: 'object' },
+    hasRoundedCorners: { control: 'boolean' },
+    colour: {
+      control: 'select',
+      options: navboxColours
     }
   },
   args: {
-    image: './750x500.png',
-    altText: '750x500 placeholder',
-    url: 'https://www.st-andrews.ac.uk/',
+    hasRoundedCorners: false,
+    colour: 'Blue',
   }
 }
 
 export const Navbox = {
   args: {
-    image: './750x500.png',
-    altText: '750x500 placeholder',
-    url: 'https://www.st-andrews.ac.uk/',
-    title: 'Navbox title',
-    content: '<p>Lorem ipsum</p>',
-    columns: 1,
+    contentArray: [
+      {
+        url: 'https://www.st-andrews.ac.uk/',
+        title: 'Navbox title'
+      }
+    ],
+    size: 'Regular',
+  }
+}
+
+export const NavboxTextOnly = {
+  name: 'Navbox - Text only',
+  args: {
+    contentArray: [
+      {
+        ...Navbox.args.contentArray[0],
+        content: '<p>Lorem ipsum</p>',
+      }
+    ],
+    size: 'Regular',
+  }
+}
+
+export const NavboxImageOnly = {
+  name: 'Navbox - Image only',
+  args: {
+    contentArray: [
+      {
+        ...Navbox.args.contentArray[0],
+        image: './750x500.png',
+        altText: '750x500 placeholder',
+      }
+    ],
+    size: 'Regular',
+  }
+}
+
+export const NavboxTextAndImage = {
+  name: "Navbox - Text and image",
+  args: {
+    contentArray: [
+      {
+        ...NavboxTextOnly.args.contentArray[0],
+        ...NavboxImageOnly.args.contentArray[0],
+      }
+    ],
+    size: 'Regular',
   }
 }
 
 export const GridTwo = {
+  name: 'Grid - Two navboxes',
   args: {
-    image: './750x500.png',
-    altText: '750x500 placeholder',
-    url: 'https://www.st-andrews.ac.uk/',
-    title: 'Navbox title',
-    content: '<p>Lorem ipsum</p>',
-    columns: 2,
+    contentArray: [
+      ...Navbox.args.contentArray,
+      ...Navbox.args.contentArray
+    ],
+    size: 'Large',
   }
 }
-export const GridThree = {
+
+export const GridTwoTextOnly = {
+  name: 'Grid - Two navboxes, text only',
   args: {
-    image: './750x500.png',
-    altText: '750x500 placeholder',
-    url: 'https://www.st-andrews.ac.uk/',
-    title: 'Navbox title',
-    content: '<p>Lorem ipsum</p>',
-    columns: 3,
+    contentArray: [
+      ...NavboxTextOnly.args.contentArray,
+      ...NavboxTextOnly.args.contentArray
+    ],
+    size: 'Large',
   }
+}
+
+export const GridTwoImageOnly = {
+  name: 'Grid - Two navboxes, image only',
+  args: {
+    contentArray: [
+      ...NavboxImageOnly.args.contentArray,
+      ...NavboxImageOnly.args.contentArray
+    ],
+    size: 'Large',
+  }
+}
+
+export const GridTwoTextAndImage = {
+  name: 'Grid - Two navboxes, text and Image',
+  args: {
+    contentArray: [
+      ...NavboxTextAndImage.args.contentArray,
+      ...NavboxTextAndImage.args.contentArray,
+    ],
+    size: 'Large',
+  }
+}
+
+export const GridThree = {
+  name: 'Grid - Three navboxes',
+  args: {
+    contentArray: [
+      ...Navbox.args.contentArray,
+      ...Navbox.args.contentArray,
+      ...Navbox.args.contentArray
+    ],
+    size: 'Regular'
+  }
+}
+
+export const GridThreeTextOnly = {
+  name: 'Grid - Three navboxes, text only',
+  args: {
+    contentArray: [
+      ...NavboxTextOnly.args.contentArray,
+      ...NavboxTextOnly.args.contentArray,
+      ...NavboxTextOnly.args.contentArray,
+    ],
+    size: 'Regular',
+  }
+}
+
+export const GridThreeImageOnly = {
+  name: 'Grid - Three navboxes, image only',
+  args: {
+    contentArray: [
+      ...NavboxImageOnly.args.contentArray,
+      ...NavboxImageOnly.args.contentArray,
+      ...NavboxImageOnly.args.contentArray,
+    ],
+    size: 'Regular',
+  }
+}
+
+export const GridThreeTextAndImage = {
+  name: 'Grid - Three navboxes, text and Image',
+  args: {
+    contentArray: [
+      ...NavboxTextAndImage.args.contentArray,
+      ...NavboxTextAndImage.args.contentArray,
+      ...NavboxTextAndImage.args.contentArray,
+    ],
+    size: 'Regular',
+  }
+}
+
+export const AllColourVariants = {
+  tags: ['!dev'],
+  render: ({ contentArray, size }) => {
+    let navboxHtml = '';
+    const columnClass = getNavboxSizeClass(size);
+
+    navboxColours.forEach((colour) => {
+      const hoverClass = getHoverClass(colour);
+
+      navboxHtml += template({
+        contentObj: contentArray[0],
+        size: columnClass,
+        colour: colour.toLowerCase(),
+        hoverClass
+      });
+    });
+
+    return navboxHtml;
+  },
+  args: {
+    ...Navbox.args
+  },
+}
+
+export const AllCornerVariants = {
+  tags: ['!dev'],
+  render: ({ contentArray, size, colour }) => {
+    let navboxHtml = '';
+    const columnClass = getNavboxSizeClass(size);
+
+    roundedCorners.forEach((cornerValue) => {
+      const hoverClass = getHoverClass(colour);
+
+      navboxHtml += template({
+        contentObj: contentArray[0],
+        size: columnClass,
+        colour: colour.toLowerCase(),
+        hoverClass,
+        hasRoundedCorners: cornerValue
+      });
+    });
+
+    return navboxHtml;
+  },
+  args: {
+    ...Navbox.args,
+    size: 'Large'
+  },
 }

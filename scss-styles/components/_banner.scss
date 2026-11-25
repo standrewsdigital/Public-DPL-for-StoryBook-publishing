@@ -1,3 +1,5 @@
+@use "../global-partials/variables";
+
 .banner-content {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -16,13 +18,13 @@
   h2,h3 {
     margin-top: 0em;
     margin-bottom: 0.5em;
-    color: $white;
+    color: variables.$white;
 
     a {
-      color: $white;
+      color: variables.$white;
 
       &:focus {
-        color: $dark-grey-2;
+        color: variables.$dark-grey-2;
       }
     }
   }
@@ -35,13 +37,13 @@
   h2,h3 {
     margin-top: 0em;
     margin-bottom: 0.5em;
-    color: $dark-grey-2;
+    color: variables.$dark-grey-2;
 
     a {
-      color: $dark-grey-2;
+      color: variables.$dark-grey-2;
 
       &:focus {
-        color: $dark-grey-2;
+        color: variables.$dark-grey-2;
       }
     }
   }

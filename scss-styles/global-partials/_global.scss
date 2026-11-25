@@ -1,3 +1,6 @@
+@use "category-header";
+@use "mixins";
+
 :root {
   --page-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   --page-font-family-alternative: 'Noto Sans', Helvetica, Arial, sans-serif;
@@ -7,8 +10,8 @@
 body {
   background-color: var(--page-background-color);
   color: var(--page-text-color);
-  font-family: $page-font-family;
-  @include typography(font-size, ('xs': 100%, 'sm': 112.5%));
+  font-family: category-header.$page-font-family;
+  @include mixins.typography(font-size, ('xs': 100%, 'sm': 112.5%));
 }
 
 .noto-sans {
@@ -21,22 +24,22 @@ body {
 
 h1 {
   font-weight: 700;
-  @include responsive-font-size(2.0736em, 0.36780625em, 36em, 75em);
+  @include mixins.responsive-font-size(2.0736em, 0.36780625em, 36em, 75em);
 }
 
 h2 {
   font-weight: 700;
-  @include responsive-font-size(1.728em, 0.225125em, 36em, 75em);
+  @include mixins.responsive-font-size(1.728em, 0.225125em, 36em, 75em);
 }
 
 h3 {
   font-weight: 700;
-  @include responsive-font-size(1.44em, 0.1225em, 36em, 75em);
+  @include mixins.responsive-font-size(1.44em, 0.1225em, 36em, 75em);
 }
 
 h4 {
   font-weight: 700;
-  @include responsive-font-size(1.2em, 0.05em, 36em, 75em);
+  @include mixins.responsive-font-size(1.2em, 0.05em, 36em, 75em);
 }
 
 h5 {

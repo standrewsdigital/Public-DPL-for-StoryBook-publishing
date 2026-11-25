@@ -1,7 +1,9 @@
+@use "../global-partials/variables";
+
 .secondary-call {
 	padding: 2em 0;
-	background-color: $light-grey-1;
-	color: $dark-grey-2;
+	background-color: variables.$light-grey-1;
+	color: variables.$dark-grey-2;
 
 	.call-heading {
 		margin: 0;
@@ -16,11 +18,11 @@
 	&.bg-blue-primary {
 		.call-buttons {
 			.btn.lg.action:not(.white) {
-				border-bottom: 3px solid $dark-orange-25-shade;
-				background-color: $dark-orange;
+				border-bottom: 3px solid variables.$dark-orange-25-shade;
+				background-color: variables.$dark-orange;
 
 				&:hover, &:focus {
-					background-color: $dark-orange-25-shade;
+					background-color: variables.$dark-orange-25-shade;
 				}
 			}
 		}

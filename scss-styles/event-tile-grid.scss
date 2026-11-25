@@ -1,9 +1,10 @@
 // Import only what's needed for this component
-@import "./variables/breakpoints";
-@import "./variables/main-colors";
+@use "sass:meta";
+@use "variables/breakpoints";
+@use "variables/main-colors";
 
 // Icon mixin needed for metadata-list
-@mixin icon($content, $altText, $colour: $dark-grey-2) {
+@mixin icon($content, $altText, $colour: main-colors.$dark-grey-2) {
 	content: $content / $altText;
 	font-family: 'Material Symbols Outlined';
 	font-feature-settings: 'liga';
@@ -23,5 +24,5 @@
 	}
 }
 
-@import "./components/_metadata-list";
-@import "./components/_event-tile-grid";
+@include meta.load-css("components/_metadata-list");
+@include meta.load-css("components/_event-tile-grid");
