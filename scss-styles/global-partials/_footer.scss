@@ -1,6 +1,9 @@
-$footer-background: $dark-grey-2;
-$footer-text-color: $light-grey-1;
-$footer-link-color: $light-grey-1;
+@use "mixins";
+@use "variables";
+
+$footer-background: variables.$dark-grey-2;
+$footer-text-color: variables.$light-grey-1;
+$footer-link-color: variables.$light-grey-1;
 
 // Footer styles
 footer {
@@ -36,7 +39,7 @@ footer {
 }
 
 // Responsive typography
-@include respond-to(sm) {
+@include mixins.respond-to(sm) {
   .footer {
     font-size: 16px;
   }

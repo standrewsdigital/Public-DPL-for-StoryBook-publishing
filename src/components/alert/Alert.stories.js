@@ -1,33 +1,72 @@
 import { createAlert } from './Alert';
+import { createContainer } from '../container/Container';
 
 export default {
   title: 'Components/Alert',
-  tags: ['autodocs'],
-  render: ({ headingLevel, headingContent, content, ...args }) => {
-//     return `<div class="alert ${args.option}" role="alert">
-//   <${headingLevel}>${headingContent}</${headingLevel}>
-//   ${content}
-// </div>`;
+  tags: ['!autodocs'],
+  decorators: [
+    (story, context) => {
+      const container = createContainer();
+      const row = container.querySelector('.row');
+      const column = document.createElement('div');
+      const gridColumns = context.args.gridColumns ?? 12;
 
-    return createAlert({ headingLevel, headingContent, content, ...args });
+      column.classList.add(
+        'col',
+        'col-12-sm',
+        `col-${gridColumns}-md`,
+      );
 
+      column.appendChild(story());
+      row.appendChild(column);
+
+      return container;
+    },
+  ],
+  render: ({
+    headingLevel,
+    headingContent,
+    content,
+    option,
+  }) => {
+    return createAlert({
+      headingLevel,
+      headingContent,
+      content,
+      option,
+    });
   },
   argTypes: {
     headingLevel: {
       control: { type: 'select' },
       options: ['h2', 'h3', 'h4', 'h5'],
     },
-    headingContent: { control: 'text' },
-    content: { control: 'text' },
+    headingContent: {
+      control: 'text',
+    },
+    content: {
+      control: 'text',
+    },
     option: {
       control: { type: 'select' },
       options: ['success', 'info', 'warning', 'danger'],
     },
+    gridColumns: {
+      name: 'Grid columns',
+      control: { type: 'select' },
+      options: [12, 8, 6],
+      description:
+        'Sets the alert width from the medium breakpoint upwards. Alerts remain 12 columns wide on small screens.',
+      table: {
+        category: 'Layout',
+      },
+    },
   },
   args: {
     option: 'success',
-  }
-}
+    gridColumns: 12,
+  },
+};
 
 export const Success = {
   args: {

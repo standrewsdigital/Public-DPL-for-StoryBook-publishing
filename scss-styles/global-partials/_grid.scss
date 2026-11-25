@@ -1,3 +1,5 @@
+@use "mixins";
+
 *, *:after, *:before {
   box-sizing: border-box;
 }
@@ -14,13 +16,13 @@
   padding-right: 15px;
   padding-left: 15px;
 
-  @include respond-to(xxs) { max-width: 100%; }
-  @include respond-to(xs) { max-width: 460px; }
-  @include respond-to(sm) { max-width: 540px; }
-  @include respond-to(md) { max-width: 720px; }
-  @include respond-to(lg) { max-width: 960px; }
-  @include respond-to(xl) { max-width: 1140px; }
-  @include respond-to(xxl) { max-width: 1366px; }
+  @include mixins.respond-to(xxs) { max-width: 100%; }
+  @include mixins.respond-to(xs) { max-width: 460px; }
+  @include mixins.respond-to(sm) { max-width: 540px; }
+  @include mixins.respond-to(md) { max-width: 720px; }
+  @include mixins.respond-to(lg) { max-width: 960px; }
+  @include mixins.respond-to(xl) { max-width: 1140px; }
+  @include mixins.respond-to(xxl) { max-width: 1366px; }
 
   .row {
     display: contents; // Keeps elements inside the grid without extra divs
@@ -32,7 +34,7 @@
   grid-column: span 12; // Default full-width
   grid-row: span 1; // Default to span 1 row
 
-  @include respond-to(xxs) {
+  @include mixins.respond-to(xxs) {
     @for $i from 1 through 12 {
       &.col-#{$i}-xxs {
         grid-column: span #{$i};
@@ -45,7 +47,7 @@
     }
   }
 
-  @include respond-to(xs) {
+  @include mixins.respond-to(xs) {
     @for $i from 1 through 12 {
       &.col-#{$i}-xs {
         grid-column: span #{$i};
@@ -58,7 +60,7 @@
     }
   }
 
-  @include respond-to(sm) {
+  @include mixins.respond-to(sm) {
     @for $i from 1 through 12 {
       &.col-#{$i}-sm {
         grid-column: span #{$i};
@@ -71,7 +73,7 @@
     }
   }
 
-  @include respond-to(md) {
+  @include mixins.respond-to(md) {
     @for $i from 1 through 12 {
       &.col-#{$i}-md {
         grid-column: span #{$i};
@@ -84,7 +86,7 @@
     }
   }
 
-  @include respond-to(lg) {
+  @include mixins.respond-to(lg) {
     @for $i from 1 through 12 {
       &.col-#{$i}-lg {
         grid-column: span #{$i};
@@ -97,7 +99,7 @@
     }
   }
 
-  @include respond-to(xl) {
+  @include mixins.respond-to(xl) {
     @for $i from 1 through 12 {
       &.col-#{$i}-xl {
         grid-column: span #{$i};
@@ -110,7 +112,7 @@
     }
   }
 
-  @include respond-to(xxl) {
+  @include mixins.respond-to(xxl) {
     @for $i from 1 through 12 {
       &.col-#{$i}-xxl {
         grid-column: span #{$i};
@@ -127,7 +129,7 @@
 .col-centered {
   grid-column: span 12; // Default full-width
   grid-row: span 1; // Default to span 1 row
-  @include respond-to(xxs) {
+  @include mixins.respond-to(xxs) {
     @for $i from 1 through 12 {
     &.col-#{$i}-xxs {
       grid-column-start: calc((13 - #{$i}) / 2);
@@ -135,7 +137,7 @@
     }
   }
 
-  @include respond-to(xs) {
+  @include mixins.respond-to(xs) {
     @for $i from 1 through 12 {
       &.col-#{$i}-xs {
         grid-column-start: calc((13 - #{$i}) / 2);
@@ -144,7 +146,7 @@
     }
   }
 
-  @include respond-to(sm) {
+  @include mixins.respond-to(sm) {
     @for $i from 1 through 12 {
       &.col-#{$i}-sm {
         grid-column-start: calc((13 - #{$i}) / 2);
@@ -153,7 +155,7 @@
     }
   }
 
-  @include respond-to(md) {
+  @include mixins.respond-to(md) {
     @for $i from 1 through 12 {
       &.col-#{$i}-md {
         grid-column-start: calc((13 - #{$i}) / 2);
@@ -162,7 +164,7 @@
     }
   }
 
-  @include respond-to(lg) {
+  @include mixins.respond-to(lg) {
     @for $i from 1 through 12 {
       &.col-#{$i}-lg {
         grid-column-start: calc((13 - #{$i}) / 2);
@@ -171,7 +173,7 @@
     }
   }
 
-  @include respond-to(xl) {
+  @include mixins.respond-to(xl) {
     @for $i from 1 through 12 {
       &.col-#{$i}-xl {
         grid-column-start: calc((13 - #{$i}) / 2);
@@ -180,7 +182,7 @@
     }
   }
 
-  @include respond-to(xxl) {
+  @include mixins.respond-to(xxl) {
     @for $i from 1 through 12 {
       &.col-#{$i}-xxl {
         grid-column-start: calc((13 - #{$i}) / 2);
@@ -193,7 +195,7 @@
 
 // Utility for placing an element starting from column 1 (start)
 @each $bp in (xxs, xs, sm, md, lg, xl, xxl) {
-  @include respond-to(#{$bp}) {
+  @include mixins.respond-to(#{$bp}) {
     @for $i from 1 through 12 {
       .start-col-#{$i}-#{$bp} {
         grid-column: 1 / span #{$i};
@@ -204,7 +206,7 @@
 
 // Utility for placing an element ending at column 13 (right end), spanning backwards
 @each $bp in (xxs, xs, sm, md, lg, xl, xxl) {
-  @include respond-to(#{$bp}) {
+  @include mixins.respond-to(#{$bp}) {
     @for $i from 1 through 12 {
       // Start at (13 - i), end at 13
       .end-col-#{$i}-#{$bp} {

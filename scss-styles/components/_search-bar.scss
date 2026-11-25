@@ -1,3 +1,5 @@
+@use "../global-partials/variables";
+
 $responsive-sizing: clamp(1.5rem, 4vw, 4rem);
 
 .search-bar {
@@ -21,8 +23,8 @@ $responsive-sizing: clamp(1.5rem, 4vw, 4rem);
             &.clear-icon {
                 position: absolute;
                 right: 46px;
-                background-color: $white;
-                color: $dark-grey-2;
+                background-color: variables.$white;
+                color: variables.$dark-grey-2;
                 border-radius: 50%;
                 min-width: 38px;
                 height: 38px;
@@ -50,7 +52,7 @@ $responsive-sizing: clamp(1.5rem, 4vw, 4rem);
 .search-bar-banner {
     //padding: 4rem 0;
     padding: $responsive-sizing 0;
-    color: $dark-grey-2;
+    color: variables.$dark-grey-2;
 
     h2, h3, h4, h5, h6 {
         margin: 0 0 1rem 0;
@@ -62,15 +64,15 @@ $responsive-sizing: clamp(1.5rem, 4vw, 4rem);
     }
 
     &.bg-blue-primary {
-        color: $white;
+        color: variables.$white;
 
         .search-bar {
             button {
                 &.btn {
-                    background-color: $light-blue-primary;
+                    background-color: variables.$light-blue-primary;
 
                     &.clear-icon {
-                        background-color: $white;
+                        background-color: variables.$white;
 
                         &:hover, &:focus {
                             background-color: #0c070f11;
@@ -78,11 +80,11 @@ $responsive-sizing: clamp(1.5rem, 4vw, 4rem);
                     }
 
                     &:hover {
-                        background-color: $blue-25-shade;
+                        background-color: variables.$blue-25-shade;
                     }
 
                     &:focus {
-                        background-color: $blue-25-shade;
+                        background-color: variables.$blue-25-shade;
                     }
                 }
             }
@@ -120,9 +122,9 @@ $responsive-sizing: clamp(1.5rem, 4vw, 4rem);
             display: inline-block;
             margin: 0;
             padding: 10px 15px;
-            background-color: $light-grey-1;
-            color: $dark-grey-2;
-            border: 2px solid $grey;
+            background-color: variables.$light-grey-1;
+            color: variables.$dark-grey-2;
+            border: 2px solid variables.$grey;
             border-radius: 5px;
             font-size: 1rem;
             cursor: pointer;
@@ -130,14 +132,14 @@ $responsive-sizing: clamp(1.5rem, 4vw, 4rem);
             white-space: nowrap;
 
             &:hover {
-                background-color: $mid-grey-2;
-                border-color: $mid-grey-1;
+                background-color: variables.$mid-grey-2;
+                border-color: variables.$mid-grey-1;
             }
         }
     }
 
     .no-courses {
-        color: $red-primary;
+        color: variables.$red-primary;
     }
 }
 
