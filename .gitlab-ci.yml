@@ -39,15 +39,18 @@ compile:
     - npm config set https-proxy "http://${PROXY_HOST}:${PROXY_PORT}"
     - npm install -g sass
   script:
-    - RELEASE_VERSION="${CI_COMMIT_TAG#v}"
-    - mkdir $RELEASE_VERSION
-    - sass --style=compressed --no-source-map scss-styles/:$RELEASE_VERSION/
+    - RELEASE_VERSION="${CI_COMMIT_TAG:-ci-review}"
+    - RELEASE_VERSION="${RELEASE_VERSION#v}"
+    - echo "RELEASE_VERSION=$RELEASE_VERSION" >> "$GITLAB_ENV"
+    - mkdir -p "$RELEASE_VERSION"
+    - sass --style=compressed --no-source-map "scss-styles/:$RELEASE_VERSION/"
   artifacts:
     paths:
-      - ./$RELEASE_VERSION
-    expire_in: 10 mins
-  only:
-    - tags
+      - "$RELEASE_VERSION/"
+    expire_in: 1 day
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_TAG'
 
 deploy:
   stage: deploy
