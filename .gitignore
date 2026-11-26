@@ -2,6 +2,9 @@
 uploadToSftp.js
 .env
 
+# Ignore compiled files. It's all done through CICD
+compiled-css/
+
 # Ignore all node modules
 node_modules/
 # Ignore GitHub and GitLab configuration folders
