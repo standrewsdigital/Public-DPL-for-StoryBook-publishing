@@ -8,7 +8,7 @@
 
 @use "global-partials/mixins";
 @use "global-partials/align";
-@use "global-partials/bg-colors";
+
 @use "global-partials/border";
 @use "global-partials/bottom-navigation";
 @use "global-partials/breadcrumbs";
@@ -72,3 +72,5 @@
 @use "components/tabs";
 @use "components/text-banner";
 @use "components/tile";
+
+@use "global-partials/bg-colors";
